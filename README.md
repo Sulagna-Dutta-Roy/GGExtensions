@@ -62,4 +62,6 @@ Soon I'll be merging all your changes into the master branch of this project. Yo
 Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
 
 Thanks to all the people who have contributed: 
+
+
 [![Contributors](https://contrib.rocks/image?repo=WeBeginners-Community/GGExtensions)](https://github.com/WeBeginners-Community/GGExtensions/graphs/contributors)
