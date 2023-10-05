@@ -25,14 +25,17 @@ How to make a Pull Request
 1. Fork the repository by clicking fork symbol at the top right corner.
 
 2. Clone the forked repository.
-
+```
    git clone https://github.com/<your-github-id>/GGExtensions.git
+```
 3. Navigate to the project directory.
-
-   cd CSS.Effects-Designs
+```
+   cd GGExtensions
+```
 4. Create a new branch:
-
+```
    git checkout -b <Add your branch name>
+```
 5. Make necessary changes and commit those changes:
 
 Add all the changes to the staging area
@@ -42,13 +45,15 @@ Push changes to GitHub
 or Open in Gitpod
 
 Now commit those changes using the git commit command:
-
+```
 git commit -m "commit message"
+```
 6. Push changes to GitHub:
 
 Push your changes using the command git push:
-
+```
 git push origin -u <add-your-branch-name>
+```
 replacing <add-your-branch-name> with the name of the branch you created earlier.
 
 7. Submit your changes for review:
