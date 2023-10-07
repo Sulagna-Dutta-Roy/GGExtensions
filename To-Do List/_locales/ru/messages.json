@@ -1,0 +1,132 @@
+{
+	"extensionName":{
+		"message": "Simple To-Do List"
+	},
+	"extensionDescription": {
+		"message": "Минималистичное расширение для управления задачами."
+	},
+	"optionsTitle": {
+		"message": "Настройки"
+	},
+	"deleteCompleted": {
+		"message": "Удалить выполненные задачи"
+	},
+	"edit": {
+		"message": "Редактировать"
+	},
+	"priority": {
+		"message": "Приоритет:"
+	},
+	"delete": {
+		"message": "Удалить"
+	},
+	"save": {
+		"message": "Сохранить"
+	},
+	"newTask": {
+		"message": "Введите новую задачу..."
+	},
+	"addTask": {
+		"message": "Добавить"
+	},
+	"options": {
+		"message": "Настройки"
+	},
+	"importExport": {
+		"message": "Импорт/Экспорт"
+	},
+	"versionHistory": {
+		"message": "История изменений"
+	},
+	"popupWidth": {
+		"message": "Ширина окна расширения:"
+	},
+	"taskFontCSS": {
+		"message": "CSS-код для текста задачи:"
+	},
+	"priority1color": {
+		"message": "Цвет задачи с приоритетом 1:"
+	},
+	"priority2color": {
+		"message": "Цвет задачи с приоритетом 2:"
+	},
+	"priority3color": {
+		"message": "Цвет задачи с приоритетом 3:"
+	},
+	"hotkeys": {
+		"message": "Горячие клавиши:"
+	},
+	"addSave": {
+		"message": "добавить, сохранить задачу"
+	},
+	"newLine": {
+		"message": "новая строка"
+	},
+	"browsersContextMenu": {
+		"message": "Контекстное меню браузера"
+	},
+	"browsersContextMenuRestart": {
+		"message": "После изменения данной опции необходимо перезапустить расширение."
+	},
+	"saveOptions": {
+		"message": "Сохранить настройки"
+	},
+	"restoreDefaults": {
+		"message": "Сбросить настройки"
+	},
+	"importData": {
+		"message": "Импорт данных"
+	},
+	"importNote": {
+		"message": "Здесь вы можете импортировать данные (настройки и список задач), экспортированных из другого браузера."
+	},
+	"importData2": {
+		"message": "Импортировать"
+	},
+	"clearAllData": {
+		"message": "Удалить все данные"
+	},
+	"areYouSure": {
+		"message": "Вы уверены?"
+	},
+	"confirmImportNote": {
+		"message": "Все имеющиеся данные будут заменены!"
+	},
+	"clearNote": {
+		"message": "База данных расширения и все настройки будут удалены!"
+	},
+	"yes": {
+		"message": "Да"
+	},
+	"no": {
+		"message": "Нет"
+	},
+	"dataImportedSuccessfully": {
+		"message": "Данные успешно импортированы"
+	},
+	"couldNotBeImported": {
+		"message": "Указанные данные не могут быть импортированы из-за неправильного формата"
+	},
+	"allDataIsDeleted": {
+		"message": "Все данные удалены"
+	},
+	"ok": {
+		"message": "Ok"
+	},
+	"exportData": {
+		"message": "Экспорт данных"
+	},
+	"exportNote": {
+		"message": "Используйте данный код, чтобы импортировать настройки и список задач в другой браузер."
+	},
+	"clickToDownload": {
+		"message": "Кликните, чтобы сохранить данные в виде файла"
+	},
+	"saveAsTask": {
+		"message": "Сохранить как задачу"
+	},
+
+	"locale": {
+		"message": "ru"
+	}
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple To-Do List Options</title>
+	<link href="css/options.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.minicolors.min.js"></script>
+	<script src="js/options.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+	<h1>Simple To-Do List <span class="version" id="version"></span></h1>
+
+	<div class="tabs">
+		<ul class="tabs__caption">
+			<li class="active" data-i18n="options">Options</li>
+			<li data-i18n="importExport">Import/Export</li>
+			<li data-i18n="versionHistory">Version History</li>
+		</ul>
+
+		<div class="tabs__content  active">
+
+			<div class="option">
+				<div class="option__title"><span data-i18n="popupWidth">Extension popup width:</span></div>
+				<input type="number" min="300" max="800" step="10" id="popup-width" data-default="400" />
+				<div class="option__after">px <em>(min - 300, max - 800)</em></div>
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span data-i18n="taskFontCSS">CSS for the task font:</span></div>
+				<input type="text" id="task-css" data-default="font-size: 13px; line-height: 16px; font-family: Helvetica, Arial, sans-serif" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span data-i18n="priority1color">Color for a task with priority 1:</span></div>
+				<input type="text" class="color" id="color1" data-default="#F04B39" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span data-i18n="priority2color">Color for a task with priority 2:</span></div>
+				<input type="text" class="color" id="color2" data-default="#FFA600" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span data-i18n="priority3color">Color for a task with priority 3:</span></div>
+				<input type="text" class="color" id="color3" data-default="#75BE2C" />
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span data-i18n="hotkeys">Горячие клавиши:</span></div>
+				<div class="radios" id="hotkeys">
+
+					<label><input type="radio" name="hotkey" value="0" /><span><kdb>Enter</kdb> – <span data-i18n="addSave">add, save a task</span>;<br /> <kdb style="margin-left: 25px">Ctrl + Enter</kdb> (<kdb>Shift + Enter</kdb>) – <span data-i18n="newLine">new line</span></span></label>
+
+					<label><input type="radio" name="hotkey" value="1" /><span><kdb>Ctrl + Enter</kdb> – <span data-i18n="addSave">add, save a task</span>;<br /> <kdb style="margin-left: 25px">Enter</kdb> (<kdb>Shift + Enter</kdb>) – <span data-i18n="newLine">new line</span></span></label>
+				</div><!-- .radios -->
+			</div><!-- .option -->
+
+			<div class="option">
+				<div class="option__title"><span><span data-i18n="browsersContextMenu">Browser's context menu</span><br /> (<span data-i18n="saveAsTask">Save as task</span>):</span></div>
+				<div class="checkbox" id="context-menu" data-default="0" data-val="0"></div>
+				<div class="option__note" data-i18n="browsersContextMenuRestart">После изменения данной опции необходимо перезапустить расширение.</div>
+			</div><!-- .option -->
+
+			<div class="buttons">
+				<div class="button" id="save"><div data-i18n="saveOptions">Save Options</div></div>
+				<div class="button  gray-button" id="defaults"><div data-i18n="restoreDefaults">Restore Defaults</div></div>
+			</div><!-- .buttons -->
+		</div><!-- .tabs__content -->
+
+		<div class="tabs__content">
+
+			<h2 data-i18n="importData">Import Data</h2>
+			<p data-i18n="importNote">Here you can import the data (options and tasks), exported from another browser.</p>
+			<textarea id="import" name="" cols="30" rows="7"></textarea>
+			<div class="buttons">
+				<div class="button" id="import-button"><div data-i18n="importData2">Import Data</div></div>
+				<div class="button gray-button" id="clear-button"><div data-i18n="clearAllData">Clear All Data</div></div>
+			</div><!-- .buttons -->
+
+			<div class="modal" id="confirm-import"><div class="modal-inner">
+				<div class="modal__headline" data-i18n="areYouSure">Are you sure?</div>
+				<p data-i18n="confirmImportNote">All current data will be overwritten!</p>
+				<div class="buttons">
+					<div class="button" id="import-yes"><div data-i18n="yes">Yes</div></div>
+					<div class="button gray-button" id="import-no"><div data-i18n="no">No</div></div>
+				</div><!-- .buttons -->
+			</div></div><!-- .modal -->
+
+			<div class="modal" id="confirm-clear"><div class="modal-inner">
+				<div class="modal__headline" data-i18n="areYouSure">Are you sure?</div>
+				<p data-i18n="clearNote">The database and all settings of the extension will be deleted!</p>
+				<div class="buttons">
+					<div class="button" id="clear-yes"><div data-i18n="yes">Yes</div></div>
+					<div class="button gray-button" id="clear-no"><div data-i18n="no">No</div></div>
+				</div><!-- .buttons -->
+			</div></div><!-- .modal -->
+
+			<div class="modal" id="done"><div class="modal-inner">
+				<div class="modal__headline" id="data-imported-successfully" data-i18n="dataImportedSuccessfully">Data imported successfully</div>
+				<div class="modal__headline" id="could-not-be-imported" data-i18n="couldNotBeImported">The data could not be imported due to wrong format</div>
+				<div class="modal__headline" id="all-data-is-deleted" data-i18n="allDataIsDeleted">All data is deleted</div>
+				<div class="buttons">
+					<div class="button" id="ok"><div data-i18n="ok">Ok</div></div>
+				</div><!-- .buttons -->
+			</div></div><!-- .modal -->
+
+			<h2 data-i18n="exportData">Export Data</h2>
+			<p data-i18n="exportNote">Use this code to import data (options and tasks) into another browser.</p>
+			<textarea id="export" name="" cols="30" rows="7"></textarea>
+
+			<a href="" id="export-link" data-i18n="clickToDownload">Click to download data as file</a>
+
+		</div><!-- .tabs__content -->
+
+		<div class="tabs__content">
+
+			<dl>
+				<dt>1.3.5 <sup>2017.02.05</sup></dt>
+				<dd class="added">Added: new option "Extension popup width".</dd>
+			</dl>
+
+			<dl>
+				<dt>1.3.4.1 <sup>2015.11.26</sup></dt>
+				<dd class="fixed">Fixed: data lost in Chrome.</dd>
+			</dl>
+
+			<dl>
+				<dt>1.3.4 <sup>2015.11.24</sup></dt>
+				<dd class="added">Added: entered text automatically saves in the input field when you close the extension popup.</dd>
+				<dd class="changed">Changed: the "Delete completed tasks" link now displays only if there is completed tasks in the list.</dd>
+				<dd class="changed">Changed: data structure in localStorage.</dd>
+			</dl>
+
+			<dl>
+				<dt>1.3.3.1 <sup>2015.01.11</sup></dt>
+				<dd class="added">Added: options for 'Enter' and 'Ctrl + Enter' hotkeys.</dd>
+				<dd class="changed">Changed: "Save as task" in browser's context menu is now can be disabled in options.</dd>
+				<dd class="changed">Changed: task edit mode is now activated in a single click.</dd>
+				<dd class="fixed">Fixed: wrong counter on browser startup until you click the extension icon.</dd>
+				<dd class="fixed">Fixed: "Save as task" has not worked in Chrome.</dd>
+			</dl>
+
+			<dl>
+				<dt>1.3.2 <sup>2014.05.12</sup></dt>
+				<dd class="added">Added support for data synchronization.</dd>
+			</dl>
+
+			<dl>
+				<dt>1.3 <sup>2013.11.24</sup></dt>
+				<dd class="added">Added context menu to save the selected text on a page as a task.</dd>
+				<dd class="changed">Changed: extension icon now shows the task counter on browser start up.</dd>
+			</dl>
+
+			<dl>
+				<dt>1.2 <sup>2013.09.21</sup></dt>
+				<dd class="added">Added localization support.</dd>
+				<dd class="added">Added 'Export/Import' functionality.</dd>
+				<dd class="added">Added 'Ctrl + Enter' hotkey to add a new task or to save a modified task.</dd>
+				<dd class="changed">Changed: 'Enter' key now adds a new line.</dd>
+				<dd class="fixed">Fixed: task not saved on 'Save' button click.</dd>
+				<dd class="fixed">Fixed: some bugs related to removing completed tasks.</dd>
+			</dl>
+
+			<dl>
+				<dt>1.1 <sup>2013.08.20</sup></dt>
+				<dd class="added">Added: tasks are now draggable.</dd>
+				<dd class="added">Added extension options.</dd>
+				<dd class="changed">Changed: increased the widget's width.</dd>
+			</dl>
+
+			<dl>
+				<dt>1.0 <sup>2013.07.16</sup></dt>
+				<dd class="added">Initial version.</dd>
+			</dl>
+
+		</div><!-- .tabs__content -->
+
+	</div><!-- .tabs -->
+
+	<div class="copyright">
+		© 2013–<span class="current-year"></span> Developed by <a href="http://dimox.net" id="developer-url">Dimox</a>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="DB7YANVJFY2PS">
+			<input type="image" src="data:image/gif;base64,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" name="submit">
+		</form>
+	</div><!-- .copyright -->
+
+</div><!-- .wrapper -->
+
+</body>
+</html>

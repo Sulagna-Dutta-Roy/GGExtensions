@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "__MSG_extensionName__",
+	"description": "__MSG_extensionDescription__",
+	"version": "1.3.5",
+	"background": {"scripts": ["js/background.js"]},
+	"options_page": "options.html",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "index.html",
+		"default_title": "__MSG_extensionName__"
+	},
+	"permissions": [
+		"contextMenus",
+		"storage"
+	],
+	"default_locale": "en",
+	"icons": {
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	},
+	"manifest_version": 2
+}

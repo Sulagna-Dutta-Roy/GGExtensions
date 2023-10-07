@@ -1,0 +1,132 @@
+{
+	"extensionName":{
+		"message": "Simple To-Do List"
+	},
+	"extensionDescription": {
+		"message": "Simple and minimalistic extension for task management."
+	},
+	"optionsTitle": {
+		"message": "Options"
+	},
+	"deleteCompleted": {
+		"message": "Delete completed tasks"
+	},
+	"edit": {
+		"message": "Edit"
+	},
+	"priority": {
+		"message": "Priority:"
+	},
+	"delete": {
+		"message": "Delete"
+	},
+	"save": {
+		"message": "Save"
+	},
+	"newTask": {
+		"message": "Type a new task..."
+	},
+	"addTask": {
+		"message": "Add"
+	},
+	"options": {
+		"message": "Options"
+	},
+	"importExport": {
+		"message": "Import/Export"
+	},
+	"versionHistory": {
+		"message": "Version History"
+	},
+	"popupWidth": {
+		"message": "Extension popup width:"
+	},
+	"taskFontCSS": {
+		"message": "CSS for the task font:"
+	},
+	"priority1color": {
+		"message": "Color for a task with priority 1:"
+	},
+	"priority2color": {
+		"message": "Color for a task with priority 2:"
+	},
+	"priority3color": {
+		"message": "Color for a task with priority 3:"
+	},
+	"hotkeys": {
+		"message": "Hotkeys:"
+	},
+	"addSave": {
+		"message": "add, save a task"
+	},
+	"newLine": {
+		"message": "new line"
+	},
+	"browsersContextMenu": {
+		"message": "Browser's context menu"
+	},
+	"browsersContextMenuRestart": {
+		"message": "After changing this option you must restart the extension."
+	},
+	"saveOptions": {
+		"message": "Save Options"
+	},
+	"restoreDefaults": {
+		"message": "Restore Defaults"
+	},
+	"importData": {
+		"message": "Import Data"
+	},
+	"importNote": {
+		"message": "Here you can import the data (options and tasks), exported from another browser."
+	},
+	"importData2": {
+		"message": "Import Data"
+	},
+	"clearAllData": {
+		"message": "Clear All Data"
+	},
+	"areYouSure": {
+		"message": "Are you sure?"
+	},
+	"confirmImportNote": {
+		"message": "All current data will be overwritten!"
+	},
+	"clearNote": {
+		"message": "The database and all settings of the extension will be deleted!"
+	},
+	"yes": {
+		"message": "Yes"
+	},
+	"no": {
+		"message": "No"
+	},
+	"dataImportedSuccessfully": {
+		"message": "Data imported successfully"
+	},
+	"couldNotBeImported": {
+		"message": "The data could not be imported due to wrong format"
+	},
+	"allDataIsDeleted": {
+		"message": "All data is deleted"
+	},
+	"ok": {
+		"message": "Ok"
+	},
+	"exportData": {
+		"message": "Export Data"
+	},
+	"exportNote": {
+		"message": "Use this code to import data (options and tasks) into another browser."
+	},
+	"clickToDownload": {
+		"message": "Click to download data as file"
+	},
+	"saveAsTask": {
+		"message": "Save as task"
+	},
+
+	"locale": {
+		"message": "en"
+	}
+}
