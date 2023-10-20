@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title msg="upload">upload</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		body {
+            text-align: center;
+        }
+
+        #chooseFile {
+            border-radius:50%;
+            display: inline-block;
+            zoom: 2;
+        }
+	</style>
+
+    <script src="js/polymer-css.js"></script>
+	<script src="js/common.js"></script>
+    <script src="js/extensionCommon.js"></script>
+	<script defer src="js/explainAndSendScreenshots.js"></script>
+	<script defer src="js/openFile.js"></script>
+</head>
+
+<body>
+	<div style="margin-top:100px">
+		<paper-icon-button id="chooseFile" icon="file-upload" class="paper-material" elevation="1"></paper-icon-button>
+		<input id="file" type="file" hidden/>
+	</div>
+</body>
+</html>

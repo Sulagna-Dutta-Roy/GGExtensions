@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<head>
+	<title>Jason Savard Apps</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<script src="js/polymer-css.js"></script>
+
+	<custom-style>
+		<style>
+			paper-icon-button {
+				--iron-icon: {
+					opacity:0.8;
+				}
+			}
+		</style>
+	</custom-style>
+	
+	<style>
+	  	body {font-size:90%;background-color:#FAFAFA}
+	  	body.processing, body.processing paper-button {cursor:progress}
+		#processing {position:fixed;left:49%;top:35%;z-index:100;display:none}
+	  	body.processing #processing {display:block}
+	  	body.processing app-header-layout {opacity:0.2}
+	  	
+	  	.hide {display:none}
+	  	
+	  	:link, :visited {
+		    color: #03a9f4;
+		    outline: 0;
+		    text-decoration: none;
+		}
+	  	
+	  	[main-title] a {color:white}
+			
+	  	#paymentMethods {margin:15px 0}
+	  	#paymentMethods paper-button {min-width:108px}
+		
+		/* Firefox fix */
+		paper-button {background-color:white}
+		app-toolbar paper-button {background-color:transparent}
+		/* Original commented */
+		xxapp-header-layout > div paper-button {background-color:white !important}
+		
+		.amountSelections paper-button[focused] {background-color: #ddd !important}
+		
+		#amount {width:70px;border:none;padding:12px 12px 11px 12px;text-align:center;display:inline-block;margin-left:4px}
+		
+		#submitDonationAmount {opacity:0;transition:opacity 0.1s ease-in;pointer-events: none}
+		#submitDonationAmount.visible {opacity:1; pointer-events: auto}
+		
+		#extraFeatures {padding:0 40px;text-align:center}
+		#extraFeatures > div {font-size:1.1em;margin:3px}
+
+		#licenseOptions paper-item {justify-content:center}
+		
+		#recurringPayment {margin:20px}
+		
+		paper-checkbox #checkbox.checked {
+			background-color:transparent !important;
+			border-color: black !important;
+		}
+		
+		#paymentType paper-icon-button {opacity:0.8}
+		#paymentType paper-icon-button:hover {opacity:1}
+		#paymentType paper-radio-button {width:160px;padding:12px}
+		.add {vertical-align:top;margin-top:5px;color:#aaa;width:15px}
+		
+	</style>
+	
+	<custom-style>
+		<style is="custom-style">
+			#currencyWrapper {
+				--paper-input-container-underline: {
+					display:none;
+				}
+				--paper-input-container-underline-focus: {
+					display:none;
+				}
+			}
+		</style>
+	</custom-style>
+	
+	<script src="js/common.js"></script>
+	<script src="js/extensionCommon.js"></script>
+   	<script defer src="js/explainAndSendScreenshots.js"></script>
+  	<script defer src="js/contribute.js"></script>
+	
+</head>
+<body class="fullbleed" unresolved unresolved2>
+
+	<paper-spinner id="processing" active></paper-spinner>
+	<app-header-layout>
+		<app-header slot="header" fixed post-effects="waterfall">
+			<app-toolbar>
+				<div main-title class="layout horizontal center">
+					<img src="images/icons/default48.png" align="absmiddle">
+					<div><a class="titleLink" href="https://jasonsavard.com?ref=SSContributeTitle">Jason Savard Extension</a></div>
+				</div>
+				<a class="inherit" href="options.html"><paper-button msg="options">options</paper-button></a> <paper-button id="alreadyDonated" msg="alreadyDonated">Already contributed</paper-button> <paper-button id="help" msg="help">Help</paper-button>
+			</app-toolbar>
+		</app-header>
+		<!--paper-progress id="progress" indeterminate style="position:absolute;opacity:0;width:100%;height:4px"></paper-progress-->
+		<div class="layout vertical center" style="margin-top:30px">
+			<div id="extraFeaturesWrapper" class="layout horizontal" style="margin:10px 0 40px 0;background-color:white">
+				<div class="paper-material layout vertical center-justified" style="padding-bottom:20px" elevation=1><!-- padding-bottom required because -->
+					<div id="extraFeatures" class="layout vertical center">
+						<h2 style="margin-top:0" msg="extraFeatures">Extra Features</h2>
+						<div msg="removeHeaderFooter">removeHeaderFooter</div>
+						<div msg="changeFontOptions">changeFontSize</div>
+						<div msg="darkMode">dark mode</div>
+						<div msg="changeButtonIcon">Change button icon</div>
+						<div msg="hideButtons">hideButtons</div>
+						<div msg="hideToolbarInPopup">Hide toolbar in popup</div>
+                        <div msg="presetButtonAction">presetButtonAction</div>
+                        <div msg="filters">filters</div>
+					</div>
+				</div>
+				<div class="paper-material layout vertical center-center" elevation=1>
+					<iframe id="video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div id="paymentArea" class="layout vertical center">
+
+				<paper-radio-group id="paymentType" class="paper-material" style="background:white;padding:6px 19px" elevation="1">
+						<paper-radio-button name="onetime"><span msg="onetime">onetime</span></paper-radio-button>
+						<div style="display:inline-block;vertical-align:middle;margin-left:15px">
+							<paper-icon-button src="images/allExtensionIcons/screenshot.png"></paper-icon-button>
+						</div>
+						<div style="border-bottom:1px solid #eee;margin: 0 -19px;padding:0"></div>
+					<paper-radio-button name="monthly-all-extensions">
+						<div msg="monthly" style="margin:0 0 4px">Monthly</div>
+						<div msg="monthlySubtitle" style="font-size:80%">Best deal! Cancel anytime</div>
+					</paper-radio-button>
+						<div style="display:inline-block;vertical-align:middle;margin-left:15px">
+							<paper-icon-button id="screenshotExtraFeatures" src="images/allExtensionIcons/screenshot.png"></paper-icon-button>
+							<iron-icon class="add" icon="add"></iron-icon>
+							<paper-icon-button id="gmailExtraFeatures" src="images/allExtensionIcons/gmail.png"></paper-icon-button>
+							<iron-icon class="add" icon="add"></iron-icon>
+							<paper-icon-button id="calendarExtraFeatures" src="images/allExtensionIcons/calendar.png"></paper-icon-button>
+							<iron-icon class="add" icon="add"></iron-icon>
+							<paper-icon-button id="driveExtraFeatures" src="images/allExtensionIcons/drive.png"></paper-icon-button>
+							<iron-icon class="add" icon="add"></iron-icon>
+							<paper-icon-button id="support" icon="communication:chat-bubble-outline" style="opacity:0.5"></paper-icon-button>
+						</div>
+					</paper-radio-group>
+				<paper-tooltip for="driveExtraFeatures" animation-delay="200" fit-to-visible-bounds>
+					<div style="text-align:center">
+						<div style="margin:8px 0 15px;font-size:120%" msg="includesExtraFeaturesForX" msgArg1=" "></div>
+						<img src="/images/allExtensionIcons/drive-promo-small.webp" height="200"/>
+					</div>
+				</paper-tooltip>
+				<paper-tooltip for="gmailExtraFeatures" animation-delay="200" fit-to-visible-bounds>
+					<div style="text-align:center">
+						<div style="margin:8px 0 15px;font-size:120%" msg="includesExtraFeaturesForX" msgArg1=" "></div>
+						<img src="/images/allExtensionIcons/gmail-promo-small.webp" height="200"/>
+					</div>
+				</paper-tooltip>
+				<paper-tooltip for="calendarExtraFeatures" animation-delay="200" fit-to-visible-bounds>
+					<div style="text-align:center">
+						<div style="margin:8px 0 15px;font-size:120%" msg="includesExtraFeaturesForX" msgArg1=" "></div>
+						<img src="/images/allExtensionIcons/calendar-promo-small.webp" height="200"/>
+					</div>
+				</paper-tooltip>
+	 			<paper-tooltip for="support" animation-delay="100" fit-to-visible-bounds><span msg="support"></span></paper-tooltip>
+
+				<paper-button id="singleUserButton" raised hidden>
+					<iron-icon icon="social:person"></iron-icon>
+					<span msg="Xuser" msgArg1="1">1 user</span>
+				</paper-button>
+
+				<div id="multipleUserLicenseWrapper" class="hide" style="margin-top:10px;text-align:center">
+					<div id="licenseOnlyValidFor"><span msg="licenseOnlyValidFor">Valid only for a </span> <span id="licenseDomain" style="font-weight:bold">@abc.com</span>							(<a id="changeDomain" href="#">Change domain</a>) </div>
+					<div id="signInAsUserOfOrg" class="hide"><span msg="signInAsUserOfOrg"><a msg="signInAsUserOfOrg2" class="signOutAndSignIn" href="javascript:;">signInAsUserOfOrg2</a>sign as a diff</span>							<span style="white-space:nowrap"><span msg="example">example</span>: <span id="exampleEmail">abc@mycompany.com</span></span></div>
+					<paper-listbox id="licenseOptions" slot="dropdown-content" class="paper-material" elevation="1" style="width:200px;margin:20px auto">
+							<paper-item users="1" price="any" style="text-transform:lowercase">
+								<paper-item-body two-line>
+									<div>x user</div>
+									<div secondary><span msg="anyAmount">any amount</span></div>
+								</paper-item-body>
+							</paper-item>
+							<paper-item users="5" price="2.99">
+								<paper-item-body two-line>
+									<div>x users</div>
+									<div secondary>$x</div>
+								</paper-item-body>
+							</paper-item>
+							<paper-item users="20" price="9.99">
+								<paper-item-body two-line>
+									<div>x users</div>
+									<div secondary>$x</div>
+								</paper-item-body>
+							</paper-item>
+							<paper-item users="unlimited" price="29.99">
+								<paper-item-body two-line>
+									<div>x users</div>
+									<div secondary>$x</div>
+								</paper-item-body>
+							</paper-item>
+							<paper-item users="other">
+								<paper-item-body two-line>
+									<div msg="otherPlans">Other plans</div>
+									<div secondary msg="otherPlansDescription">aa ...</div>
+								</paper-item-body>
+							</paper-item>
+						</paper-listbox>
+				</div>
+
+				<div id="donateAmountWrapper" class="hide" style="margin-top:12px">
+					<paper-dropdown-menu id="currencyWrapper" style="width:72px">
+						<paper-listbox id="currency" slot="dropdown-content" attr-for-selected="value" selected="USD">
+							<paper-item value="USD" symbol="$">USD $</paper-item>
+							<paper-item value="EUR" symbol="€">EUR €</paper-item>
+							<paper-item value="GBP" symbol="£">GBP £</paper-item>
+							<paper-item value="AUD" symbol="$">AUD $</paper-item>
+							<paper-item value="CAD" symbol="$">CAD $</paper-item>
+							<paper-item value="JPY" symbol="¥">JPY ¥</paper-item>
+							<paper-item value="TWD" symbol="$">TWD $</paper-item>
+							<paper-item value="BTC" symbol="BTC">BTC</paper-item>
+						</paper-listbox>
+					</paper-dropdown-menu>
+
+					<span id="monthlyAmountSelections" class="amountSelections">
+							<paper-button raised amount="10">10</paper-button>
+							<paper-button raised amount="5">5</paper-button>
+						<paper-button raised amount="3">3</paper-button>
+						<paper-button raised amount="2">2</paper-button>
+						</span>
+					<span id="onetimeAmountSelections" class="amountSelections" hidden>
+						<paper-button raised amount="40">40</paper-button>
+						<paper-button raised amount="20">20</paper-button>
+						<paper-button raised amount="15">15</paper-button>
+						<paper-button raised amount="10">10</paper-button>
+					</span>
+					<input type="text" id="amount" class="paper-material" elevation="1" name="amount" autocomplete="off" msgPlaceholder="amount"/> <paper-button id="submitDonationAmount" icon="check" class="colored" style="margin-inline-start:20px" raised msg="ok"></paper-button>
+				</div>
+
+				<div id="paymentMethods" class="hide">
+					<paper-button id="paypal" raised hidden>
+						<iron-icon src="/images/paypal.png"></iron-icon>
+						PayPal
+					</paper-button>
+					<paper-button id="stripe" raised>
+						<iron-icon icon="credit-card"></iron-icon>
+						<span msg="card">Card</span>
+					</paper-button>
+                    <paper-tooltip for="stripe" animation-delay="0" fit-to-visible-bounds><img style="width:120px" src="/images/powered_by_stripe.svg" /><span hidden>.</span></paper-tooltip>
+					<paper-button id="googlePay" raised>
+                        <iron-icon src="/images/googlePay.png"></iron-icon>
+                        Pay
+                    </paper-button>
+					<paper-button id="applePay" raised>
+						<iron-icon style="transform: translateY(-2px)" src="/images/apple_logo_black.svg"></iron-icon>
+						Pay
+					</paper-button>
+					<!--paper-button id="alipay" raised>
+						<iron-icon src="/images/alipay.png"></iron-icon>
+						Alipay
+					</paper-button-->
+					<paper-button id="wechat-pay" raised>
+						<iron-icon src="/images/wechat-pay.png"></iron-icon>
+						WeChat
+					</paper-button>
+					<paper-button id="coinbase" raised>
+						<iron-icon src="/images/bitcoin.svg"></iron-icon>
+						<span>Coinbase</span>
+					</paper-button>
+				</div>
+
+				<div id="multipleUserLicenseIntro">
+					<div style="margin:15px 0 20px">
+						<a id="multipleUserLicenseLink" style="font-size:0.9em" href="#" msg="multipleUserLicense">multipler user lcience</a>
+					</div>
+					<div id="multipleUserLicenseButtonWrapper" class="hide">
+						<div msg="or" style="text-align:center;margin:20px 0;font-size:1.2em">or</div>
+						<paper-button id="multipleUserLicenseButton" raised>
+							<iron-icon icon="social:people"></iron-icon>
+							<span id="multipleUserLicenseFor">multipleuser license for</span>
+						</paper-button>
+					</div>
+				</div>
+
+			</div>
+			<div id="paymentComplete" hidden class="layout vertical center">
+				<div msg="thankYouForYourContribution">thank you...</div>
+				<div id="unlockOtherExtensions" msg="unlockOtherExtensions" hidden style="margin-top:3px;font-style:italic;color:gray">Unlock the other extensions by opening their contribute page and use the Already Contributed link above.</div>
+				<paper-button id="options" raised msg="options" style="margin-top:20px">options</paper-button>
+			</div>
+		</div>
+	</app-header-layout>
+
+	<template id="genericDialogTemplate">
+		<paper-dialog id="genericDialog" modal="true">
+			<h2>blah blah</h2>
+			<paper-dialog-scrollable class="dialogDescription"></paper-dialog-scrollable>
+			<div class="buttons">
+		  		<paper-button dialog-other class="otherDialog" hidden>empty</paper-button>
+	  			<paper-button dialog-confirm autofocus>OK</paper-button>
+	  		</div>
+		</paper-dialog>
+	</template>
+
+	<template id="noPaymentFoundDialogTemplate">
+		<paper-dialog id="noPaymentFoundDialog" modal="true">
+			<h2>No payment found!</h2>
+			<paper-dialog-scrollable class="dialogDescription">
+				<span>No payment found for email</span>: <span id="noPaymentEmail" style="font-weight:bold"></span>
+				<br>
+				<div>Make sure to sign into the Google account which you contributed from, then try again!</div>
+				<span style="color:gray;font-style:italic">(If your contribution is not recognized then please use the <a href="https://jasonsavard.com/already-contributed-form">already contributed form</a>)</span>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+	  			<paper-button dialog-confirm autofocus>OK</paper-button>
+	  		</div>
+		</paper-dialog>
+	</template>
+
+	<template id="mobilePayDialogTemplate">
+		<paper-dialog id="mobilePayDialog" modal="true">
+			<h2></h2>
+			<paper-dialog-scrollable class="dialogDescription" style="text-align:center"></paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button dialog-dismiss class="cancelDialog"><span msg="cancel">cancel</span></paper-button>
+				<paper-button class="continue"><span msg="continue">continue</span></paper-button>
+			</div>
+		</paper-dialog>
+	</template>
+
+	<template id="alreadyDonatedDialogTemplate">
+		<paper-dialog id="alreadyDonatedDialog" modal="true">
+			<paper-dialog-scrollable class="dialogDescription">
+				<paper-input id="alreadyDonatedEmail" label="Email" autofocus></paper-input>
+				<paper-input id="confirmationNumber" label="Order #"></paper-input>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button dialog-other class="otherDialog"><span>Help with order number</span></paper-button>
+				<paper-button dialog-dismiss class="cancelDialog"><span msg="cancel"></span></paper-button>
+		  		<paper-button dialog-confirm class="okDialog"><span>Submit</span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+	
+	<paper-toast id="message"><paper-icon-button class="closeToast" icon="close"></paper-icon-button></paper-toast>
+	<paper-toast id="error"><paper-button class="toastLink"></paper-button> <paper-icon-button class="closeToast" icon="close"></paper-icon-button></paper-toast>
+
+</body>
+</html>

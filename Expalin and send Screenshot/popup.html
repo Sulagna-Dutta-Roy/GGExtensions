@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Explain & Send Screenshots</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   	
+   	<style>
+   		[resolved] {opacity:1 !important}
+   	
+   		body {margin:0;width:280px;font-size:14px;opacity:0} /* margin:0 instead of fullbleed because it created slight resizing of popup on load, height 305px before */
+
+  	 	a {color:#3c80f6}
+  	 	a:visited {color:#3f51b5}
+  	 	
+  	 	input, textarea, keygen, select {font-size:14px}
+  	 	
+  	 	#titleClickArea {pointer-events:auto;cursor:pointer} /* had to override things because paper-toolbar's .title conflicts here */
+  	 	.logo {vertical-align: middle}
+  	 	
+  	 	xx.share-button {display:none}
+  	 	
+  	 	textarea {font-family:'Segoe UI', Tahoma, sans-serif}
+  	 	
+  	 	paper-dialog-scrollable .scrollable {max-width:100% !important}
+  	 	
+   		paper-spinner .circle {border-color: gray !important}
+   		
+		.highDevicePixelRatio body {width:100vw !important;height:100vh !important}
+   		
+		#topLeft paper-icon-button {vertical-align:middle}
+		
+		.topRight {margin-right:-10px}
+		.topRight paper-menu-button {padding:0}
+		
+		#newsNotification {opacity:1}
+		
+        .extraActionButton {
+            background-color: var(--bg-light-color);
+            box-shadow: 1px 1px 1px gray;
+            border-radius: 50%;
+            transition: background-color 0.1s ease-in;
+        }
+
+		#mainContent paper-icon-item:not(:hover) .extraActionButton:not(.clicked) {display:none}
+		#mainContent paper-icon-item {line-height:normal}
+		#mainContent paper-icon-item paper-tooltip {white-space:nowrap}
+
+		.with-clipboard-contents {
+			background-size: contain;
+			background-position: center;
+			background-repeat:no-repeat;
+			height:120px;
+		}
+
+		.with-clipboard-contents:hover {
+			background-color:white;
+			opacity:0.7;
+		}
+		
+    </style>
+    
+	<script src="js/polymer-css.js"></script>
+
+	<script src="js/common.js"></script>
+	<script src="js/extensionCommon.js"></script>
+
+   	<script defer src="js/explainAndSendScreenshots.js"></script>
+   	<script defer src="js/popup.js"></script>
+
+</head>
+
+<body unresolved unresolved2>
+
+	<app-toolbar>
+		<div main-title id="topLeft" class="flex layout horizontal">
+			<div class="titleWrapper">
+				<div id="titleClickArea" class="title layout horizontal center">
+					<div style="margin-inline-end:4px"><img class="logo" src="/images/icons/default128.png" style="width:40px"/></div>
+					<div style="font-size:12px;vertical-align:middle">Explain & Send Screenshots</div>
+				</div>
+			</div>
+		</div>
+		<div class="topRight">
+            <paper-icon-button id="newsNotification" icon="av:new-releases" hidden></paper-icon-button>
+            <paper-tooltip for="newsNotification" animation-delay="100" fit-to-visible-bounds="true">
+                <div id="newsNotificationBigUpdateMessage" hidden style="text-align:center;white-space:nowrap"><span msg="extensionUpdated">big update</span></div>
+            </paper-tooltip>
+			<paper-menu-button id="mainOptions" msgHALIGN="right">
+				<paper-icon-button id="mainOptions" slot="dropdown-trigger" icon="more-vert" msgTitle="options" style="opacity:0.8"></paper-icon-button>
+				<paper-listbox id="options-menu" slot="dropdown-content">
+					<paper-icon-item class="options">
+						<iron-icon icon="settings" slot="item-icon"></iron-icon>
+						<span msg="options"></span>
+					</paper-icon-item>
+					<paper-item class="separator" disabled></paper-item>
+					<paper-item class="contribute"><span msg="contribute">contribute</span></paper-item>
+					<paper-item class="changelog"><span msg="changelog">Changelog</span></paper-item>
+					<paper-item class="discoverMyApps"><span msg="discoverMyApps">discoverMyApps</span></paper-item>
+					<paper-item class="aboutMe"><span msg="aboutMe">about me</span></paper-item>
+					<paper-item class="help"><span msg="help">help</span></paper-item>
+				</paper-listbox>
+			</paper-menu-button>
+			<paper-icon-button class="close" msgTitle="closeEsc" icon="close" hidden></paper-icon-button>
+		</div>
+	</app-toolbar>
+	<div id="mainContent">
+		<paper-listbox style="padding:0" slot="dropdown-content">
+			<paper-icon-item id="selectedArea">
+				<iron-icon icon="image:crop-free" slot="item-icon"></iron-icon>
+				<paper-item-body>
+					<span msg="selectArea"></span>
+					<paper-ripple/>
+				</paper-item-body>
+				<paper-icon-button id="selectedAreaDelay" class="extraActionButton" icon="image:timer"></paper-icon-button>
+				<paper-tooltip for="selectedAreaDelay" fit-to-visible-bounds="true" animation-delay="1"><span msg="addXDelay" msgArg1="3s"></span></paper-tooltip>
+			</paper-icon-item>
+			<paper-icon-item id="selectElement">
+				<iron-icon icon="image:center-focus-strong" slot="item-icon"></iron-icon>
+				<paper-item-body>
+					<span msg="selectElement"></span>
+					<paper-ripple/>
+				</paper-item-body>
+				<paper-icon-button id="selectElementDelay" class="extraActionButton" icon="image:timer"></paper-icon-button>
+				<paper-tooltip for="selectElementDelay" fit-to-visible-bounds="true" animation-delay="1"><span msg="addXDelay" msgArg1="3s"></span></paper-tooltip>
+			</paper-icon-item>
+			<paper-icon-item id="visibleArea">
+				<iron-icon icon="image:crop-landscape" slot="item-icon"></iron-icon>
+				<paper-item-body>
+					<span msg="grabVisiblePart"></span>
+					<paper-ripple/>
+				</paper-item-body>
+				<paper-icon-button id="visibleAreaDelay" class="extraActionButton" icon="image:timer"></paper-icon-button>
+				<paper-tooltip for="visibleAreaDelay" fit-to-visible-bounds="true" animation-delay="1"><span msg="addXDelay" msgArg1="3s"></span></paper-tooltip>
+			</paper-icon-item>
+			<paper-icon-item id="entirePage">
+				<iron-icon icon="editor:vertical-align-bottom" slot="item-icon"></iron-icon>
+                <paper-item-body>
+					<span msg="grabEntirePage"></span>
+					<paper-ripple/>
+				</paper-item-body>
+                <paper-icon-button class="extraActionButton" hidden></paper-icon-button>
+			</paper-icon-item>
+			<paper-icon-item id="entireScreen" chromium-only>
+				<iron-icon icon="hardware:desktop-windows" slot="item-icon"></iron-icon>
+				<paper-item-body>
+					<span msg="grabEntireScreen"></span>
+					<paper-ripple/>
+				</paper-item-body>
+				<paper-icon-button id="screenDelay" class="extraActionButton" icon="image:timer"></paper-icon-button>
+				<paper-tooltip for="screenDelay" fit-to-visible-bounds="true" animation-delay="1"><span msg="addXDelay" msgArg1="5s"></span></paper-tooltip>
+			</paper-icon-item>
+			<paper-icon-item id="recordScreen" chromium-only>
+				<iron-icon icon="av:videocam" slot="item-icon"></iron-icon>
+				<paper-item-body>
+                    <span msg="recordScreen"></span>
+                    <div style="color:gray;font-size:0.6em"><span msg="enableMic">Enable mic</span> &#8594;</div>
+					<paper-ripple/>
+				</paper-item-body>
+				<paper-icon-button id="enableMic" class="extraActionButton" icon="av:mic"></paper-icon-button>
+				<paper-tooltip for="enableMic" fit-to-visible-bounds="true" animation-delay="1"><span msg="enableMic">enableMic</span></paper-tooltip>
+			</paper-icon-item>
+			<paper-item class="separator"></paper-item>
+			<paper-icon-item id="openFile">
+				<iron-icon icon="file-upload" slot="item-icon"></iron-icon>
+				<span msg="openFile"></span>
+				<paper-ripple/>
+			</paper-icon-item>
+			<paper-item id="clipboard-separator" class="separator" hidden></paper-item>
+			<paper-icon-item id="openFromClipboard" chromium-only>
+				<iron-icon class="remove-in-presence-of-clipboard-contents" icon="content-paste" slot="item-icon"></iron-icon>
+				<paper-item-body>
+					<span class="remove-in-presence-of-clipboard-contents" msg="openFromClipboard"></span>
+					<paper-ripple/>
+				</paper-item-body>
+				<paper-icon-button id="clipboardCrop" class="extraActionButton" icon="image:crop"></paper-icon-button>
+				<paper-tooltip for="clipboardCrop" fit-to-visible-bounds="true"><span msg="openFromClipboardAndCrop">openFromClipboardAndCrop</span></paper-tooltip>
+			</paper-icon-item>
+		</paper-listbox>
+	</div>
+	
+	<paper-toast id="processing"><paper-spinner dir="ltr" active></paper-spinner></paper-toast>
+	<paper-toast id="message"><paper-icon-button class="closeToast" icon="close"></paper-icon-button></paper-toast>
+	<paper-toast id="error"><paper-button class="toastLink" hidden></paper-button> <paper-icon-button class="closeToast" icon="close"></paper-icon-button></paper-toast>
+	
+	<div style="position:absolute;top:0;left:0;height:100vh;width:0">
+		<!-- patch for resize loop in popup windows when using paper-dialog: this will be used as the positionTarget instead of the body https://www.webcomponents.org/element/PolymerElements/iron-fit-behavior/behaviors/Polymer.IronFitBehavior#property-fitInto -->
+	
+		<template id="genericDialogTemplate">
+			<paper-dialog id="genericDialog" modal="true">
+				<h2>blah blah</h2>
+				<paper-dialog-scrollable class="dialogDescription">
+					blah
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button dialog-dismiss class="cancelDialog"><span msg="cancel"></span></paper-button>
+					<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+				</div>
+			</paper-dialog>
+		</template>
+
+		<template id="entirePageIssueDialogTemplate">
+			<paper-dialog id="entirePageIssueDialog" style="width:90%">
+				<h2>Problem</h2>
+				<paper-dialog-scrollable class="dialogDescription" xxstyle="height:240px">
+					Could not grab entire page, try to <b>reload</b> the page or grab the <b msg="justInstalled3">visible part of page</b> instead!
+					<br><br>
+					<div style="color:gray">If using multiple monitors try unplugging the 2nd one temporarily.</div>
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button dialog-dismiss class="otherDialog"><span>Grab visible</span></paper-button>
+					<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+				</div>
+			</paper-dialog>
+		</template>
+
+		<template id="cannotCaptureWarningTemplate">
+			<paper-dialog id="cannotCaptureWarning" modal="true" style="width:90%">
+				<h2>Problem</h2>
+				<paper-dialog-scrollable class="dialogDescription" style="height:240px">
+					<span msg="particularPages">These <span id="particularPages" msg="particularPages2">particular pages</span> cannot be captured due to Chrome's security policy, please try another page!</span>
+					<div id="particularPagesList" class="hide nowrap" style="font-size:11px;margin-top:5px;color:black">&bull; <span msg="pagesThatStartWith">Pages that start with</span> <b>chrome://</b><br>&bull; <span msg="pagesFromOtherExtensions">Pages from other extensions</span></div>
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+				</div>
+			</paper-dialog>
+		</template>
+
+		<template id="urlWasCopiedTemplate">
+			<paper-dialog id="urlWasCopied" modal="true" style="width:90%">
+				<h2>Problem</h2>
+				<paper-dialog-scrollable class="dialogDescription" style="height:240px">
+					You must right click on the image and choose <b>Copy image</b> (NOT the URL) and then choose <b msg="openFromClipboard"></b><br><br>Try again by first opening the image.
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button dialog-other class="otherDialog"><span>Open image</span></paper-button>
+					<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+				</div>
+			</paper-dialog>
+		</template>
+
+		<template id="entireScreenWindowsInstructionsTemplate">
+			<paper-dialog id="entireScreenWindowsInstructions" modal="true" style="width:90%">
+				<paper-dialog-scrollable class="dialogDescription" style="height:100px">
+					Press <b>PrtScr</b> on your keyboard.
+					<br>
+					<div id="multipleMonitors" hidden style="margin-top:10px">
+						or <b>Alt + PrtScr</b> to get the active monitor.
+					</div>
+					<br>
+					Then <b style="white-space:nowrap" msg="openFromClipboard">Open from clipboard</b>
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+				</div>
+			</paper-dialog>
+		</template>
+
+		<template id="entireScreenMacInstructionsTemplate">
+			<paper-dialog id="entireScreenMacInstructions" modal="true" style="width:90%">
+				<paper-dialog-scrollable class="dialogDescription" style="height:50px">
+					Press <b>Control-Command (⌘)-Shift-3</b> on your keyboard.
+					<br>
+					Then <b style="white-space:nowrap" msg="openFromClipboard">Open from clipboard</b>
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+				</div>
+			</paper-dialog>
+		</template>
+
+		<template id="entireScreenCrOSInstructionsTemplate">
+			<paper-dialog id="entireScreenCrOSInstructions" modal="true" style="width:90%">
+				<paper-dialog-scrollable class="dialogDescription" style="height:50px">
+					Press <b>Ctrl + <img src="images/chromeos_page_flipper.png" style="width: 39px;vertical-align: middle;"/></b> on your keyboard.
+					<br>
+					Then <b style="white-space:nowrap" msg="openFromClipboard">Open from clipboard</b>
+				</paper-dialog-scrollable>
+				<div class="buttons">
+					<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+				</div>
+			</paper-dialog>
+		</template>
+	</div>
+		
+</body>
+</html>

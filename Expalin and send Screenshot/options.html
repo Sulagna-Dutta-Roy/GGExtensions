@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Explain & Send Screenshots - Options</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+	<script src="js/common.js"></script>
+	<script src="js/extensionCommon.js"></script>
+
+   	<script defer src="js/explainAndSendScreenshots.js"></script>
+	<script defer src="js/options.js"></script>
+
+	<script src="js/polymer-css.js"></script>
+
+	<style>
+		body {font-size:16px;overflow-y:scroll;opacity:1;transition:opacity 0.15s ease-in-out}
+		body[unresolved2] {opacity:0}
+
+		app-toolbar {padding:0 calc(calc(100% - 1366px) / 2)}
+		#middle {margin: 0 auto;max-width: 1366px}
+		
+		[mustDonate] {opacity:0.4;transition:opacity 0.1s ease-in}
+		[mustDonate]:hover {opacity:1}
+
+		paper-radio-button {display:block;padding:8px 0 !important}
+		paper-radio-group {display:block}
+
+		/* options.html */		
+		#middle {padding:30px 10px}
+		
+		#buttonIcons paper-radio-button,
+		#defaultTool paper-radio-button {display:inline-block;margin-right:40px}
+
+		#buttonIcons paper-radio-button  img {vertical-align: middle}
+		
+		.file {outline:1px solid lightblue;margin:10px}
+		
+		#showHideButtons {margin:10px 0 30px 0}
+		#showHideButtons paper-checkbox {margin-right:10px;border: 1px solid #eee;padding: 5px;border-radius: 5px}
+		xx#showHideButtons paper-checkbox[checked] {background: #fafafa}
+		
+	</style>
+
+</head>
+
+<body class="fullbleed" unresolved unresolved2>
+	<app-header-layout>
+		<app-header slot="header" fixed post-effects="waterfall">
+			<app-toolbar>
+				<img id="logo" src="images/icons/default48.png" style="vertical-align:middle"/>
+				<div main-title><a class="inherit" href="https://jasonsavard.com?ref=SSOptionsTitle">Explain & Send Screenshots</a></div>
+				<div class="flex"></div>
+				<paper-button id="version">version</paper-button>
+				<a id="changelog" class="inherit" href="https://jasonsavard.com/wiki/Explain_and_Send_Screenshots_changelog?ref=SSOptions"><paper-button><span msg="changelog"></span></paper-button></a>
+				<a class="inherit" href="contribute.html"><paper-button><span msg="contribute"></span></paper-button></a>
+				<a class="inherit" href="https://jasonsavard.com/forum/categories/explain-and-send-screenshots"><paper-button><span msg="help"></span></paper-button></a>
+			</app-toolbar>
+		</app-header>
+		<div id="middle" class="layout vertical start">
+			<paper-checkbox id="removeMenuItems" storage="removeMenuItems"><span msg="removeMenuItems"></span></paper-checkbox>
+			<paper-tooltip for="removeMenuItems" position="right" animation-delay="0"><span msg="removeMenuItemsToolTip">removeMenuItemsToolTip</span></paper-tooltip>
+			<paper-checkbox mustDonate id="headerFooter" storage="removeHeaderFooter"><span msg="removeHeaderFooter"></span></paper-checkbox>
+			<paper-checkbox mustDonate id="removeToolbarInPopup" storage="removeToolbarInPopup"><span msg="removeToolbarInPopup">hideToolbarInPopup</span></paper-checkbox>
+			<paper-checkbox mustDonate id="removeSocialMedia" storage="removeSocialMedia"><span msg="removeSocialMedia">removeSocialMedia</span></paper-checkbox>
+			<paper-checkbox mustDonate id="darkMode" storage="darkMode"><span msg="darkMode">darkMode</span></paper-checkbox>
+			<paper-checkbox storage="autoCopyAfterAnnotating"><span msg="autoCopyAfterAnnotating">autoCopyAfterAnnotating</span></paper-checkbox>
+			<paper-checkbox storage="alwaysRecordAudio"><span msg="alwaysRecordAudio">alwaysRecordAudio</span></paper-checkbox>
+
+			<br>
+			<span msg="buttonIcon">Button icon</span>
+			<paper-radio-group id="buttonIcons" storage="buttonIcon" mustDonate>
+				<paper-radio-button name="default"><img src="/images/icons/default19.png" /></paper-radio-button>
+				<paper-radio-button name="monochrome"><img src="/images/icons/monochrome19.png" /></paper-radio-button>
+				<paper-radio-button name="camera"><img src="/images/icons/camera19.png" /></paper-radio-button>
+				<paper-radio-button name="crop"><img src="/images/icons/crop19.png" /></paper-radio-button>
+			</paper-radio-group>
+
+			<paper-dropdown-menu msgLabel="imageFormat">
+				<paper-listbox id="imageFormat" slot="dropdown-content" attr-for-selected="value" storage="imageFormat">
+					<paper-item value="image/jpeg">jpeg</paper-item>
+					<paper-item value="image/png">png</paper-item>
+				</paper-listbox>
+			</paper-dropdown-menu>
+
+			<div id="presetOptions" mustDonate>
+				<paper-dropdown-menu msgLabel="presetButtonAction">
+					<paper-listbox id="presetButtonAction" slot="dropdown-content" attr-for-selected="value" storage="presetButtonAction">
+						<paper-item value="popupWindow" msg="popupWindow">Popup window</paper-item>
+						<paper-item value="grabSelectedArea" msg="selectArea">selectArea</paper-item>
+						<paper-item value="grabVisiblePart" msg="grabVisiblePart">grabVisiblePart</paper-item>
+						<paper-item value="grabEntirePage" msg="grabEntirePage">grabEntirePage</paper-item>
+					</paper-listbox>
+				</paper-dropdown-menu>
+			</div>
+
+			<div id="afterGrabOptions">
+				<paper-dropdown-menu msgLabel="afterGrabAction">
+					<paper-listbox id="afterGrabAction" slot="dropdown-content" attr-for-selected="value" storage="afterGrabAction">
+						<paper-item value="openEditor" msg="openEditor">openEditor</paper-item>
+						<paper-item value="upload" msg="upload">upload</paper-item>
+						<paper-item value="copyToClipboard" msg="copyToClipboard">copyToClipboard</paper-item>
+						<paper-item value="saveToGoogleDrive" msg="saveToGoogleDrive">saveToGoogleDrive</paper-item>
+					</paper-listbox>
+				</paper-dropdown-menu>
+			</div>
+
+			<div>
+				<paper-dropdown-menu msgLabel="audioInput" style="width: 500px">
+					<paper-listbox id="audioInput" slot="dropdown-content" attr-for-selected="value" storage="audioInput"></paper-listbox>
+				</paper-dropdown-menu>
+                <paper-button id="fetch-audio-devices" raised>Fetch audio devices</paper-button>
+			</div>
+
+			<br>
+			<span msg="defaultTool">defaultTool</span>
+			<paper-radio-group id="defaultTool" storage="defaultTool" mustDonate>
+				<paper-radio-button name="arrow"><paper-icon-button icon="trending-flat"></paper-icon-button></paper-radio-button>
+				<paper-radio-button name="line"><paper-icon-button icon="remove"></paper-icon-button></paper-radio-button>
+				<paper-radio-button name="freeHand"><paper-icon-button icon="gesture"></paper-icon-button></paper-radio-button>
+				<paper-radio-button name="writeText"><paper-icon-button icon="custom:cat"></paper-icon-button></paper-radio-button>
+				<paper-radio-button name="numbers"><paper-icon-button icon="image:looks-one"></paper-icon-button></paper-radio-button>
+				<paper-radio-button name="highlight"><paper-icon-button icon="editor:border-color"></paper-icon-button></paper-radio-button>
+				<paper-radio-button name="blur"><paper-icon-button id="blur" src="images/cursors/blur.png"></paper-icon-button></paper-radio-button>
+                <paper-radio-button name="rectangle"><paper-icon-button id="rectangle" icon="image:crop-din"></paper-icon-button></paper-radio-button>
+                <paper-radio-button name="circle"><paper-icon-button id="circle" icon="image:panorama-fish-eye"></paper-icon-button></paper-radio-button>
+			</paper-radio-group>
+
+			<div id="showHideButtons">
+				<div style="margin:10px 0" msg="hideButtons">Hide buttons</div>
+				<paper-checkbox mustDonate id="downloadButton" storage="downloadButton"><iron-icon icon="file-download"></iron-icon> <span msg="download">Download</span></paper-checkbox>
+				<paper-checkbox mustDonate id="saveAsButton" storage="saveAsButton"><iron-icon icon="editor:insert-drive-file"></iron-icon> <span msg="saveAs">saveAs</span></paper-checkbox>
+				<paper-checkbox mustDonate id="uploadButton" storage="uploadButton"><iron-icon icon="cloud-upload"></iron-icon> <span msg="upload">Upload</span></paper-checkbox>
+				<paper-checkbox mustDonate id="saveToDriveButton" storage="saveToDriveButton" chromium-only><iron-icon src="images/drive.png"></iron-icon> <span msg="saveToGoogleDrive">Save to Google Drive</span></paper-checkbox>
+				<paper-checkbox mustDonate id="copyToClipboardButton" storage="copyToClipboardButton"><iron-icon icon="content-copy"></iron-icon> <span msg="copy">Copy image</span></paper-checkbox>
+				<paper-checkbox mustDonate id="editInPixlrButton" storage="editInPixlrButton"><iron-icon icon="editor:insert-photo"></iron-icon> <span msg="editInPixlr">Edit in Pixlr</span></paper-checkbox>
+				<paper-checkbox mustDonate id="shareButton" storage="shareButton"><iron-icon icon="social:share"></iron-icon> <span msg="share">Share</span></paper-checkbox>
+				<paper-checkbox mustDonate id="openButton" storage="openButton" chromium-only><iron-icon icon="open-in-new"></iron-icon> <span msg="open">Open</span></paper-checkbox>
+				<paper-checkbox mustDonate id="pdfButton" storage="pdfButton" chromium-only><iron-icon icon="image:picture-as-pdf"></iron-icon> <span>PDF</span></paper-checkbox>
+				<paper-checkbox mustDonate id="searchImageButton" storage="searchImageButton" chromium-only><iron-icon icon="search"></iron-icon> <span msg="search">search</span></paper-checkbox>
+				
+				<div style="margin-top:20px">
+					<div style="margin:10px 0" msg="popupMenu">Popup menu</div>
+					<paper-checkbox mustDonate id="grabEntireScreenButton" storage="grabEntireScreenButton" chromium-only><iron-icon icon="hardware:desktop-windows"></iron-icon> <span msg="grabEntireScreen">grabEntireScreen</span></paper-checkbox>
+					<paper-checkbox mustDonate id="openFromClipboardButton" storage="openFromClipboardButton" chromium-only><iron-icon icon="content-paste"></iron-icon> <span msg="openFromClipboard">openFromClipboard</span></paper-checkbox>
+					<paper-checkbox mustDonate id="openFileButton" storage="openFileButton"><iron-icon icon="file-upload"></iron-icon> <span msg="openFile">openFile</span></paper-checkbox>
+				</div>
+
+			</div>
+
+			<paper-button id="viewUploadedFiles" toggles raised msg="viewUploadedFiles">View uploaded files</paper-button>
+			<div id="uploadedFiles" class="layout horizontal start wrap" style="display:none"></div>
+		</div>
+	</app-header-layout>
+
+	<template id="genericDialogTemplate">
+		<paper-dialog id="genericDialog">
+			<h2>blah blah</h2>
+			<paper-dialog-scrollable class="dialogDescription">
+				blah
+			</paper-dialog-scrollable>
+			<div class="buttons">
+		  		<paper-button dialog-other class="otherDialog" hidden>empty</paper-button>
+		  		<paper-button dialog-dismiss class="cancelDialog"><span msg="cancel"></span></paper-button>
+		  		<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+    <template id="uploaded-files-template">
+        <div class='file layout self-start'>
+            <img style='cursor:pointer;max-width:200px;vertical-align:middle'/> <paper-icon-button class='delete' style='vertical-align:top' icon='delete'></paper-icon-button>
+        </div>
+    </template>
+	
+	<paper-toast id="message" text="Done"><paper-icon-button class="closeToast" icon="close"></paper-icon-button></paper-toast>
+
+	<iron-iconset-svg name="custom" size="438" style="display:none">
+	<svg><defs>
+		<g id="cat"><path xmlns="http://www.w3.org/2000/svg" d="M223.395,203.198c-8.932-22.4-17.798-43.867-26.599-64.001C187.994,119.064,179.061,100,169.995,80H110.4    c-9.334,20-18.335,39.064-27.002,59.197c-8.667,20.134-17.468,41.501-26.404,63.9c-8.936,22.4-18.068,46.518-27.399,71.851    C20.266,300.283,10.4,328,0,358h64.795c2.938-10,6.205-19.471,9.802-29.603S81.726,308,85.193,298h108.008    c3.467,10,6.998,20.265,10.596,30.397c3.597,10.132,6.864,19.603,9.802,29.603h66.797c-10.401-30-20.268-57.667-29.602-83.001    C241.459,249.665,232.326,225.598,223.395,203.198L223.395,203.198z M99.597,248c4.264-12,8.463-23.47,12.598-34.404    c4.134-10.933,7.934-20.932,11.401-29.998s6.533-17.065,9.198-23.999c2.665-6.933,4.665-12.402,6-16.406    c1.603,4.004,3.737,9.473,6.403,16.406c2.665,6.934,5.798,14.934,9.399,23.999c3.601,9.066,7.401,19.064,11.401,29.997    c4,10.934,8.132,22.404,12.396,34.404H99.597V248z"/><polygon xmlns="http://www.w3.org/2000/svg" points="438,59 438,19 318,19 318,59 358,59 358,379 318,379 318,419 438,419 438,379 398,379 398,59   "/></g>
+	</defs></svg>
+	</iron-iconset-svg>
+		
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
+	
+</body>
+</html>

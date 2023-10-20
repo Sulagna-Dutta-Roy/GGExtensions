@@ -1,0 +1,129 @@
+:root {
+    --primary-color: black;
+    --primary-link-color: #1e79a7;
+    --polymer-input-color: #3f51b5;
+    --bg-color: white;
+    --bg-light-color: #ddd;
+    --bg-light-color-hover: #eaeaea;
+    
+    /* skins */
+    --paper-light-bg-color: #f7f7f7;
+    --paper-light-hover-bg-color: #eee;
+
+    --button-primary: #4285f4;
+
+    /* polymer */
+    --primary-text-color: var(--primary-color);
+    --paper-checkbox-checked-color: var(--polymer-input-color);
+    --paper-checkbox-checkmark-color: var(--bg-color);
+
+    --paper-radio-button-checked-color: var(--polymer-input-color);
+}
+
+:root[color-scheme='dark'] { /* note that color-scheme in dom cannot be empty for this logic to work */
+    --primary-color: #ddd;
+    --primary-link-color: #8ab4f8;
+    --bg-color: #222;
+    --bg-light-color: #333;
+    --bg-light-color-hover: #555;
+
+    --button-primary: #3b8183;
+
+    /* skins */
+    --paper-light-bg-color: var(--bg-light-color);
+    --paper-light-hover-bg-color: #555;
+
+    /* dark only */
+    --primary-color-lighter: #ccc;
+    --input-bg-color: #2a2a2a;
+
+    --paper-dialog-background-color: var(--bg-light-color);
+    --paper-listbox-background-color: var(--bg-light-color);
+    --primary-background-color: var(--bg-light-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+body[resolved] {transition: opacity 0.15s ease-in-out} /* move transition to [resolved] because attaching it to body alone would take effect when initially hiding fouc so it would fade out then fade in, test it with a longer transitionduration */
+body.page-loading-animation, .postPolymerLoading app-header-layout {background-image:url("/images/ajax-loader.svg");background-repeat: no-repeat;background-position:50% 50%} /* issue: when using camel case and the import css */
+.widget body {height:100%;width:100%}
+
+paper-radio-group {outline:none}
+
+paper-icon-item iron-icon {opacity:0.5}
+
+paper-dropdown-menu {padding:8px !important} /* seems polymer update adding padding:0 ??? previously it was not there */
+
+paper-item {white-space:nowrap}
+
+paper-item:hover,
+paper-icon-item:hover {
+    cursor:pointer;
+    background-color: var(--bg-light-color-hover); /* on laptop screen #eee did not show up? */
+}
+
+paper-icon-item .content-icon {width:40px !important} /* --paper-item-icon-width above should normally sufice, but when using <template> to import polyer menu the --p... was not working */
+
+paper-button > iron-icon {margin-right:8px}
+paper-button[raised].colored {background-color:#4285f4 !important;color:#fff}
+
+/* .placeholder is used to prevent flickering of paper-icon-button when inside paper-menu-button, I place one paper-icon-button outside and inside and then swap their visibility when polymer2 is loaded */
+xx[resolved2] .placeholder {display:none !important}
+xx[unresolved2] paper-menu-button {display:none}
+
+[unresolved2] paper-dialog {display:none}
+[unresolved2] paper-tooltip, [unresolved2] paper-toast {display:none}
+
+paper-toast {min-width:auto !important}
+.rtl paper-toast {left:auto;right:12px}
+paper-toast #label {padding-right:20px}
+paper-toast#error #label {font-weight:bold;color:#FF5050}
+.toastLink {color:#a1c2fa;background-color:initial}
+.toastLink:hover {color:#bbdefb}
+
+[main-title] a {margin-inline-start:10px;pointer-events:auto;font-size:20px}
+
+paper-toast:not(#processing) {padding:8px 9px 4px 16px}
+
+.closeToast {cursor:pointer}
+
+paper-dialog {border-radius:8px}
+paper-dialog .buttons paper-icon-button {color:#555}
+
+paper-dialog-scrollable paper-radio-button {display:block}
+paper-dialog-scrollable paper-radio-button, paper-dialog-scrollable paper-checkbox {margin:2px 0} /* patch to remove scrollbar in paper-dialog-scrollable */
+
+.separator {
+    height:1px;
+    background:#ddd;
+    margin:4px 0;
+    min-height:0 !important;
+}
+:root[color-scheme='dark'] .separator {
+    background: #444;
+}
+
+#options-menu paper-item, #options-menu paper-icon-item {min-height: 38px}
+#options-menu span {white-space:nowrap}
+
+.share-button {display:none;margin-bottom:1px}
+.share-button iron-icon {width:20px;xxheight:20px} /* changing width is good enough to shrink image, height is default 24 - all the other non social icons beside this one in the top right are height 24px so changing that will mis align vertically */
+#share-menu svg {padding:5px 15px;width:19px;height:19px}
+
+.close {position:absolute;margin:0;padding:3px;top:-1px;right:1px;width:24px;height:24px}
+.rtl .close {right:auto;left:1px}
+.inherit, a.inherit {color:inherit}
+.inherit {background-color:inherit;text-decoration:inherit}
+
+.dialog-close-button {position:absolute;top:0px;right:2px;margin:0;padding:0;z-index:1}
+
+/* screenshot specific */
+html[color-scheme='dark'] iron-icon[src='images/drive.png'] {
+    filter: invert(1);
+}
+
+html[color-scheme='dark'] *[src='images/cursors/blur.png'] {
+    filter: invert(1);
+}

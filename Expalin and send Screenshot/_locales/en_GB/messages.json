@@ -1,0 +1,8 @@
+{
+	"name": {"message": "Explain and Send Screenshots"},
+	"currencyCode": {"message": "GBP"},
+	"currencySymbol": {"message": "£"},
+	"currencyCodeForGoogleCheckout": {"message": "GBP"},
+	"currencySymbolForGoogleCheckout": {"message": "£"},
+	"LAST_ITEM_DO_NOT_REMOVE": {"message": "DO NOT REMOVE"}
+}

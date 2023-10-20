@@ -1,0 +1,230 @@
+{
+	"name": {"message": "Explain and Send Screenshots"},
+	"description": {"message": "Capture or record a video of your screen, write text or arrows and share it. The safest extension with NO crazy permissions!"},
+
+	"selectArea": {"message": "Select area"},
+	"selectElement": {"message": "Select element"},
+	"grabVisiblePart": {"message": "Visible page"},
+	"grabEntirePage": {"message": "Entire page"},
+	"grabWindow": {"message": "Browser or window"},
+	"grabEntireScreen": {"message": "Screen"},
+	"openFile": {"message": "Open file..."},
+	"openFromClipboardAndCrop": {"message": "Grab clipboard & crop"},
+	"openFromClipboard": {"message": "Grab clipboard"},
+	"uploadImage": {"message": "Upload an image"},
+	"justInstalled": {"message": "You probably just installed this extension or an update has been done, so you'll need to $1 this tab first or grab the $2 instead!"},
+	"justInstalled2": {"message": "reload"},
+	"justInstalled3": {"message": "visible part of page"},
+
+	"clickAndDrag": {"message": "Click and drag"},
+
+	"supportExtension": {"message": " to support this extension"},
+	"done": {"message": "Done"},
+	"editingInstructions": {"message": "Draw arrows or write text if you want."},
+	"advancedEditing": {"message": "Advanced editing in Pixlr"},
+
+	"restart": {"message": "Restart"},
+	"undo": {"message": "Undo"},
+	"redo": {"message": "Redo"},
+	"cropTool": {"message": "Crop image"},
+	"selectionTool": {"message": "Select"},
+	"drawArrow": {"message": "Draw an arrow"},
+	"drawCircle": {"message": "Draw a circle"},
+	"drawRectangle": {"message": "Draw a rectangle"},
+	"drawLine": {"message": "Draw a line"},
+	"drawFreehand": {"message": "Draw freehand"},
+	"blurTool": {"message": "Erase / blur"},
+	"writeText": {"message": "Write text"},
+	"chooseColor": {"message": "Choose a color"},
+	"colorPicker": {"message": "Color picker"},
+	"spotLight": {"message": "Spotlight"},
+
+	"processing": {"message": "Processing"},
+
+	"rightClickImage": {"message": "Right click image to Copy or Save image"},
+	"copyToClipboard": {"message": "Copy to clipboard"},
+	"or": {"message": "or"},
+	"save": {"message": "Save"},
+	"copyLink": {"message": "Copy link"},
+
+	"donateButton": {"message": "https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif"},
+
+	"removeDonationLink": {"message": "Remove donation link"},
+
+	"currencyCode": {"message": "USD"},
+
+	"enterAnAmount": {"message": "You must enter an amount!"},
+	"minimumAmount": {"message": "You must donate at least $1"},
+	"amount": {"message": "Amount"},
+	"continue": {"message": "Continue"},
+	"extraFeatures": {"message": "Extra features"},
+
+	"extraFeaturesPopup1": {"message": "These dimmed out options are extra features I spent a lot of time developing."},
+	"extraFeaturesPopup2": {"message": "To unlock these features, contribute ANY amount in support of my work."},
+
+	"option": {"message": "Option"},
+	"myPreference": {"message": "my preference"},
+	"orPayUsing_": {"message": "Or you can pay using"},
+
+	"alreadyDonated": {"message": "Already contributed"},
+
+	"removeHeaderFooter": {"message": "Remove watermark footer"},
+	"removeToolbarInPopup": {"message": "Remove toolbar in popup"},
+	"removeSocialMedia": {"message": "Remove social media links"},
+	"presetButtonAction": {"message": "Preset button action"},
+	
+	"changeFontSize": {"message": "Change font size"},
+	"changeFontOptions": {"message": "Change font options"},
+	"changeButtonIcon": {"message": "Change button icon"},
+	"saveImageAsAFile": {"message": "Save as a file..."},
+	"saveImageAsDesc": {"message": "Right click the image and choose $1"},
+	"saveImageAs": {"message": "Save image as..."},
+	"saveAs": {"message": "Save as..."},
+	"copyToClipboardDesc": {"message": "Right click image and choose"},
+	"copyImage": {"message": "Copy image"},
+	"example": {"message": "example"},
+	"uploading": {"message": "Uploading"},
+	"deleteLink": {"message": "Delete link"},
+
+	"otherExtensions": {"message": "Try my other popular apps!"},
+
+	"small": {"message": "Small"},
+	"normal": {"message": "Normal"},
+	"large": {"message": "Large"},
+	"extraLarge": {"message": "Extra large"},
+
+	"particularPages": {"message": "These $1 cannot be captured due to Chrome's security policy, please try another page!<br><span style='color:gray'>Note: Restarting the browser or reinstalling the extension might fix this.</span>"},
+	"particularPages2": {"message": "particular pages"},
+	"pagesThatStartWith": {"message": "Pages that start with"},
+	"pagesFromOtherExtensions": {"message": "Pages from other extensions"},
+
+	"options": {"message": "Options"},
+
+	"failureWithInAppPurchase": {"message": "Canceled or failure with transaction! Try PayPal instead?"},
+	"failureWithPayPalPurchase": {"message": "Canceled or failure with transaction! Try $1 instead?"},
+	"canceledInAppPurchase": {"message": "Try PayPal instead? or contact me for questions at "},
+	"thankYouForYourContribution": {"message": "The features are now unlocked. Thank you for your contribution!"},
+
+	"removeMenuItems": {"message": "Remove menu items from right click"},
+	"removeMenuItemsToolTip": {"message": "Capture a webpage by right clicking it and select a screenshot method"},
+	"otherAmount": {"message": "Other amount"},
+
+	"contribute": {"message": "Contribute"},
+
+	"changelog": {"message": "Changelog"},
+	"discoverMyApps": {"message": "Discover my apps"},
+	"feedback": {"message": "Feedback"},
+	"aboutMe": {"message": "About"},
+	"help": {"message": "Help"},
+
+	"close": {"message": "Close"},
+	"open": {"message": "Open"},
+	"cancel": {"message": "Cancel"},
+	"ok": {"message": "OK"},
+	"share": {"message": "Share"},
+	"download": {"message": "Download"},
+	"upload": {"message": "Upload"},
+	"saveToGoogleDrive": {"message": "Save to Drive"},
+	"openInGoogleDrive": {"message": "Open in Drive"},
+	"editInPixlr": {"message": "Edit in Pixlr"},
+	"delete": {"message": "Delete"},
+	"deleteSelection": {"message": "Delete selection"},
+	"wantALink": {"message": "I prefer a link"},
+	"popupWindow": {"message": "Popup window"},
+	"viewUploadedFiles": {"message": "View uploaded files"},
+	"linkCopied": {"message": "Link copied"},
+
+	"imageFormat": {"message": "Image format"},
+	"highlight": {"message": "Highlight"},
+
+	"extensionUpdated": {"message": "Extension updated!"},
+	"seeUpdates": {"message": "View updates"},
+	"doNotNotifyMeOfUpdates": {"message": "Do not notify me of updates"},
+	"extensionUpdates": {"message": "Extension updates"},
+	"dismiss": {"message": "Dismiss"},
+
+	"afterGrabAction": {"message": "After grab action"},
+	"openEditor": {"message": "Open editor"},
+
+	"shareImageBlurb": {"message": "I recommend the $1 or $2"},
+	"shareButtons": {"message": "Share buttons"},
+	"shareableLink": {"message": "Shareable link"},
+
+	"paste": {"message": "Paste"},
+	"paste2": {"message": "into an email or social media"},
+
+	"useUploadButton": {"message": "Use the <b>$1</b> button to get a link"},
+	"buttonIcon": {"message": "Button icon"},
+
+	"makeThisAMonthlyContribution": {"message": "Make this a monthly contribution"},
+	"makeThisAMonthlyContributionTooltip": {"message": "Help maintain my user support and updates"},
+
+	"size": {"message": "Size"},
+	"background": {"message": "Background"},
+	"semiTransparent": {"message": "Semi-transparent"},
+	"white": {"message": "White"},
+	"black": {"message": "Black"},
+	"none": {"message": "None"},
+
+	"search": {"message": "Search"},
+	"copy": {"message": "Copy"},
+
+	"hideButtons": {"message": "Hide buttons"},
+
+	"lineWeight": {"message": "Line weight"},
+	"font": {"message": "Font"},
+
+	"tryAgain": {"message": "Please try again"},
+	"tryAgainLater": {"message": "Please try again later"},
+	"theresAProblem": {"message": "There's a problem"},
+
+	"addXDelay": {"message": "Add $1 delay"},
+
+	"tip": {"message": "Tip"},
+	"title": {"message": "Title"},
+	"link": {"message": "Link"},
+	"hideToolbarInPopup": {"message": "Hide toolbar in popup"},
+	"popupMenu": {"message": "Popup menu"},
+
+	"zoomOut": {"message": "Zoom out"},
+	"zoomIn": {"message": "Zoom in"},
+
+	"month": {"message": "Month"},
+
+	"monthly": {"message": "Monthly"},
+	"monthlySubtitle": {"message": "Best deal! Cancel anytime"},
+	"monthlyPaymentBonus": {"message": "Monthly payment bonus"},
+	"onetime": {"message": "One-time"},
+	"includesExtraFeaturesForX": {"message": "Includes the extra features for $1"},
+	"unlockOtherExtensions": {"message": "Unlock the other extensions by opening their contribute page and use the Already Contributed link above."},
+
+	"card": {"message": "Card"},
+	"bitcoin": {"message": "Bitcoin"},
+
+	"makeThisSimpler": {"message": "Make this simpler"},
+	"recordScreen": {"message": "Record screen"},
+	"enableMic": {"message": "Enable mic"},
+	"alwaysRecordAudio": {"message": "Always record audio"},
+	"uploadToYouTube": {"message": "Upload to YouTube"},
+	"audioInput": {"message": "Audio input"},
+
+	"support": {"message": "Support"},
+
+	"defaultTool": {"message": "Default tool"},
+
+    "autoCopyAfterAnnotating": {"message": "Auto copy to clipboard when annotating"},
+
+    "darkMode": {"message": "Dark mode"},
+    "filters": {"message": "Filters"},
+
+    "freeform": {"message": "Freeform"},
+    "square": {"message": "Square"},
+    "expand": {"message": "Expand"},
+    "numbers": {"message": "Numbers"},
+
+    "fillStyle": {"message": "Fill style"},
+    "transparent": {"message": "Transparent"},
+    "fill": {"message": "Fill"},
+
+	"LAST_ITEM_DO_NOT_REMOVE": {"message": "DO NOT REMOVE"}
+}

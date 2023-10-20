@@ -1,0 +1,9 @@
+{
+	"name": {"message": "Επεξήγηση και αποστολή στιγμιοτύπων οθόνης"},
+	"description": {"message": "Λήψη στιγμιότυπου από οποιοδήποτε τμήμα μιας ιστοσελίδας. Μετά μπορείς να προσθέσεις επεξηγήσεις με βέλη, ή κείμενο"},
+	"currencyCode": {"message": "EUR"},
+	"currencySymbol": {"message": "€"},
+	"minimumDonation": {"message": "0.50"},
+	"minimumDonationForGoogleCheckout": {"message": "0.50"},
+	"LAST_ITEM_DO_NOT_REMOVE": {"message": "DO NOT REMOVE"}
+}
