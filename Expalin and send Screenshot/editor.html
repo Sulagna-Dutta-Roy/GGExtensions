@@ -1,0 +1,661 @@
+<html>
+<head>
+	<title>Explain & Send Screenshots</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<script src="js/common.js"></script>
+	<script src="js/extensionCommon.js"></script>
+
+	<script src="js/polymer-css.js"></script>
+
+   	<script defer src="js/FastBlur.js"></script>
+	<script defer src="js/paint.js"></script>
+   	<script defer src="js/explainAndSendScreenshots.js"></script>
+   	<script defer src="js/editor.js"></script>
+
+    <custom-style>
+		<style>
+            paper-icon-button#color-list-button {
+              --iron-icon: {
+                    opacity: 1;
+                };
+            }
+		</style>
+	</custom-style>
+
+   	
+   	<style>
+   		body {font-size:0.9em}
+
+		[mustDonate] {opacity:0.4;transition:opacity 0.1s ease-in}
+		[mustDonate]:hover {opacity:1}
+
+  	 	a {color:#3c80f6}
+  	 	a:visited {color:#3f51b5}
+  	 	
+  	 	input, textarea, keygen, select {font-size:14px}
+  	 	
+  	 	#titleClickArea {pointer-events:auto;cursor:pointer} /* had to override things because paper-toolbar's .title conflicts here */
+  	 	.logo {vertical-align: middle}
+  	 	
+  	 	.share-button {display:none}
+  	 	
+  	 	textarea {font-family:'Segoe UI', Tahoma, sans-serif}
+  	 	
+   		paper-spinner .circle {border-color: gray !important}
+   		
+		.highDevicePixelRatio body {width:100vw !important;height:100vh !important}
+   		
+		#topLeft paper-icon-button {vertical-align:middle}
+        
+        .topRight {user-select: none}
+		.topRight paper-menu-button {padding:0}
+		
+		#workspace {position:relative;cursor:not-allowed}
+		#workspace canvas, #finalImage {max-width:100vw}
+		body.zoomed #workspace canvas, body.zoomed #finalImage {max-width:initial}
+		#workspace canvas.loaded {outline:1px solid #eee}
+		#workspace canvas, #workspace img {cursor:auto}
+		#workspace canvas.line, #workspace canvas.numbers {cursor: url(images/cursors/shapes.gif) 9 9, auto}
+		#workspace canvas.blur {cursor: url(images/cursors/blur.png) 16 16, auto}
+        #workspace canvas.colorPicker {cursor: url('images/cursors/color-picker.png') 0 32, auto}
+		#workspace canvas.text {
+            cursor: text;
+            outline: 1px solid #f0f0f0;
+        }
+		#workspace canvas.highlight {cursor:text}
+		#workspace.done canvas {cursor:auto;border-color:transparent}
+        body.copyToClipboard #workspace {
+            transition: opacity 0.1s ease-in-out;
+            opacity: 0.5;
+        }
+
+		#canvastemp {background-color:transparent;display:none;position:absolute;top:0}
+
+        #color-listbox {
+            padding: 0;
+        }
+
+        #color-listbox-items {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .color {
+            box-sizing: border-box;
+            width: 20px;
+            height: 20px;
+            min-height: 20px;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            font-size: 0;
+            position: relative;
+        }
+
+        #precise-color-wrapper {
+            background-color: var(--bg-color);
+            padding: 10px;
+        }
+
+        .precise-color-sample {
+            border: 1px solid var(--primary-color);
+            cursor: pointer;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+
+        #line-weight {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .rgb {
+            width: 40px;
+            text-align: center;
+        }
+
+        #hex {
+            width: 70px;
+            text-align: center;
+        }
+
+        #text-outline {
+            display:none;
+            position: absolute;
+        }
+        .moving #text-outline {
+            pointer-events: none;
+        }
+        .moving canvas {
+            cursor: move !important;
+        }
+        
+        #text-outline,
+        #text-inner-outline {
+            padding: 3px;
+            cursor: move;
+        }
+
+        #text-inner-outline {
+            border:1px dashed blue;
+            border-radius: 5px;
+            background:transparent;
+            color:red;
+        }
+
+		#text {
+            padding: 1px;
+            font-size:10px;
+            font-weight:bold;
+            font-family:arial;
+            text-align: left;
+            cursor:text;
+        }
+		#text.chromeOnlyMultilinePatch {white-space:nowrap}
+		#text:focus {
+            outline:none;
+        }
+
+        input[type=range] {
+            height: 25px;
+            xx-webkit-appearance: none;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        #filterDialog input[type=range] {
+            width: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 10px;
+            cursor: pointer;
+            animate: 0.2s;
+            box-shadow: 1px 1px 1px #000000;
+            background: #3071A9;
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            xxbox-shadow: 1px 1px 1px #000000;
+            xxborder: 1px solid #000000;
+            height: 12px;
+            width: 15px;
+            border-radius: 5px;
+            background: #FFFFFF;
+            cursor: pointer;
+            xx-webkit-appearance: none;
+            margin-top: -3px;
+        }
+		
+		#font-size {width:100px}
+		
+		#finalImage {display:none;margin:0 auto}
+		
+		#refresh {opacity:0.7;transition:opacity 0.2s ease-in}
+		#refresh.hidden {opacity:0}
+		#line iron-icon {transform: rotate(-45deg)}
+		
+		#tools paper-icon-button {border-radius:50%}
+		#tools paper-icon-button.selected {
+            background-color: var(--bg-light-color-hover);
+        }
+		
+		#color {opacity:0.6}
+		#color:hover {opacity:1}
+		
+		#imageOptions paper-button {
+            background-color: var(--bg-color);
+            white-space:nowrap;
+        }
+
+        .subOptions paper-button,
+        #reducedDonation paper-button {
+            background-color: var(--bg-color);
+            padding: 6px;
+        }
+
+        #cropOptions .selected {
+            background-color: #ddd;
+        }
+        :root[color-scheme='dark'] #cropOptions .selected {
+            background-color: #4e4e4e;
+        }
+		
+		#driveTitle .underline, #driveLink .underline {display:none}
+		
+		xx.medium-tall {height:115px !important}
+		xx#middleBar, xx.middle {height:50px}
+
+        app-header,
+        app-toolbar {
+            background-color: var(--paper-light-bg-color);
+        }
+		app-toolbar {
+            color: var(--primary-color);
+            height:40px;
+            transition:all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+		app-toolbar.removeTransition {transition:none}
+        app-toolbar .inherit {
+            color: var(--primary-color);
+        }
+		#toolbarButtons {transform:translateY(20px) !important}
+		#toolbarOptions {transform:translateY(-20px) !important}
+
+		.toolbarOptionsVisible #toolbarButtons {transform:translateY(3px) !important}
+		.toolbarOptionsVisible #toolbarOptions {transform:translateY(0px) !important}
+		
+		.icon-only {min-width:auto}
+		.icon-only iron-icon {margin-right:0}
+
+		#removeWatermarkWrapper {margin-top:10px}
+		
+		#socialMedia paper-button {min-width:auto;filter: grayscale(100%);}
+
+        #drag-dimensions {
+            display:none;
+            pointer-events:none;
+            border-radius:1px;
+            padding:5px;
+            z-index:5005;
+            color: black;
+            background:#FFFFCC;
+            border:1px solid gray;
+            border-radius:5px;
+            position:absolute;
+            left:-500px;
+            top:-500px;
+        }
+
+		@media all and (max-width:1163px) {
+            .topRight {text-align: right}
+			#socialMedia {display: none !important}
+		}
+
+		@media all and (max-width:1366px) {
+			#searchImage {display:none}
+		}
+		
+		@media all and (min-width:1367px) {
+			#imageOptions {margin-left:13px}
+		}
+		
+   	</style>
+	   
+	<custom-style>
+		<style>
+            .topRight paper-icon-button {
+                height: 24px;
+                width: 24px;
+                padding: 3px;
+                --iron-icon: {
+                    height:16px;
+                    width:16px;
+                    opacity: 0.7;
+                }
+            }
+		</style>
+	</custom-style>
+   	
+</head>
+
+<body class="fullbleed" unresolved unresolved2>
+
+	<app-header-layout>
+		<app-header slot="header" fixed post-effects="waterfall">
+			<app-toolbar id="toolbarButtons" class="medium-tall" middle-justify="center" style="z-index:1">
+				<div id="tools" class="flex layout horizontal center-justified">
+					<div id="toolsButtons" class="layout horizontal center">
+						<paper-button id="refresh" class="hidden" msg="restart">Restart</paper-button>
+						<paper-icon-button id="undo" icon="undo" style="visibility:hidden"></paper-icon-button>
+						<paper-tooltip for="undo" fit-to-visible-bounds><span msg="undo">undo</span></paper-tooltip>
+						<paper-icon-button id="redo" icon="redo" style="visibility:hidden;margin-right:20px"></paper-icon-button>
+						<paper-tooltip for="redo" fit-to-visible-bounds><span msg="redo">redo</span></paper-tooltip>
+						<paper-icon-button id="crop" icon="image:crop"></paper-icon-button>
+						<paper-tooltip for="crop"><span msg="cropTool">crop</span></paper-tooltip>
+						<paper-icon-button id="select" icon="image:crop-free"></paper-icon-button>
+						<paper-tooltip for="select"><span msg="selectionTool">Select</span></paper-tooltip>
+						<paper-icon-button id="circle" icon="image:panorama-fish-eye"></paper-icon-button>
+						<paper-icon-button id="rectangle" icon="image:crop-din"></paper-icon-button>
+						<paper-icon-button id="spotlight-circle" icon="editor:highlight"></paper-icon-button>
+						<paper-tooltip for="spotlight-circle"><span msg="spotLight"></span></paper-tooltip>
+						<paper-icon-button id="arrow" icon="trending-flat"></paper-icon-button><!-- arrow-forward -->
+						<paper-icon-button id="line" icon="remove"></paper-icon-button>
+						<paper-icon-button id="freeHand" icon="gesture"></paper-icon-button>
+						<paper-tooltip for="freeHand"><span msg="drawFreehand"></span></paper-tooltip>
+						<paper-icon-button id="writeText" icon="custom:cat"></paper-icon-button>
+						<paper-tooltip for="writeText"><span msg="writeText">writeText</span></paper-tooltip>
+						<paper-icon-button id="numbers" icon="image:looks-one"></paper-icon-button>
+						<paper-tooltip for="numbers"><span msg="numbers">numbers</span></paper-tooltip>
+						<paper-icon-button id="highlight" icon="editor:border-color"></paper-icon-button>
+						<paper-tooltip for="highlight"><span msg="highlight"></span></paper-tooltip>
+						<paper-icon-button id="blur" src="images/cursors/blur.png"></paper-icon-button>
+						<paper-tooltip for="blur"><span msg="blurTool"></span></paper-tooltip>
+                        <paper-menu-button role="group" aria-haspopup="true" horizontal-align="left" vertical-align="top" aria-disabled="false">
+                            <paper-icon-button id="color-list-button" icon="editor:format-color-fill" slot="dropdown-trigger" class="dropdown-trigger" alt="color picker"></paper-icon-button>
+                            <paper-listbox id="color-listbox" slot="dropdown-content" class="dropdown-content">
+                                <div id="color-listbox-items" style="height: 200px; width: 360px;"></div>
+                                <div id="precise-color-wrapper">
+                                    <div class="precise-color-sample" style="background-color: black;" color="#000000"></div>
+                                    <div class="precise-color-sample" style="background-color: white;" color="#ffffff"></div>
+                                    <div class="precise-color-sample" id="precise-color-rgb-hex" style="border-color: transparent;"></div>
+                                    <div style="margin-top: 15px">
+                                        R: <input id="rgb-red" class="rgb" type="red" value="0" autocomplete="off"/> G: <input id="rgb-green" class="rgb" type="red" value="0" autocomplete="off"/> B: <input id="rgb-blue" class="rgb" type="red" value="0" autocomplete="off"/> <span style="margin-left:20px">Hex:</span> <input id="hex" type="text" autocomplete="off"/>
+                                    </div>
+                                    <div style="margin-top:15px;text-align: center;">
+                                        <paper-button id="precise-color-done" raised class="colored"><span msg="done"></span></paper-button>
+                                    </div>
+                                </div>
+                            </paper-listbox>
+                        </paper-menu-button>
+						<paper-tooltip for="color-list-button" fit-to-visible-bounds><span msg="chooseColor">Change color</span></paper-tooltip>
+                        <div id="colorPickerWrapper"></div>
+                        <paper-icon-button id="color-picker" icon="image:colorize"></paper-icon-button>
+						<paper-tooltip for="color-picker"><span msg="colorPicker"></span></paper-tooltip>
+						<paper-icon-button id="my-filter" icon="image:brightness-6"></paper-icon-button>
+						<paper-tooltip for="my-filter" fit-to-visible-bounds><span msg="filters">filters</span></paper-tooltip>
+                        <paper-icon-button id="resize" icon="aspect-ratio"></paper-icon-button>
+                        <paper-tooltip for="resize" fit-to-visible-bounds><span msg="expand">expand</span></paper-tooltip>
+						<paper-icon-button id="zoomOut" icon="zoom-out"></paper-icon-button>
+						<paper-tooltip for="zoomOut" fit-to-visible-bounds><span msg="zoomOut">zoomOut</span></paper-tooltip>
+						<paper-icon-button id="zoomIn" icon="zoom-in"></paper-icon-button>
+						<paper-tooltip for="zoomIn" fit-to-visible-bounds><span msg="zoomIn">zoomIn</span></paper-tooltip>
+						<paper-button id="done" class="colored" raised style="margin-left:20px" msg="done">Done</paper-button>
+					</div>
+					<div id="imageOptions" class="layout horizontal center" hidden>
+						<paper-icon-button id="back" icon="arrow-back" style="margin-right:6px"></paper-icon-button>
+						<paper-button id="download" raised><iron-icon icon="file-download"></iron-icon> <span msg="download">Download</span></paper-button>
+						<paper-tooltip for="download" fit-to-visible-bounds><span msg="tip">Tip</span>: <span msg="saveImageAsDesc"> <i msg="saveImageAs" class="nobr" style="font-weight:bold">Save image as...</i></span></paper-tooltip>
+						<paper-button id="saveAs" raised chromium-only><iron-icon icon="editor:insert-drive-file"></iron-icon> <span msg="saveAs">saveAs</span></paper-button>
+						<paper-button id="upload" raised><iron-icon icon="cloud-upload"></iron-icon> <span msg="upload">Upload</span></paper-button>
+						<paper-button id="saveToDrive" raised><iron-icon src="images/drive.png" style="opacity:0.7"></iron-icon> <span msg="saveToGoogleDrive">Save to Google Drive</span></paper-button>
+						<paper-button id="uploadToYouTube" raised chromium-only><iron-icon src="images/youtube.svg" style="opacity:0.7"></iron-icon> <span msg="uploadToYouTube">uploadToYouTube</span></paper-button>
+						<paper-button id="copyToClipboard" raised><iron-icon icon="content-copy"></iron-icon> <span msg="copy">Copy image</span></paper-button>
+						<paper-button id="editInPixlr" raised><iron-icon icon="editor:insert-photo"></iron-icon> <span msg="editInPixlr">Edit in Pixlr</span></paper-button>
+                        <paper-button id="share" raised><iron-icon icon="social:share"></iron-icon> <span msg="share">Share</span></paper-button>
+                        <paper-button id="open" raised chromium-only class="icon-only"><iron-icon icon="open-in-new"></iron-icon></paper-button>
+						<paper-tooltip for="open"><span msg="open"></span></paper-tooltip>
+						<paper-button id="pdf" raised chromium-only class="icon-only"><iron-icon icon="image:picture-as-pdf"></iron-icon></paper-button>
+						<paper-button id="searchImage" raised chromium-only class="icon-only"><iron-icon icon="search"></iron-icon></paper-button>
+						<paper-tooltip for="searchImage"><span msg="search"></span></paper-tooltip>
+					</div>
+				</div>
+				<div class="topRight">
+					<paper-button id="contribute" msg="contribute" style="font-size:11px"></paper-button>
+					<paper-icon-button id="help" icon="help"></paper-icon-button>
+					<paper-icon-button id="options" icon="settings"></paper-icon-button>
+					<div id="socialMedia" style="text-align:center;display:none">
+						<a class="inherit" href="https://www.facebook.com/thegreenprogrammer" target="_blank">
+							<paper-button><social-media-icons icon="facebook" size="16"></social-media-icons></paper-button>
+						</a>
+						<a class="inherit" href="https://twitter.com/JasonSavard" target="_blank">
+							<paper-button><social-media-icons icon="twitter" size="16"></social-media-icons></paper-button>
+						</a>
+						<a class="inherit" href="https://jasonsavard.com/blog/?show-email-subscription=true" target="_blank">
+							<paper-button><iron-icon icon="mail" style="width:16px;height:16px"></iron-icon></paper-button>
+						</a>
+					</div>
+				</div>
+			</app-toolbar>
+			<app-toolbar id="toolbarOptions" class="layout horizontal center-center">
+				<div class="middle">
+					<div id="textOptions" class="subOptions" style="display:none" mustDonate>
+						<paper-dropdown-menu id="font-family" msgLabel="font">
+							<paper-listbox slot="dropdown-content" attr-for-selected="value" xxstorage="fontFamily">
+								<paper-item style="font-family:arial" value="arial">Arial</paper-item>
+								<paper-item style="font-family:cambria" value="cambria">Cambria</paper-item>
+								<paper-item style="font-family:comic sans ms" value="comic sans ms">Comic Sans MS</paper-item>
+								<paper-item style="font-family:courier new" value="courier new">Courier New</paper-item>
+								<paper-item style="font-family:georgia" value="georgia">Georgia</paper-item>
+								<paper-item style="font-family:helvetica" value="helvetica">Helvetica</paper-item>
+								<paper-item style="font-family:impact" value="impact">Impact</paper-item>
+								<paper-item style="font-family:times new roman" value="times new roman">Times New Roman</paper-item>
+								<paper-item style="font-family:verdana" value="verdana">Verdana</paper-item>
+                                <paper-item id="more-fonts"><span msg="more">More</span>...</paper-item>
+							</paper-listbox>
+						</paper-dropdown-menu>
+						<paper-dropdown-menu id="font-size" msgLabel="size">
+							<paper-listbox slot="dropdown-content" attr-for-selected="value" storage="fontSize">
+								<paper-item style="font-size:12px" value="small" msg="small">ssmall</paper-item>
+								<paper-item style="font-size:18px" value="normal" msg="normal">Normal</paper-item>
+								<paper-item style="font-size:30px" value="large" msg="large">Large</paper-item>
+								<paper-item style="font-size:38px" value="extraLarge" msg="extraLarge">Extra Large</paper-item>
+							</paper-listbox>
+						</paper-dropdown-menu>
+						<paper-dropdown-menu id="font-bg" msgLabel="background" style="margin-left:20px">
+							<paper-listbox slot="dropdown-content" attr-for-selected="value" storage="fontBackground">
+								<paper-item value="semi-transparent" msg="semiTransparent">semi-trans</paper-item>
+								<paper-item value="white" msg="white">white</paper-item>
+								<paper-item value="black" msg="black">black</paper-item>
+								<paper-item value="none" msg="none">none</paper-item>
+							</paper-listbox>
+						</paper-dropdown-menu>
+					</div>
+					<div id="lineOptions" class="subOptions" style="display:none">
+                        <paper-slider id="line-weight" min="1" max="13" step="2" mustDonate msgTitle="size"></paper-slider>
+                        <paper-dropdown-menu id="fill-style" msgLabel="fillStyle" style="margin-left:20px;width:120px" hidden>
+                            <paper-listbox slot="dropdown-content" attr-for-selected="value" storage="fillStyle">
+                                <paper-item value="transparent" msg="transparent">transparent</paper-item>
+                                <paper-item value="semi-transparent" msg="semiTransparent">semi-transparent</paper-item>
+                                <paper-item value="fill" msg="fill">fill</paper-item>
+                            </paper-listbox>
+                        </paper-dropdown-menu>
+					</div>
+					<div id="blurOptions" class="subOptions" style="display:none">
+						<paper-dropdown-menu no-label-float>
+							<paper-listbox slot="dropdown-content" attr-for-selected="value" storage="blurShape">
+								<paper-item value="selectArea" msg="selectArea">select area</paper-item>
+								<paper-item value="freeHand" msg="drawFreehand">free hand</paper-item>
+							</paper-listbox>
+						</paper-dropdown-menu>
+					</div>
+					<div id="cropOptions" class="subOptions" style="display:none">
+						<paper-button id="crop-freeform" msg="freeform" raised class="selected">freeform</paper-button>
+						<paper-button id="crop-square" msg="square" raised>square</paper-button>
+						<paper-button class="crop-ratio" raised x=16 y=9>16:9</paper-button>
+						<paper-button class="crop-ratio" raised x=10 y=8>10:8</paper-button>
+						<paper-button class="crop-ratio" raised x=7 y=5>7:5</paper-button>
+                        <paper-button class="crop-ratio" raised x=4 y=3>4:3</paper-button>
+                        <paper-button class="crop-ratio" raised x=5 y=3>5:3</paper-button>
+                        <paper-button class="crop-ratio" raised x=3 y=2>3:2</paper-button>
+					</div>
+					<div id="selectOptions" class="subOptions" style="display:none">
+						<paper-button id="delete" raised msg="deleteSelection">Delete selection</paper-button>
+					</div>
+					<div id="numbersOptions" class="subOptions" style="display:none">
+                        <input id="numbersCount" type="text" style="width: 30px; text-align: center;"/>
+                    </div>
+					<div id="reducedDonation" style="display:none;font-size:14px;color:gray">
+						Long time user special... get the <a class="inherit" target="_blank" href="contribute.html"><paper-button raised>extra features</paper-button></a> for only 50&cent;
+					</div>
+				</div>
+			</app-toolbar>
+		</app-header>
+		<paper-progress id="progress" indeterminate style="opacity:0;width:100%;height:4px"></paper-progress>
+		<div id="mainContent">
+			<div id="editor" style='text-align:center'>
+				<div id="workspace">
+					<canvas id="canvas" width="540" height="320" class="line"></canvas>
+                    <canvas id="canvastemp" width="540" height="320"></canvas>
+                    <div id="text-outline">
+                        <div id="text-inner-outline">
+                            <div id="text" contenteditable="true"></div>
+                        </div>
+                    </div>
+					<img id="finalImage"/>
+					<div id="removeWatermarkWrapper" hidden>
+						<paper-button id="removeWatermark"><iron-icon icon="av:branding-watermark" style="color:gray"></iron-icon><span msg="removeHeaderFooter">Remove watermark</span></paper-button>
+					</div>
+				</div>
+
+				<div id="statusbar" style="display:none">
+					<div id="statusbar2">
+						<div id="status">
+							<div>&nbsp;</div>
+						</div>
+						<div id="xy">
+							<div>&nbsp;</div>
+						</div>
+						<div id="txy">
+							<div>&nbsp;</div>
+						</div>
+					</div>
+				</div>
+
+				<a id="videoWrapper" href="#">
+					<video id="video" hidden controls autoplay style="max-width:100%;max-height:80vh"></video>
+				</a>
+			</div>
+		</div>
+		<input id="hiddenLink" type="text" style="position:absolute;left:-1000px;opacity:0" />
+	</app-header-layout>
+
+    <div id='drag-dimensions'>x/w</div>
+
+	<paper-toast id="processing"><paper-spinner dir="ltr" active></paper-spinner></paper-toast>
+	<paper-toast id="message"><paper-icon-button class="closeToast" icon="close"></paper-icon-button></paper-toast>
+	<paper-toast id="error"><paper-button class="toastLink" hidden></paper-button> <paper-icon-button class="closeToast" icon="close"></paper-icon-button></paper-toast>
+	
+	<template id="genericDialogTemplate">
+		<paper-dialog id="genericDialog" modal="true">
+			<h2>blah blah</h2>
+			<paper-dialog-scrollable class="dialogDescription">
+				blah
+			</paper-dialog-scrollable>
+			<div class="buttons">
+		  		<paper-button dialog-other class="otherDialog" hidden>empty</paper-button>
+		  		<paper-button dialog-dismiss class="cancelDialog"><span msg="cancel"></span></paper-button>
+		  		<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<template id="copyToClipboardDialogTemplate">
+		<paper-dialog id="copyToClipboardDialog" modal="true">
+			<paper-dialog-scrollable class="dialogDescription">
+				<div style="margin-bottom:6px"><span>1 - </span> <span msg="copy">copy</span> (<span id="copyPC" hidden>Ctrl+C</span><span id="copyMac" hidden>Command+C</span>) or click <span msg="copy"></span> button</div>
+				<div><span>2 - </span> <span msg="paste">Paste</span> (<span id="pastePC" hidden>Ctrl+V</span><span id="pasteMac" hidden>Command+V</span>) <span msg="paste2">into an email or social media</span></div>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button dialog-dismiss class="cancelDialog"><span msg="wantALink">Want a link</span></paper-button>
+		  		<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<template id="saveImageAsDialogTemplate">
+		<paper-dialog id="saveImageAsDialog" modal="true">
+			<paper-dialog-scrollable class="dialogDescription">
+				<div style="margin-bottom:6px"><span msg="saveImageAsDesc"> <i msg="saveImageAs" class="nobr" style="font-weight:bold">Save image as...</i></span></div>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button class="otherDialog"><span msg="makeThisSimpler">makeThisSimpler</span></paper-button>
+		  		<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<template id="shareImageDialogTemplate">
+		<paper-dialog id="shareImageDialog" modal="true">
+			<paper-dialog-scrollable class="dialogDescription">
+				<span msg="shareImageBlurb"><b msg="copy"></b><b msg="shareButtons"></b></span><br>but if you really want to upload your screenshot to the cloud at <a href="https://imgur.com/" target="_blank">Imgur.com</a> then click OK
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button dialog-dismiss class="cancelDialog"><span msg="cancel"></span></paper-button>
+		  		<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<template id="shareLinkDialogTemplate">
+		<paper-dialog id="shareLinkDialog" modal="true">
+			<paper-dialog-scrollable class="dialogDescription">
+				<paper-input id="shareLink" msgLabel="shareableLink" readonly autofocus></paper-input>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button dialog-dismiss class="cancelDialog"><span msg="cancel"></span></paper-button>
+				<paper-button class="otherDialog"><span msg="delete">Delete</span></paper-button>
+		  		<paper-button class="okDialog"><span msg="copyLink"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<template id="driveDialogTemplate">
+		<paper-dialog id="driveDialog" modal="true" style="min-width:750px">
+			<div class="dialog-close-button">
+				<paper-icon-button icon="close" dialog-dismiss msgTitle="close"></paper-icon-button>
+			</div>
+			<paper-dialog-scrollable class="dialogDescription">
+				<paper-input id="driveTitle" msgLabel="title" readonly></paper-input>
+				<paper-input id="driveLink" msgLabel="link" readonly></paper-input>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button raised class="shareableLink"><iron-icon icon="link"></iron-icon> <span msg="shareableLink">shareableLink</span></paper-button>
+				<paper-button raised class="copyLink"><iron-icon icon="content-copy"></iron-icon> <span msg="copyLink">copyLink</span></paper-button>
+				<paper-button raised dialog-confirm class="okDialog"><iron-icon icon="open-in-new"></iron-icon> <span msg="openInGoogleDrive">openInGoogleDrive</span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<template id="openImageDialogTemplate">
+		<paper-dialog id="openImageDialog" modal="true" style="min-width:750px">
+			<paper-dialog-scrollable class="dialogDescription">
+				Right click image below and click <b>"Open image in new tab"</b>
+				<br>
+				<iframe sandbox id="openImageIframe" style="width:98%"></iframe>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<template id="filterDialogTemplate">
+		<paper-dialog id="filterDialog" style="opacity:0.7">
+			<paper-dialog-scrollable class="dialogDescription">
+                <div>
+                    <input id="grayscale" type="range" value="0"/> Grayscale
+                </div>
+                <div>
+                    <input id="sepia" type="range" value="0"/> Sepia
+                </div>
+                <div>
+                    <input id="invert" type="range" min=0 max="1" value="0"/> Invert
+                </div>
+                <div>
+                    <input id="hue-rotation" type="range" min=0 max=360 value="0"/> Hue rotation
+                </div>
+                <div>
+                    <input id="brightness" type="range" min=0 max="2" step="0.1"/> Brightness
+                </div>
+                <div>
+                    <input id="saturation" type="range" min=0 max="2" step="0.1"/> Saturation
+                </div>
+			</paper-dialog-scrollable>
+			<div class="buttons">
+				<paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+		  	</div>
+		</paper-dialog>
+	</template>
+
+	<iron-iconset-svg name="custom" size="438" style="display:none">
+	<svg><defs>
+		<g id="cat"><path xmlns="http://www.w3.org/2000/svg" d="M223.395,203.198c-8.932-22.4-17.798-43.867-26.599-64.001C187.994,119.064,179.061,100,169.995,80H110.4    c-9.334,20-18.335,39.064-27.002,59.197c-8.667,20.134-17.468,41.501-26.404,63.9c-8.936,22.4-18.068,46.518-27.399,71.851    C20.266,300.283,10.4,328,0,358h64.795c2.938-10,6.205-19.471,9.802-29.603S81.726,308,85.193,298h108.008    c3.467,10,6.998,20.265,10.596,30.397c3.597,10.132,6.864,19.603,9.802,29.603h66.797c-10.401-30-20.268-57.667-29.602-83.001    C241.459,249.665,232.326,225.598,223.395,203.198L223.395,203.198z M99.597,248c4.264-12,8.463-23.47,12.598-34.404    c4.134-10.933,7.934-20.932,11.401-29.998s6.533-17.065,9.198-23.999c2.665-6.933,4.665-12.402,6-16.406    c1.603,4.004,3.737,9.473,6.403,16.406c2.665,6.934,5.798,14.934,9.399,23.999c3.601,9.066,7.401,19.064,11.401,29.997    c4,10.934,8.132,22.404,12.396,34.404H99.597V248z"/><polygon xmlns="http://www.w3.org/2000/svg" points="438,59 438,19 318,19 318,59 358,59 358,379 318,379 318,419 438,419 438,379 398,379 398,59   "/></g>
+	</defs></svg>
+	</iron-iconset-svg>
+	
+
+</body>
+</html>

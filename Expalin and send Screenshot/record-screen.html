@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Explain & Send Screenshots - Record Screen</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="js/common.js"></script>
+    <script src="js/extensionCommon.js"></script>
+
+    <script defer src="js/explainAndSendScreenshots.js"></script>
+    <script defer src="js/record-screen.js"></script>
+
+    <script src="js/polymer-css.js"></script>
+
+    <style is="custom-style">
+        paper-icon-button.giant {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <style>
+        body {
+            font-size: 1em;
+        }
+
+        paper-icon-button {
+            background-color: var(--bg-light-color-hover);
+            border-radius:50%;
+        }
+    </style>
+
+</head>
+
+<body class="layout horizontal center-center">
+
+    <div id="do-not-close-warning" hidden style="text-align: center">Window required to save video.<br>This will close automatically when you close the save video window.</div>
+
+    <paper-icon-button id="recordScreen" icon="av:videocam" class="giant" hidden></paper-icon-button>
+
+    <template id="genericDialogTemplate">
+        <paper-dialog id="genericDialog" modal="true">
+            <h2>blah blah</h2>
+            <paper-dialog-scrollable class="dialogDescription">
+                blah
+            </paper-dialog-scrollable>
+            <div class="buttons">
+                <paper-button dialog-dismiss class="cancelDialog"><span msg="cancel"></span></paper-button>
+                <paper-button dialog-confirm autofocus class="okDialog"><span msg="ok"></span></paper-button>
+            </div>
+        </paper-dialog>
+    </template>
+
+</body>
+</html>

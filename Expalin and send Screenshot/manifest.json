@@ -1,0 +1,58 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "version": "13.2",
+  "homepage_url": "https://jasonsavard.com?ref=homepage_url&ext=screenshot",
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "commands": {
+	  "grab_selected_area": {
+	    "description": "__MSG_selectArea__"
+	  },
+	  "select_element": {
+	    "description": "__MSG_selectElement__"
+	  },
+	  "grab_visible_page": {
+	    "description": "__MSG_grabVisiblePart__"
+	  },
+	  "grab_entire_page": {
+	    "description": "__MSG_grabEntirePage__"
+    },
+    "grab_entire_screen": {
+      "description": "__MSG_grabEntireScreen__"
+    },
+    "record_screen": {
+      "description": "__MSG_recordScreen__"
+    }
+  },
+  "action": {
+      "default_icon": "/images/icons/default19.png",
+      "default_title": "__MSG_name__",
+      "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+      "16": "/images/icons/default19.png",
+      "19": "/images/icons/default19.png",
+      "32": "/images/icons/default32.png",
+      "48": "/images/icons/default48.png",
+      "128": "/images/icons/default128.png"
+  },
+  "default_locale": "en",
+  "incognito": "split",
+  "permissions": [ "storage", "activeTab", "contextMenus", "notifications", "scripting", "system.display", "alarms" ],
+  "storage": {
+	  "managed_schema": "schema.json"
+  },
+  "optional_permissions": [ "clipboardRead", "desktopCapture", "downloads" ],
+
+  "manifest_version": 3,
+  "web_accessible_resources": [{
+        "resources": ["options.html", "contribute.html"],
+        "matches": ["https://jasonsavard.com/*", "https://checkout.stripe.com/*", "https://www.paypal.com/*", "https://commerce.coinbase.com/*"]
+    }
+  ]
+}

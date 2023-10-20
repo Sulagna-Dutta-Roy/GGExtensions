@@ -1,0 +1,10 @@
+{
+	"type": "object",
+	"properties": {
+		"DoNotOpenWebsiteOnInstall": {
+			"title": "Do not open developer's website when installed",
+			"description": "This extension by default opens the developer's website, check this to disable that.",
+			"type": "boolean"
+		}
+	}
+}
