@@ -1,6 +1,5 @@
 ## Welcome to GG Extensions
 This repository is especially for newcomers who want to enhance their knowledge and skills by making small/large projects.
-![Capture](https://github.com/WeBeginners-Community/GGExtensions/assets/72568715/f9fe12dd-d091-4999-8775-e034f4a81034)
 
 
 How to Start?
