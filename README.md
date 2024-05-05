@@ -1,4 +1,7 @@
 ## Welcome to GG Extensions
+This project has been Accepted for GirlScript Summer of Code 2024
+![Untitled](https://github.com/Sulagna-Dutta-Roy/GGExtensions/assets/72568715/f6bab92e-c4c3-40d1-ae8f-01ed9ab84be6)
+
 This repository is especially for newcomers who want to enhance their knowledge and skills by making small/large projects.
 
 
@@ -66,6 +69,4 @@ Soon I'll be merging all your changes into the master branch of this project. Yo
 Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
 
 Thanks to all the people who have contributed: 
-
-
 [![Contributors](https://contrib.rocks/image?repo=WeBeginners-Community/GGExtensions)](https://github.com/WeBeginners-Community/GGExtensions/graphs/contributors)
