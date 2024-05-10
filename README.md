@@ -1,72 +1,85 @@
-## Welcome to GG Extensions
-This project has been Accepted for GirlScript Summer of Code 2024
-![Untitled](https://github.com/Sulagna-Dutta-Roy/GGExtensions/assets/72568715/f6bab92e-c4c3-40d1-ae8f-01ed9ab84be6)
+# Welcome to GG Extensions
 
-This repository is especially for newcomers who want to enhance their knowledge and skills by making small/large projects.
+![GG Extensions](https://github.com/Sulagna-Dutta-Roy/GGExtensions/assets/72568715/f6bab92e-c4c3-40d1-ae8f-01ed9ab84be6)
 
+## Accepted for GirlScript Summer of Code 2024
 
-How to Start?
-If you have an idea of any web projects you want to build just open an appropriate issue regarding this, and we will discuss and assign you that issue. In case you are confused and have queries, just ping me, will help you get along and build!
+Congratulations! GG Extensions has been selected for participation in GirlScript Summer of Code 2024. We're excited to have you on board to contribute and learn together!
 
-If you want to contribute by creating new extensions then check the type of your project and add it to its respective folder.
-EX: Paint Extensions/files.html
+This repository serves as a platform for newcomers and seasoned developers alike to enhance their knowledge and skills by working on small to large web projects. Whether you're diving into web development for the first time or looking to expand your portfolio, GG Extensions offers a supportive community and a variety of opportunities to grow.
 
-Submit a Pull Request :
-Branch naming convention is as follows:
+## How to Get Started?
 
-TYPE-ISSUE_ID-DESCRIPTION
+Getting started with GG Extensions is easy! Follow these steps to jump right in:
 
-When TYPE can be:
+1. **Explore Project Ideas**: Browse through the existing project ideas or propose your own by opening an issue. We welcome a diverse range of project proposals and aim to match contributors with projects that align with their interests and skill levels.
 
-feat - is a new project
-doc - documentation only changes
-fix - a bug fix/improvement of any project
-All PRs must include a commit message with the changes description!
+2. **Join the Community**: Connect with fellow contributors and mentors in our community channels. Whether you have questions, need guidance, or want to share your progress, our community is here to support you every step of the way.
 
-How to make a Pull Request
-1. Fork the repository by clicking fork symbol at the top right corner.
+3. **Choose Your Project**: Once you've identified a project that interests you, let us know! We'll assign you the issue and provide any additional resources or information you may need to get started.
 
-2. Clone the forked repository.
-```
-   git clone https://github.com/<your-github-id>/GGExtensions.git
-```
-3. Navigate to the project directory.
-```
-   cd GGExtensions
-```
-4. Create a new branch:
-```
-   git checkout -b <Add your branch name>
-```
-5. Make necessary changes and commit those changes:
+4. **Start Contributing**: Dive into the project, work on your assigned tasks, and collaborate with your peers. Don't hesitate to ask for help or feedback along the way—we're all here to learn and grow together.
 
-Add all the changes to the staging area
+## How to Contribute?
 
-git add --a
-Push changes to GitHub
-or Open in Gitpod
+Contributing to GG Extensions is a rewarding experience that allows you to sharpen your skills, gain practical experience, and make meaningful contributions to real-world projects. Here's how you can get involved:
 
-Now commit those changes using the git commit command:
-```
-git commit -m "commit message"
-```
-6. Push changes to GitHub:
+- **Coding**: Contribute code to existing projects or propose new projects to work on. Whether you're a frontend developer, backend developer, or full-stack developer, there's a place for you to contribute your expertise.
 
-Push your changes using the command git push:
-```
-git push origin -u <add-your-branch-name>
-```
-replacing <add-your-branch-name> with the name of the branch you created earlier.
+- **Documentation**: Improve project documentation, write tutorials, or create developer guides to help others understand and contribute to the project more effectively.
 
-7. Submit your changes for review:
+- **Testing**: Help ensure the quality and reliability of our projects by testing new features, identifying bugs, and providing feedback on improvements.
 
-If you go to your repository on GitHub, you'll see a Compare & pull request button. Click on that button.
+- **Design**: If you have a knack for design, contribute your skills to create user-friendly interfaces, design project logos, or enhance the overall visual appeal of our projects.
 
-Now submit the pull request.
+## Submitting a Pull Request
 
-Soon I'll be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
+To submit your contributions, follow these steps:
 
-Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
+1. **Fork the Repository**: Click the "Fork" button at the top right corner of the repository to create your own copy.
 
-Thanks to all the people who have contributed: 
-[![Contributors](https://contrib.rocks/image?repo=WeBeginners-Community/GGExtensions)](https://github.com/WeBeginners-Community/GGExtensions/graphs/contributors)
+2. **Clone Your Fork**: Clone your forked repository to your local machine using the following command:
+   ```
+   git clone https://github.com/Your-Username/GGExtensions.git
+   ```
+
+3. **Create a Branch**: Create a new branch for your changes:
+   ```
+   git checkout -b my-feature
+   ```
+
+4. **Make Changes**: Make your desired changes to the codebase.
+
+5. **Commit Changes**: Commit your changes with a descriptive commit message:
+   ```
+   git commit -m "Add new feature"
+   ```
+
+6. **Push Changes**: Push your changes to your forked repository:
+   ```
+   git push origin my-feature
+   ```
+
+7. **Submit a Pull Request**: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.
+
+## Project Directory Structure
+
+The project directory is organized as follows:
+
+- **Projects**: Contains subdirectories for individual projects, each with its own README.md file detailing project-specific information and instructions.
+- **Contributing.md**: Provides guidelines for contributing to the repository.
+- **Code_of_Conduct.md**: Outlines our community code of conduct and expectations for contributors.
+- **LICENSE**: Specifies the license under which the repository is distributed.
+
+## Get Involved
+
+Ready to start contributing? Join us on our journey to build innovative web projects and make a positive impact in the developer community! Together, we can learn, grow, and create something truly remarkable.
+
+Join our community channels:
+
+- Discord: [GG Extensions Community](#)
+- Slack: [GG Extensions Slack Workspace](#)
+- Twitter: [@GGExtensions](#)
+
+Happy coding!
+
