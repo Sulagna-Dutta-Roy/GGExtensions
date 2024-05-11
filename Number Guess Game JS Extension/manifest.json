@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Number Guess JS",
+    "version": "1.0",
+    "description": "Simple Number Guess JS Game",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
