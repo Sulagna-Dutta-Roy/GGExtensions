@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "ToDo Extension JS",
+    "version": "1.0",
+    "description": "Simple ToDo Extension is JS for managing day to day tasks...",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
