@@ -50,7 +50,7 @@ To submit your contributions, follow these steps:
 
 4. **Make Changes**: Make your desired changes to the codebase.
 
-5. **Add changes**: add your changes to staging area.
+5. **Add changes**: add your changes to staging area:
      '''
      git add .
      '''
