@@ -1,54 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-::selection{
+
+::selection {
   color: #ffff;
   background: #1940a5;
 }
-body{
+
+body {
   width: 100%;
   height: 100vh;
   /* overflow: hidden; */
   padding: 10px;
-  background-image: url(bg.jpg);
+  background-color: hsla(0, 100%, 50%, 1);
+  background-image:
+    radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
 }
-.wrapper{
-  background: #fff;
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.24);
   max-width: 400px;
   width: 100%;
   margin: 120px auto;
   padding: 25px;
   border-radius: 5px;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  border: 2px solid #000;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
-.wrapper header{
+
+.wrapper header {
   font-size: 30px;
   font-weight: 600;
 }
-.wrapper .inputField{
+
+.wrapper .inputField {
   margin: 20px 0;
   width: 100%;
   display: flex;
   height: 45px;
 }
-.inputField input{
+
+.inputField input {
   width: 85%;
   height: 100%;
   outline: none;
   border-radius: 3px;
-  border: 1px solid #ccc;
+  border: 2px solid #000;
   font-size: 17px;
   padding-left: 15px;
   transition: all 0.3s ease;
 }
-.inputField input:focus{
+
+.inputField input:focus {
   border-color: #1940a5;
 }
-.inputField button{
+
+.inputField button {
   width: 50px;
   height: 100%;
   border: none;
@@ -63,19 +83,23 @@ body{
   pointer-events: none;
   transition: all 0.3s ease;
 }
+
 .inputField button:hover,
-.footer button:hover{
+.footer button:hover {
   background: #1940a5;
 }
-.inputField button.active{
+
+.inputField button.active {
   opacity: 1;
   pointer-events: auto;
 }
-.wrapper .todoList{
+
+.wrapper .todoList {
   max-height: 250px;
   overflow-y: auto;
 }
-.todoList li{
+
+.todoList li {
   position: relative;
   list-style: none;
   margin-bottom: 8px;
@@ -86,7 +110,8 @@ body{
   overflow: hidden;
   word-wrap: break-word;
 }
-.todoList li .icon{
+
+.todoList li .icon {
   position: absolute;
   right: -45px;
   top: 50%;
@@ -100,17 +125,20 @@ body{
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.todoList li:hover .icon{
+
+.todoList li:hover .icon {
   right: 0px;
 }
-.wrapper .footer{
+
+.wrapper .footer {
   display: flex;
   width: 100%;
   margin-top: 20px;
   align-items: center;
   justify-content: space-between;
 }
-.footer button{
+
+.footer button {
   padding: 6px 10px;
   border-radius: 3px;
   border: none;
@@ -126,7 +154,8 @@ body{
   pointer-events: none;
   transition: all 0.3s ease;
 }
-.footer button.active{
+
+.footer button.active {
   opacity: 1;
   pointer-events: auto;
 }
