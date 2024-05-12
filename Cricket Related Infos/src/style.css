@@ -1,0 +1,51 @@
+body
+{
+min-width: 400px;
+min-height: 400px;
+background-color: midnightblue;
+background-image: linear-gradient(cornflowerblue, royalblue);
+text-align: center;
+}
+.outer
+{
+border : 1%;
+padding : 1%;
+color : white;
+}
+
+#match1
+{
+ padding : 2%;
+ border : 1%;
+ border: 2px white solid;
+ border-radius: 10%;
+ width : auto;
+ border-radius: 10%;
+ background: transparent;
+ color: white;
+ text-align: center;
+}
+
+#match2
+{
+ padding : 2%;
+ border : 1%;
+ border: 2px white solid;
+ border-radius: 10%;
+ width : auto;
+ border-radius: 10%;
+ background: transparent;
+ color: white;
+ text-align: center;
+}
+
+.heading
+{
+padding : 1%;
+font-size: 15px;
+font-weight: bold;
+}
+p
+{
+font-size: 15px;
+}
