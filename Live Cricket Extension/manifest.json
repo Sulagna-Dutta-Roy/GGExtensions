@@ -1,9 +1,9 @@
 {
-    "name": "cric-extension",
+    "name": "Live Cricket Extension",
     "description": "A chrome extension for complete cricket information",
     "version": "1.0.0",
-    "manifest_version": 1,
-    "browser_action":{
+    "manifest_version": 3,
+    "action":{
         "default_icon": "bat.png", 
         "default_popup": "index.html" 
     }
