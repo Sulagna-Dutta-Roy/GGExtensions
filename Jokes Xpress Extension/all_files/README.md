@@ -76,4 +76,3 @@ The project directory is organized as follows:
 Ready to start contributing? Join us on our journey to build innovative web projects and make a positive impact in the developer community! Together, we can learn, grow, and create something truly remarkable.
 
 Happy coding!
-
