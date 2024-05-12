@@ -53,7 +53,6 @@ To submit your contributions, follow these steps:
 5. **Add changes**: add your changes to staging area.
      '''
      git add .
-
      '''
 
 6. **Commit Changes**: Commit your changes with a descriptive commit message:
