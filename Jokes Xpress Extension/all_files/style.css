@@ -1,0 +1,23 @@
+body{
+    background-color: #28282B;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: auto; 
+    justify-content: center;
+    border: 3px solid whitesmoke;
+}
+header{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+p{
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid lightblue;
+    padding: 10px;
+}
