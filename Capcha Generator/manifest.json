@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Captcha Validation Extension JS",
+    "version": "1.0",
+    "description": "Simple Captcha validation extension built in pure HTML CSS JS...",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
