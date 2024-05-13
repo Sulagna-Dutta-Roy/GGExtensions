@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Playable Piano",
+    "version": "1.0",
+    "description": "Simple Playable Piano for Tympasss",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
