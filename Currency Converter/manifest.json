@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Currency Converter",
+    "version": "1.0",
+    "description": "Currency Pair Converter Extension for browser...",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
