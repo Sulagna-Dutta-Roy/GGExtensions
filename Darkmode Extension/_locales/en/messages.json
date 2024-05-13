@@ -1,0 +1,263 @@
+{
+    "about": {
+        "message": "About"
+    },
+    "absolute": {
+        "message": "Absolute"
+    },
+    "accept": {
+        "message": "Accept"
+    },
+    "allYourSettingsWillBeErasedAndCanTBeRecovered": {
+        "message": "All your settings will be erased and can't be recovered"
+    },
+    "always": {
+        "message": "Always"
+    },
+    "appearance": {
+        "message": "Appearance"
+    },
+    "areYouSureYouWantToDeleteTheSelectedWebsiteSettings": {
+        "message": "Are you sure you want to delete the selected website settings?"
+    },
+    "areYouSureYouWantToExportTheData": {
+        "message": "Are you sure you want to export the data?"
+    },
+    "areYouSureYouWantToImportTheData": {
+        "message": "Are you sure you want to import the data?"
+    },
+    "audioFormats": {
+        "message": "Audio formats"
+    },
+    "backupAndReset": {
+        "message": "Backup & reset"
+    },
+    "bitness": {
+        "message": "Bitness"
+    },
+    "bluelight": {
+        "message": "Bluelight"
+    },
+    "brightness": {
+        "message": "Brightness"
+    },
+    "browser": {
+        "message": "Browser"
+    },
+    "cancel": {
+        "message": "Cancel"
+    },
+    "colorTemperature": {
+        "message": "Color temperature"
+    },
+    "contrast": {
+        "message": "Contrast"
+    },
+    "cores": {
+        "message": "Cores"
+    },
+    "dateAndTime": {
+        "message": "Date & time"
+    },
+    "description": {
+        "message": "Dark Mode, read at night. Bluelight filter for every website. Relax your eyes at night and day."
+    },
+    "device": {
+        "message": "Device"
+    },
+    "disabled": {
+        "message": "Disabled"
+    },
+    "dynamic": {
+        "message": "Dynamic"
+    },
+    "dynamicFilter": {
+        "message": "Dynamic filter"
+    },
+    "dynamicTheme": {
+        "message": "Dynamic theme"
+    },
+    "excludeThisWebsite": {
+        "message": "Exclude this website"
+    },
+    "exportSettings": {
+        "message": "Export settings"
+    },
+    "extension": {
+        "message": "Extension"
+    },
+    "filters": {
+        "message": "Filters"
+    },
+    "flash": {
+        "message": "Flash"
+    },
+    "general": {
+        "message": "General"
+    },
+    "global": {
+        "message": "Global"
+    },
+    "gpu": {
+        "message": "GPU"
+    },
+    "grayscale": {
+        "message": "Grayscale"
+    },
+    "hardwareInformation": {
+        "message": "Hardware information"
+    },
+    "hideMadeWithLove": {
+        "message": "Hide \"Made with ❤...\""
+    },
+    "importSettings": {
+        "message": "Import settings"
+    },
+    "invert": {
+        "message": "Invert"
+    },
+    "invertColors": {
+        "message": "Invert colors"
+    },
+    "language": {
+        "message": "Language"
+    },
+    "languages": {
+        "message": "Languages"
+    },
+    "mode": {
+        "message": "Mode"
+    },
+    "name": {
+        "message": "Name"
+    },
+    "never": {
+        "message": "Never"
+    },
+    "no": {
+        "message": "No"
+    },
+    "ok": {
+        "message": "OK"
+    },
+    "onlyEnableForThisWebsite": {
+        "message": "Only enable for this website"
+    },
+    "os": {
+        "message": "OS"
+    },
+    "permissionIsNotGranted": {
+        "message": "Permission is not granted"
+    },
+    "permissions": {
+        "message": "Permissions"
+    },
+    "platform": {
+        "message": "Platform"
+    },
+    "ram": {
+        "message": "RAM"
+    },
+    "remove": {
+        "message": "Remove"
+    },
+    "reset": {
+        "message": "Reset"
+    },
+    "resetAllSettings": {
+        "message": "Reset all settings"
+    },
+    "resetSettings": {
+        "message": "Reset settings?"
+    },
+    "saveAs": {
+        "message": "Save as..."
+    },
+    "schedule": {
+        "message": "Schedule"
+    },
+    "screen": {
+        "message": "Screen"
+    },
+    "sepia": {
+        "message": "Sepia"
+    },
+    "settings": {
+        "message": "Settings"
+    },
+    "softwareInformation": {
+        "message": "Software information"
+    },
+    "somethingWentWrongTryReloadingThePage": {
+        "message": "Restricted Browser Page! (Otherwise, try reloading!)"
+    },
+    "styles": {
+        "message": "Styles"
+    },
+    "successfullyImportedSettings": {
+        "message": "Successfully imported settings"
+    },
+    "sunsetToSunrise": {
+        "message": "Sunset to sunrise"
+    },
+    "systemPeference": {
+        "message": "System preference"
+    },
+    "textEditorMode": {
+        "message": "Text editor mode"
+    },
+    "theListIsEmpty": {
+        "message": "The list is empty"
+    },
+    "thePageHOSTNAMEisProtectedByBrowser": {
+        "message": "The page HOSTNAME is protected by browser."
+    },
+    "theme": {
+        "message": "Theme"
+    },
+    "thisIsAnExperimentalFeatureDoYouWantToActivateIt": {
+        "message": "This is an experimental feature. Do you want to activate it?"
+    },
+    "thisWillResetAllSettings": {
+        "message": "This will reset all settings"
+    },
+    "timeFrom": {
+        "message": "Time from"
+    },
+    "timeTo": {
+        "message": "Time to"
+    },
+    "turnOffForThisWebsite": {
+        "message": "Turn off for this website"
+    },
+    "turnOn": {
+        "message": "Turn on"
+    },
+    "turnOnForThisWebsite": {
+        "message": "Turn on for this website"
+    },
+    "type": {
+        "message": "Type"
+    },
+    "use24HourFormat": {
+        "message": "Use 24-hour format"
+    },
+    "useGlobal": {
+        "message": "Use global"
+    },
+    "useSettingsForAllWebsites": {
+        "message": "Use settings for all websites"
+    },
+    "version": {
+        "message": "Version"
+    },
+    "videoFormats": {
+        "message": "Video formats"
+    },
+    "websites": {
+        "message": "Websites"
+    },
+    "yes": {
+        "message": "Yes"
+    }
+}

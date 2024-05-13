@@ -1,0 +1,263 @@
+{
+    "about": {
+        "message": "About"
+    },
+    "absolute": {
+        "message": "Assoluto"
+    },
+    "accept": {
+        "message": "Accettò"
+    },
+    "allYourSettingsWillBeErasedAndCanTBeRecovered": {
+        "message": "Tutte le tue impostazioni verranno cancellate e non potranno essere recuperate"
+    },
+    "always": {
+        "message": "Sempre"
+    },
+    "appearance": {
+        "message": "Aspetto"
+    },
+    "areYouSureYouWantToDeleteTheSelectedWebsiteSettings": {
+        "message": "Sei sicuro di voler eliminare le impostazioni del sito selezionato?"
+    },
+    "areYouSureYouWantToExportTheData": {
+        "message": "Sei sicuro di voler esportare i dati?"
+    },
+    "areYouSureYouWantToImportTheData": {
+        "message": "Sei sicuro di voler importare i dati?"
+    },
+    "audioFormats": {
+        "message": "Formato audio"
+    },
+    "backupAndReset": {
+        "message": "Backup & ripristino"
+    },
+    "bitness": {
+        "message": "Bitness"
+    },
+    "bluelight": {
+        "message": "Luce blu"
+    },
+    "brightness": {
+        "message": "Luminosità"
+    },
+    "browser": {
+        "message": "Browser"
+    },
+    "cancel": {
+        "message": "Annulla"
+    },
+    "colorTemperature": {
+        "message": "Temperatura del colore"
+    },
+    "contrast": {
+        "message": "Contrasto"
+    },
+    "cores": {
+        "message": "Cores"
+    },
+    "dateAndTime": {
+        "message": "Data e tempo"
+    },
+    "description": {
+        "message": "Modalita scura, leggi a notte. Filtro della luce blu per ogni sito. Rilassati gli occhi di notte e di giorno."
+    },
+    "device": {
+        "message": "Dispositivo"
+    },
+    "disabled": {
+        "message": "Disabilitato"
+    },
+    "dynamic": {
+        "message": "Dinamico"
+    },
+    "dynamicFilter": {
+        "message": "Filtri dinamici"
+    },
+    "dynamicTheme": {
+        "message": "Tema dinamico"
+    },
+    "excludeThisWebsite": {
+        "message": "Escludi questo sito"
+    },
+    "exportSettings": {
+        "message": "Esporta impostazioni"
+    },
+    "extension": {
+        "message": "Estensione"
+    },
+    "filters": {
+        "message": "Filtro"
+    },
+    "flash": {
+        "message": "Flash"
+    },
+    "general": {
+        "message": "Generale"
+    },
+    "global": {
+        "message": "Globale"
+    },
+    "gpu": {
+        "message": "GPU"
+    },
+    "grayscale": {
+        "message": "Scala di grigi"
+    },
+    "hardwareInformation": {
+        "message": "Informazioni Hardware"
+    },
+    "hideMadeWithLove": {
+        "message": "Nascondi \"Fatto da ❤...\""
+    },
+    "importSettings": {
+        "message": "Importa impostazioni"
+    },
+    "invert": {
+        "message": "Inverti"
+    },
+    "invertColors": {
+        "message": "Inverti colori"
+    },
+    "language": {
+        "message": "Lingua"
+    },
+    "languages": {
+        "message": "Lingue"
+    },
+    "mode": {
+        "message": "Modalità"
+    },
+    "name": {
+        "message": "Nome"
+    },
+    "never": {
+        "message": "Mai"
+    },
+    "no": {
+        "message": "No"
+    },
+    "ok": {
+        "message": "OK"
+    },
+    "onlyEnableForThisWebsite": {
+        "message": "Abilita solo per questo sito Web"
+    },
+    "os": {
+        "message": "OS"
+    },
+    "permissionIsNotGranted": {
+        "message": "Il permesso non è stato concesso"
+    },
+    "permissions": {
+        "message": "Permessi"
+    },
+    "platform": {
+        "message": "Piattaforma"
+    },
+    "ram": {
+        "message": "RAM"
+    },
+    "remove": {
+        "message": "Rimuovi"
+    },
+    "reset": {
+        "message": "Ripristino"
+    },
+    "resetAllSettings": {
+        "message": "Ripristina tutte le impostazioni"
+    },
+    "resetSettings": {
+        "message": "Rispristina impostazioni?"
+    },
+    "saveAs": {
+        "message": "Salva come..."
+    },
+    "schedule": {
+        "message": "Programma"
+    },
+    "screen": {
+        "message": "Schermo"
+    },
+    "sepia": {
+        "message": "Sepia"
+    },
+    "settings": {
+        "message": "Impostazioni"
+    },
+    "softwareInformation": {
+        "message": "Informazioni software"
+    },
+    "somethingWentWrongTryReloadingThePage": {
+        "message": "Qualcosa è andato storto. Prova a ricaricare la pagina."
+    },
+    "styles": {
+        "message": "Stili"
+    },
+    "successfullyImportedSettings": {
+        "message": "Impostazioni importate correttamente"
+    },
+    "sunsetToSunrise": {
+        "message": "Dal tramonto all'alba"
+    },
+    "systemPeference": {
+        "message": "Preferenza del sistema"
+    },
+    "textEditorMode": {
+        "message": "Modalità di modifica del testo"
+    },
+    "theListIsEmpty": {
+        "message": "La lista è vuota"
+    },
+    "thePageHOSTNAMEisProtectedByBrowser": {
+        "message": "Il nome host della pagina è protetto dal browser."
+    },
+    "theme": {
+        "message": "Tema"
+    },
+    "thisIsAnExperimentalFeatureDoYouWantToActivateIt": {
+        "message": "Questa è una funzione sperimentale. La vuoi attivare?"
+    },
+    "thisWillResetAllSettings": {
+        "message": "Questo ripristinerà tutte le impostazioni"
+    },
+    "timeFrom": {
+        "message": "Tempo da"
+    },
+    "timeTo": {
+        "message": "Tempo di"
+    },
+    "turnOffForThisWebsite": {
+        "message": "Spengi per questo sito"
+    },
+    "turnOn": {
+        "message": "Accendi"
+    },
+    "turnOnForThisWebsite": {
+        "message": "Accendi per questo sito"
+    },
+    "type": {
+        "message": "Tipo"
+    },
+    "use24HourFormat": {
+        "message": "Usa formato 24-ore"
+    },
+    "useGlobal": {
+        "message": "Usa globale"
+    },
+    "useSettingsForAllWebsites": {
+        "message": "Usa impostazioni per tutti i siti"
+    },
+    "version": {
+        "message": "Versione"
+    },
+    "videoFormats": {
+        "message": "Formati dei video"
+    },
+    "websites": {
+        "message": "Sito"
+    },
+    "yes": {
+        "message": "Si"
+    }
+}

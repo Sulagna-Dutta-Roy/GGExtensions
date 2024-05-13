@@ -1,0 +1,263 @@
+{
+    "about": {
+        "message": "Tentang"
+    },
+    "absolute": {
+        "message": "Absolute"
+    },
+    "accept": {
+        "message": "Terima"
+    },
+    "allYourSettingsWillBeErasedAndCanTBeRecovered": {
+        "message": "All your settings will be erased and can't be recovered"
+    },
+    "always": {
+        "message": "Always"
+    },
+    "appearance": {
+        "message": "Appearance"
+    },
+    "areYouSureYouWantToDeleteTheSelectedWebsiteSettings": {
+        "message": "Are you sure you want to delete the selected website settings?"
+    },
+    "areYouSureYouWantToExportTheData": {
+        "message": "Are you sure you want to export the data?"
+    },
+    "areYouSureYouWantToImportTheData": {
+        "message": "Are you sure you want to import the data?"
+    },
+    "audioFormats": {
+        "message": "Format suara"
+    },
+    "backupAndReset": {
+        "message": "Backup & reset"
+    },
+    "bitness": {
+        "message": "Bitness"
+    },
+    "bluelight": {
+        "message": "Cahaya biru"
+    },
+    "brightness": {
+        "message": "Kecerahan"
+    },
+    "browser": {
+        "message": "Peramban"
+    },
+    "cancel": {
+        "message": "Batal"
+    },
+    "colorTemperature": {
+        "message": "Temperatur warna"
+    },
+    "contrast": {
+        "message": "Kontras"
+    },
+    "cores": {
+        "message": "Core"
+    },
+    "dateAndTime": {
+        "message": "Tanggal & waktu"
+    },
+    "description": {
+        "message": "Dark Mode, read at night. Bluelight filter for every website. Relax your eyes at night and day."
+    },
+    "device": {
+        "message": "Perangkat"
+    },
+    "disabled": {
+        "message": "Nonaktifkan"
+    },
+    "dynamic": {
+        "message": "Dynamic"
+    },
+    "dynamicFilter": {
+        "message": "Dynamic filter"
+    },
+    "dynamicTheme": {
+        "message": "Dynamic theme"
+    },
+    "excludeThisWebsite": {
+        "message": "Kecualikan situs ini"
+    },
+    "exportSettings": {
+        "message": "Ekspor pengaturan"
+    },
+    "extension": {
+        "message": "Ekstensi"
+    },
+    "filters": {
+        "message": "Filter"
+    },
+    "flash": {
+        "message": "Flash"
+    },
+    "general": {
+        "message": "Umum"
+    },
+    "global": {
+        "message": "Global"
+    },
+    "gpu": {
+        "message": "GPU"
+    },
+    "grayscale": {
+        "message": "Grayscale"
+    },
+    "hardwareInformation": {
+        "message": "Hardware information"
+    },
+    "hideMadeWithLove": {
+        "message": "Sembunyikan \"Made with ❤...\""
+    },
+    "importSettings": {
+        "message": "Impor pengaturan"
+    },
+    "invert": {
+        "message": "Invert"
+    },
+    "invertColors": {
+        "message": "Balikkan warna"
+    },
+    "language": {
+        "message": "Bahasa"
+    },
+    "languages": {
+        "message": "Bahasa"
+    },
+    "mode": {
+        "message": "Mode"
+    },
+    "name": {
+        "message": "Nama"
+    },
+    "never": {
+        "message": "Never"
+    },
+    "no": {
+        "message": "No"
+    },
+    "ok": {
+        "message": "OK"
+    },
+    "onlyEnableForThisWebsite": {
+        "message": "Aktifkan untuk situs ini"
+    },
+    "os": {
+        "message": "OS"
+    },
+    "permissionIsNotGranted": {
+        "message": "Izin tidak diberikan"
+    },
+    "permissions": {
+        "message": "Perizinan"
+    },
+    "platform": {
+        "message": "Platform"
+    },
+    "ram": {
+        "message": "RAM"
+    },
+    "remove": {
+        "message": "Hapus"
+    },
+    "reset": {
+        "message": "Reset"
+    },
+    "resetAllSettings": {
+        "message": "Setel ulang semua pengaturan"
+    },
+    "resetSettings": {
+        "message": "Setel ulang pengaturan?"
+    },
+    "saveAs": {
+        "message": "Simpan sebagai..."
+    },
+    "schedule": {
+        "message": "Jadwal"
+    },
+    "screen": {
+        "message": "Layar"
+    },
+    "sepia": {
+        "message": "Sepia"
+    },
+    "settings": {
+        "message": "Pengaturan"
+    },
+    "softwareInformation": {
+        "message": "Software information"
+    },
+    "somethingWentWrongTryReloadingThePage": {
+        "message": "Something went wrong. Try reloading the page."
+    },
+    "styles": {
+        "message": "Styles"
+    },
+    "successfullyImportedSettings": {
+        "message": "Impor pengaturan sukses"
+    },
+    "sunsetToSunrise": {
+        "message": "Matahari terbenam hingga terbit"
+    },
+    "systemPeference": {
+        "message": "Preferensi sistem"
+    },
+    "textEditorMode": {
+        "message": "Mode teks editor"
+    },
+    "theListIsEmpty": {
+        "message": "Daftar kosong"
+    },
+    "thePageHOSTNAMEisProtectedByBrowser": {
+        "message": "Halaman HOSTNAME dilindungi oleh peramban."
+    },
+    "theme": {
+        "message": "Tema"
+    },
+    "thisIsAnExperimentalFeatureDoYouWantToActivateIt": {
+        "message": "This is an experimental feature. Do you want to activate it?"
+    },
+    "thisWillResetAllSettings": {
+        "message": "Ini akan menyetel ulang semua pengaturan"
+    },
+    "timeFrom": {
+        "message": "Waktu dari"
+    },
+    "timeTo": {
+        "message": "Waktu hingga"
+    },
+    "turnOffForThisWebsite": {
+        "message": "Nonaktifkan untuk situs ini"
+    },
+    "turnOn": {
+        "message": "Turn on"
+    },
+    "turnOnForThisWebsite": {
+        "message": "Aktifkan untuk situs ini"
+    },
+    "type": {
+        "message": "Tipe"
+    },
+    "use24HourFormat": {
+        "message": "Gunakan format 24 jam"
+    },
+    "useGlobal": {
+        "message": "Gunakan global"
+    },
+    "useSettingsForAllWebsites": {
+        "message": "Gunakan pengaturan untuk semua situs"
+    },
+    "version": {
+        "message": "Versi"
+    },
+    "videoFormats": {
+        "message": "Format video"
+    },
+    "websites": {
+        "message": "Situs"
+    },
+    "yes": {
+        "message": "Yes"
+    }
+}

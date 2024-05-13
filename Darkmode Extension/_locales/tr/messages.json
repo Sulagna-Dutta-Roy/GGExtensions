@@ -1,0 +1,263 @@
+{
+    "about": {
+        "message": "Hakkında"
+    },
+    "absolute": {
+        "message": "Absolute"
+    },
+    "accept": {
+        "message": "Kabul"
+    },
+    "allYourSettingsWillBeErasedAndCanTBeRecovered": {
+        "message": "All your settings will be erased and can't be recovered"
+    },
+    "always": {
+        "message": "Always"
+    },
+    "appearance": {
+        "message": "Görünüm"
+    },
+    "areYouSureYouWantToDeleteTheSelectedWebsiteSettings": {
+        "message": "Seçilen web sitesi ayarlarını silmek istediğinizden emin misiniz??"
+    },
+    "areYouSureYouWantToExportTheData": {
+        "message": "Verileri dışa aktarmak istediğinizden emin misiniz?"
+    },
+    "areYouSureYouWantToImportTheData": {
+        "message": "Verileri içe aktarmak istediğinizden emin misiniz?"
+    },
+    "audioFormats": {
+        "message": "Ses formatları"
+    },
+    "backupAndReset": {
+        "message": "Yedek & Sıfırla"
+    },
+    "bitness": {
+        "message": "Bitness"
+    },
+    "bluelight": {
+        "message": "Mavi ışık"
+    },
+    "brightness": {
+        "message": "Parlaklık"
+    },
+    "browser": {
+        "message": "Tarayıcı"
+    },
+    "cancel": {
+        "message": "İptal"
+    },
+    "colorTemperature": {
+        "message": "Renk sıcaklığı"
+    },
+    "contrast": {
+        "message": "Kontrast"
+    },
+    "cores": {
+        "message": "Çekirdek"
+    },
+    "dateAndTime": {
+        "message": "Tarih & Saat"
+    },
+    "description": {
+        "message": "Karanlık Mod ile geceleri okuyun.  Her web sitesi için mavi ışık filtresi.  Gece ve gündüz gözlerinizi rahatlatın."
+    },
+    "device": {
+        "message": "Cihaz"
+    },
+    "disabled": {
+        "message": "Engelli"
+    },
+    "dynamic": {
+        "message": "Dynamic"
+    },
+    "dynamicFilter": {
+        "message": "Dynamic filter"
+    },
+    "dynamicTheme": {
+        "message": "Dinamik tema"
+    },
+    "excludeThisWebsite": {
+        "message": "Bu siteyi hariç tut"
+    },
+    "exportSettings": {
+        "message": "Dışa aktarma ayarları"
+    },
+    "extension": {
+        "message": "Uzantı"
+    },
+    "filters": {
+        "message": "Filtreler"
+    },
+    "flash": {
+        "message": "Flaş"
+    },
+    "general": {
+        "message": "Genel"
+    },
+    "global": {
+        "message": "Genel"
+    },
+    "gpu": {
+        "message": "GPU"
+    },
+    "grayscale": {
+        "message": "Gri tonlamalı"
+    },
+    "hardwareInformation": {
+        "message": "Hardware information"
+    },
+    "hideMadeWithLove": {
+        "message": "\"❤ ile yapıldı'yı\" gizle"
+    },
+    "importSettings": {
+        "message": "Ayarları içe aktar"
+    },
+    "invert": {
+        "message": "Invert"
+    },
+    "invertColors": {
+        "message": "Renkleri ters çevir"
+    },
+    "language": {
+        "message": "Dil"
+    },
+    "languages": {
+        "message": "Diller"
+    },
+    "mode": {
+        "message": "Mode"
+    },
+    "name": {
+        "message": "Ad"
+    },
+    "never": {
+        "message": "Never"
+    },
+    "no": {
+        "message": "Hayır"
+    },
+    "ok": {
+        "message": "Tamam"
+    },
+    "onlyEnableForThisWebsite": {
+        "message": "Yalnızca bu site için etkinleştir"
+    },
+    "os": {
+        "message": "OS"
+    },
+    "permissionIsNotGranted": {
+        "message": "İzin verilmedi"
+    },
+    "permissions": {
+        "message": "İzinler"
+    },
+    "platform": {
+        "message": "Platform"
+    },
+    "ram": {
+        "message": "RAM"
+    },
+    "remove": {
+        "message": "Kaldır"
+    },
+    "reset": {
+        "message": "Reset"
+    },
+    "resetAllSettings": {
+        "message": "Bütün ayarları sıfırla"
+    },
+    "resetSettings": {
+        "message": "Ayarları sıfırla?"
+    },
+    "saveAs": {
+        "message": "Farklı kaydet..."
+    },
+    "schedule": {
+        "message": "Zamanlayıcı"
+    },
+    "screen": {
+        "message": "Ekran"
+    },
+    "sepia": {
+        "message": "Sepya"
+    },
+    "settings": {
+        "message": "Ayarlar"
+    },
+    "softwareInformation": {
+        "message": "Software information"
+    },
+    "somethingWentWrongTryReloadingThePage": {
+        "message": "Bir şeyler yanlış gitti.  Sayfayı yeniden yüklemeyi deneyin."
+    },
+    "styles": {
+        "message": "Stiller"
+    },
+    "successfullyImportedSettings": {
+        "message": "Ayarlar başarıyla içe aktarıldı."
+    },
+    "sunsetToSunrise": {
+        "message": "Gün batımından gün doğumuna"
+    },
+    "systemPeference": {
+        "message": "Sistem tercihi"
+    },
+    "textEditorMode": {
+        "message": "Metin düzenleyici modu"
+    },
+    "theListIsEmpty": {
+        "message": "Liste boş"
+    },
+    "thePageHOSTNAMEisProtectedByBrowser": {
+        "message": "HOSTNAME sayfası tarayıcı tarafından korunuyor."
+    },
+    "theme": {
+        "message": "Tema"
+    },
+    "thisIsAnExperimentalFeatureDoYouWantToActivateIt": {
+        "message": "Bu deneysel bir özelliktir.  Etkinleştirmek istiyor musunuz?"
+    },
+    "thisWillResetAllSettings": {
+        "message": "Bu, tüm ayarları sıfırlayacaktır"
+    },
+    "timeFrom": {
+        "message": "Şu saatten"
+    },
+    "timeTo": {
+        "message": "Bu saate"
+    },
+    "turnOffForThisWebsite": {
+        "message": "Bu site için kapat"
+    },
+    "turnOn": {
+        "message": "Turn on"
+    },
+    "turnOnForThisWebsite": {
+        "message": "Bu site için aç"
+    },
+    "type": {
+        "message": "Tip"
+    },
+    "use24HourFormat": {
+        "message": "24 saatlik biçimi kullan"
+    },
+    "useGlobal": {
+        "message": "Genel kullan"
+    },
+    "useSettingsForAllWebsites": {
+        "message": "Tüm web siteleri için ayarları kullan"
+    },
+    "version": {
+        "message": "Versiyon"
+    },
+    "videoFormats": {
+        "message": "Video formatları"
+    },
+    "websites": {
+        "message": "Siteler"
+    },
+    "yes": {
+        "message": "Evet"
+    }
+}

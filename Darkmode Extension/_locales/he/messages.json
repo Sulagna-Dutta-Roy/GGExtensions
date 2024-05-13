@@ -1,0 +1,263 @@
+{
+    "about": {
+        "message": "אודות"
+    },
+    "absolute": {
+        "message": "מוחלט"
+    },
+    "accept": {
+        "message": "אישור"
+    },
+    "allYourSettingsWillBeErasedAndCanTBeRecovered": {
+        "message": "כל ההגדרות יימחקו ולא ניתן יהיה לשחזר אותן"
+    },
+    "always": {
+        "message": "תמיד"
+    },
+    "appearance": {
+        "message": "נראות"
+    },
+    "areYouSureYouWantToDeleteTheSelectedWebsiteSettings": {
+        "message": "האם הנכם בטוחים שברצונכם למחוק את הגדרות האתר שנבחר?"
+    },
+    "areYouSureYouWantToExportTheData": {
+        "message": "האם הנכם בטוחים שברצונכם לייצא את הנתונים?"
+    },
+    "areYouSureYouWantToImportTheData": {
+        "message": "האם הנכם בטוחים שברצונכם לייבא את הנתונים?"
+    },
+    "audioFormats": {
+        "message": "פורמטים של אודיו"
+    },
+    "backupAndReset": {
+        "message": "גיבוי ואיפוס"
+    },
+    "bitness": {
+        "message": "כמות סיביות"
+    },
+    "bluelight": {
+        "message": "אור כחול"
+    },
+    "brightness": {
+        "message": "בהירות"
+    },
+    "browser": {
+        "message": "דפדפן"
+    },
+    "cancel": {
+        "message": "ביטול"
+    },
+    "colorTemperature": {
+        "message": "טמפרטורת צבע"
+    },
+    "contrast": {
+        "message": "ניגודיות"
+    },
+    "cores": {
+        "message": "ליבות"
+    },
+    "dateAndTime": {
+        "message": "תאריך ושעה"
+    },
+    "description": {
+        "message": "Dark Mode, read at night. Bluelight filter for every website. Relax your eyes at night and day."
+    },
+    "device": {
+        "message": "מכשיר"
+    },
+    "disabled": {
+        "message": "מבוטל"
+    },
+    "dynamic": {
+        "message": "דינמי"
+    },
+    "dynamicFilter": {
+        "message": "סינון דינמי"
+    },
+    "dynamicTheme": {
+        "message": "ערכת נושא דינמית"
+    },
+    "excludeThisWebsite": {
+        "message": "אל תכלול אתר זה"
+    },
+    "exportSettings": {
+        "message": "ייצא הגדרות"
+    },
+    "extension": {
+        "message": "Extension"
+    },
+    "filters": {
+        "message": "סינון"
+    },
+    "flash": {
+        "message": "Flash"
+    },
+    "general": {
+        "message": "כללי"
+    },
+    "global": {
+        "message": "גלובלי"
+    },
+    "gpu": {
+        "message": "מעבד גרפי"
+    },
+    "grayscale": {
+        "message": "Grayscale"
+    },
+    "hardwareInformation": {
+        "message": "מידע אודות חומרה"
+    },
+    "hideMadeWithLove": {
+        "message": "Hide \"Made with ❤...\""
+    },
+    "importSettings": {
+        "message": "ייבא הגדרות"
+    },
+    "invert": {
+        "message": "היפוך"
+    },
+    "invertColors": {
+        "message": "היפוך צבעים"
+    },
+    "language": {
+        "message": "שפה"
+    },
+    "languages": {
+        "message": "שפות"
+    },
+    "mode": {
+        "message": "מצב"
+    },
+    "name": {
+        "message": "שם"
+    },
+    "never": {
+        "message": "אף פעם"
+    },
+    "no": {
+        "message": "לא"
+    },
+    "ok": {
+        "message": "אישור"
+    },
+    "onlyEnableForThisWebsite": {
+        "message": "אפשר רק עבור אתר זה"
+    },
+    "os": {
+        "message": "מערכת הפעלה"
+    },
+    "permissionIsNotGranted": {
+        "message": "לא ניתנה הרשאה"
+    },
+    "permissions": {
+        "message": "הרשאות"
+    },
+    "platform": {
+        "message": "פלטפורמה"
+    },
+    "ram": {
+        "message": "זכרון ראם"
+    },
+    "remove": {
+        "message": "הסר"
+    },
+    "reset": {
+        "message": "איפוס"
+    },
+    "resetAllSettings": {
+        "message": "איפוס כלל ההגדרות"
+    },
+    "resetSettings": {
+        "message": "האם לאפס את ההגדרות?"
+    },
+    "saveAs": {
+        "message": "שמור בשם..."
+    },
+    "schedule": {
+        "message": "לוח זמנים"
+    },
+    "screen": {
+        "message": "מסך"
+    },
+    "sepia": {
+        "message": "Sepia"
+    },
+    "settings": {
+        "message": "הגדרות"
+    },
+    "softwareInformation": {
+        "message": "מידע אודות תוכנה"
+    },
+    "somethingWentWrongTryReloadingThePage": {
+        "message": "משהו השתבש. נסו לרענן את העמוד."
+    },
+    "styles": {
+        "message": "Styles"
+    },
+    "successfullyImportedSettings": {
+        "message": "ההגדרות יובאו בהצלחה"
+    },
+    "sunsetToSunrise": {
+        "message": "שקיעה עד זריחה"
+    },
+    "systemPeference": {
+        "message": "העדפת מערכת"
+    },
+    "textEditorMode": {
+        "message": "מצב עורך טקסט"
+    },
+    "theListIsEmpty": {
+        "message": "הרשימה ריקה"
+    },
+    "thePageHOSTNAMEisProtectedByBrowser": {
+        "message": "The page HOSTNAME is protected by browser."
+    },
+    "theme": {
+        "message": "ערכת נושא"
+    },
+    "thisIsAnExperimentalFeatureDoYouWantToActivateIt": {
+        "message": "אפשרות זו הינה נסיונית. האם הנכם בטוחים שאתם רוצים להפעיל אותה?"
+    },
+    "thisWillResetAllSettings": {
+        "message": "פעולה זו תאפס את כל ההגדרות"
+    },
+    "timeFrom": {
+        "message": "זמן מ…"
+    },
+    "timeTo": {
+        "message": "זמן עד…"
+    },
+    "turnOffForThisWebsite": {
+        "message": "בטל עבור אתר זה"
+    },
+    "turnOn": {
+        "message": "הפעל"
+    },
+    "turnOnForThisWebsite": {
+        "message": "הפעל עבור אתר זה"
+    },
+    "type": {
+        "message": "סוג"
+    },
+    "use24HourFormat": {
+        "message": "השתמש בפורמט 24 שעות"
+    },
+    "useGlobal": {
+        "message": "Use global"
+    },
+    "useSettingsForAllWebsites": {
+        "message": "השתמש בהגדרות עבור כל האתרים"
+    },
+    "version": {
+        "message": "גרסה"
+    },
+    "videoFormats": {
+        "message": "פורמטים של וידאו"
+    },
+    "websites": {
+        "message": "אתרים"
+    },
+    "yes": {
+        "message": "כן"
+    }
+}
