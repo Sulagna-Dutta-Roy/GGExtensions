@@ -50,23 +50,17 @@ To submit your contributions, follow these steps:
 
 4. **Make Changes**: Make your desired changes to the codebase.
 
-5. **Add changes**: add your changes to staging area.
-     '''
-     git add .
-
-     '''
-
-6. **Commit Changes**: Commit your changes with a descriptive commit message:
+5. **Commit Changes**: Commit your changes with a descriptive commit message:
    ```
    git commit -m "Add new feature"
    ```
 
-7. **Push Changes**: Push your changes to your forked repository:
+6. **Push Changes**: Push your changes to your forked repository:
    ```
    git push origin my-feature
    ```
 
-8. **Submit a Pull Request**: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.
+7. **Submit a Pull Request**: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.
 
 ## Project Directory Structure
 
@@ -82,4 +76,3 @@ The project directory is organized as follows:
 Ready to start contributing? Join us on our journey to build innovative web projects and make a positive impact in the developer community! Together, we can learn, grow, and create something truly remarkable.
 
 Happy coding!
-

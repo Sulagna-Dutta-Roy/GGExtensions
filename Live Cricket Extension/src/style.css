@@ -1,0 +1,33 @@
+body {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: midnightblue;
+    background-image: linear-gradient(cornflowerblue, royalblue);
+    text-align: center;
+    color: skyblue; 
+}
+
+.outer {
+    padding: 1%;
+    color: inherit; 
+}
+
+.box {
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 10%;
+    width: auto;
+    background: transparent;
+    color: inherit; 
+    text-align: center;
+}
+
+.heading {
+    padding: 1%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15px;
+}
