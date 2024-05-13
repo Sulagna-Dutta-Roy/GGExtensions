@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+  width: 300px;
+  display:inline-block;
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF; 
+  color: black; 
+}
+
+.container {
+  font-size: 15px;
+}
+
+.title {
+  padding: 15px;
+  padding-top: 0px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+}
+
+.info {
+  padding: 5px;
+  background-color: white;
+  font-size: 20px;
+}
+
+.p1 {
+  padding: 5px 5px 0px;
+  margin-top: 20px;
+  background-color: white;
+  font-size: 20px;
+}
+
+#site {
+  font-size: 15px;
+  color:aqua;
+}
+
+.check {
+  font-size: 15px;
+  background-color: white;
+  margin-top: 20px;
+  align-content: center;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid #0C5;
+  background-color: #0C5;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 12px 35px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.89);
+}
+
+button:focus {
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: #0C5;
+  border-color: #0C5;
+  background: #FFF;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #FFFFFF;
+}
+
+#div1 {
+  vertical-align: middle; 
+  line-height: 50px; 
+  text-align:center;
+  font-size:20px;
+  color: #0C5;
+  font-weight: bolder;
+}
+
+#div2 {
+  vertical-align: middle; 
+  line-height: 50px; 
+  text-align:center;
+  font-size:20px;
+  color:red;
+  font-weight: bolder;
+}

@@ -66,3 +66,10 @@ deleteAllBtn.onclick = ()=>{
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //set the item in localstorage
   showTasks(); //call the showTasks function
 }
+
+const closeIcon = document.getElementById("closeIcon");
+
+// Add click event listener to close the popup
+closeIcon.addEventListener("click", () => {
+    window.close(); // Close the popup
+});

@@ -9,6 +9,9 @@
     "action": {
       "default_popup": "index.html"
     },
+    "icons": {
+      "128": "logo.png"
+    },
     "web_accessible_resources": [
       {
         "resources": ["index.html"],
