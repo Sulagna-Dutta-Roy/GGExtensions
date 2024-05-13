@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Quote Generator",
+    "version": "1.0",
+    "description": "Find new motivating quotes daily and kick start your day with positivity :)",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
