@@ -1,52 +1,26 @@
 {
-	"manifest_version": 3,
-	"name": "Dark Mode",
-	"version": "0.0.1",
-	"description": "Dark Mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
-	"default_locale": "en",
-	"icons": {
-		"16": "assets/icons/16.png",
-		"32": "assets/icons/32.png",
-		"48": "assets/icons/48.png",
-		"128": "assets/icons/128.png"
-	},
-	"background": {
-		"service_worker": "background.js"
-	},
-	"action": {
-		"default_popup": "options-page/index.html"
-	},
-	"options_page": "options-page/index.html",
-	"content_scripts": [
-		{
-			"all_frames": true,
-			"match_about_blank": true,
-			"css": [
-				"content-scripts/styles.css"
-			],
-			"js": [
-				"assets/satus/satus.js",
-				"content-scripts/core.js",
-				"content-scripts/custom-css.js",
-				"content-scripts/dynamic-theme.js",
-				"content-scripts/filters.js"
-			],
-			"matches": [
-				"<all_urls>"
-			],
-			"run_at": "document_start"
-		}
-	],
-	"host_permissions": [
-		"<all_urls>"
-	],
-	"permissions": [
-		"scripting",
-		"storage",
-		"tabs"
-	],
-	"optional_permissions": [
-		"downloads"
-	],
-	"offline_enabled": true
+    "manifest_version": 3,
+    "name": "DarkMode.io",
+    "version": "1.0",
+    "description": "Dark Mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/moon.png",
+            "48": "images/moon.png",
+            "128": "images/moon.png"
+        }
+    },
+    "background": {
+        "service_worker": "popup.js"
+    },
+    "icons": {
+        "16": "images/moon.png",
+        "48": "images/moon.png",
+        "128": "images/moon.png"
+    }
 }
