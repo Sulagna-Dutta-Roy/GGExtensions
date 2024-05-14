@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>STOPWATCH WEB APP - SAMBIT MONDAL</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="watch">
+            <div class="outer-circle">
+                <div class="inner-circle">
+                    <span class="text minute">0 :</span>
+                    <span class="text sec">&nbsp; 0 :</span>
+                    <span class="text msec">&nbsp; 0</span>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button class="button reset display-none">Reset</button>
+                <button class="button play">Play</button>
+                <button class="button lap display-none">Lap</button>
+            </div>
+        </div>
+        <ul class="laps">
+            <button class="lap-clear-button display-none">Clear All</button>
+        </ul>
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
