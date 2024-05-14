@@ -1,0 +1,24 @@
+{
+   "manifest_version": 3,
+   "name": "Crypto Tracker",
+   "options_page": "html/main.html",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1",
+   
+   "action": {
+      "default_icon": {
+         "19": "images/CT-logo-19.png",
+         "38": "images/CT-logo-38.png"
+      },
+      "default_popup": "html/main.html",
+      "default_title": "Crypto Tracker"
+   },
+   "description": "Track your favorite Cryptocurrencies movement. To the moon",
+   "homepage_url": "https://github.com/Vi-shub",
+   "icons": {
+      "128": "images/CT-logo-128.png",
+      "19": "images/CT-logo-19.png",
+      "38": "images/CT-logo-38.png"
+   }
+
+}

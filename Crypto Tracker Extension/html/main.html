@@ -1,0 +1,51 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"></link>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/main.css"></link>
+  
+</head>
+<body>
+  <div id="main-outer">
+    <div style="display: flex;">
+      <input type="text" class="form-control" placeholder="Search for coin name or symbol" style="width: 50em" id="coinSearch" />
+      <select id="platform" class="btn btn-white btn-sm dropdown-toggle" style="font-weight:bold">
+        <option selected>CoinCap</option>
+        <option>CoinGecko</option>
+      </select>
+    </div>
+
+   <table class=>
+    <thead>
+      <tr>
+        <th scope="col" style="width: 30px"><div id="favorite" title="Options"><img src="../images/favorite.png" style="width:35px;height:35px;"></div></th>
+        <th scope="col" style="width: 40px"></th>
+        <th scope="col" style="width: 30px"><div id="top" align="left" title="Top 100"><img src="../images/home.png" style="width:25px;height:25px;"></div></th>
+        <th scope="col" style="width: 50px"><div id="rank">Rank</div></th>
+        <th scope="col" style="width: 200px"><div id="name">Name</div></th>
+        <th scope="col" style="width: 150px"><div align="right" >
+          <select id="pageSize" class="btn btn-white btn-sm dropdown-toggle" style="width:110px; font-weight:bold">
+            <option selected value="100">Top 100</option>
+            <option value="200">Top 200</option>
+            <option value="500">Top 500</option>
+          </select></div>		  
+          <div>
+            <th style="width:9px" id="price">
+              <img src="../images/lacc.png" >
+              <img src="../images/ldesc.png">					
+            </th>
+            </div>	
+		      </th>
+        <th scope="col" style="width: 5px"></a></th>
+        <th scope="col" style="width: 165px"><div id="change" align="center">Change (24h)</div></th>
+      </tr>
+    </thead>
+    <tbody id="cryptoTable">
+    </tbody>
+    </table>
+  </div>
+  <script type="text/javascript" src="../js/main.js"></script>
+  	
+</body>
+</html>
