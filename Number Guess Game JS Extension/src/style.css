@@ -6,27 +6,51 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url(bg.jpg);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
 .wrapper {
   padding: 30px 40px;
+  width: 50vw;
   border-radius: 12px;
-  background: #fff;
+  background: #f0def5;
   text-align: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .wrapper header {
-  font-size: 18px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #541d5a;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: #333;
+  font-style: normal;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
 }
 .wrapper p {
-  color: #333;
+  font-size: 18px;
+  color: #2c0533;
 }
 .wrapper .input-field {
   display: flex;
@@ -45,10 +69,22 @@ body {
 }
 .input-field input {
   text-align: center;
-  color: #707070;
+  color: #2b272d;
+  background-color: rgba(228, 199, 227, 0.8);
   width: 110px;
   border: 1px solid #aaa;
+  box-shadow: 0.5px 0.5px 1px black;
 }
+
+.input-field input:hover {
+  text-align: center;
+  color: #2b272d;
+  background-color: rgba(228, 199, 227, 0.5);
+  width: 110px;
+  box-shadow: 0.5px 0.5px 1px black;
+  border: 1px solid #000000;
+}
+
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   display: none;
@@ -58,11 +94,22 @@ input::-webkit-outer-spin-button {
 }
 .input-field button {
   border: none;
-  background: #1940a5;
-  color: #fff;
+  background: #8e26a0;
+  color: #f0d8f1;
+  font-size: 20px;
   cursor: pointer;
   transition: 0.3s;
 }
+
+.input-field button:hover {
+  border: none;
+  color: #711c81;
+  background-color: #e2b9e3;
+  box-shadow: 1px 1px 1px black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .input-field button:active {
   transform: scale(0.97);
 }
