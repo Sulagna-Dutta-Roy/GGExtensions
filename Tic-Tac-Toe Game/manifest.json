@@ -1,8 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "QR Code Generator Extension JS",
+    "name": "Tic-Tac-Toe Game Extension JS",
     "version": "1.0",
-    "description": "Simple QR code generator extension built in pure HTML CSS JS...",
+    "description": "Multiplayer Tic-Tac-Toe game extension built in pure HTML CSS JS...",
+    "author" : "sambitmondal2005@gmail.com",
     "icons": {
         "48": "images/icon-48.png",
         "128": "images/icon-128.png"
@@ -10,6 +11,7 @@
     "permissions": [
         "storage"
     ],
+    "optional-permissions" : ["tabs"],
     "action": {
         "default_popup": "index.html"
     },
