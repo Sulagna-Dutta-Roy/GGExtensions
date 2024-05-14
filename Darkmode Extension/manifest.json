@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "DarkMode.io",
+    "version": "1.0",
+    "description": "Dark Mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/moon.png",
+            "48": "images/moon.png",
+            "128": "images/moon.png"
+        }
+    },
+    "background": {
+        "service_worker": "popup.js"
+    },
+    "icons": {
+        "16": "images/moon.png",
+        "48": "images/moon.png",
+        "128": "images/moon.png"
+    }
+}

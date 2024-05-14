@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body background="assets/Backgound.jpg">
+    <div class="container">
+
+        <!-- Search Box -->
+
+        <div class="search-box">
+            <i class='bx bxs-map'></i>
+            <input type="text" placeholder="Enter Your Location">
+            <button class="bx bx-search"></button>
+        </div>
+
+        <p class="city-hide">city hide</p>
+
+
+        <!-- Box to display the weather details -->
+
+
+        <!-- Place found -->
+
+
+        <div class="weather-box">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img src="">
+                        <p class="temperature"><span>&deg;C</span></p>
+                        <p class="description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class='bx bx-water'></i>
+                <div class="text">
+                    <div class="info-humidity">
+                        <span></span>
+                    </div>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class='bx bx-wind'></i>
+                <div class="text">
+                    <div class="info-wind">
+                        <span></span>
+                    </div>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Place not found -->
+
+        <div class="not-found">
+            <div class="box">
+                <img src="assets/404.png">
+                <p>Oops! Location not found!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
