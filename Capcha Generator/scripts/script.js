@@ -40,9 +40,11 @@ const submitBtnClick = () => {
   message.classList.add("active");
   // Check if the entered captcha text is correct or not
   if (captchaInputBox.value === captchaText) {
+    swal("Verification Success..","Hooray!","success");
     message.innerText = "Entered captcha is correct";
     message.style.color = "#1940a5";
   } else {
+    swal("Incorrect!","Please enter the correct captcha.","warning")
     message.innerText = "Entered captcha is not correct";
     message.style.color = "#FF2525";
   }
