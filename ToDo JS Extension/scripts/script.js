@@ -45,12 +45,18 @@ function showTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+    newLiTag += `<li>${element}<span class="icon delete-btn"><i class="fas fa-trash"></i></span></li>`;
   });
   todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
   inputBox.value = ""; //once task added leave the input field blank
 }
-
+//event delegation
+todoList.addEventListener("click", function(event) {
+  if (event.target.classList.contains("delete-btn")) {
+    let index = event.target.dataset.index;
+    deleteTask(index);
+  }
+});
 // delete task function
 function deleteTask(index){
   let getLocalStorageData = localStorage.getItem("New Todo");
