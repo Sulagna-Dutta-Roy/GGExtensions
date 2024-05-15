@@ -1,5 +1,6 @@
 <h1 align="center">✨ Contributors Guide ✨</h1>
 <h3 align="center">Welcome to my Web Development project! 😍<br> We appreciate your interest in contributing.😊 <br>This guide will help you get started with the project and make your first contribution.</h3>
+
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
 ## What you can  Contribute?
@@ -25,6 +26,8 @@ Contributors can enhance the project by implementing new features or improvement
 - **IMPORTANT: Don't make any type of `Pull Request` until & unless you get assigned to an `Issue`**
 - Add screenshots or screen captures to your `Pull Request` to help us understand the effects of the changes that are included in 
   your commits.
+
+  ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
 ## Submitting a Pull Request?
 **1.** Start by forking the [**GGExtensions**](https://github.com/Sulagna-Dutta-Roy/GGExtensions) repository. Click on the <a href="https://github.com/Sulagna-Dutta-Roy/GGExtensions/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
