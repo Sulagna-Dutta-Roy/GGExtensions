@@ -1,16 +1,26 @@
 let term = '';
 let previousTerm = '';
+let debounceTimer;
 
 const updateTerm = () => {
-    term = document.getElementById('searchTerm').value.trim();
+    const searchTerm = document.getElementById('searchTerm').value.trim();
     
     // Avoid unnecessary API calls if the search term remains the same
-    if (!term || term === '' || term === previousTerm) {
+    if (!searchTerm || searchTerm === '' || searchTerm === previousTerm) {
         return;
     }
     
-    previousTerm = term;
+    previousTerm = searchTerm;
+    term = searchTerm;
     
+    // Debounce input to avoid frequent API calls
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+        fetchData(term);
+    }, 300); // Adjust debounce delay as needed
+};
+
+const fetchData = (term) => {
     const url = `https://itunes.apple.com/search?term=${term}`; //API
     const songContainer = document.getElementById('songs');
     songContainer.innerHTML = ''; // Clear previous search results
@@ -21,25 +31,30 @@ const updateTerm = () => {
     fetch(url)
         .then((Response) => Response.json())
         .then((data) => {
-            const artists = data.results;
-            
-            // Check if there are no results
-            if (artists.length === 0) {
-                songContainer.innerHTML = '<p>No results found.</p>';
-                return;
-            }
-            
-            // Create HTML elements and populate them with data
-            artists.forEach(result => {
-                const article = createSongElement(result);
-                songContainer.appendChild(article);
-            });
+            displayResults(data.results, songContainer);
         })
         .catch(error => {
             // Display error message
             songContainer.innerHTML = `<p>Error: ${error.message}</p>`;
             console.error('Request failed:', error);
         });
+};
+
+const displayResults = (results, container) => {
+    if (results.length === 0) {
+        container.innerHTML = '<p>No results found.</p>';
+        return;
+    }
+    
+    const fragment = document.createDocumentFragment();
+    
+    results.forEach(result => {
+        const article = createSongElement(result);
+        fragment.appendChild(article);
+    });
+    
+    container.innerHTML = '';
+    container.appendChild(fragment);
 };
 
 const createSongElement = (result) => {
