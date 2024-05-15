@@ -1,72 +1,85 @@
 let term = '';
+let previousTerm = '';
+
 const updateTerm = () => {
-    term = document.getElementById('searchTerm').value;
+    term = document.getElementById('searchTerm').value.trim();
     
-    // Checking if term exists
+    // Avoid unnecessary API calls if the search term remains the same
+    if (!term || term === '' || term === previousTerm) {
+        return;
+    }
     
-    if (!term || term === '') {
-        alert('Please enter a seach term');
+    previousTerm = term;
+    
+    const url = `https://itunes.apple.com/search?term=${term}`; //API
+    const songContainer = document.getElementById('songs');
+    songContainer.innerHTML = ''; // Clear previous search results
+    
+    // Display loading state
+    songContainer.innerHTML = '<p>Loading...</p>';
+    
+    fetch(url)
+        .then((Response) => Response.json())
+        .then((data) => {
+            const artists = data.results;
+            
+            // Check if there are no results
+            if (artists.length === 0) {
+                songContainer.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+            
+            // Create HTML elements and populate them with data
+            artists.forEach(result => {
+                const article = createSongElement(result);
+                songContainer.appendChild(article);
+            });
+        })
+        .catch(error => {
+            // Display error message
+            songContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+            console.error('Request failed:', error);
+        });
+};
+
+const createSongElement = (result) => {
+    const article = document.createElement('article');
+    article.classList.add('song-item');
+    
+    const artists = document.createElement('p');
+    artists.textContent = result.artistName;
+    
+    const song = document.createElement('h4');
+    song.textContent = result.trackName;
+    // Add play/pause functionality
+    song.addEventListener('click', () => togglePlay(result.previewUrl));
+    
+    const img = document.createElement('img');
+    img.src = result.artworkUrl100;
+    
+    const audio = document.createElement('audio');
+    const audioSource = document.createElement('source');
+    audioSource.src = result.previewUrl;
+    audio.appendChild(audioSource);
+    audio.controls = true;
+    
+    article.appendChild(img);
+    article.appendChild(artists);
+    article.appendChild(song);
+    article.appendChild(audio);
+    
+    return article;
+};
+
+const togglePlay = (audioUrl) => {
+    const audio = new Audio(audioUrl);
+    if (audio.paused) {
+        audio.play();
     } else {
-        const url = `https://itunes.apple.com/search?term=${term}`; //API
-        const songContainer = document.getElementById('songs');
-        while (songContainer.firstChild) {
-            songContainer.removeChild(songContainer.firstChild);
-        }
-        fetch(url)
-            .then((Response) => Response.json())
-            .then((data) => {
-
-                
-                // console.log(data.results);
-                
-                
-                const artists = data.results;
-                return artists.map(result => {
-
-
-                    // Creation of HTML Element 
-
-
-                    const article = document.createElement('article'),
-                        artists = document.createElement('p'),
-                        song = document.createElement('h4'),
-                        img = document.createElement('img'),
-                        audio = document.createElement('audio'),
-                        audioSource = document.createElement('source')
-
-                    // Putting contents
-
-                    artists.innerHTML = result.artistName;
-                    song.innerHTML = result.trackName;
-                    img.src = result.artworkUrl100;
-                    audioSource.src = result.previewUrl;
-                    audio.controls = true;
-
-                    article.appendChild(img);
-                    article.appendChild(artists);
-                    article.appendChild(song);
-                    article.appendChild(audio);
-                    audio.appendChild(audioSource);
-
-                    songContainer.appendChild(article);
-                })
-            })
-            .catch(error => console.log('Request failed:', error))
+        audio.pause();
     }
-}
+};
 
+// Initialize search button event listener
 const searchBtn = document.getElementById('searchTermBtn');
-searchBtn.addEventListener('click', updateTerm)
-
-
-// Play, pause, skip, mute and download features
-
-
-document.addEventListener('play', event => {
-    const audio = document.getElementsByTagName('audio');
-    for (let i = 0; i < audio.length; i++) {
-        if (audio[i] != event.target) {
-            audio[i].pause();
-        }
-    }
-}, true)
+searchBtn.addEventListener('click', updateTerm);
