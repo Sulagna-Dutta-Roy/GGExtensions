@@ -1,37 +1,92 @@
-const textarea = document.querySelector("textarea");
-const button = document.querySelector("button");
-let isSpeaking = true;
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const textarea = document.querySelector("textarea");
+  const button = document.querySelector("button");
+  let isSpeaking = false;
+  let synth;
 
-const textToSpeech = () => {
-  const synth = window.speechSynthesis;
-  const text = textarea.value;
+  const initTextToSpeech = async () => {
+    // Check if Speech Synthesis API is supported
+    if (!('speechSynthesis' in window)) {
+      alert("Your browser does not support the Speech Synthesis API.");
+      return;
+    }
 
-  if (!synth.speaking && text) {
-    const utternace = new SpeechSynthesisUtterance(text);
-    synth.speak(utternace);
-  }
+    synth = window.speechSynthesis;
+    const text = textarea.value.trim();
 
-  if (text.length > 50) {
-    if (synth.speaking && isSpeaking) {
-      button.innerText = "Pause";
-      synth.resume();
-      isSpeaking = false;
+    // Check if there is text to speak
+    if (!text) {
+      alert("Please enter some text to convert to speech.");
+      return;
+    }
+
+    // If not speaking and there is text, start speaking
+    if (!synth.speaking) {
+      try {
+        const utterance = new SpeechSynthesisUtterance(text);
+        
+        utterance.onerror = handleSpeechError;
+        utterance.onend = () => {
+          isSpeaking = false;
+          button.innerText = "Convert to Speech";
+        };
+
+        synth.speak(utterance);
+        isSpeaking = true;
+        button.innerText = "Pause";
+      } catch (error) {
+        handleSpeechError({ error });
+      }
+    }
+
+    manageSpeechState();
+  };
+
+  const handleSpeechError = (event) => {
+    console.error("Speech synthesis error:", event.error);
+    alert("An error occurred during speech synthesis: " + event.error);
+    resetSpeechState();
+  };
+
+  const manageSpeechState = () => {
+    if (textarea.value.trim().length > 50) {
+      if (synth.speaking) {
+        button.innerText = "Pause";
+      } else {
+        button.innerText = "Resume";
+      }
     } else {
-      button.innerText = "Resume";
-      synth.pause();
-      isSpeaking = true;
+      resetSpeechState();
     }
-  } else {
+  };
+
+  const resetSpeechState = () => {
     isSpeaking = false;
-    button.innerText = "Speaking";
-  }
+    button.innerText = "Convert to Speech";
+  };
 
-  setInterval(() => {
-    if (!synth.speaking && !isSpeaking) {
-      isSpeaking = true;
-      button.innerText = "Convert to Speech";
+  const toggleSpeech = async () => {
+    if (isSpeaking) {
+      if (synth.paused) {
+        synth.resume();
+        button.innerText = "Pause";
+      } else {
+        synth.pause();
+        button.innerText = "Resume";
+      }
+    } else {
+      await initTextToSpeech();
     }
-  });
-};
+  };
 
-button.addEventListener("click", textToSpeech);
+  // Add event listener to button
+  button.addEventListener("click", toggleSpeech);
+
+  // Periodically check if the speech synthesis has stopped unexpectedly
+  setInterval(() => {
+    if (synth && !synth.speaking && isSpeaking) {
+      resetSpeechState();
+    }
+  }, 100);
+});
