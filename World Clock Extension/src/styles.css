@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for form */
+form {
+    margin-bottom: 20px;
+}
+
+/* Styles for dropdown lists */
+select {
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Styles for button */
+button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.clock {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.clock span {
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: small;
+}
