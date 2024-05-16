@@ -1,31 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var checkbox = document.getElementById('invertCheckbox');
-
-    // Check and apply the stored checkbox state from local storage
-    var isChecked = localStorage.getItem('invertCheckboxState') === 'true';
-    checkbox.checked = isChecked;
-    applyPageColorBasedOnCheckbox(isChecked);
-
-    checkbox.addEventListener('change', function () {
-        // Save the checkbox state to local storage
-        localStorage.setItem('invertCheckboxState', checkbox.checked);
-        applyPageColorBasedOnCheckbox(checkbox.checked);
-    });
-});
-
-function applyPageColorBasedOnCheckbox(isChecked) {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.scripting.executeScript({
-            target: { tabId: tabs[0].id },
-            func: isChecked ? invertPageColors : resetPageColors
-        });
-    });
+function activateDarkMode() {
+    document.body.classList.add('dark-mode');
+    // Save the selected mode to local storage
+    localStorage.setItem('mode', 'dark');
 }
 
-function invertPageColors() {
-    document.documentElement.style.filter = 'invert(1)';
+// Function to activate light mode
+function activateLightMode() {
+    document.body.classList.remove('dark-mode');
+    // Save the selected mode to local storage
+    localStorage.setItem('mode', 'light');
 }
 
-function resetPageColors() {
-    document.documentElement.style.filter = 'none';
+// Function to check and set mode on page load
+function checkMode() {
+    // Check if mode is stored in local storage
+    const mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+        activateDarkMode(); // Activate dark mode if stored mode is dark
+    } else {
+        activateLightMode(); // Activate light mode if stored mode is not dark
+    }
 }
+
+// Call checkMode function when the page loads
+window.onload = checkMode;
