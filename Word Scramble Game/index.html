@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Coding By Ali Aslan -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Word Scramble Game</title>
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h2>Word Scramble Game</h2>
+    <center>
+      <div class="startArea" onclick="start()"><button class="startBtn">Start the Game</button></div>
+    </center>
+
+    <div class="content">
+      <p class="word"></p>
+      <div class="details">
+        <p class="hint">Hint: <span></span></p>
+        <p class="time">Time Left: <span><b>30</b>s</span></p>
+      </div>
+      <input type="text" spellcheck="false" placeholder="Enter a valid word">
+      <div class="buttons">
+        <button class="refresh-word">Refresh Word</button>
+        <button class="check-word">Check Word</button>
+      </div>
+      <div class="score-area"><span>Score: </span><span class="score">0</span></div>
+    </div>
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+
+  <script src="scripts/words.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
