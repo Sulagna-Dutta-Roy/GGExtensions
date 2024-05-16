@@ -1,0 +1,19 @@
+{
+    "name": "website-blocker-chrome-extension",
+    "version": "1.0.0",
+    "description": "Replaces distracting websites with a pretty landing page.",
+    "main": "index.js",
+    "scripts": {
+      "reload": "open http://reload.extensions/",
+      "watch": "watch 'npm run reload' ./index.js",
+      "bundle": "browserify indexDev.js -o index.js"
+    },
+    "author": "Akshar",
+    "devDependencies": {
+      "watch": "^1.0.2"
+    },
+    "dependencies": {
+      "dotenv": "^16.0.3",
+      "whatwg-fetch": "^3.6.2"
+    }
+  }
