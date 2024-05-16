@@ -1,3 +1,6 @@
+document.getElementById("btnReset").addEventListener("click", ResetConverter);
+document.getElementById("btnCalculate").addEventListener("click", CalculateLength);
+
 function CalculateLength(){
     var fromLength = Number(document.getElementById("fromLength").value);
 
