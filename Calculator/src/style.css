@@ -38,6 +38,9 @@ input {
     cursor: pointer;
     color: #ffffff;
 }
+input:hover{
+    background-color:skyblue;
+}
 
 input::placeholder {
     color: #ffffff;
@@ -55,6 +58,9 @@ button {
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
+button:hover{
+    background-color: aqua;
+}
 
 .equalBtn {
     background-color: #fb7c14;
@@ -62,4 +68,7 @@ button {
 
 .operator {
     color: #6dee0a;
+}
+.operator:hover{
+    background-color: yellow;
 }
