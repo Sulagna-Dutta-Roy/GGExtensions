@@ -1,0 +1,31 @@
+<!-- Author-Deep Moitra -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fugaz+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Major+Mono+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tab Manager</h1>
+      <button id="saveSessionBtn">Save Session</button>
+      <button id="clearSelectedBtn">Clear Selected</button>
+      <button id="clearAllBtn">Clear All</button>
+
+      <input type="text" id="searchInput" placeholder="Search tabs..." />
+      <div id="sessionSavedMsg">Session saved!</div>
+      <ul id="tabList"></ul>
+
+      <ul id="sessionList"></ul>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
