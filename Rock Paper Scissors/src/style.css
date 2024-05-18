@@ -36,7 +36,6 @@ body {
     transform: rotate(10deg);
   }
 }
-
 .container.start .cpu_result {
   transform-origin: right;
   animation: cpuShake 0.7s ease infinite;
@@ -60,6 +59,30 @@ body {
   font-size: 2rem;
   color: #7d2ae8;
   margin-top: 1.5rem;
+}
+.scores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  top: 10px;
+}
+
+.user_score,
+.cpu_score {
+  font-size: 1.2rem;
+  color: #333;
+  position: absolute;
+  top: 100px; 
+}
+
+.user_score {
+  left: 50%; /* Position at the center horizontally */
+  transform: translateX(-210%); /* Adjust to center the score */
+}
+
+.cpu_score {
+  right: 50%; /* Position at the center horizontally */
+  transform: translateX(210%); /* Adjust to center the score */
 }
 
 .option_image img {
@@ -95,5 +118,22 @@ body {
   color: #7d2ae8;
   font-size: 1.235rem;
   margin-top: 1rem;
-  pointer-events: none;
+}
+
+/* Button Styles */
+.reset {
+  background-color: #7d2ae8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+  display: block;
+}
+
+.reset:hover {
+  background-color: #6c1ccf;
 }

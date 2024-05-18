@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Enhanced Bookmark Manager",
+    "version": "1.0",
+    "description": "An extension to enhance bookmark management in the browser.",
+    "permissions": ["storage", "bookmarks"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon16.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    }
+  }
+  

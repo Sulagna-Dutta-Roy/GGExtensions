@@ -46,6 +46,11 @@ git checkout -b my-feature
 
 **4.** Make Changes: Make your desired changes to the codebase.
 
+```bash
+git add .
+git add <filename>
+```
+
 **5.** Commit Changes: Commit your changes with a descriptive commit message:
 
 ```bash
