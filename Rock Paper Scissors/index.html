@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <!-- Coding By PrasadChavan - prasadchavan.me -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>JavaScript Game | Rock Paper Scissors</title>
-    <link rel="stylesheet" href="src/style.css" />
-  </head>
-  <body>
-    <section class="container">
-      <div class="result_field">
-        <div class="result_images">
-          <span class="user_result">
-            <img src="images/rock.png" alt="" />
-          </span>
-          <span class="cpu_result">
-            <img src="images/rock.png" alt="" />
-          </span>
-        </div>
-        <div class="result">Let's Play!!</div>
-      </div>
 
-      <div class="option_images">
-        <span class="option_image">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Game | Rock Paper Scissors</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+  <section class="container">
+    <div class="result_field">
+      <div class="result_images">
+        <span class="user_result">
           <img src="images/rock.png" alt="" />
-          <p>Rock</p>
         </span>
-        <span class="option_image">
-          <img src="images/paper.png" alt="" />
-          <p>Paper</p>
-        </span>
-        <span class="option_image">
-          <img src="images/scissors.png" alt="" />
-          <p>Scissors</p>
+        <span class="cpu_result">
+          <img src="images/rock.png" alt="" />
         </span>
       </div>
-    </section>
+      <div class="result">Let's Play!!</div>
+      <div class="scores">
+        <span class="user_score">User: 0</span>
+        <span class="cpu_score">CPU: 0</span>
+      </div>
+    </div>
 
-   <script src="scripts/script.js" defer></script>
-  </body>
+    <div class="option_images">
+      <span class="option_image">
+        <img src="images/rock.png" alt="" />
+        <p>Rock</p>
+      </span>
+      <span class="option_image">
+        <img src="images/paper.png" alt="" />
+        <p>Paper</p>
+      </span>
+      <span class="option_image">
+        <img src="images/scissors.png" alt="" />
+        <p>Scissors</p>
+      </span>
+    </div>
+    <button class="reset">Reset</button>
+  </section>
+
+  <audio id="click-sound" src="sounds/click.mp3"></audio>
+  <audio id="win-sound" src="sounds/win.mp3"></audio>
+  <audio id="lose-sound" src="sounds/lose.mp3"></audio>
+
+  <script src="scripts/script.js" defer></script>
+</body>
+
 </html>
