@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="calci.css">
+    <link rel="stylesheet" href="src/calci.css">
 </head>
 <body>
     <div class="container">
@@ -32,25 +32,6 @@
 
         </div>
     </div>
-    <script>
-        let output=document.getElementById('output');
-        function display(num){
-            output.value+=num;
-        }
-        function caliculate(){
-            try{
-                output.value=eval(output.value);
-            }
-            catch(err){
-                alert('Invalid');
-            }
-        }
-        function Clear(){
-            output.value="";
-        }
-        function del(){
-            output.value=output.value.slice(0,-1);
-        }
-    </script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
