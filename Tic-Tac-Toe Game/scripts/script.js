@@ -52,7 +52,7 @@ function checkDraw() {
         if (isDraw) {
             isGameOver = true;
             document.querySelector("#results").innerHTML = "Match drawn";
-            document.querySelector("#play-again").innerHTML = "inline";
+            document.querySelector("#play-again").style.display = "inline";
         }
     }
 }
