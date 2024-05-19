@@ -113,3 +113,15 @@ input::-webkit-outer-spin-button {
 .input-field button:active {
   transform: scale(0.97);
 }
+
+
+@media screen and (max-width:600px) {
+.wrapper {
+    padding: 30px 40px;
+    width: 60vw;
+    border-radius: 12px;
+    background: #f0def5;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  }
+}
