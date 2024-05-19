@@ -45,15 +45,23 @@ function showTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<span class="icon delete-btn"><i class="fas fa-trash"></i></span></li>`;
+    newLiTag += `<li data-index="${index}">${element}<span class="icon delete-btn"><i class="fas fa-trash"></i></span></li>`;
   });
   todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
   inputBox.value = ""; //once task added leave the input field blank
 }
-//event delegation
+// Event delegation for delete button
 todoList.addEventListener("click", function(event) {
-  if (event.target.classList.contains("delete-btn")) {
-    let index = event.target.dataset.index;
+  const target = event.target;
+  // Check if the click event targets the delete button icon directly
+  if (target.classList.contains("fa-trash")) {
+    // If so, retrieve the index of the todo item from its parent <li> element
+    const index = target.closest("li").dataset.index;
+    deleteTask(index);
+  } else if (target.classList.contains("delete-btn")) {
+    // If the click event targets the delete button container (orange square),
+    // retrieve the index of the todo item from the closest parent <li> element
+    const index = target.closest("li").dataset.index;
     deleteTask(index);
   }
 });
