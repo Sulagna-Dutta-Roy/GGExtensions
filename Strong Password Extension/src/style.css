@@ -1,25 +1,92 @@
 body {
-    font-family: Arial, sans-serif;
-    width: 200px;
-    padding: 20px;
-  }
-  
-  #container {
-    text-align: center;
-  }
-  
-  input {
-    width: 60px;
-    text-align: center;
-  }
-  
-  button {
-    margin-top: 10px;
-  }
-  
-  #password {
-    margin-top: 20px;
-    font-weight: bold;
-    word-break: break-all;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#container {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+  font-size: 18px;
+}
+
+input {
+  width: 80px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#password {
+  margin-top: 40px;
+  font-weight: bold;
+  word-break: break-all;
+  padding: 14px;
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 18px;
+}
+
+#copy {
+  margin-top: 30px;
+  padding: 14px 28px;
+  border: none;
+  background-color: #008CBA;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#copy:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#copy:hover {
+  background-color: #005f79;
+}
