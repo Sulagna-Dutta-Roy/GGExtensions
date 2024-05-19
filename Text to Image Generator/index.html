@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-7654240481590326">
+  <link rel="stylesheet" href="src/style.css">
+  <title> Text to Image Generator </title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>AI Image Generator</h1>
+    <p>Write your prompt here to generate images with power of AI, For example : "Best Quality, Masterpiece,
+      Exteremly Detailed, High Resolution, 4K, Ultra High Resolution, Detailed Shadows, (A kite flying in the sky 4K), Colorful Braids, Mixed Fujifilm, Cute, Laugh".</p>
+    <form class="gen-form">
+      <input type="text" id="user-prompt" , placeholder="Type your prompt here..." autocomplete="off">
+      <button type="button" id="generate">Generate</button>
+    </form>
+
+    <div class="result">
+      <div id="loading">Generating...</div>
+      <div id="image-grid"></div>
+    </div>
+
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
