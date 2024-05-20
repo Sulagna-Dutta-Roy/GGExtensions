@@ -342,7 +342,7 @@ async function fetchTime(city) {
     try {
         const response = await fetch(`https://worldtimeapi.org/api/timezone/${city}`);
         const data = await response.json();
-        return data.utc_datetime;
+        return data;
     } catch (error) {
         console.error('Error fetching time:', error);
         return null;
@@ -352,28 +352,51 @@ async function fetchTime(city) {
 // Function to add a clock for a city
 async function addClock(city) {
     const clockContainer = document.getElementById('clockContainer');
-    // Remove existing clock elements
-    clockContainer.innerHTML = '';
     const clock = document.createElement('div');
     clock.classList.add('clock');
+
     const cityName = document.createElement('span');
     cityName.textContent = city.split('/').pop().replace(/_/g, ' ');
-    cityName.classList.add('city'); // Add city class
+    cityName.classList.add('city');
+
     const clockTime = document.createElement('span');
+    clockTime.classList.add('time');
+
+    const timeZone = document.createElement('span');
+    timeZone.classList.add('timezone');
+
     clock.appendChild(cityName);
     clock.appendChild(clockTime);
+    clock.appendChild(timeZone);
     clockContainer.appendChild(clock);
-    // Update time every second
-    setInterval(async () => {
-        const time = await fetchTime(city);
-        if (time) {
-            const currentTime = new Date(time);
-            clockTime.textContent = currentTime.toLocaleTimeString();
-            clockTime.classList.add('time'); // Add time class
+
+    const updateTime = async () => {
+        const timeData = await fetchTime(city);
+        if (timeData) {
+            const currentTime = new Date(timeData.datetime);
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZone: city,
+                timeZoneName: 'short'
+            });
+            const formattedTime = formatter.formatToParts(currentTime);
+            const timeString = formattedTime
+                .filter(part => part.type === 'hour' || part.type === 'minute' || part.type === 'second')
+                .map(part => part.value)
+                .join(':');
+            const timeZoneAbbr = formattedTime.find(part => part.type === 'timeZoneName').value;
+            clockTime.textContent = timeString;
+            timeZone.textContent = timeZoneAbbr;
         } else {
             clockTime.textContent = 'Error fetching time';
+            timeZone.textContent = '';
         }
-    }, 1000);
+    };
+
+    updateTime();
+    setInterval(updateTime, 1000);
 }
 
 // Event listener for form submission
