@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Downloader</h1>
+        <input type="text" id="videoUrl" placeholder="Enter YouTube video URL">
+        <select id="quality">
+            <option value="144p">144p</option>
+            <option value="240p">240p</option>
+            <option value="360p">360p</option>
+            <option value="480p">480p</option>
+            <option value="720p">720p</option>
+            <option value="1080p">1080p</option>
+            <option value="1440p">1440p</option>
+        </select>
+        <button id="downloadBtn">Download</button>
+        <div id="downloadLinks"></div>
+        <div id="message"></div> <!-- Message div -->
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
