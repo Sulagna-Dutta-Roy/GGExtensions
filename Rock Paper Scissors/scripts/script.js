@@ -4,12 +4,42 @@ const gameContainer = document.querySelector(".container"),
   result = document.querySelector(".result"),
   userScoreDisplay = document.querySelector(".user_score"),
   cpuScoreDisplay = document.querySelector(".cpu_score"),
-  resetButton = document.querySelector(".reset");
+  resetButton = document.querySelector(".reset"),
+  winnerModal = document.getElementById("winnerModal"),
+  winnerMessage = document.getElementById("winnerMessage"),
+  playAgainButton = document.getElementById("playAgainButton");
 
 let userScore = 0,
   cpuScore = 0;
 
 const optionImages = document.querySelectorAll(".option_image");
+
+function checkWinner() {
+  if (userScore === 5) {
+    showWinner("User");
+  } else if (cpuScore === 5) {
+    showWinner("CPU");
+  }
+}
+
+function showWinner(winner) {
+  winnerMessage.textContent = `${winner} Won 5 Times!`;
+  winnerModal.style.display = "block";
+}
+
+function resetGame() {
+  userScore = 0;
+  cpuScore = 0;
+  userScoreDisplay.textContent = `User: ${userScore}`;
+  cpuScoreDisplay.textContent = `CPU: ${cpuScore}`;
+  result.textContent = "Let's Play!!";
+  optionImages.forEach(image => image.classList.remove("active"));
+}
+
+playAgainButton.addEventListener("click", () => {
+  winnerModal.style.display = "none";
+  resetGame();
+});
 
 optionImages.forEach((image, index) => {
   image.addEventListener("click", (e) => {
@@ -61,14 +91,12 @@ optionImages.forEach((image, index) => {
 
       userScoreDisplay.textContent = `User: ${userScore}`;
       cpuScoreDisplay.textContent = `CPU: ${cpuScore}`;
+
+      checkWinner();
     }, 2500);
   });
 });
 
 resetButton.addEventListener("click", () => {
-  userScore = 0;
-  cpuScore = 0;
-  userScoreDisplay.textContent = `User: ${userScore}`;
-  cpuScoreDisplay.textContent = `CPU: ${cpuScore}`;
-  result.textContent = "Let's Play!!";
+  resetGame();
 });

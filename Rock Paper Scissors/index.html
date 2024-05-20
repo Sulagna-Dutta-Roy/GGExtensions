@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- Coding By PrasadChavan - prasadchavan.me -->
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +8,6 @@
   <title>JavaScript Game | Rock Paper Scissors</title>
   <link rel="stylesheet" href="src/style.css" />
 </head>
-
 <body>
   <section class="container">
     <div class="result_field">
@@ -45,11 +43,13 @@
     <button class="reset">Reset</button>
   </section>
 
-  <audio id="click-sound" src="sounds/click.mp3"></audio>
-  <audio id="win-sound" src="sounds/win.mp3"></audio>
-  <audio id="lose-sound" src="sounds/lose.mp3"></audio>
+  <div class="modal" id="winnerModal">
+    <div class="modal-content">
+      <p id="winnerMessage"></p>
+      <button id="playAgainButton">Play Again</button>
+    </div>
+  </div>
 
   <script src="scripts/script.js" defer></script>
 </body>
-
 </html>
