@@ -3,10 +3,6 @@
     "name": "Pictionary Game Extension",
     "version": "1.0",
     "description": "Here's Pictionary! A fun and entertaining multi-player game to enjoy :))",
-    "icons": {
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
-    },
     "permissions": [
         "storage"
     ],
