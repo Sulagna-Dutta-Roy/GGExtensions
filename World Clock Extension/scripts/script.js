@@ -354,6 +354,7 @@ async function addClock(city) {
     const clockContainer = document.getElementById('clockContainer');
     const clock = document.createElement('div');
     clock.classList.add('clock');
+    // clock.id = city;
 
     const cityName = document.createElement('span');
     cityName.textContent = city.split('/').pop().replace(/_/g, ' ');
@@ -369,6 +370,11 @@ async function addClock(city) {
     clock.appendChild(clockTime);
     clock.appendChild(timeZone);
     clockContainer.appendChild(clock);
+
+    // Add a click event listener to remove the clock
+    clock.addEventListener('click', () => {
+        clock.remove();
+    });
 
     const updateTime = async () => {
         const timeData = await fetchTime(city);
@@ -398,8 +404,6 @@ async function addClock(city) {
     updateTime();
     setInterval(updateTime, 1000);
 }
-
-// Event listener for form submission
 document.getElementById('cityForm').addEventListener('submit', async (event) => {
     event.preventDefault();
     const selectedCity = citySelect.value;
