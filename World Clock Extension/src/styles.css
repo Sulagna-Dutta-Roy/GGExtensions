@@ -33,11 +33,12 @@ button:hover {
 
 
 .clock {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
 }
-
 .clock span {
     margin-right: 15px;
     font-weight: bold;
