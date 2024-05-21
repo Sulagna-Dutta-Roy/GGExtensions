@@ -12,26 +12,26 @@
 </head>
 <body>
 <div class="container">
-    <header>Captcha Generator</header>
+    <header style="color: #333;  font-size:22px;">Captcha Generator</header>
     <div class="input_field captch_box">
-        <input id="captchaOutput" type="text" value="" disabled />
-        <button class="refresh_button" onclick="generateCaptcha()">
-            <i class="fa-solid fa-rotate-right"></i>
+        <input id="captchaOutput" style="border: 1px solid #1e1b18" type="text" value="" />
+        <button class="refresh_button" id="refbut" onclick="generateCaptcha()">
+            <i class="fa-solid fa-rotate-left"></i>
         </button>
     </div>
     <div class="input_field captch_input">
         <input id="captchaInput" type="text" placeholder="Enter captcha" />
     </div>
     <div id="message" class="message">Entered captcha is correct</div>
-    <div class="input_field button disabled">
-        <button onclick="checkCaptcha()">Submit Captcha</button>
+    <div  class="input_field button ">
+        <button onclick="checkCaptcha()" id="inputfield">Submit Captcha</button>
     </div>
     <div class="captcha-history">
-        <h2>Captcha History</h2>
+        <h4>Captcha History</h4>
         <ul id="captchaHistoryList"></ul>
     </div>
     <div class="audio-captcha">
-        <button onclick="playAudioCaptcha()">Play Audio Captcha</button>
+        <button onclick="playAudioCaptcha()" id="audcaptch" >Audio Captcha</button>
         <audio id="audioCaptcha" controls style="display: none;">
             <source src="audio/captcha.mp3" type="audio/mpeg">
             Your browser does not support the audio element.

@@ -11,14 +11,20 @@ body {
   align-items: center;
   justify-content: center;
   background-image: url(bg.jpg);
+  background-size: cover;
+  background-position: -1px;
+
 }
 .container {
   position: relative;
   max-width: 300px;
   width: 100%;
-  border-radius: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid #1e1b18;
   padding: 15px 25px 25px;
-  background: #fff;
+  background: rgba(255, 255,255, 0.4);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 header {
@@ -34,21 +40,43 @@ header {
   margin-top: 15px;
   width: 100%;
 }
+#inputfield{
+  background-color: #0d5dd5;
+  color: #fff;
+  transition: 0.4s;
+  font-size: 13px;
+  border: 1px solid #333;
+}
+#inputfield:hover{
+  background-color: #06f;
+  color: #fff;
+  border: 1px solid #333;
+  offset: 20px;
+}
 .refresh_button {
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  background: #1940a5;
+  background: #fcc4f4;
   height: 30px;
   width: 30px;
   border: none;
-  border-radius: 4px;
-  color: #fff;
+  border-radius: 50%;
+  color: #2c2926;
   cursor: pointer;
+  border: 1px solid #fcc4f4;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 .refresh_button:active {
   transform: translateY(-50%) scale(0.98);
+}
+#refbut{
+  transition: 0.4s;
+}
+#refbut:hover{
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+  
 }
 .input_field input,
 .button button {
@@ -69,6 +97,25 @@ header {
 }
 .captch_input input:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+#captchaOutput{
+  background: rgba(255, 175, 250, 0.457);
+  color: #555;
+}
+#captchaInput{
+    transition: 0.4s;
+    background: rgba(255, 255, 255, 0.457);
+    border: 1px solid #444;
+}
+#captchaInput:hover{
+    border: 1px solid #444;
+    background-color: white;
+}
+.captcha-history{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
 }
 .message {
   font-size: 14px;
@@ -91,4 +138,17 @@ header {
 .button.disabled {
   opacity: 0.6;
   pointer-events: none;
+}
+#audcaptch{
+  padding: 7px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 10px;
+  color: #333;
+  background: rgba(252, 196, 244, 0.7);
+  transition: 0.4s;
+}
+#audcaptch:hover{
+  background: rgba(252, 196, 244, 0.8);
+  box-shadow: 1px 2px 3px #1940a5;
 }
