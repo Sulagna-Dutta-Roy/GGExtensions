@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Fun Trivia",
+    "version": "1.0",
+    "description": "Presents users with a fun trivia question or fact each day to entertain and educate them while they browse the web.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "permissions": [
+      "storage"
+    ]
+  }
+  

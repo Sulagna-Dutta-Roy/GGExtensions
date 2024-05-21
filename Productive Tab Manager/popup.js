@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearAllBtn = document.getElementById("clearAllBtn");
   const sessionSavedMsg = document.getElementById("sessionSavedMsg");
   const sessionList = document.getElementById("sessionList");
-
+  let loader=document.getElementById("preloader");
+  window.addEventListener("load",function(){
+     loader.style.display="none";
+  })
   let sessionHistory = [];
 
   chrome.tabs.query({}, function (tabs) {
