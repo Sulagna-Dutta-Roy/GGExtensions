@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Fun Trivia</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Daily Fun Trivia</h1>
+        <div class="trivia-container">
+            <div id="trivia-question" class="question"></div>
+            <input type="text" id="answer-input" class="answer-input" placeholder="Type your answer...">
+            <div class="button-container">
+                <button id="submit-answer-btn" class="btn">Submit Answer</button>
+                <button id="play-again-btn" class="btn" style="display: none;">Play Again</button>
+            </div>
+            <div id="feedback" class="feedback"></div>
+            <div id="score" class="score">Score: 0</div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Congratulations! You won the game!</p>
+            <button id="play-again-modal-btn" class="btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
