@@ -1,27 +1,36 @@
-let input = document.getElementById('inputBox');
-let buttons = document.querySelectorAll('button');
+let output = document.getElementById('output');
+function display(num) {
+    output.value += num;
+}
+function calculate() {
+    try {
+        output.value = eval(output.value);
+    }
+    catch (err) {
+        alert('Invalid');
+    }
+}
+function Clear() {
+    output.value = "";
+}
+function del() {
+    output.value = output.value.slice(0, -1);
+}
 
-let string = "";
-let arr = Array.from(buttons);
-arr.forEach(button => {
-    button.addEventListener('click', (e) => {
-        if (e.target.innerHTML == '=') {
-            string = eval(string);
-            input.value = string;
-        }
+document.addEventListener('keypress', (e) => {
+    if (e.key == 'Enter') {
+        calculate();
+    }
+});
 
-        else if (e.target.innerHTML == 'AC') {
-            string = "";
-            input.value = string;
-        }
-        else if (e.target.innerHTML == 'DEL') {
-            string = string.substring(0, string.length - 1);
-            input.value = string;
-        }
-        else {
-            string += e.target.innerHTML;
-            input.value = string;
-        }
+document.addEventListener('keydown', (e) => {
+    if(e.key == 'numbers') {
+        display(num);
+    }
+});
 
-    })
+document.addEventListener('keydown', (e) => {
+    if (e.key == 'Delete') {
+        Clear();
+    }
 });

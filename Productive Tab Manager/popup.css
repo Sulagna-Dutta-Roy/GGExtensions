@@ -1,0 +1,109 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px;
+  background-color: #e6e6e6;
+  color: #333;
+  width: 350px;
+  border-radius: 10px;
+
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #4d4d4d;
+}
+
+h2 {
+  text-align: left;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #4d4d4d;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a6268;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1em;
+  background-color: #f8f9fa;
+}
+
+#sessionSavedMsg {
+  display: none;
+  text-align: center;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+li a {
+  flex: 1;
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+li a:hover {
+  color: #0056b3;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded shadow-md text-center w-80">
+      <h1 class="text-2xl font-bold mb-4">URL Shortener</h1>
+      <input
+        type="text"
+        id="url-input"
+        class="w-full p-2 mb-4 border border-gray-300 rounded"
+        placeholder="Enter URL"
+      />
+      <button
+        id="shorten-btn"
+        class="w-full bg-blue-500 text-white py-2 rounded mb-4"
+      >
+        Shorten URL
+      </button>
+      <div id="result" class="hidden">
+        <p id="short-url" class="mb-4"></p>
+        <button
+          id="copy-btn"
+          class="w-full bg-green-500 text-white py-2 rounded mb-2"
+        >
+          Copy
+        </button>
+        <button
+          id="share-btn"
+          class="w-full bg-teal-500 text-white py-2 rounded"
+        >
+          Share
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
