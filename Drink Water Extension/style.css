@@ -1,11 +1,62 @@
-body{
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
   margin: 20px;
   text-align: center;
 }
-input{
+
+input[type="number"] {
   margin-top: 10px;
   margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
-button{
+
+button {
   margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
