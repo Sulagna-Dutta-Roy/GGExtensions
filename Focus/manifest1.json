@@ -6,8 +6,8 @@
     "content_scripts": [
       {
         "matches": ["https://www.youtube.com/*","https://www.instagram.com/accounts/login/?hl=en"],
-        "css": ["./style.css"],
-        "js": ["./index.js"]
+        "css": ["./stylee.css"],
+        "js": ["./index1.js"]
       }
     ]
   }
