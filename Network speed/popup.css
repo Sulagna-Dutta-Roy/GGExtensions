@@ -50,3 +50,12 @@ button:hover {
   margin-top: 20px;
   color: #4caf50;
 }
+#preloader{
+  background: #000 url(prelo.gif) no-repeat center center;
+  background-size: 50%;
+  height:221px;
+  width: 241px;
+  position: fixed;
+  z-index: 10;
+
+}
