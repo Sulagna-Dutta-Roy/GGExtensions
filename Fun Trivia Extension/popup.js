@@ -112,3 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Display a random trivia question when the page loads
     displayTriviaQuestion();
 });
+let loader=document.getElementById("preloader");
+    window.addEventListener("load",function(){
+     loader.style.display="none";
+  })
