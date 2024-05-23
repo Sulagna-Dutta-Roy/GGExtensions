@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="src/calci.css">
 </head>
 <body>
     <div class="container">
         <div class="calci">
-            <input type="text" placeholder="0" id="output">
-            <button onclick="Clear()">C</button>
-            <button onclick="del()">DEL</button>
-            <button onclick="display('%')">%</button>
-            <button onclick="display('/')">/</button>
-            <button onclick="display('7')">7</button>
-            <button onclick="display('8')">8</button>
-            <button onclick="display('9')">9</button>
-            <button onclick="display('+')">+</button>
-            <button onclick="display('4')">4</button>
-            <button onclick="display('5')">5</button>
-            <button onclick="display('6')">6</button>
-            <button onclick="display('-')">-</button>
-            <button onclick="display('1')">1</button>
-            <button onclick="display('2')">2</button>
-            <button onclick="display('3')">3</button>
-            <button onclick="display('*')">*</button>
-            <button onclick="display('0')">0</button>
-            <button onclick="display('00')">00</button>
-            <button onclick="calculate('=')" class="equal">=</button>
-
+            <input type="text" placeholder="0" id="output" readonly>
+            <div class="buttons">
+                <button id="clear" class="function">C</button>
+                <button id="delete" class="function">DEL</button>
+                <button id="percentage" class="function">%</button>
+                <button id="divide" class="operator">/</button>
+                <button id="seven" class="number">7</button>
+                <button id="eight" class="number">8</button>
+                <button id="nine" class="number">9</button>
+                <button id="add" class="operator">+</button>
+                <button id="four" class="number">4</button>
+                <button id="five" class="number">5</button>
+                <button id="six" class="number">6</button>
+                <button id="subtract" class="operator">-</button>
+                <button id="one" class="number">1</button>
+                <button id="two" class="number">2</button>
+                <button id="three" class="number">3</button>
+                <button id="multiply" class="operator">*</button>
+                <button id="zero" class="number">0</button>
+                <button id="double-zero" class="number">00</button>
+                <button id="equals" class="equal operator">=</button>
+            </div>
         </div>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" type="module"></script>
 </body>
 </html>
