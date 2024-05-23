@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="css/csspin.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="fontawesome/css/fontawesome-all.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/hint.min.css"></link>
+  <title>APOD Popup</title>
+</head>
+<body>
+  <div id="controls">
+    <span class="button" id="backButton"><i class="fas fa-arrow-left"></i></span>
+    <span class="button" id="nextButton"><i class="fas fa-arrow-right"></i></span>
+    <input type="text" id="date" value="2018-02-12" />
+    <span class="hint--bottom" aria-label="Type in a date in the form YYYY-MM-DD"><i class="fas fa-question-circle"></i></span>
+    <span class="button" id="sendButton">Load</span>
+  </div>
+  <span class="button hint--right" id="back" aria-label="Back to last picture viewed"><i class="fas fa-backward"></i></span>
+  <div id="sharing">
+    <span class="button hint--left" id="share" aria-label="Share this picture"><i class="fas fa-share-alt"></i></span>
+    <div id="shareOptions">
+      <a href="#" id="facebookImage"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#" id="tweetImage"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#" id="diasporaImage"><img src="./img/diaspora.png" width="15px" /> Diaspora</a>
+      <a href="#" id="mastodonImage"><img src="./img/mastodon.png" width="15px" /> Mastodon</a>
+      <a href="#" id="mailImage"><i class="far fa-envelope"></i> Email</a>
+    </div>
+  </div>
+  <br />
+  <div id="loadingbox">
+    <div id="loader" class="cp-spinner cp-round"></div>
+    <span id="internet">Check your internet connection</span>
+  </div>
+  <div id="apod">
+    <h3 id="apod_title"></h3>
+    <a id="apod_img_link" href=""><img id="apod_img_id" width="250px"/></a>
+    <iframe id="apod_vid_id" type="text/html" width="384" height="231" frameborder="0"></iframe>
+    <small id="copyright"></small>
+    <p id="apod_explaination">If this is showing there is something wrong with the program.</p>
+  </div>
+  <hr />
+  <small id="foot">Images from <a href="https://apod.nasa.gov" id="more">NASA APOD</a>  
+  <script src="js/popup.js"></script>
+</body>
+</html>

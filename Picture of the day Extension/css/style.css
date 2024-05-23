@@ -1,0 +1,107 @@
+body {
+  width: 400px;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  padding: 5px;
+  font-size: 16px;
+  text-align: justify;
+}
+#apod_img_id {
+  width: 98%;
+}
+h3 {text-align:center; font-size: 25px; margin: 0 0 5px 0; }
+#back {display: none;}
+#loader {
+  display: none;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+#internet {
+  display: none;
+  position: absolute;
+  top: 35%;
+  width: 94%;
+  text-align: center;
+}
+hr {
+  margin-bottom: 2px;
+  margin-top: 5px;
+  border: none;
+  border: 1px dashed #000;
+}
+p {width: 98%; line-height: 20px;}
+.arrow {size: 10%;}
+#apod_title {
+  font-family: Arial;
+  text-align: left;
+}
+a {color: #61dcf4;}
+.button {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  padding: 6px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #efefef;
+  font-size: 13px;
+  font-family: arial;
+  border-width: thin;
+}
+.button:hover {
+  background-color: #d8d8d8;
+  cursor: default;
+}
+.button:active {
+  background-color: lightblue;
+  border-color: lightblue
+}
+#date {
+  border-radius: 3px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  padding: 8px 2px 5px 2px;
+  font-size: 13px;
+  font-family: arial;
+  border-width: thin;
+  max-width: 90px;
+  font-size: 12px;
+  font-family: monospace;
+  text-align: center;
+}
+#share {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+#shareOptions {
+  position: absolute;
+  display: none;
+  right: 18px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  border-width: thin;
+  font-size: 14px;
+  margin-top: 1px;
+}
+#shareOptions a {
+  text-decoration: none;
+  background-color: #efefef;
+  display: block;
+  padding: 10px 10px;
+  color: black;
+}
+#shareOptions a:hover {
+  background-color: #d8d8d8;
+}
+.shareButton {
+  font-size: 250%;
+  padding: 6px;
+  width: 65px;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+}

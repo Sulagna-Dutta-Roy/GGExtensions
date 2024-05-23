@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("startButton");
     const resultDiv = document.getElementById("result");
+    let loader=document.getElementById("preloader");
+    window.addEventListener("load",function(){
+     loader.style.display="none";
+  })
 
     startButton.addEventListener("click", function () {
         const fileSize = 20 * 1024 * 1024; // 50 MB file
