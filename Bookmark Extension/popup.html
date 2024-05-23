@@ -4,15 +4,22 @@
   <title>Bookmark Manager</title>
   <script src="popup.js"></script>
   <link rel="stylesheet" href="styles.css">
+  
 </head>
 <body>
-   <div class="container">
-  <h1>Bookmark Manager</h1>
-  <img src="icon128.png" alt="Extension Logo">
-  <input type="text" id="bookmarkUrl" placeholder="Enter URL">
-  <input type="text" id="bookmarkTags" placeholder="Enter tags (comma-separated)">
-  <button class="btn" id="addBookmark">Add Bookmark</button>
-  <div id="status"></div>
+  <div class="maincontain">
+    <div class="headcontain">
+      <h1>Bookmark Manager</h1>
+    </div>
+    <div class="subcontain">
+      
+      <div class="fieldcontain">
+        <input type="text" class="bookmarkUrl" placeholder="Enter URL">
+        <input type="text" class="bookmarkTags" placeholder="Enter tags (comma-separated)">
+        <button class="btn" >Bookmark+</button>
+      </div>
+    </div>
+    <div class="status"></div>
   </div>
 </body>
 </html>
