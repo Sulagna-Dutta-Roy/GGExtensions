@@ -349,12 +349,37 @@ async function fetchTime(city) {
     }
 }
 
+// Function to create an analog clock hand
+function createHand(className) {
+    const hand = document.createElement('div');
+    hand.classList.add(className);
+    return hand;
+}
+
+// Function to update the analog clock
+function updateAnalogClock(clock, currentTime) {
+    const secondHand = clock.querySelector('.second');
+    const minuteHand = clock.querySelector('.minute');
+    const hourHand = clock.querySelector('.hour');
+
+    const seconds = currentTime.getSeconds();
+    const minutes = currentTime.getMinutes();
+    const hours = currentTime.getHours();
+
+    const secondsDegrees = ((seconds / 60) * 360) + 90;
+    const minutesDegrees = ((minutes / 60) * 360) + ((seconds / 60) * 6) + 90;
+    const hoursDegrees = ((hours / 12) * 360) + ((minutes / 60) * 30) + 90;
+
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+    hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+}
+
 // Function to add a clock for a city
 async function addClock(city) {
     const clockContainer = document.getElementById('clockContainer');
     const clock = document.createElement('div');
     clock.classList.add('clock');
-    // clock.id = city;
 
     const cityName = document.createElement('span');
     cityName.textContent = city.split('/').pop().replace(/_/g, ' ');
@@ -366,15 +391,23 @@ async function addClock(city) {
     const timeZone = document.createElement('span');
     timeZone.classList.add('timezone');
 
-    clock.appendChild(cityName);
-    clock.appendChild(clockTime);
-    clock.appendChild(timeZone);
-    clockContainer.appendChild(clock);
+    // Create the analog clock container
+    const analogClock = document.createElement('div');
+    analogClock.classList.add('analog-clock');
+    analogClock.appendChild(createHand('hour'));
+    analogClock.appendChild(createHand('minute'));
+    analogClock.appendChild(createHand('second'));
 
     // Add a click event listener to remove the clock
     clock.addEventListener('click', () => {
         clock.remove();
     });
+
+    clock.appendChild(analogClock);
+    clock.appendChild(clockTime);
+    clock.appendChild(timeZone);
+    clock.appendChild(cityName);
+    clockContainer.appendChild(clock);
 
     const updateTime = async () => {
         const timeData = await fetchTime(city);
@@ -395,6 +428,9 @@ async function addClock(city) {
             const timeZoneAbbr = formattedTime.find(part => part.type === 'timeZoneName').value;
             clockTime.textContent = timeString;
             timeZone.textContent = timeZoneAbbr;
+
+            // Update analog clock
+            updateAnalogClock(analogClock, currentTime);
         } else {
             clockTime.textContent = 'Error fetching time';
             timeZone.textContent = '';
@@ -404,6 +440,8 @@ async function addClock(city) {
     updateTime();
     setInterval(updateTime, 1000);
 }
+
+// Event listener for form submit
 document.getElementById('cityForm').addEventListener('submit', async (event) => {
     event.preventDefault();
     const selectedCity = citySelect.value;
