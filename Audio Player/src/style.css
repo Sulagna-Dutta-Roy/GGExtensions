@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  input[type="file"] {
+    margin: 10px 0;
+  }
+  audio {
+    margin-top: 20px;
+    width: 100%;
+  }
