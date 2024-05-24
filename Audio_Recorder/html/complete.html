@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>Chrome Audio Capture Options</title>
+  
+   
+  </head>
+  <style>
+    .header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  border-bottom: 2px solid darkred;
+}
+
+.header-title {
+  padding: 0 5px;
+}
+
+.progress {
+  margin: 50px 20px 10px 20px;
+  font-size: 16px;
+  display: flex;
+}
+
+.notes {
+  margin: 0 20px;
+}
+
+#progressContainer {
+  margin-left: 5px;
+  width: 500px;
+  height: 18px;
+  background-color: lavenderblush;
+}
+
+#encodeProgress {
+  height: 100%;
+  width: 0%;
+  background-color: darkred;
+}
+
+#saveCapture {
+  display: none;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+#status {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.button {
+  padding: 10px;
+  border: 2px solid darkred;
+  font-size: 16px;
+  background-color: lavenderblush;
+  font-weight: bold;
+  margin: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: red;
+  background-color: darkred;
+}
+
+#review {
+  color: blue;
+  display: inline;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+  </style>
+  <body>
+    <div class="header"><img src="./icon.png"/> <h1 class="header-title">Chrome Audio Capture</h1></div>
+    <div class="inner">
+      <div class="progress">
+        <label for="progrssContainer">Encoding Progress:</label>
+        <div id="progressContainer">
+          <div id="encodeProgress"></div>
+        </div>
+      </div>
+      <p id="status"></p>
+    </div>
+    <div class="buttonContainer">
+      <div class="button" id="saveCapture">Save Capture</div>
+      <div class="button" id="close">Close</div>
+    </div>
+    <div class="notes">Thank you for using the extension! Please go <div id="review">here</div> to leave a review!</div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const encodeProgress = document.getElementById('encodeProgress');
+  const saveButton = document.getElementById('saveCapture');
+  const closeButton = document.getElementById('close');
+  const review = document.getElementById('review');
+  const status = document.getElementById('status');
+  let format;
+  let audioURL;
+  let encoding = false;
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if(request.type === "createTab") {
+      format = request.format;
+      let startID = request.startID;
+      status.innerHTML = "Please wait..."
+      closeButton.onclick = () => {
+        chrome.runtime.sendMessage({cancelEncodeID: startID});
+        chrome.tabs.getCurrent((tab) => {
+          chrome.tabs.remove(tab.id);
+        });
+      }
+
+      //if the encoding completed before the page has loaded
+      if(request.audioURL) {
+        encodeProgress.style.width = '100%';
+        status.innerHTML = "File is ready!"
+        generateSave(request.audioURL);
+      } else {
+        encoding = true;
+      }
+    }
+
+    //when encoding completes
+    if(request.type === "encodingComplete" && encoding) {
+      encoding = false;
+      status.innerHTML = "File is ready!";
+      encodeProgress.style.width = '100%';
+      generateSave(request.audioURL);
+    }
+    //updates encoding process bar upon messages
+    if(request.type === "encodingProgress" && encoding) {
+      encodeProgress.style.width = `${request.progress * 100}%`;
+    }
+    function generateSave(url) { //creates the save button
+      const currentDate = new Date(Date.now()).toDateString();
+      saveButton.onclick = () => {
+        chrome.downloads.download({url: url, filename: `${currentDate}.${format}`, saveAs: true});
+      };
+      saveButton.style.display = "inline-block";
+    }
+  });
+  review.onclick = () => {
+    chrome.tabs.create({url: "https://chrome.google.com/webstore/detail/chrome-audio-capture/kfokdmfpdnokpmpbjhjbcabgligoelgp/reviews"});
+  }
+
+
+})
+
+  </script>
+</html>
