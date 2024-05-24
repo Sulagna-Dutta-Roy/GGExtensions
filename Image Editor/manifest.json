@@ -6,7 +6,7 @@
     "author": "sambitmondal2005@gmail.com",
     "icons": {
         "48": "images-20-48.png",
-        "128": "imaages-20-128.png"
+        "128": "images-20-128.png"
     },
     "permissions": [
         "storage"
