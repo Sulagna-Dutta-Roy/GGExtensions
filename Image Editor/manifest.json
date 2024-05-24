@@ -5,8 +5,8 @@
     "description": "Image editor extension built in pure HTML CSS JS...",
     "author": "sambitmondal2005@gmail.com",
     "icons": {
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
+        "48": "images-20-48.png",
+        "128": "imaages-20-128.png"
     },
     "permissions": [
         "storage"

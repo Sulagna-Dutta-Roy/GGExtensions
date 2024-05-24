@@ -5,8 +5,8 @@
     "description": "Gradient Generator extension built in pure HTML CSS JS...",
     "author" : "sambitmondal2005@gmail.com",
     "icons": {
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
+        "48": "colours-48.png",
+        "128": "colours-128.png"
     },
     "permissions": [
         "storage"
