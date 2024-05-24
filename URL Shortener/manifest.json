@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "QR Reader",
+    "version": "1.0",
+    "description": "Simple QR Reader",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
