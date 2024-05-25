@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Chrome Audio Capture</title>
+    <script src="../js/popup.js"></script>
+    
+  </head>
+  <style>
+  body, h2 {
+  font-family: Ubuntu, sans-serif;
+  color: navy; /* Changing font color to navy */
+}
+
+body {
+  margin: 10px 15px 5px 15px;
+  background-color: aliceblue; /* Changing background color */
+}
+
+#status, #timeRem {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 20px;
+  white-space: nowrap;
+  color: navy; /* Changing font color to navy */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid navy; /* Changing border color */
+  white-space: nowrap;
+}
+
+.header img {
+  height: 64px;
+  margin: 0 20px 0 0;
+}
+
+ul {
+  font-size: 16px;
+  font-weight: bold;
+  list-style: none;
+  padding: 0;
+  color: navy; /* Changing font color to navy */
+}
+
+li {
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+  margin: 0 0 0 5px;
+}
+
+.extra {
+  font-family: sans-serif;
+  white-space: nowrap;
+  font-style: italic;
+  margin: 3px;
+  color: navy; /* Changing font color to navy */
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+
+.links p {
+  color: blue; /* Changing link color to blue */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid navy; /* Changing border color */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: lightblue; /* Changing background color */
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: navy; /* Changing hover font color to navy */
+  background-color: blue; /* Changing hover background color to blue */
+}
+
+.notes {
+  padding: 10px;
+  font-size: 12px;
+  white-space: pre;
+  color: navy; /* Changing font color to navy */
+}
+
+
+  </style>
+  <body>
+    <div class="header"><img src="../icon.png"/> <h1>Chrome Audio Capture</h1></div>
+    <div id="status"></div>
+    <div id="timeRem"></div>
+    <div class="buttonContainer">
+      <div class="button" id="start">Start Capture</div>
+      <div class="button" id="finish">Save Capture</div>
+      <div class="button" id="cancel">Cancel Capture</div>
+    </div>
+    <div class="notes">After capture is finished, a new tab will be opened automatically for you to
+name and save the file. Please do not close the tab before saving the file!</div>
+    <ul> Hotkeys:
+      <li id="startKey">Ctrl/Command + Shift +   to start capture on current tab</li>
+      <li id="endKey">Ctrl/Command + Shift + X to stop capture on current tab</li>
+    </ul>
+    <p class="extra">Hotkeys may not work if another extension is using the same hotkeys</p>
+    <p class="extra">Currently the max capture time is 20 minutes due to Chrome memory contraints</p>
+    <div class="links">
+      <p id="options">Options</p>
+      <p id="GitHub">GitHub</p>
+    </div>
+  </body>
+</html>
