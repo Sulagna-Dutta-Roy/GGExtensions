@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusMate</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/todo_list.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body> 
+    <div class="nav-container">
+        <input type="checkbox" id="click">
+        <label for="click">
+            <i class="menu-btn bx bx-menu"></i>
+            <i class="close-btn bx bx-x-circle"></i>
+        </label>
+
+        <div class="sidenav">
+            <div class="logo">
+                🎯Focus <span> Mate </span>
+            </div>
+            <div class="icon_items">
+                <ul>
+                    <li>
+                        <i class="bx bxs-home" id="home"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-laptop" id="workingSession"></i>
+                        <a href="#">Working Session</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-block" id="websiteBlocking"></i>
+                        <a href="#">Website Blocking</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-time-five" id="pomodoro"></i>
+                        <a href="#">Pomodoro</a>
+                    </li>
+                    <li class="active">
+                        <i class="bx bx-edit" id="todoList"></i>
+                        <a href="#">To-Do List</a>
+                    </li>       
+                    <li>
+                        <i class="bx bx-signal-5" id="progress"></i>
+                        <a href="#">Progress Tracking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="todo-app">
+            <h3>To-Do List 📝</h3>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Enter your tasks . . .">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task1</li>
+                <li>Task2</li>
+                <li>Task3</li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="../JS/todo_list.js"></script>
+</body>
+</html>
