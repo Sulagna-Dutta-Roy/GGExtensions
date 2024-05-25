@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    top: 0;
+    height: 600px;
+    width: 600px;
+    left: 80px;
+    padding: 0 10px;
+    transition: all 0.5s ease;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    flex-grow: 1;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #2c041c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+
+/* Pomodoro Timer*/
+.card{
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #e7d3f1;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-header-buttons{
+    display: flex;
+    justify-content: stretch;
+    gap: 10px;
+    padding: 20px 4px 4px 4px;
+    cursor: pointer;
+}
+
+.card-header-buttons button{
+    padding: 8px;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #eca3cf;
+    color:#67032f;
+    cursor: pointer;
+}
+
+.card-header-buttons .active{
+    background-color: #b52756;
+    color:#e7d3f1;
+    cursor: pointer;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.progress-bar{
+    height: 180px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#901b42 360deg, #be6c9d 0deg);
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+    transition: all ease;
+    box-shadow: #b52756 0px 0px 0px 2px,
+    #e8759b 0px 4px 6px -1px,
+    #e452a5 0px 1px 0px inset;; 
+}   
+
+.progress-bar-inner{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f46ba6;
+    border-radius: 50%;
+    box-shadow: #b52756 0px 0px 0px 2px,
+    #e8759b 0px 4px 6px -1px,
+    #e452a5 0px 1px 0px inset; 
+
+}
+
+.progress-bar-inner h2{
+    font-weight: 500;
+    color:#780b48;
+    font-size: 40px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: stretch;
+    gap: 20px;
+    padding: 10px;
+}
+
+.card-footer button{
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: #6c475d;
+    color:#fff;
+    font-weight: 400;
+    font-size: 14px;
+    cursor:pointer;
+}
+
+.card-footer .btn-success{
+    background-color: #be6c9d;   
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(0.97);
+        box-shadow: 0 0 0 0 #b52756 0.7;
+    }
+    50%{
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #901b42 0;
+    }
+    100%{
+        transform: scale(0.97);
+        box-shadow: 0 0 0 0 #b52756 0;
+    }
+}
