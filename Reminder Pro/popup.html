@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reminder Pro</title>
+        <link rel="stylesheet" href="./CSS/popup.css">
+       
+    </head>
+    <body>
+        <h2 class="app_name" >Reminder pro </h2>
+
+        <form id="reminder-form">
+            <label for="datetime" class="mb-1" >Reminder date and time</label>
+            <input type="datetime-local" class="mb-1" id="datetime" required />
+            <input type="text" placeholder="reminder name" id="reminder_name" class="mb-1" required />
+            <div class="" style="width: 100%;display: flex; justify-content: center;align-items: center;" >
+                <button id="btn_submit_reminder_pro_input_form" type="submit" class="btn btn-primary btn_save" >Add Reminder</button>
+            </div>
+           
+        </form>
+        <ul id="reminder_list"></ul>
+
+        <!--table design-->
+        <hr style="width: 90%;">
+        <div class="cont_wrrapper" style="max-width:100%;padding: 10px 20px;">
+            <h2>Your remindals</small></h2>
+            <div id="reminder_pro_no_reminder" style="display: none;width: 100%; display: flex;text-align: center;" >
+              <p  style="margin-top:10px;width: 100%;text-align: center;">No remindals</p>
+            </div>
+            <!--activity cards-->
+
+            <div class="list-div" id="main_list_div" style="display: flex;flex-direction: column;justify-content: space-between !important;align-items: center;max-height: 50vh;overflow-y: scroll;width: 100%;padding: 10px 20px;">
+            
+              <div class="card" style="padding: 10px 20px;border:1px solid white;border-radius: 12px;display: flex;flex-direction: column;min-width: 80%;margin-bottom: 10px;align-self: center;">
+                <div style="width: 100%;margin-bottom: 10px;">Reminder Name: Name</div>
+                <div style="width: 100%;margin-bottom: 10px;">Reminder Time: 12:23</div>
+                <div style="display: flex;justify-content: center;align-items: center;">
+                  <button style="min-width: 50px;padding: 5px 8px;border-radius: 10px;cursor: pointer;">Edit</button>
+                  <button style="min-width: 50px;padding: 5px 8px;border-radius: 10px;cursor: pointer;" >Delete</button>
+                </div>
+
+              </div>
+              <div class="card" style="padding: 10px 20px;border:1px solid white;border-radius: 12px;display: flex;flex-direction: column;min-width: 80%;margin-bottom: 10px;">
+                <div style="width: 100%;margin-bottom: 10px;">Reminder Name: Name</div>
+                <div style="width: 100%;margin-bottom: 10px;">Reminder Time: 12:23</div>
+                <div style="display: flex;justify-content: center;align-items: center;">
+                  <button style="min-width: 50px;padding: 5px 8px;border-radius: 10px;cursor: pointer;">Edit</button>
+                  <button style="min-width: 50px;padding: 5px 8px;border-radius: 10px;cursor: pointer;" >Delete</button>
+                </div>
+
+              </div>
+              <div class="card" style="padding: 10px 20px;border:1px solid white;border-radius: 12px;display: flex;flex-direction: column;min-width: 80%;margin-bottom: 10px;">
+                <div style="width: 100%;margin-bottom: 10px;">Reminder Name: Name</div>
+                <div style="width: 100%;margin-bottom: 10px;">Reminder Time: 12:23</div>
+                <div style="display: flex;justify-content: center;align-items: center;">
+                  <button style="min-width: 50px;padding: 5px 8px;border-radius: 10px;cursor: pointer;">Edit</button>
+                  <button style="min-width: 50px;padding: 5px 8px;border-radius: 10px;cursor: pointer;" >Delete</button>
+                </div>
+
+              </div>
+
+            </div>
+            <!-- <ul class="responsive-table">
+              <li class="table-header">
+                <div class="col col-1">Job Id</div>
+                <div class="col col-2">Customer Name</div>
+                <div class="col col-3">Amount Due</div>
+                <div class="col col-4">Payment Status</div>
+              </li>
+              <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42235</div>
+                <div class="col col-2" data-label="Customer Name">John Doe</div>
+                <div class="col col-3" data-label="Amount">$350</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+              </li>
+              <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42442</div>
+                <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+                <div class="col col-3" data-label="Amount">$220</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+              </li>
+              <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42257</div>
+                <div class="col col-2" data-label="Customer Name">John Smith</div>
+                <div class="col col-3" data-label="Amount">$341</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+              </li>
+              <li class="table-row">
+                <div class="col col-1" data-label="Job Id">42311</div>
+                <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+                <div class="col col-3" data-label="Amount">$115</div>
+                <div class="col col-4" data-label="Payment Status">Pending</div>
+              </li>
+            </ul> -->
+        </div><script src="contentScript.js" ></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+        
+    </body>
+</html>
