@@ -29,6 +29,8 @@ html {
 body {
     font-size: 1.6rem;
     font-family: var(--font-poppins);
+    width: 100vh;
+    height: 100vh;
 }
 
 button {
