@@ -6,13 +6,12 @@ const wordText = document.querySelector(".word"),
     checkBtn = document.querySelector(".check-word"),
     contentBox = document.querySelector(".container .content"),
     startArea = document.querySelector(".startArea"),
+    startBtn = document.querySelector(".startBtn"),
     scoreArea = document.querySelector(".score"),
     modalContent = document.querySelector(".modal-content");
 
 // Get the modal
 var modal = document.getElementById("myModal");
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // Get the text of modal
@@ -125,6 +124,7 @@ const checkWord = () => {
 
 refreshBtn.addEventListener("click", initGame);
 checkBtn.addEventListener("click", checkWord);
+startBtn.addEventListener("click", start);
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {

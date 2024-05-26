@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <title>Chrome Audio Capture Options</title>
+
+  </head>
+  <style>
+    .header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  border-bottom: 2px solid darkred;
+}
+
+.header-title {
+  padding: 0 5px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+img {
+  height: 64px;
+  margin: 0 20px 0 0;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+label {
+  font-size: 16px;
+}
+
+.inner {
+  margin-left: 40px;
+}
+
+.options-list {
+  padding: 0;
+  list-style: none;
+}
+
+.options-list li {
+  padding: 10px;
+}
+
+.time {
+  font-size: 16px;
+}
+
+.limit {
+  display: inline-block;
+  margin: 0;
+  font-size: 12px;
+}
+
+.radioChoice {
+  margin-left: 15px;
+}
+
+.button {
+  padding: 10px;
+  border: 2px solid darkred;
+  font-size: 16px;
+  background-color: lavenderblush;
+  font-weight: bold;
+  margin: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 110px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: red;
+  background-color: darkred;
+}
+
+#save {
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+#status {
+  color: red;
+  margin-top: 8px;
+  margin-left: 50px;
+  font-size: 14px;
+}
+
+#qualityLi {
+  display: none;
+}
+
+#maxTime {
+  width: 30px;
+  text-align: center;
+}
+
+  </style>
+  <body>
+    <div class="header"><img src="../icon.png"/> <h1>Chrome Audio Capture</h1></div>
+    <div class="inner">
+      <h2>Options</h2>
+      <ul class="options-list">
+        <li><input type="checkbox" id="mute"><label for="mute">Mute tabs that are being captured</label></li>
+        <li class="time"><label for="maxTime">Maximum capture time <p class="limit">(enter value from 1 - 20)</p>: </label><input type="text" id="maxTime"> min(s)</li>
+        <li><input type="checkbox" id="removeLimit"><label for="removeLimit">Remove capture time limit (not recommended)</label></li>
+        <li id="outputType"><label for="outputType">Output file format:</label>
+          <input class="radioChoice" id="mp3" type="radio" name="format" value="mp3"> <label for="mp3">.mp3</label>
+          <input class="radioChoice" id="wav" type="radio" name="format" value="wav"> <label for="wav">.wav</label>
+        </li>
+        <li id="qualityLi">
+          <label for="quality">MP3 Quality: </label>
+          <select id="quality">
+            <option value="96">Low</option>
+            <option value="192">Medium</option>
+            <option value="320">High</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div class="button" id="save">Save Settings</div>
+    <div id="status"></div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const mute = document.getElementById('mute');
+  const maxTime = document.getElementById('maxTime');
+  const save = document.getElementById('save');
+  const status = document.getElementById('status');
+  const mp3Select = document.getElementById('mp3');
+  const wavSelect = document.getElementById('wav');
+  const quality = document.getElementById("quality");
+  const qualityLi = document.getElementById("qualityLi");
+  const limitRemoved = document.getElementById("removeLimit");
+  let currentFormat;
+  //initial settings
+  chrome.storage.sync.get({
+    muteTab: false,
+    maxTime: 1200000,
+    format: "mp3",
+    quality: 192,
+    limitRemoved: false
+  }, (options) => {
+    mute.checked = options.muteTab;
+    limitRemoved.checked = options.limitRemoved;
+    maxTime.disabled = options.limitRemoved;
+    maxTime.value = options.maxTime/60000;
+    currentFormat = options.format;
+    if (options.format === "mp3") {
+      mp3Select.checked = true;
+      qualityLi.style.display = "block";
+    } else {
+      wavSelect.checked = true;
+    }
+    if (options.quality === "96") {
+      quality.selectedIndex = 0;
+    } else if(options.quality === "192") {
+      quality.selectedIndex = 1;
+    } else {
+      quality.selectedIndex = 2;
+    }
+  });
+
+  mute.onchange = () => {
+    status.innerHTML = "";
+  }
+
+  maxTime.onchange = () => {
+    status.innerHTML = "";
+    if(maxTime.value > 20) {
+      maxTime.value = 20;
+    } else if (maxTime.value < 1) {
+      maxTime.value = 1;
+    } else if (isNaN(maxTime.value)) {
+      maxTime.value = 20;
+    }
+  }
+
+  mp3Select.onclick = () => {
+    currentFormat = "mp3";
+    qualityLi.style.display = "block";
+    status.innerHTML = "";
+  }
+
+  wavSelect.onclick = () => {
+    currentFormat = "wav";
+    qualityLi.style.display = "none";
+    status.innerHTML = "";
+  }
+
+  quality.onchange = (e) => {
+    status.innerHTML = "";
+  }
+
+  limitRemoved.onchange = () => {
+    if(limitRemoved.checked) {
+      maxTime.disabled = true;
+      status.innerHTML = "WARNING: Recordings that are too long may not save properly!"
+    } else {
+      maxTime.disabled = false;
+      status.innerHTML = "";
+    }
+  }
+
+  save.onclick = () => {
+    chrome.storage.sync.set({
+      muteTab: mute.checked,
+      maxTime: maxTime.value*60000,
+      format: currentFormat,
+      quality: quality.value,
+      limitRemoved: limitRemoved.checked
+    });
+    status.innerHTML = "Settings saved!"
+  }
+});
+
+  </script>
+</html>
