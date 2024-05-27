@@ -38,34 +38,52 @@ Contributors can enhance the project by implementing new features or improvement
 git clone https://github.com/Your-Username/GGExtensions.git
 ```
 
-**3.** Create a Branch: Create a new branch for your changes:
+**3.** Add a reference(remote) to the original repository.
+
+```bash
+git remote add upstream https://github.com/Your-Username/GGExtensions.git
+```
+
+**4.** Check the remotes for this repository.
+
+```bash
+git remote -v
+```
+
+**5.** Always take a pull from the upstream repository to your master branch to keep it at par with the main project (updated repository).
+
+```bash
+git pull upstream main
+```
+
+**6.** Create a Branch: Create a new branch for your changes:
 
 ```bash
 git checkout -b my-feature
 ```
 
-**4.** Make Changes: Make your desired changes to the codebase.
+**7.** Make Changes: Make your desired changes to the codebase.
 
 ```bash
 git add .
 git add <filename>
 ```
 
-**5.** Commit Changes: Commit your changes with a descriptive commit message:
+**8.** Commit Changes: Commit your changes with a descriptive commit message:
 
 ```bash
 git commit -m "Add new feature"
 ```
 
-**6.** Push Changes: Push your changes to your forked repository:
+**9.** Push Changes: Push your changes to your forked repository:
 
 ```bash
 git push origin my-feature
 ```
 
-**7.** Submit a Pull Request: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.
+**10.** Submit a Pull Request: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.
 
-**8.** Congratulations! You've made your first contribution! 🙌🏼
+**11.** Congratulations! You've made your first contribution! 🙌🏼
 
 ### Alternatively contribute using GitHub Desktop
 

@@ -1,25 +1,38 @@
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
-/* Styles for form */
-form {
+.form-container {
     margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles for dropdown lists */
+form {
+    display: flex;
+    align-items: center;
+}
+
 select {
     padding: 5px;
-    font-size: 12px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
 }
 
-/* Styles for button */
 button {
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -31,15 +44,65 @@ button:hover {
     background-color: #0056b3;
 }
 
-
-.clock {
+body.clock-container {
     display: flex;
-    align-items: center;
-    margin-top: 10px;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow clocks to wrap to the next row */
+    justify-content: center;
+    gap: 10px;
 }
 
+.clock {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 150px; /* Set the width of each clock */
+}
 .clock span {
-    margin-right: 15px;
+    margin-top: 5px;
     font-weight: bold;
     font-size: small;
+}
+
+.time {
+    display: block;
+}
+
+.timezone {
+    display: block;
+    font-size: small;
+}
+
+/* Styles for analog clock */
+.analog-clock {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.hour, .minute, .second {
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: black;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+}
+
+.minute {
+    background: red;
+    height: 1px;
+}
+
+.second {
+    background: blue;
+    height: 1px;
 }

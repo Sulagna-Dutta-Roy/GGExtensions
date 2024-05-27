@@ -5,8 +5,8 @@
     "description": "Simple Expense splitter extension built in pure HTML CSS JS...",
     "author" : "sambitmondal2005@gmail.com",
     "icons": {
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
+        "48": "src/expense-1-48.png",
+        "128": "src/expense-1-128.png"
     },
     "optional_permissions" : ["tabs"],
     "action": {

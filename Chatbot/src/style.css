@@ -10,6 +10,9 @@
 
 body {
     background: #E3F2FD;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
 }
 
 .chatbot-toggler {

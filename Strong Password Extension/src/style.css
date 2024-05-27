@@ -1,6 +1,6 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f7f7;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,84 +9,124 @@ body {
 }
 
 #container {
-  background-color: #fff;
+  background-color: #000;
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 16px rgba(33, 255, 4, 1);
   text-align: center;
   max-width: 450px;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
-
-h1 {
-  color: #333;
-  font-size: 28px;
-  margin-bottom: 30px;
+/* heading of the container */
+#heading{
+  font-size: 42px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(33, 255, 4, 1), rgba(0, 0, 0, 0.1) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-label {
+/* the length label */
+#lengthlabel{
+  background: linear-gradient(to right, #fff, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  margin-right: 20px;
   font-weight: bold;
-  color: #555;
-  font-size: 18px;
 }
-
-input {
-  width: 80px;
+#length{
+  border: 2px solid #fff;
+  background-color: black;
+  color: #aaa;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 8px;
+  padding: 4px;
   text-align: center;
-  margin-bottom: 30px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: 0.2s;
+  font-weight: bold;
+}
+#length:hover{
+  background-color:#fff ;
+  color: black;
+}
+#length:focus{
+  outline: none;
+}
+/* removing the arrows in the length button */
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
-button {
-  margin-top: 30px;
-  padding: 14px 28px;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-button:hover {
-  background-color: #45a049;
-}
 
 #password {
-  margin-top: 40px;
-  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 60px;
   word-break: break-all;
   padding: 14px;
-  border: 2px dashed #aaa;
+  border: 1px solid #fff;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #000;
+  color: #fff;
   font-size: 18px;
+  width: 300px;
 }
-
+#password:focus{
+  color: #fff;
+}
+button{
+  border:none;
+}
 #copy {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-top: 30px;
-  padding: 14px 28px;
-  border: none;
-  background-color: #008CBA;
+  margin-left: 20px ;
+  padding: 7px 14px;
+  border-bottom: 1px solid #fff ;
+  border-top: 1px solid #000;
+  background-color: #000;
   color: white;
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
+  transition: 0.4s;
+  font-size: 11px;
+  box-shadow: 0px 1px 1px #fff;
   text-transform: uppercase;
-}
-
-#copy:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+  font-weight: bold;
 }
 
 #copy:hover {
-  background-color: #005f79;
+  box-shadow: 0px 3px 1px rgb(0, 200, 255);
+  border-top: 1px solid rgb(0, 200, 255);
+  border-bottom: 1px solid rgb(0, 200, 255);
+  color: rgb(0, 200, 255);
+ 
+}
+
+#generate{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 30px;
+  margin-left: 20px ;
+  padding: 7px 14px;
+  border-bottom: 1px solid #fff ;
+  border-top: 1px solid #000;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.4s;
+  font-size: 11px;
+  box-shadow: 0px 1px 1px #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#generate:hover{
+  box-shadow: 0px 3px 1px rgba(33, 255, 4, 1);
+  border-top: 1px solid rgba(33, 255, 4, 1);
+  border-bottom: 1px solid rgba(33, 255, 4, 1);
+  color: rgba(33, 255, 4, 1);
 }

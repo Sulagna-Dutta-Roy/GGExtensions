@@ -16,6 +16,8 @@
 
 body{
     font-family: 'Inter', sans-serif;
+    width: 100vh;
+    height: 100vh;
 }
 
 ::-webkit-scrollbar {

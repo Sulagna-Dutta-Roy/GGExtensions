@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusMate</title>
+    <link rel="stylesheet" href="../CSS/popup.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body> 
+    <div class="nav-container">
+        <input type="checkbox" id="click">
+        <label for="click">
+            <i class="menu-btn bx bx-menu"></i>
+            <i class="close-btn bx bx-x-circle"></i>
+        </label>
+
+        <div class="sidenav">
+            <div class="logo">
+                🎯Focus <span> Mate </span>
+            </div>
+            <div class="icon_items">
+                <ul>
+                    <li class="active">
+                        <i class="bx bxs-home" id="home"></i>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-laptop" id="workingSession"></i>
+                        <a href="#">Working Session</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-block" id="websiteBlocking"></i>
+                        <a href="#">Website Blocking</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-time-five" id="pomodoro"></i>
+                        <a href="#">Pomodoro</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-edit" id="todoList"></i>
+                        <a href="#">To-Do List</a>
+                    </li>       
+                    <li>
+                        <i class="bx bx-signal-5" id="progress"></i>
+                        <a href="#">Progress Tracking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>🎯Focus <span>Mate</span></h1>
+        <div id="quote-container">
+            <p id="myquote"></p>
+        </div>
+    </div>
+    <script src="../JS/popup.js"></script>
+</body>
+</html>

@@ -101,3 +101,10 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
+
+.calendar, .calendar * {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}

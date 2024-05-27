@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Wikipedia Search",
+    "version": "1.0",
+    "description": "Quickly search for terms or topics on Wikipedia without leaving your current webpage.",
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}

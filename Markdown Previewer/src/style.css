@@ -13,7 +13,8 @@ body {
     padding: 20px;
     background-color: #282c34;
     color: #ffffff;
-    height: 100vh;
+    width: 600px;
+    height: 600px;
 }
 
 .container {
