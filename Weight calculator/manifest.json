@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "weight calculator",
+  "name": "Weight Calculator",
   "version": "1.0",
   "description": "A simple weight calculator.",
   "action": {
