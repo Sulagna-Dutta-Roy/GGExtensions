@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Gold Price Tracker",
+    "version": "1.0",
+    "description": "Track gold and silver prices easily.",
+    
+    "action": {
+        "default_popup": "index.html"
+        
+      },
+    "permissions": ["tabs", "activeTab"]
+  }
+  
