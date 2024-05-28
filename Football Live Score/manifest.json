@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "Football Live Score Tracker",
+    "description": "Track live football scores right from your browser!",
+    "version": "1.0.0",
+    "permissions": ["storage", "activeTab"],
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
