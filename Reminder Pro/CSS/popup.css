@@ -1,0 +1,136 @@
+body{
+    width: 408px;
+    min-height: 250px;
+    
+    border-radius: 10px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(43, 39, 39);
+    color: white;
+}
+h2{
+    text-align: center;
+}
+form{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_save{
+    max-width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form input{
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin-bottom: 10px !important;
+}
+form label{
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+h2.app_name{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+ul{
+    list-style-type: none;
+
+}
+li{
+    margin-bottom: 5px;
+}
+button{
+    margin-top: 10px;
+}
+input{
+    margin-bottom: 2px !important;
+}
+.div_item{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* list table */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+container.h2 {
+  font-size: 15px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
