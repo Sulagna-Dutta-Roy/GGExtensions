@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.match {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+}
+.team {
+    display: flex;
+    align-items: center;
+}
+.team img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.score-details {
+    margin-top: 5px;
+    color: #666;
+}
