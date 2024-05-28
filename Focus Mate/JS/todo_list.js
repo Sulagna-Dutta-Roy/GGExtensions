@@ -70,6 +70,47 @@ function showTask(){
 
 showTask();
 
+const home = document.querySelector("#home");
+home.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "../HTML/popup.html";
+});
+
+
+/*  Pomodoro */
+const pomodoro = document.querySelector("#pomodoro");
+pomodoro.addEventListener("click", function (event) {
+  try{
+    event.preventDefault();
+    window.location.href = "../HTML/pomodoro.html";
+  }catch(error){
+    console.log('error', error);
+  }
+	
+});
+
+const todolistIcon = document.querySelector("#todoList");
+todolistIcon.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "../HTML/todo_list.html";
+});
+
+
+const performance = document.querySelector("#progress");
+performance.addEventListener("click", function(event){
+    event.preventDefault();
+    window.location.href = "../HTML/performance.html";
+});
+
+
+
+
+
+
+
+
+
+
 
 // Calculate the total number of tasks added and completed (replace with actual data)
 const totalTasksAdded = totalTasks; //localStorage.getItem("totalTasksAdded") || 0;
