@@ -59,14 +59,13 @@ button:hover {
 }
 
 #clockContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Allow clocks to wrap to the next row */
+ 
     justify-content: center;
     gap: 20px;
 }
 
 .clock {
+    margin-top: 15px;
     border: 1px solid #ccc;
     padding: 20px;
     background: white;
