@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Crypto Price Tracker",
+    "version": "1.0",
+    "description": "Track cryptocurrency prices using CoinGecko API.",
+    "permissions": [
+      "https://api.coingecko.com/*"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
+  

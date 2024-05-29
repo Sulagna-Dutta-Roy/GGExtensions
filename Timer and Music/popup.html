@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer with Music</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Timer with Music</h1>
+        <div class="form-group">
+            <label for="duration">Set Duration (minutes):</label>
+            <input type="number" id="duration" class="form-control" min="1" value="25">
+        </div>
+        <div class="form-group">
+            <label for="music">Select Music:</label>
+            <select id="music" class="form-control">
+                <option value="playlist1">Playlist 1</option> 
+                <option value="playlist2">Playlist 2</option>
+                <option value="playlist3">Playlist 3</option>
+            </select>
+        </div>
+        <div class="mb-3">Minutes left: <span id="timerDisplay">0</span></div>
+        <button id="startTimer" class="btn btn-primary">Start Timer</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

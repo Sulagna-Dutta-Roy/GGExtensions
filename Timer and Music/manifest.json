@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Timer with Music",
+    "version": "1.0",
+    "description": "Enhance productivity with a timer and soothing background music.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ]
+  }
+  

@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 250px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  #prices {
+    text-align: left;
+  }
+  
+  #prices h2 {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  #prices div {
+    margin-top: 10px;
+    font-size: larger;
+  }
+  .currency  {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .currency h2 {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .currency p {
+    margin: 0;
+    color: #777;
+  }
+  

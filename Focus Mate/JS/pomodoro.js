@@ -96,3 +96,43 @@ document.getElementById("stop-btn").addEventListener("click", stopTimer);
 document.getElementById("reset-btn").addEventListener("click", resetTimer);
 document.getElementById("buttonTypePomodoro").addEventListener("click", () => setPomodoroType(TIMER_TYPE_POMODORO));
 document.getElementById("buttonTypeShortBreak").addEventListener("click", () => setPomodoroType(TIMER_TYPE_SHORT_BREAK));
+const home = document.querySelector("#home");
+home.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "../HTML/popup.html";
+});
+
+
+/*  Pomodoro */
+const pomodoro = document.querySelector("#pomodoro");
+pomodoro.addEventListener("click", function (event) {
+  try{
+    event.preventDefault();
+    window.location.href = "../HTML/pomodoro.html";
+  }catch(error){
+    console.log('error', error);
+  }
+	
+});
+
+const todoListIcon = document.querySelector("#todoList");
+todoListIcon.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "../HTML/todo_list.html";
+});
+
+
+const performance = document.querySelector("#progress");
+performance.addEventListener("click", function(event){
+    event.preventDefault();
+    window.location.href = "../HTML/performance.html";
+});
+
+
+
+
+
+
+
+
+
