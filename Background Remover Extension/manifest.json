@@ -1,0 +1,21 @@
+{
+    "name": "Background Remover",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://www.google.com/*"],
+            "css": ["styles.css"],
+            "js": ["script.js"],
+            "all_frames": true
+        }
+    ],
+    "icons": {
+        "128": "logo.png"
+    }
+}
+
