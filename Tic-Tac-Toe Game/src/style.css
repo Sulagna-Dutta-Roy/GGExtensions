@@ -100,3 +100,11 @@ main {
     background-color: #08d9d6;
     color: black;
 }
+
+.reset{
+    color: #ff2e63;
+    background-color:transparent;
+    cursor: pointer;
+    height: 38px;
+    width: 70px;
+}
