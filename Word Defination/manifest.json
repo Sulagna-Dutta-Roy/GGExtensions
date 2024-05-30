@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Word Defination",
+  "version": "1.0.0",
+  "action": {
+      "default_icon": "word.png",
+      "default_title": "Defination",
+      "default_popup": "popup/popup.html"
+  },
+  "description": "Select a word on the webpage and open popup to look up the defination",
+  "author": "Akshar Bansal",
+  "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "permissions": [
+      "activeTab"
+    ]
+}
+  
