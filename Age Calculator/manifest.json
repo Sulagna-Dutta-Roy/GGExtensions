@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Age Calculator Extension",
+    "version": "1.0",
+    "description": "A simple age calculator Chrome extension",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "storage"
+    ]
+  }
+  
