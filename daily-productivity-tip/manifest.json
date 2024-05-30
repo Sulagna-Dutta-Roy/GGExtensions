@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Daily Productivity Tip",
+    "version": "1.0",
+    "description": "Shows a new productivity tip each day on your new tab.",
+    "permissions": [
+      "storage"
+    ],
+    "chrome_url_overrides": {
+      "newtab": "newtab.html"
+    }
+  }
+  
