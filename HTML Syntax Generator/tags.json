@@ -1,0 +1,138 @@
+[
+    {
+      "name": "a",
+      "syntax": "<a href=\"https://example.com\">Link Text</a>",
+      "example": "<a href=\"https://example.com\">Visit Example</a>"
+    },
+    {
+      "name": "abbr",
+      "syntax": "<abbr title=\"Full Title\">Abbreviation</abbr>",
+      "example": "<abbr title=\"HyperText Markup Language\">HTML</abbr>"
+    },
+    {
+      "name": "address",
+      "syntax": "<address>Contact Information</address>",
+      "example": "<address>123 Main St, Anytown, USA</address>"
+    },
+    {
+      "name": "article",
+      "syntax": "<article>Article Content</article>",
+      "example": "<article><h2>Article Title</h2><p>Article content goes here.</p></article>"
+    },
+    {
+      "name": "aside",
+      "syntax": "<aside>Sidebar Content</aside>",
+      "example": "<aside><p>This is a sidebar.</p></aside>"
+    },
+    {
+      "name": "audio",
+      "syntax": "<audio controls><source src=\"audiofile.mp3\" type=\"audio/mpeg\"></audio>",
+      "example": "<audio controls><source src=\"audio.mp3\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>"
+    },
+    {
+      "name": "b",
+      "syntax": "<b>Bold Text</b>",
+      "example": "<b>This text is bold</b>"
+    },
+    {
+      "name": "blockquote",
+      "syntax": "<blockquote>Quote Content</blockquote>",
+      "example": "<blockquote cite=\"https://example.com\">This is a quote.</blockquote>"
+    },
+    {
+      "name": "button",
+      "syntax": "<button>Button Text</button>",
+      "example": "<button type=\"button\">Click Me!</button>"
+    },
+    {
+      "name": "canvas",
+      "syntax": "<canvas id=\"myCanvas\"></canvas>",
+      "example": "<canvas id=\"myCanvas\" width=\"200\" height=\"100\" style=\"border:1px solid #000000;\"></canvas>"
+    },
+    {
+      "name": "caption",
+      "syntax": "<table><caption>Caption Text</caption></table>",
+      "example": "<table><caption>Table Title</caption><tr><th>Header</th></tr><tr><td>Data</td></tr></table>"
+    },
+    {
+      "name": "cite",
+      "syntax": "<cite>Citation Text</cite>",
+      "example": "<cite>The Great Gatsby</cite>"
+    },
+    {
+      "name": "code",
+      "syntax": "<code>Code Snippet</code>",
+      "example": "<code>console.log('Hello, world!');</code>"
+    },
+    {
+      "name": "colgroup",
+      "syntax": "<table><colgroup><col style=\"width:50%\"><col style=\"width:50%\"></colgroup></table>",
+      "example": "<table><colgroup><col span=\"2\" style=\"background-color:yellow\"></colgroup><tr><td>Data</td><td>Data</td></tr></table>"
+    },
+    {
+      "name": "datalist",
+      "syntax": "<datalist id=\"listID\"><option value=\"Option 1\"><option value=\"Option 2\"></datalist>",
+      "example": "<input list=\"browsers\"><datalist id=\"browsers\"><option value=\"Chrome\"><option value=\"Firefox\"><option value=\"Edge\"></datalist>"
+    },
+    {
+      "name": "dd",
+      "syntax": "<dd>Description Text</dd>",
+      "example": "<dl><dt>Term</dt><dd>Description</dd></dl>"
+    },
+    {
+      "name": "details",
+      "syntax": "<details><summary>Summary Text</summary>Details Content</details>",
+      "example": "<details><summary>More Info</summary><p>Here are the details.</p></details>"
+    },
+    {
+      "name": "dfn",
+      "syntax": "<dfn>Definition Term</dfn>",
+      "example": "<p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>"
+    },
+    {
+      "name": "div",
+      "syntax": "<div>Division Content</div>",
+      "example": "<div><p>This is a division.</p></div>"
+    },
+    {
+      "name": "dl",
+      "syntax": "<dl><dt>Term</dt><dd>Description</dd></dl>",
+      "example": "<dl><dt>HTML</dt><dd>HyperText Markup Language</dd></dl>"
+    },
+    {
+      "name": "dt",
+      "syntax": "<dt>Term</dt>",
+      "example": "<dl><dt>Term</dt><dd>Description</dd></dl>"
+    },
+    {
+      "name": "em",
+      "syntax": "<em>Emphasized Text</em>",
+      "example": "<em>This text is emphasized</em>"
+    },
+    {
+      "name": "embed",
+      "syntax": "<embed src=\"file.ext\" type=\"media/type\">",
+      "example": "<embed src=\"video.mp4\" type=\"video/mp4\">"
+    },
+    {
+      "name": "fieldset",
+      "syntax": "<fieldset><legend>Legend Text</legend>Fieldset Content</fieldset>",
+      "example": "<fieldset><legend>Personal Information</legend><label for=\"name\">Name:</label><input type=\"text\" id=\"name\" name=\"name\"></fieldset>"
+    },
+    {
+      "name": "figcaption",
+      "syntax": "<figcaption>Caption Text</figcaption>",
+      "example": "<figure><img src=\"image.jpg\" alt=\"Image\"><figcaption>Image Caption</figcaption></figure>"
+    },
+    {
+      "name": "figure",
+      "syntax": "<figure>Figure Content</figure>",
+      "example": "<figure><img src=\"image.jpg\" alt=\"Image\"><figcaption>Image Caption</figcaption></figure>"
+    },
+    {
+      "name": "footer",
+      "syntax": "<footer>Footer Content</footer>",
+      "example": "<footer><p>Footer information goes here.</p></footer>"
+    }
+   
+]
