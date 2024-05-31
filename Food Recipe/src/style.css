@@ -39,6 +39,8 @@ body {
 /*  */
 .container {
     min-height: 100vh;
+    position: relative;
+    left: 20vw;
 }
 
 .meal-wrapper {
@@ -105,6 +107,7 @@ body {
 
 .meal-result {
     margin-top: 4rem;
+    width: 345px;
 }
 
 #meal {
@@ -120,6 +123,7 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
     margin: 2rem 0;
+    width: 20vw;
 }
 
 .meal-img img {
@@ -155,6 +159,7 @@ body {
     -moz-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
+    width: 8rem;
 }
 
 .recipe-btn:hover {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div id="homePage">
+        <h1>Pong Game</h1>
+        <p>Welcome to the Pong Game! Here are the instructions:</p>
+        <ul>
+            <li>Player 1 (Left Paddle): Use 'W' and 'S' keys to move up and down.</li>
+            <li>Player 2 (Right Paddle): Use the 'Up' and 'Down' arrow keys to move up and down.</li>
+            <li>Hit the ball with your paddle to send it back to the opponent.</li>
+            <li>The game ends when a player reaches 5 points.</li>
+        </ul>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="congratsPage">
+        <h1>Congratulations!</h1>
+        <p id="winnerMessage"></p>
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
+    <canvas id="pongCanvas"></canvas>
+    <div id="scoreBoard">
+        <span id="scoreLeft">0</span> - <span id="scoreRight">0</span>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

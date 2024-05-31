@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+#homePage, #congratsPage {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#pongCanvas {
+    background-color: #111;
+    border: 2px solid #fff;
+    height: 80%;
+    
+    display: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#scoreBoard {
+    display: none;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#homePage button, #congratsPage button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#homePage button:hover, #congratsPage button:hover {
+    background-color: #ddd;
+}
+
+#homePage h1, #congratsPage h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#homePage ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+#homePage ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
