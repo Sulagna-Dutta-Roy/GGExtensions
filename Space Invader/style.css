@@ -1,0 +1,33 @@
+#canvas{
+    margin-left: 450;
+    
+}
+.container{
+    background-color:rgb(43, 216, 255);
+    border-radius:23px;
+    padding:6px;
+}
+h3{
+    text-align:center;
+    font-weight: normal;
+    padding:0;
+    margin:0;
+}
+h2{
+    text-align:center;
+    font-weight: normal;
+    padding:0;
+    margin:0;
+}
+button{
+    height:31px;
+    width:67px;
+    background:transparent;
+    outline:none;
+    border-style: none;
+    text-align: right;
+}
+.reset{
+    width:53px;
+    height:45px;
+}
