@@ -72,6 +72,16 @@ function changeTurn() {
 }
 
 
+    reset = document.querySelector(".reset");
+    reset.addEventListener("click", (e)=>{
+        boxes.forEach(e => {
+            e.innerHTML = "";
+            e.style.removeProperty("background-color")
+            e.style.color = "#fff"
+        })
+    });
+
+
 
 document.querySelector("#play-again").addEventListener("click", () => {
     isGameOver = false;
