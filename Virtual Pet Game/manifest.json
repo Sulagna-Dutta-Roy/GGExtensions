@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Virtual Pet",
+    "version": "1.0",
+    "description": "Take care of your virtual pet by feeding and playing with it!",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "assets/pet-happy.png",
+        "48": "assets/pet-happy.png",
+        "128": "assets/pet-happy.png"
+      }
+    },
+    "permissions": []
+  }
+  
