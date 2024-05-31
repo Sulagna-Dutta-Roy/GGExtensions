@@ -1,0 +1,13 @@
+﻿{
+  "name": "Puzzle Game",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Puzzle game Extension",
+  "action": {
+    "default_title": "Puzzle game",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "logo.png"
+    }
+  }
+}
