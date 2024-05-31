@@ -1,9 +1,0 @@
-.idea/
-node_modules/
-babel
-babelscripts@1.0.0
-dist/
-out/
-.env
-ext.zip
-dist.zip
