@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(58, 122, 21);
+    color: white;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h5 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+img {
+    height: 150px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+#book-list {
+    margin-top: 20px;
+}
