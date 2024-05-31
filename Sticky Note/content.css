@@ -1,0 +1,10 @@
+.sticky-note {
+    position: absolute;
+    background: yellow;
+    padding: 10px;
+    border: 1px solid black;
+    z-index: 1000;
+    margin: 10px;
+    width: 200px;
+  }
+  
