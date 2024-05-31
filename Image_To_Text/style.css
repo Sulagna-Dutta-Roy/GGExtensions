@@ -1,0 +1,154 @@
+
+
+:root {
+    --gradient: linear-gradient(180deg, #0C041E -8.41%, #4E21B7 98.85%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.app {
+    min-height: 100vh;
+    background: var(--gradient);
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload-file {
+    width: 60vw;
+    height: 3rem;
+    background-color: #fff3;
+    border-radius: 4rem;
+    padding: 0 1.4rem;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip img {
+    width: 1.8rem;
+    cursor: pointer;
+}
+
+.tooltip::before,
+.tooltip::after {
+    color: #111;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -15px);
+    font-size: .9rem;
+
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+
+.tooltip::before {
+    content: "";
+    top: -2px;
+
+    width: 0;
+    height: 0;
+    border: .6rem solid transparent;
+    border-top-color: #eee;
+}
+
+.tooltip::after {
+    content: attr(title);
+    top: -44px;
+
+    background: #eee;
+    white-space: pre;
+
+    padding: .8rem 1rem;
+    border-radius: .4rem;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -8px);
+}
+
+.upload-file input#img-url {
+    width: 86%;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    border:none;
+    outline: none;
+}
+
+.result {
+    margin-top: 2rem;
+    width: 60vw;
+    height: 22rem;
+}
+
+.result #img-result,
+.result textarea {
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.result #img-result {
+    max-width: 55%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.result div {
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+.result div p {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0;
+}
+
+.result div:hover p {
+    opacity: 1;
+}
+
+.result textarea {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: transparent;
+
+    color: #fff;
+    font: 500 1.2rem sans-serif;
+    border: 2px solid #4E21B7;
+    
+    resize: none;
+    outline: none;
+}
+
+.result textarea:focus {
+    border: 1px solid #fff;
+}
+
+.result .arrow {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem;
+}
