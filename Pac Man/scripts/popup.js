@@ -8,6 +8,55 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const squares = []
 
+  // Function to show the popup with a message
+  function showPopup(message) {
+    const popup = document.getElementById("popup");
+    const popupMessage = document.getElementById("popup-message");
+    popupMessage.textContent = message;
+    popup.style.display = "block";
+  }
+  
+  // Function to hide the popup
+  function hidePopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "none";
+  }
+  
+  // Event listener for Play Again button
+  document.getElementById("play-again-btn").addEventListener("click", resetGame);
+  
+  function resetGame() {
+    // Clear the grid
+    grid.innerHTML = '';
+    squares.length = 0;
+  
+    // Reset score
+    score = 0;
+    scoreDisplay.innerHTML = score;
+  
+    // Recreate the board
+    createBoard();
+  
+    // Reset Pac-Man position
+    pacmanCurrentIndex = 490;
+    squares[pacmanCurrentIndex].classList.add("pac-man");
+  
+    // Reset ghost positions and behaviors
+    ghosts.forEach(ghost => {
+      clearInterval(ghost.timerId);
+      ghost.currentIndex = ghost.startIndex;
+      squares[ghost.currentIndex].classList.add(ghost.className, "ghost");
+      moveGhost(ghost);
+    });
+  
+    // Hide the popup
+    hidePopup();
+  
+    // Add event listener back
+    document.addEventListener("keyup", movePacman);
+  }
+
+
   //create your board
   function createBoard() {
     for (let i = 0; i < layout.length; i++) {
@@ -188,27 +237,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }, ghost.speed)
   }
 
-  //check for a game over
+  // Modify your checkForGameOver and checkForWin functions to show the popup
   function checkForGameOver() {
     if (
       squares[pacmanCurrentIndex].classList.contains("ghost") &&
-      !squares[pacmanCurrentIndex].classList.contains("scared-ghost")) {
-      ghosts.forEach(ghost => clearInterval(ghost.timerId))
-      document.removeEventListener("keyup", movePacman)
-      setTimeout(function () {
-        alert("Game Over")
-      }, 500)
+      !squares[pacmanCurrentIndex].classList.contains("scared-ghost")
+    ) {
+      ghosts.forEach(ghost => clearInterval(ghost.timerId));
+      document.removeEventListener("keyup", movePacman);
+      showPopup("Game Over. Try again!");
     }
   }
-
-  //check for a win - change the winning score to whatever you wish
+  
   function checkForWin() {
     if (score >= 274) {
-      ghosts.forEach(ghost => clearInterval(ghost.timerId))
-      document.removeEventListener("keyup", movePacman)
-      setTimeout(function () {
-        alert("You have WON!")
-      }, 500)
+      ghosts.forEach(ghost => clearInterval(ghost.timerId));
+      document.removeEventListener("keyup", movePacman);
+      showPopup("Congratulations! You have won!");
     }
   }
 })

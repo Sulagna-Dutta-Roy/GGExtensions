@@ -1,0 +1,15 @@
+{
+    "name" : "Internet Speed Extension",
+    "version" : "1.0.0",
+    "manifest_version" : 3,
+    "author" : "Anushka Sharma",
+    "action" : {    
+        "default_popup" : "index.html",
+        "default_title" : "Check Speed",
+        "default_icon" : "images/logo.png",
+        "icons" : {
+            "64" : "images/logo.png"
+        }
+    },
+    "permissions" : ["activeTab"]
+}

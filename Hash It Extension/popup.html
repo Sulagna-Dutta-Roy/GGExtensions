@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <h5 class="title">Hash It</h5>
+
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item selected"><a href="popup.html" target="_self">MD5</a></li>
+        <li class="nav-item"><a href="sha.html" target="_self">SHA</a></li>
+        <li class="nav-item"><a href="hmac.html" target="_self">HMAC</a></li>
+      </ul>
+    </nav>
+
+
+    <!-- find hash form -->
+    <div class="form">
+      <div class="input-group">
+        <input type="text" name="string" placeholder="Enter something...">
+        <button class="submit-btn" id="md5-calc">MD5</button>
+      </div>
+    </div>
+
+    <div class="output">
+      <h3># OUTPUT</h3>
+      <div id="text"></div>
+    </div>
+
+    <script src="crypto.min.js"></script>
+    <script src="hash.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Timer</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reading Timer</h1>
+        <div class="timer">
+            <span id="time">00:00:00</span>
+        </div>
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        <div class="log">
+            <h2>Reading Log</h2>
+            <input type="text" id="bookInput" placeholder="Enter book/article title">
+            <button id="logBtn">Log Reading</button>
+            <ul id="logList"></ul>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

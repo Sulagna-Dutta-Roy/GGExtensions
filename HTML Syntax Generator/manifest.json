@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "HTML Syntax Generator",
+    "version": "1.0",
+    "description": "Generates basic HTML syntax for selected tags",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  

@@ -20,61 +20,81 @@ body {
 form {
     display: flex;
     align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 select {
-    padding: 5px;
+    padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #007bff;
 }
 
 button {
-    padding: 5px 10px;
+    padding: 10px 20px;
     font-size: 14px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-body.clock-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Allow clocks to wrap to the next row */
+#clockContainer {
+ 
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .clock {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
     background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     width: 150px; /* Set the width of each clock */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 .clock span {
-    margin-top: 5px;
+    margin-top: 10px;
     font-weight: bold;
     font-size: small;
 }
 
 .time {
     display: block;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .timezone {
     display: block;
-    font-size: small;
+    font-size: 0.9em;
+    color: #666;
 }
 
 /* Styles for analog clock */
@@ -85,24 +105,29 @@ body.clock-container {
     border: 5px solid #000;
     border-radius: 50%;
     margin: 0 auto;
+    background: #fff;
 }
 
 .hour, .minute, .second {
     position: absolute;
     width: 50%;
-    height: 2px;
-    background: black;
     top: 50%;
     transform-origin: 100%;
     transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.hour {
+    background: #000;
+    height: 4px;
 }
 
 .minute {
-    background: red;
-    height: 1px;
+    background: #007bff;
+    height: 3px;
 }
 
 .second {
-    background: blue;
-    height: 1px;
+    background: #ff0000;
+    height: 2px;
 }

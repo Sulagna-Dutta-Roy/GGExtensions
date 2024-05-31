@@ -100,8 +100,15 @@ body{
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.todoList li:hover .icon{
-  right: 0px;
+.todoList li .delete-btn {
+  right: 0;
+  background: #e74c3c;
+  border-radius: 0 3px 3px 0;
+}
+.todoList li .edit-icon {
+  right: 50px;
+  background: #f39c12;
+  border-radius: 3px 0 0 3px;
 }
 .wrapper .footer{
   display: flex;
