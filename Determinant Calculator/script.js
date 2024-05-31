@@ -1,3 +1,10 @@
+// Event listener for the "Generate Matrix" button
+document.getElementById("generateMatrixButton").addEventListener("click", generateMatrixTable);
+
+// Event listener for the "Calculate Determinant" button
+document.getElementById("calculateDeterminantButton").addEventListener("click", calculateDeterminant);
+
+// Function to generate the matrix table
 function generateMatrixTable() {
     var size = parseInt(document.getElementById("sizeInput").value);
     var matrixTableDiv = document.getElementById("matrixTable");
@@ -23,6 +30,7 @@ function generateMatrixTable() {
     matrixTableDiv.appendChild(table);
 }
 
+// Function to extract matrix from the table
 function getMatrixFromTable(size) {
     var matrix = [];
     for (var i = 0; i < size; i++) {
@@ -36,15 +44,16 @@ function getMatrixFromTable(size) {
     return matrix;
 }
 
+// Function to calculate the determinant
 function calculateDeterminant() {
     var size = parseInt(document.getElementById("sizeInput").value);
     var matrix = getMatrixFromTable(size);
-
 
     var determinant = getDeterminant(matrix);
     document.getElementById("result").innerHTML = "<p>Determinant: " + determinant + "</p>";
 }
 
+// Function to calculate the determinant of a matrix
 function getDeterminant(matrix) {
     var n = matrix.length;
     if (n === 1) {

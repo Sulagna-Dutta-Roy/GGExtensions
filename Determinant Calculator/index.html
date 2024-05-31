@@ -7,7 +7,8 @@
 </head>
 <style>
     .container {
-        max-width: 600px;
+        width: 600px;
+        height: 500px;
         margin: 0 auto;
         text-align: center;
         padding: 20px;
@@ -39,8 +40,10 @@
         <h1>Determinant Calculator</h1>
         <label for="sizeInput">Enter matrix size (n x n):</label>
         <input type="number" id="sizeInput" min="1">
-        <div><button onclick="generateMatrixTable()">Generate Matrix</button>
-        <button onclick="calculateDeterminant()">Calculate Determinant</button></div>
+        <div>
+            <button id="generateMatrixButton">Generate Matrix</button>
+            <button id="calculateDeterminantButton">Calculate Determinant</button>
+        </div>
         <div id="matrixTable"></div>
         <div id="result"></div>
     </div>
