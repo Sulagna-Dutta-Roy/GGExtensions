@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 400px;
+  height: 500px;
+  background-color: #eeeeee;
+}
+
+.title {
+  padding: 5px;
+  font-size: 26px;
+  background-color: #686D76;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  list-style: none;
+  font-size: 24px;
+}
+
+.selected {
+  border-bottom: 2px solid black;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+.form {
+  width: 100%;
+  height: 70%;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  height: 30px;
+  width: 250px;
+
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.submit-btn {
+  height: 30px;
+  width: 70px;
+
+  background-color: green;
+  color: white;
+
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: limegreen;
+  color: black;
+}
+
+.output {
+  position: relative;
+
+  width: 100%;
+  height: 30%;
+
+  padding: 10px;
+
+  background-color: grey;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.output h3 {
+  position: absolute;
+  top: 10px;
+  margin: 0px auto;
+}
+
+#text {
+  color: white;
+  font-size: 18px;
+  width: 90%;
+
+  word-wrap: break-word;
+}
