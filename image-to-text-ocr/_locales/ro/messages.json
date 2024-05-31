@@ -1,0 +1,139 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Fixați extensia din meniul puzzle de mai sus.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Extrageți text din orice pagină / pdf de pe internet",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "Sa mergem!", "description": "Let's go!" },
+  "loginLabel": { "message": "Autentificare", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Urmăriți Tutorial",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "Rezultate OCR",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Vorbi", "description": "Speak" },
+  "translateLabel": { "message": "Traduceți", "description": "Translate" },
+  "extractPdfLabel": {
+    "message": "Extrageți Pdf",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "Copie", "description": "Copy" },
+  "contactLabel": { "message": "a lua legatura", "description": "Contact" },
+  "shareLabel": { "message": "Acțiune", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Imagine realizată pentru OCR (Recunoaștere Optică a Caracterelor).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Ne evalua", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Facem lucruri OCR pentru tine ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Glisați și plasați câteva fișiere aici sau faceți clic pentru a selecta fișiere.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf preluat pentru OCR (Recunoașterea Optică a Caracterelor).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Extrageți text din acest ecran",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Extrageți text din această imagine",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "încărcați pdf pentru a extrage text din",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Donează", "description": "Donate" },
+  "appName": {
+    "message": "Imagine către text (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Începeți gratuit",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "O aplicație rapidă și simplă de scanare a documentelor cu ieșire de text de înaltă calitate.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Confidențialitate", "description": "Privacy" },
+  "linkSupport": { "message": "A sustine", "description": "Support" },
+  "linkDonate": { "message": "Donează", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Descărcați pentru Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Tutorial", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Termeni si conditii",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Caracteristici cheie",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Caracteristici", "description": "Features" },
+  "subHeadOne": {
+    "message": "Scanați imaginea din folderul dvs. sau de pe Internet.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Scanați imaginea pe orice pagină web [folosind extensia browserului] de pe internet sau încărcați imaginea pe site-ul nostru web pentru a obține text folosind cea mai bună precizie a tehnologiei OCR.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Suport pentru mai multe limbi.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Suportă peste 100 de limbi și variantele sale. Scanați documentul din orice limbă și obțineți text utilizând aplicația noastră Image to Text (OCR).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Noțiuni de bază",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "Scanați PDF-uri.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "Ecranul de decupare și scanare.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "Joaca. Traduceți.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "Faceți clic pe opțiunea „încărcați pdf pentru a face OCR” din meniul contextual pentru a face scanarea documentelor pe Pdf-uri și pentru a obține text.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Faceți clic pe pictograma extensiei din Screen cropper. apoi Faceți clic pe butonul +, ecranul decupat va fi scanat și veți obține textul.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Redați textul OCR folosind tehnologia noastră Text to Speech. Traduceți text OCR în orice limbă doriți.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Link-uri", "description": "Links" },
+  "labelLegal": { "message": "Legal", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Urmăriți Tutorial",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "Cumpărați Premium",
+    "description": "Buy Premium"
+  }
+}

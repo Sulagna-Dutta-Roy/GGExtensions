@@ -1,0 +1,139 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "উপরের ধাঁধা মেনু থেকে এক্সটেনশনটি পিন করুন।",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "ইন্টারনেটে যে কোনও পৃষ্ঠা / পিডিএফ থেকে পাঠ্য আহরণ করুন",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "চলো যাই!", "description": "Let's go!" },
+  "loginLabel": { "message": "প্রবেশ করুন", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "টিউটোরিয়াল দেখুন",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": { "message": "ওসিআর ফলাফল", "description": "OCR Results" },
+  "speakLabel": { "message": "কথা বলুন", "description": "Speak" },
+  "translateLabel": { "message": "অনুবাদ করা", "description": "Translate" },
+  "extractPdfLabel": {
+    "message": "এক্সট্র্যাক্ট পিডিএফ",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "কপি", "description": "Copy" },
+  "contactLabel": { "message": "যোগাযোগ", "description": "Contact" },
+  "shareLabel": { "message": "ভাগ করুন", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "ওসিআরের জন্য চিত্র নেওয়া হয়েছে (অপটিকাল চরিত্রের স্বীকৃতি)।",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": {
+    "message": "আমাদের ব্যাপারে আপনার মতামত দিন",
+    "description": "Rate Us"
+  },
+  "ocrLoadingLabel": {
+    "message": "আপনার জন্য ওসিআর স্টাফ করছেন ...",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "এখানে কিছু ফাইল ফেলে রেখে 'এন' টেনে আনুন বা ফাইল নির্বাচন করতে ক্লিক করুন।",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "ওডিআর (অপটিকাল চরিত্রের স্বীকৃতি) এর জন্য পিডিএফ নেওয়া হয়েছে।",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "এই স্ক্রীন থেকে পাঠ্য উত্তোলন করুন",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "এই চিত্রটি থেকে পাঠ্য বের করুন",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "থেকে পাঠ্য নিষ্কাশন করতে পিডিএফ আপলোড করুন",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "দান করুন", "description": "Donate" },
+  "appName": {
+    "message": "ছবিতে পাঠ্য (ওসিআর)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "নিখরচায় শুরু করুন",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "উচ্চ মানের পাঠ্য আউটপুট সহ একটি দ্রুত এবং সাধারণ ডকুমেন্ট স্ক্যানার অ্যাপ।",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "গোপনীয়তা", "description": "Privacy" },
+  "linkSupport": { "message": "সমর্থন", "description": "Support" },
+  "linkDonate": { "message": "দান করুন", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "ক্রোমের জন্য ডাউনলোড করুন",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "টিউটোরিয়াল", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "শর্তাবলী",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "মূল বৈশিষ্ট্য",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "বৈশিষ্ট্য", "description": "Features" },
+  "subHeadOne": {
+    "message": "আপনার ফোল্ডার বা ইন্টারনেট থেকে চিত্র স্ক্যান করুন।",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "ইন্টারনেটে যে কোনও ওয়েবপৃষ্ঠায় [আপনার ব্রাউজারের এক্সটেনশন ব্যবহার করে) চিত্র স্ক্যান করুন বা আমাদের সেরা নির্ভুলতা ওসিআর প্রযুক্তি ব্যবহার করে পাঠ্য পেতে আমাদের ওয়েবসাইটটিতে আপনার চিত্র আপলোড করুন।",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "একাধিক ভাষা সমর্থন।",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "100+ ভাষা এবং এর রূপগুলি সমর্থন করে। যে কোনও ভাষার নথি স্ক্যান করুন এবং আমাদের চিত্র থেকে পাঠ্য (ওসিআর) অ্যাপ্লিকেশন ব্যবহার করে পাঠ্য পান।",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "শুরু হচ্ছে",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "স্ক্যান পিডিএফ।", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "ক্রপ এবং স্ক্যান স্ক্রিন।",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "খেলো। অনুবাদ করা.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "পিডিএফসে ডকুমেন্ট স্ক্যান করতে এবং পাঠ্য পাওয়ার জন্য প্রসঙ্গ মেনু থেকে \"আপলোড পিডিএফ করতে ওসিআর করতে\" বিকল্পটি ক্লিক করুন।",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "স্ক্রিন ক্রপার থেকে এক্সটেনশন আইকনে ক্লিক করুন উপস্থিত হবে। তারপরে + বাটনে ক্লিক করুন, ক্রপযুক্ত স্ক্রিনটি স্ক্যান হয়ে যাবে এবং আপনি পাঠ্যটি পাবেন।",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "আমাদের পাঠ্য টু স্পিচ প্রযুক্তি ব্যবহার করে ওসিআর পাঠ্য খেলুন। আপনি যে কোনও ভাষায় ওসিআর পাঠ্যটি অনুবাদ করুন।",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "লিঙ্কগুলি", "description": "Links" },
+  "labelLegal": { "message": "আইনী", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "টিউটোরিয়াল দেখুন",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "প্রিমিয়াম কিনুন",
+    "description": "Buy Premium"
+  }
+}

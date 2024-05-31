@@ -1,0 +1,133 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "ઉપરના પઝલ મેનૂમાંથી એક્સ્ટેંશનને પિન કરો.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "ઇન્ટરનેટ પર કોઈપણ પૃષ્ઠ / પીડીએફમાંથી ટેક્સ્ટ કાractો",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "ચાલો જઇએ!", "description": "Let's go!" },
+  "loginLabel": { "message": "પ્રવેશ કરો", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "ટ્યુટોરિયલ જુઓ",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": { "message": "OCR પરિણામો", "description": "OCR Results" },
+  "speakLabel": { "message": "બોલો", "description": "Speak" },
+  "translateLabel": { "message": "ભાષાંતર", "description": "Translate" },
+  "extractPdfLabel": {
+    "message": "અર્ક કા Pવા પી.ડી.એફ.",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "નકલ કરો", "description": "Copy" },
+  "contactLabel": { "message": "સંપર્ક કરો", "description": "Contact" },
+  "shareLabel": { "message": "શેર કરો", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "OCR (icalપ્ટિકલ કેરેક્ટર ઓળખાણ) માટે લેવામાં આવેલી છબી.",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "અમારો દર", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "તમારા માટે ઓસીઆર સામગ્રી કરી રહ્યા છીએ ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "અહીં કેટલીક ફાઇલોને છોડો 'એન' ખેંચો અથવા ફાઇલો પસંદ કરવા ક્લિક કરો.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "ઓડીઆર (fપ્ટિકલ કેરેક્ટર રેકગ્નિશન) માટે પીડીએફ લીધેલ.",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "આ સ્ક્રીનમાંથી ટેક્સ્ટ કા Extો",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "આ છબીમાંથી ટેક્સ્ટ કા Extો",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "માંથી ટેક્સ્ટ કાractવા માટે પીડીએફ અપલોડ કરો",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "દાન કરો", "description": "Donate" },
+  "appName": {
+    "message": "ઇમેજ ટુ ટેક્સ્ટ (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "નિ forશુલ્ક પ્રારંભ કરો",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "ઉચ્ચ ગુણવત્તાવાળા ટેક્સ્ટ આઉટપુટ સાથે ઝડપી અને સરળ દસ્તાવેજ સ્કેનર એપ્લિકેશન.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "ગોપનીયતા", "description": "Privacy" },
+  "linkSupport": { "message": "આધાર", "description": "Support" },
+  "linkDonate": { "message": "દાન કરો", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "ક્રોમ માટે ડાઉનલોડ કરો",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "ટ્યુટોરિયલ", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "નિયમો અને શરત",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "મુખ્ય વિશેષતાઓ",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "વિશેષતા", "description": "Features" },
+  "subHeadOne": {
+    "message": "તમારા ફોલ્ડર અથવા ઇન્ટરનેટથી છબી સ્કેન કરો.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "ઇન્ટરનેટ પર કોઈપણ વેબપેજ પર [તમારા બ્રાઉઝર એક્સ્ટેંશનનો ઉપયોગ કરીને] ઇમેજ સ્કેન કરો અથવા અમારી શ્રેષ્ઠ ચોકસાઈ OCR તકનીકનો ઉપયોગ કરીને ટેક્સ્ટ મેળવવા માટે અમારી વેબસાઇટ પર તમારી છબી અપલોડ કરો.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "બહુવિધ ભાષા સપોર્ટ.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "100+ ભાષા અને તેના રૂપોને સપોર્ટ કરે છે. કોઈપણ ભાષાના દસ્તાવેજને સ્કેન કરો અને અમારી ઇમેજ ટૂ ટેક્સ્ટ (OCR) એપ્લિકેશનનો ઉપયોગ કરીને ટેક્સ્ટ મેળવો.",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "પ્રારંભ",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "પીડીએફએસ સ્કેન કરો.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "પાક અને સ્કેન સ્ક્રીન.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": { "message": "રમ. ભાષાંતર.", "description": "Play. Translate." },
+  "headF1Desc": {
+    "message": "પીડીએફએસ પર ડોક્યુમેન્ટ સ્કેન કરવા અને ટેક્સ્ટ મેળવવા માટે સંદર્ભ મેનૂમાંથી \"પીડીએફ અપલોડ કરવા માટે પીડીએફ અપલોડ કરો\" વિકલ્પ પર ક્લિક કરો.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "સ્ક્રીન ક્રોપરના એક્સ્ટેંશન ચિહ્ન પર ક્લિક કરો દેખાશે. પછી + બટન પર ક્લિક કરો, ક્રોપ કરેલી સ્ક્રીન સ્કેન થઈ જશે અને તમને ટેક્સ્ટ મળશે.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "અમારા ટેક્સ્ટ ટુ સ્પીચ ટેકનોલોજીનો ઉપયોગ કરીને OCR ટેક્સ્ટ રમો. તમને જોઈતી કોઈપણ ભાષામાં ઓસીઆર ટેક્સ્ટનું ભાષાંતર કરો.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "લિંક્સ", "description": "Links" },
+  "labelLegal": { "message": "કાયદેસર", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "ટ્યુટોરિયલ જુઓ",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "પ્રીમિયમ ખરીદો",
+    "description": "Buy Premium"
+  }
+}

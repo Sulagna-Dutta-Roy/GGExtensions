@@ -1,0 +1,142 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "ಮೇಲಿನ ಪ menu ಲ್ ಮೆನುವಿನಿಂದ ವಿಸ್ತರಣೆಯನ್ನು ಪಿನ್ ಮಾಡಿ.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "ಅಂತರ್ಜಾಲದಲ್ಲಿ ಯಾವುದೇ ಪುಟ / ಪಿಡಿಎಫ್‌ನಿಂದ ಪಠ್ಯವನ್ನು ಹೊರತೆಗೆಯಿರಿ",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "ಹೋಗೋಣ!", "description": "Let's go!" },
+  "loginLabel": { "message": "ಲಾಗಿನ್ ಮಾಡಿ", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "ಟ್ಯುಟೋರಿಯಲ್ ವೀಕ್ಷಿಸಿ",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "ಒಸಿಆರ್ ಫಲಿತಾಂಶಗಳು",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "ಮಾತನಾಡಿ", "description": "Speak" },
+  "translateLabel": { "message": "ಅನುವಾದಿಸು", "description": "Translate" },
+  "extractPdfLabel": {
+    "message": "ಪಿಡಿಎಫ್ ಹೊರತೆಗೆಯಿರಿ",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "ನಕಲಿಸಿ", "description": "Copy" },
+  "contactLabel": { "message": "ಸಂಪರ್ಕಿಸಿ", "description": "Contact" },
+  "shareLabel": { "message": "ಹಂಚಿಕೊಳ್ಳಿ", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "ಒಸಿಆರ್ (ಆಪ್ಟಿಕಲ್ ಕ್ಯಾರೆಕ್ಟರ್ ರೆಕಗ್ನಿಷನ್) ಗಾಗಿ ತೆಗೆದ ಚಿತ್ರ.",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "ನಮ್ಮನ್ನು ರೇಟ್ ಮಾಡಿ", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "ನಿಮಗಾಗಿ ಒಸಿಆರ್ ವಿಷಯವನ್ನು ಮಾಡುವುದು ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "ಕೆಲವು ಫೈಲ್‌ಗಳನ್ನು ಇಲ್ಲಿ ಎಳೆಯಿರಿ, ಅಥವಾ ಫೈಲ್‌ಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "ಒಸಿಆರ್ (ಆಪ್ಟಿಕಲ್ ಕ್ಯಾರೆಕ್ಟರ್ ರೆಕಗ್ನಿಷನ್) ಗಾಗಿ ಪಿಡಿಎಫ್ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ.",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "ಈ ಪರದೆಯಿಂದ ಪಠ್ಯವನ್ನು ಹೊರತೆಗೆಯಿರಿ",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "ಈ ಚಿತ್ರದಿಂದ ಪಠ್ಯವನ್ನು ಹೊರತೆಗೆಯಿರಿ",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "ಪಠ್ಯವನ್ನು ಹೊರತೆಗೆಯಲು ಪಿಡಿಎಫ್ ಅನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "ದಾನ", "description": "Donate" },
+  "appName": {
+    "message": "ಇಮೇಜ್ ಟು ಟೆಕ್ಸ್ಟ್ (ಒಸಿಆರ್)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "ಉಚಿತವಾಗಿ ಪ್ರಾರಂಭಿಸಿ",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "ಉತ್ತಮ ಗುಣಮಟ್ಟದ ಪಠ್ಯ with ಟ್‌ಪುಟ್ ಹೊಂದಿರುವ ವೇಗದ ಮತ್ತು ಸರಳವಾದ ಡಾಕ್ಯುಮೆಂಟ್ ಸ್ಕ್ಯಾನರ್ ಅಪ್ಲಿಕೇಶನ್.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "ಗೌಪ್ಯತೆ", "description": "Privacy" },
+  "linkSupport": { "message": "ಬೆಂಬಲ", "description": "Support" },
+  "linkDonate": { "message": "ದಾನ", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Chrome ಗಾಗಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "ಟ್ಯುಟೋರಿಯಲ್", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "ಪ್ರಮುಖ ಲಕ್ಷಣಗಳು",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "ವೈಶಿಷ್ಟ್ಯಗಳು", "description": "Features" },
+  "subHeadOne": {
+    "message": "ನಿಮ್ಮ ಫೋಲ್ಡರ್ ಅಥವಾ ಇಂಟರ್ನೆಟ್‌ನಿಂದ ಚಿತ್ರವನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "ಅಂತರ್ಜಾಲದಲ್ಲಿ [ನಿಮ್ಮ ಬ್ರೌಸರ್ ವಿಸ್ತರಣೆಯನ್ನು ಬಳಸಿಕೊಂಡು] ಯಾವುದೇ ವೆಬ್‌ಪುಟದಲ್ಲಿ ಇಮೇಜ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಅಥವಾ ನಮ್ಮ ಉತ್ತಮ ನಿಖರತೆ ಒಸಿಆರ್ ತಂತ್ರಜ್ಞಾನವನ್ನು ಬಳಸಿಕೊಂಡು ಪಠ್ಯವನ್ನು ಪಡೆಯಲು ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "ಬಹು ಭಾಷಾ ಬೆಂಬಲ.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "100+ ಭಾಷೆ ಮತ್ತು ಅದರ ರೂಪಾಂತರಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ. ಯಾವುದೇ ಭಾಷೆಯ ಡಾಕ್ಯುಮೆಂಟ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಮತ್ತು ನಮ್ಮ ಇಮೇಜ್ ಟು ಟೆಕ್ಸ್ಟ್ (ಒಸಿಆರ್) ಅಪ್ಲಿಕೇಶನ್ ಬಳಸಿ ಪಠ್ಯವನ್ನು ಪಡೆಯಿರಿ.",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "ಶುರುವಾಗುತ್ತಿದೆ",
+    "description": "Getting Started"
+  },
+  "headF1": {
+    "message": "ಪಿಡಿಎಫ್‌ಗಳನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ.",
+    "description": "Scan Pdfs."
+  },
+  "headF2": {
+    "message": "ಬೆಳೆ ಮತ್ತು ಸ್ಕ್ಯಾನ್ ಪರದೆ.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "ಪ್ಲೇ ಮಾಡಿ. ಅನುವಾದಿಸು.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "ಪಿಡಿಎಫ್‌ಗಳಲ್ಲಿ ಡಾಕ್ಯುಮೆಂಟ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಮತ್ತು ಪಠ್ಯವನ್ನು ಪಡೆಯಲು ಸಂದರ್ಭ ಮೆನುವಿನಿಂದ \"ಪಿಡಿಎಫ್ ಮಾಡಲು ಒಸಿಆರ್ ಅಪ್‌ಲೋಡ್\" ಆಯ್ಕೆಯನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "ಸ್ಕ್ರೀನ್ ಕ್ರಾಪರ್ ನಿಂದ ವಿಸ್ತರಣೆ ಐಕಾನ್ ಕ್ಲಿಕ್ ಮಾಡಿ. ನಂತರ + ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ, ಕ್ರಾಪ್ ಮಾಡಿದ ಪರದೆಯನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಲಾಗುತ್ತದೆ ಮತ್ತು ನೀವು ಪಠ್ಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "ನಮ್ಮ ಪಠ್ಯದಿಂದ ಭಾಷಣ ತಂತ್ರಜ್ಞಾನವನ್ನು ಬಳಸಿಕೊಂಡು ಒಸಿಆರ್ ಪಠ್ಯವನ್ನು ಪ್ಲೇ ಮಾಡಿ. ಒಸಿಆರ್ ಪಠ್ಯವನ್ನು ನೀವು ಬಯಸುವ ಯಾವುದೇ ಭಾಷೆಯಲ್ಲಿ ಭಾಷಾಂತರಿಸಿ.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "ಲಿಂಕ್‌ಗಳು", "description": "Links" },
+  "labelLegal": { "message": "ಕಾನೂನು", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "ಟ್ಯುಟೋರಿಯಲ್ ವೀಕ್ಷಿಸಿ",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "ಪ್ರೀಮಿಯಂ ಖರೀದಿಸಿ",
+    "description": "Buy Premium"
+  }
+}

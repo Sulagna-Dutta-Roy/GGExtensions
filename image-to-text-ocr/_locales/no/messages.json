@@ -1,0 +1,133 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Fest utvidelsen fra puslespillmenyen ovenfor.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Pakk ut tekst fra hvilken som helst side / pdf på internett",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "La oss gå!", "description": "Let's go!" },
+  "loginLabel": { "message": "Logg Inn", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Se opplæringen",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "OCR-resultater",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Snakke", "description": "Speak" },
+  "translateLabel": { "message": "Oversette", "description": "Translate" },
+  "extractPdfLabel": { "message": "Pakk ut Pdf", "description": "Extract Pdf" },
+  "copyLabel": { "message": "Kopiere", "description": "Copy" },
+  "contactLabel": { "message": "Ta kontakt med", "description": "Contact" },
+  "shareLabel": { "message": "Dele", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Bildet er tatt for OCR (Optical Character Recognition).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Rangere oss", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Gjør OCR-ting for deg ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Dra noen filer hit, eller klikk for å velge filer.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf tatt for OCR (Optical Character Recognition).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Pakk ut tekst fra dette skjermbildet",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Trekk ut tekst fra dette bildet",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "last opp pdf for å hente ut tekst fra",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Donere", "description": "Donate" },
+  "appName": {
+    "message": "Bilde til tekst (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Kom i gang gratis",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "En rask og enkel dokumentskanner-app med tekstutdata av høy kvalitet.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Personvern", "description": "Privacy" },
+  "linkSupport": { "message": "Brukerstøtte", "description": "Support" },
+  "linkDonate": { "message": "Donere", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Last ned for Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Opplæringen", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Vilkår og betingelser",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Nøkkelegenskaper",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Funksjoner", "description": "Features" },
+  "subHeadOne": {
+    "message": "Skann bilde fra mappen eller Internett.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Gjør bildeskanning på hvilken som helst webside [ved hjelp av nettleserutvidelsen] på internett, eller last opp bildet ditt på nettstedet vårt for å få tekst ved hjelp av vår beste nøyaktighets OCR-teknologi.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Støtte for flere språk.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Støtter 100+ språk og dets varianter. Skann dokument på hvilket som helst språk og få tekst ved hjelp av vår OCR-app (Image to Text).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Starter",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "Skann Pdfs.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "Beskjær og skann skjerm.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "Spille. Oversette.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "Klikk på alternativet \"last opp pdf for å gjøre OCR\" fra hurtigmenyen for å gjøre Dokumentskanning på Pdfs og få tekst.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Klikk på utvidelsesikonet fra Skjermbeskjæreren vises. klikk deretter på + -knappen, den beskjærte skjermen blir skannet og du får teksten.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Spill av OCR-teksten ved hjelp av vår Tekst til tale-teknologi. Oversett OCR-tekst på hvilket språk du vil.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Lenker", "description": "Links" },
+  "labelLegal": { "message": "Lovlig", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Se opplæringen",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": { "message": "Kjøp Premium", "description": "Buy Premium" }
+}

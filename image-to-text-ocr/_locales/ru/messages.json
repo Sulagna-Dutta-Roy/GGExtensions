@@ -1,0 +1,139 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Закрепите расширение в меню головоломки выше.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Извлечь текст с любой страницы / pdf в Интернете",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "Пошли!", "description": "Let's go!" },
+  "loginLabel": { "message": "Авторизоваться", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Смотреть руководство",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "Результаты OCR",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Говорить", "description": "Speak" },
+  "translateLabel": { "message": "Переведите", "description": "Translate" },
+  "extractPdfLabel": { "message": "Извлечь PDF", "description": "Extract Pdf" },
+  "copyLabel": { "message": "Копировать", "description": "Copy" },
+  "contactLabel": { "message": "Контакт", "description": "Contact" },
+  "shareLabel": { "message": "доля", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Изображение снято для OCR (оптического распознавания символов).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Оцените нас", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Делаем для вас OCR ...",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Перетащите сюда несколько файлов или щелкните, чтобы выбрать файлы.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf, принятый для OCR (оптического распознавания символов).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Извлечь текст с этого экрана",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Извлечь текст из этого изображения",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "загрузить PDF для извлечения текста из",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Пожертвовать", "description": "Donate" },
+  "appName": {
+    "message": "Изображение в текст (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Начни бесплатно",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "Быстрое и простое приложение для сканирования документов с высококачественным выводом текста.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Конфиденциальность", "description": "Privacy" },
+  "linkSupport": { "message": "Служба поддержки", "description": "Support" },
+  "linkDonate": { "message": "Пожертвовать", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Скачать для Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Руководство", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Условия и положения",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Ключевая особенность",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Функции", "description": "Features" },
+  "subHeadOne": {
+    "message": "Сканируйте изображение из вашей папки или из Интернета.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Сканируйте изображение на любой веб-странице [с помощью расширения вашего браузера] в Интернете или загрузите свое изображение на наш веб-сайт, чтобы получить текст с помощью нашей технологии распознавания текста с максимальной точностью.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Поддержка нескольких языков.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Поддерживает более 100 языков и их варианты. Отсканируйте документ на любом языке и получите текст с помощью нашего приложения Image to Text (OCR).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Начиная",
+    "description": "Getting Started"
+  },
+  "headF1": {
+    "message": "Сканирование PDF-файлов.",
+    "description": "Scan Pdfs."
+  },
+  "headF2": {
+    "message": "Экран кадрирования и сканирования.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "Играть. Переведите.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "Нажмите на опцию «загрузить PDF для распознавания текста» в контекстном меню, чтобы сканировать документы в PDF-файлах и получать текст.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Нажмите на значок расширения в появившемся окне \"Обрезка экрана\". затем нажмите кнопку +, обрезанный экран будет отсканирован, и вы получите текст.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Воспроизведите текст OCR, используя нашу технологию преобразования текста в речь. Переведите текст OCR на любой язык, который вы хотите.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Ссылки", "description": "Links" },
+  "labelLegal": { "message": "Юридическая", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Смотреть руководство",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "Купить Премиум",
+    "description": "Buy Premium"
+  }
+}

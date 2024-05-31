@@ -1,0 +1,130 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "위의 퍼즐 메뉴에서 확장 프로그램을 고정합니다.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "인터넷의 모든 페이지 / PDF에서 텍스트 추출",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "가자!", "description": "Let's go!" },
+  "loginLabel": { "message": "로그인", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "튜토리얼보기",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": { "message": "OCR 결과", "description": "OCR Results" },
+  "speakLabel": { "message": "말하다", "description": "Speak" },
+  "translateLabel": { "message": "옮기다", "description": "Translate" },
+  "extractPdfLabel": { "message": "PDF 추출", "description": "Extract Pdf" },
+  "copyLabel": { "message": "부", "description": "Copy" },
+  "contactLabel": { "message": "접촉", "description": "Contact" },
+  "shareLabel": { "message": "공유", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "OCR (광학 문자 인식) 용으로 촬영 한 이미지입니다.",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "평가", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "당신을 위해 OCR 작업을하는 중 ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "여기에 일부 파일을 드래그 앤 드롭하거나 클릭하여 파일을 선택합니다.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "OCR (광학 문자 인식)을 위해 찍은 PDF.",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "이 화면에서 텍스트 추출",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "이 이미지에서 텍스트 추출",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "PDF를 업로드하여 텍스트 추출",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "기부", "description": "Donate" },
+  "appName": {
+    "message": "이미지를 텍스트로 (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "무료로 시작",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "고품질 텍스트 출력을 제공하는 빠르고 간단한 문서 스캐너 앱입니다.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "은둔", "description": "Privacy" },
+  "linkSupport": { "message": "지원하다", "description": "Support" },
+  "linkDonate": { "message": "기부", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Chrome 용 다운로드",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "지도 시간", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "이용 약관",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "주요 특징들",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "풍모", "description": "Features" },
+  "subHeadOne": {
+    "message": "폴더 또는 인터넷에서 이미지를 스캔합니다.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "인터넷의 [브라우저 확장 프로그램을 사용하여] 모든 웹 페이지에서 이미지 스캔을 수행하거나 당사 웹 사이트에 이미지를 업로드하여 최상의 정확도 OCR 기술을 사용하여 텍스트를 얻으십시오.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "다국어 지원.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "100 개 이상의 언어와 그 변형을 지원합니다. 모든 언어의 문서를 스캔하고 OCR (Image to Text) 앱을 사용하여 텍스트를 가져옵니다.",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "시작하기",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "PDF 스캔.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "자르기 및 스캔 화면.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": { "message": "플레이. 옮기다.", "description": "Play. Translate." },
+  "headF1Desc": {
+    "message": "상황에 맞는 메뉴에서 \"PDF 업로드로 OCR 업로드\"옵션을 클릭하여 PDF에서 문서 스캔을 수행하고 텍스트를 가져옵니다.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "화면 자르기에서 확장 아이콘을 클릭하면 나타납니다. 그런 다음 + 버튼을 클릭하면 잘린 화면이 스캔되고 텍스트가 표시됩니다.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Text to Speech 기술을 사용하여 OCR 텍스트를 재생합니다. 원하는 언어로 OCR 텍스트를 번역합니다.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "연결", "description": "Links" },
+  "labelLegal": { "message": "적법한", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "튜토리얼보기",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "프리미엄 구매",
+    "description": "Buy Premium"
+  }
+}
