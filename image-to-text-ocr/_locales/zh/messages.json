@@ -1,0 +1,124 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "从上方的拼图菜单固定扩展名。",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "从互联网上的任何页面/ pdf中提取文本",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "我们走吧！", "description": "Let's go!" },
+  "loginLabel": { "message": "登录", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "观看教程",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": { "message": "OCR结果", "description": "OCR Results" },
+  "speakLabel": { "message": "说话", "description": "Speak" },
+  "translateLabel": { "message": "翻译", "description": "Translate" },
+  "extractPdfLabel": { "message": "提取Pdf", "description": "Extract Pdf" },
+  "copyLabel": { "message": "复制", "description": "Copy" },
+  "contactLabel": { "message": "接触", "description": "Contact" },
+  "shareLabel": { "message": "分享", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "为OCR（光学字符识别）拍摄的图像。",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "评价我们", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "为您做OCR的东西。",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "将“ n”拖放到此处，或单击以选择文件。",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "用于OCR（光学字符识别）的Pdf。",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "从此屏幕提取文本",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "从该图像中提取文本",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "上载pdf以从中提取文本",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "捐", "description": "Donate" },
+  "appName": {
+    "message": "图片到文字（OCR）",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "免费入门",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "快速，简单的文档扫描器应用程序，具有高质量的文本输出。",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "隐私", "description": "Privacy" },
+  "linkSupport": { "message": "支持", "description": "Support" },
+  "linkDonate": { "message": "捐", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "下载Chrome浏览器",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "教程", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "条款和条件",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": { "message": "主要特征", "description": "Key Features" },
+  "headFeatures": { "message": "特征", "description": "Features" },
+  "subHeadOne": {
+    "message": "从文件夹或Internet扫描图像。",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "使用互联网上的任何网页（使用浏览器扩展程序）扫描图像，或将图像上传到我们的网站上，以使用我们最高精度的OCR技术获取文本。",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "多语言支持。",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "支持100多种语言及其变体。扫描任何语言的文档，并使用我们的图像到文本（OCR）应用获取文本。",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "入门",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "扫描Pdfs。", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "裁剪和扫描屏幕。",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": { "message": "玩。翻译。", "description": "Play. Translate." },
+  "headF1Desc": {
+    "message": "从上下文菜单中单击选项“上载pdf以执行OCR”，以在Pdfs上进行文档扫描并获取文本。",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "单击屏幕裁剪器上的扩展图标。然后单击+按钮，将扫描裁剪的屏幕，您将获得文本。",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "使用我们的文字转语音技术播放OCR文字。用您想要的任何语言翻译OCR文本。",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "链接", "description": "Links" },
+  "labelLegal": { "message": "合法的", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "观看教程",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": { "message": "购买高级版", "description": "Buy Premium" }
+}

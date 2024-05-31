@@ -1,0 +1,136 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Piespraudiet augšpusē esošo puzzle izvēlnes paplašinājumu.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Izvelciet tekstu no jebkuras lapas / pdf internetā",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "Ejam!", "description": "Let's go!" },
+  "loginLabel": { "message": "Pieslēgties", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Skatīties apmācību",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "OCR rezultāti",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Runā", "description": "Speak" },
+  "translateLabel": { "message": "Tulkot", "description": "Translate" },
+  "extractPdfLabel": {
+    "message": "Izraksts Pdf",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "Kopēt", "description": "Copy" },
+  "contactLabel": { "message": "Kontakts", "description": "Contact" },
+  "shareLabel": { "message": "Dalīties", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Attēls uzņemts OCR (Optical Character Recognition).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Novērtē mūs", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Doing OCR stuff for you ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Velciet un nometiet dažus failus šeit vai noklikšķiniet, lai atlasītu failus.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf, kas paredzēts OCR (Optical Character Recognition).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Izvelciet tekstu no šī ekrāna",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Izvelciet tekstu no šī attēla",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "augšupielādēt pdf, lai no tā iegūtu tekstu",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Ziedo", "description": "Donate" },
+  "appName": {
+    "message": "Attēls uz tekstu (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Sāciet bez maksas",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "Ātra un vienkārša dokumentu skenera lietotne ar augstas kvalitātes teksta izvadi.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Privātums", "description": "Privacy" },
+  "linkSupport": { "message": "Atbalsts", "description": "Support" },
+  "linkDonate": { "message": "Ziedo", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Lejupielādēt pārlūkam Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Apmācība", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Noteikumi un nosacījumi",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Galvenās iezīmes",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Iespējas", "description": "Features" },
+  "subHeadOne": {
+    "message": "Skenējiet attēlu no mapes vai interneta.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Veiciet attēlu skenēšanu jebkurā tīmekļa vietnē [izmantojot pārlūkprogrammas paplašinājumu] internetā vai augšupielādējiet savu attēlu mūsu vietnē, lai iegūtu tekstu, izmantojot mūsu vislabāko precizitātes OCR tehnoloģiju.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Vairāku valodu atbalsts.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Atbalsta vairāk nekā 100 valodas un tās variantus. Skenējiet jebkuru valodu un iegūstiet tekstu, izmantojot mūsu lietotni Attēls uz tekstu (OCR).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Darba sākšana",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "Skenēt PDF.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "Apgriezt un skenēt ekrānu.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": { "message": "Spēlēt. Tulkot.", "description": "Play. Translate." },
+  "headF1Desc": {
+    "message": "Noklikšķiniet uz opcijas \"augšupielādēt PDF, lai veiktu OCR\" no konteksta izvēlnes, lai PDF dokumentos skenētu dokumentu un iegūtu tekstu.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Parādīsies Ekrāna apgriezējs uz paplašinājuma ikonas. tad noklikšķiniet uz pogas +, apgrieztais ekrāns tiks skenēts, un jūs saņemsiet tekstu.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Atskaņojiet OCR tekstu, izmantojot mūsu teksta uz runu tehnoloģiju. Tulkojiet OCR tekstu jebkurā vēlamajā valodā.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Saites", "description": "Links" },
+  "labelLegal": { "message": "Juridisks", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Skatīties apmācību",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "Pērciet Premium",
+    "description": "Buy Premium"
+  }
+}

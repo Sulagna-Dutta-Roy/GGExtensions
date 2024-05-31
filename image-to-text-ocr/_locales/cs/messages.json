@@ -1,0 +1,139 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Připněte příponu z nabídky puzzle výše.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Extrahujte text z jakékoli stránky / pdf na internetu",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "Pojďme!", "description": "Let's go!" },
+  "loginLabel": { "message": "Přihlásit se", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Podívejte se na výukový program",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "Výsledky OCR",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Mluvit", "description": "Speak" },
+  "translateLabel": { "message": "přeložit", "description": "Translate" },
+  "extractPdfLabel": {
+    "message": "Extrahovat Pdf",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "kopírovat", "description": "Copy" },
+  "contactLabel": { "message": "Kontakt", "description": "Contact" },
+  "shareLabel": { "message": "Podíl", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Snímek pořízený pro OCR (optické rozpoznávání znaků).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Ohodnoťte nás", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Děláme pro vás věci OCR ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Přetáhněte sem některé soubory nebo je vyberte kliknutím.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf převzato pro OCR (optické rozpoznávání znaků).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Extrahujte text z této obrazovky",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Extrahujte text z tohoto obrázku",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "nahrát pdf a extrahovat text z",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Darovat", "description": "Donate" },
+  "appName": {
+    "message": "Obrázek na text (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Začněte zdarma",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "Rychlá a jednoduchá aplikace pro skenování dokumentů s vysoce kvalitním textovým výstupem.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Soukromí", "description": "Privacy" },
+  "linkSupport": { "message": "Podpěra, podpora", "description": "Support" },
+  "linkDonate": { "message": "Darovat", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Stáhnout pro Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Tutorial", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Pravidla a podmínky",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Klíčové vlastnosti",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Funkce", "description": "Features" },
+  "subHeadOne": {
+    "message": "Naskenujte obrázek ze své složky nebo z Internetu.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Proveďte skenování obrázků na libovolné webové stránce [pomocí rozšíření prohlížeče] na internetu nebo nahrajte svůj obrázek na náš web a získejte text pomocí naší nejpřesnější technologie OCR.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Podpora více jazyků.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Podporuje více než 100 jazyků a jejich variant. Naskenujte dokument v jakémkoli jazyce a získejte text pomocí naší aplikace Image to Text (OCR).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Začínáme",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "Skenovat dokumenty.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "Obrazovka Oříznout a skenovat.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "Hrát si. Přeložit.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "Kliknutím na možnost „nahrát soubor PDF provést OCR“ v místní nabídce provedete skenování dokumentu do souboru PDF a získáte text.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Klikněte na ikonu rozšíření v ořezávači obrazovky. poté klikněte na tlačítko +, oříznutá obrazovka bude naskenována a dostanete text.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Přehrajte text OCR pomocí naší technologie převodu textu na řeč. Přeložte text OCR do libovolného jazyka, který chcete.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Odkazy", "description": "Links" },
+  "labelLegal": { "message": "Právní", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Podívejte se na výukový program",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "Koupit Premium",
+    "description": "Buy Premium"
+  }
+}

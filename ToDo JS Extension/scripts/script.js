@@ -3,6 +3,7 @@ const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
 
+let editIndex = null;
 
 inputBox.onkeyup = ()=>{
   let userEnteredValue = inputBox.value; //getting user entered value
@@ -23,7 +24,14 @@ addBtn.onclick = ()=>{ //when user click on plus icon button
   }else{
     listArray = JSON.parse(getLocalStorageData);  //transforming json string into a js object
   }
-  listArray.push(userEnteredValue); //pushing or adding new value in array
+  if (editIndex !== null) {
+    // Update the todo item
+    listArray[editIndex] = userEnteredValue;
+    editIndex = null;
+  } else {
+    // Add new todo item
+    listArray.push(userEnteredValue); //pushing or adding new value in array
+  }
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
   showTasks(); //calling showTask function
   addBtn.classList.remove("active"); //unactive the add button once the task added
@@ -45,7 +53,7 @@ function showTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li data-index="${index}">${element}<span class="icon delete-btn"><i class="fas fa-trash"></i></span></li>`;
+    newLiTag += `<li data-index="${index}">${element}<span class="icon delete-btn"><i class="fas fa-trash"></i></span><span class="icon edit-icon"><i class="fas fa-edit"></i></span></li>`;
   });
   todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
   inputBox.value = ""; //once task added leave the input field blank
@@ -64,6 +72,14 @@ todoList.addEventListener("click", function(event) {
     const index = target.closest("li").dataset.index;
     deleteTask(index);
   }
+  // Check if the click event targets the edit button icon directly
+  if (target.classList.contains("fa-edit")) {
+    const index = target.closest("li").dataset.index;
+    editTask(index);
+  } else if (target.classList.contains("edit-btn")) {
+    const index = target.closest("li").dataset.index;
+    editTask(index);
+  }
 });
 // delete task function
 function deleteTask(index){
@@ -72,6 +88,15 @@ function deleteTask(index){
   listArray.splice(index, 1); //delete or remove the li
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks(); //call the showTasks function
+}
+
+// edit task function
+function editTask(index) {
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  listArray = JSON.parse(getLocalStorageData);
+  inputBox.value = listArray[index]; // populate input field with the todo text
+  editIndex = index; // set edit index
+  addBtn.classList.add("active"); // activate the add button
 }
 
 // delete all tasks function

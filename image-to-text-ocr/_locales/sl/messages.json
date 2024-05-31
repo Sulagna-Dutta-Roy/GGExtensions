@@ -1,0 +1,142 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Pripnite priponko iz zgornjega menija sestavljanke.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Izvlecite besedilo s katere koli strani / pdf na internetu",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "Pojdimo!", "description": "Let's go!" },
+  "loginLabel": { "message": "Vpiši se", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Oglejte si vadnico",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "Rezultati OCR",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Govoriti", "description": "Speak" },
+  "translateLabel": { "message": "Prevesti", "description": "Translate" },
+  "extractPdfLabel": {
+    "message": "Izvleček Pdf",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "Kopirati", "description": "Copy" },
+  "contactLabel": { "message": "Kontakt", "description": "Contact" },
+  "shareLabel": { "message": "Deliti", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Slika posneta za OCR (optično prepoznavanje znakov).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Ocenite nas", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Za vas delam OCR ...",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Povlecite nekaj datotek sem ali pa kliknite, da jih izberete.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf za OCR (optično prepoznavanje znakov).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Izvlecite besedilo s tega zaslona",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Izvleči besedilo iz te slike",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "naloži pdf, da iz njega izvlečeš besedilo",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Podarite", "description": "Donate" },
+  "appName": {
+    "message": "Slika v besedilo (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Začnite brezplačno",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "Hitra in preprosta aplikacija za optični bralnik dokumentov z visokokakovostnim izpisom besedila.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Zasebnost", "description": "Privacy" },
+  "linkSupport": { "message": "Podpora", "description": "Support" },
+  "linkDonate": { "message": "Donirajte", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Prenesite za Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Vadnica", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Pogoji",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Ključne funkcije",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Lastnosti", "description": "Features" },
+  "subHeadOne": {
+    "message": "Optično preberite sliko iz mape ali interneta.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Skenirajte slike na kateri koli spletni strani [z razširitvijo brskalnika] na internetu ali naložite svojo sliko na naše spletno mesto, da dobite besedilo z uporabo naše najboljše tehnologije OCR.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Večjezična podpora.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Podpira jezik 100+ in njegove različice. Optično preberite dokument v katerem koli jeziku in pridobite besedilo z našo aplikacijo Image to Text (OCR).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Kako začeti",
+    "description": "Getting Started"
+  },
+  "headF1": {
+    "message": "Optično branje datotek PDF.",
+    "description": "Scan Pdfs."
+  },
+  "headF2": {
+    "message": "Zaslon za obrezovanje in optično branje.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "Igraj. Prevesti.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "V kontekstnem meniju kliknite možnost \"naloži pdf za izvedbo OCR\", da na Pdfs izvedete skeniranje dokumentov in pridobite besedilo.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Kliknite ikono razširitve na zaslonu Cropper. nato kliknite gumb +, obrezan zaslon bo optično prebran in dobili boste besedilo.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Predvajajte besedilo OCR z našo tehnologijo pretvorbe besedila v govor. Prevedite besedilo OCR v kateri koli jezik, ki ga želite.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Povezave", "description": "Links" },
+  "labelLegal": { "message": "Pravno", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Oglejte si vadnico",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "Nakup Premium",
+    "description": "Buy Premium"
+  }
+}

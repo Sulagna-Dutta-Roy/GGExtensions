@@ -1,0 +1,142 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "മുകളിലുള്ള പസിൽ മെനുവിൽ നിന്ന് വിപുലീകരണം പിൻ ചെയ്യുക.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "ഇൻറർ‌നെറ്റിലെ ഏത് പേജിൽ‌ നിന്നും / പി‌ഡി‌എഫിൽ‌ നിന്നും വാചകം എക്‌സ്‌ട്രാക്റ്റുചെയ്യുക",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "നമുക്ക് പോകാം!", "description": "Let's go!" },
+  "loginLabel": { "message": "ലോഗിൻ", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "ട്യൂട്ടോറിയൽ കാണുക",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": { "message": "OCR ഫലങ്ങൾ", "description": "OCR Results" },
+  "speakLabel": { "message": "സംസാരിക്കുക", "description": "Speak" },
+  "translateLabel": {
+    "message": "വിവർത്തനം ചെയ്യുക",
+    "description": "Translate"
+  },
+  "extractPdfLabel": {
+    "message": "പി‌ഡി‌എഫ് എക്‌സ്‌ട്രാക്റ്റുചെയ്യുക",
+    "description": "Extract Pdf"
+  },
+  "copyLabel": { "message": "പകർത്തുക", "description": "Copy" },
+  "contactLabel": { "message": "ബന്ധപ്പെടുക", "description": "Contact" },
+  "shareLabel": { "message": "പങ്കിടുക", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "ഒ‌സി‌ആറിനായി എടുത്ത ചിത്രം (ഒപ്റ്റിക്കൽ ക്യാരക്ടർ റെക്കഗ്നിഷൻ).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": {
+    "message": "ഞങ്ങളെ റേറ്റുചെയ്യുക",
+    "description": "Rate Us"
+  },
+  "ocrLoadingLabel": {
+    "message": "നിങ്ങൾക്കായി OCR സ്റ്റഫ് ചെയ്യുന്നു ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "ചില ഫയലുകൾ ഇവിടെ വലിച്ചിടുക, അല്ലെങ്കിൽ ഫയലുകൾ തിരഞ്ഞെടുക്കാൻ ക്ലിക്കുചെയ്യുക.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "ഒ‌സി‌ആറിനായി എടുത്ത പി‌ഡി‌എഫ് (ഒപ്റ്റിക്കൽ ക്യാരക്ടർ റെക്കഗ്നിഷൻ).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "ഈ സ്ക്രീനിൽ നിന്ന് വാചകം എക്‌സ്‌ട്രാക്റ്റുചെയ്യുക",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "ഈ ചിത്രത്തിൽ നിന്ന് വാചകം എക്‌സ്‌ട്രാക്റ്റുചെയ്യുക",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "വാചകം എക്‌സ്‌ട്രാക്റ്റുചെയ്യുന്നതിന് പിഡിഎഫ് അപ്‌ലോഡുചെയ്യുക",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "സംഭാവനചെയ്യുക", "description": "Donate" },
+  "appName": {
+    "message": "ഇമേജ് ടു ടെക്സ്റ്റ് (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "സ for ജന്യമായി ആരംഭിക്കുക",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "ഉയർന്ന നിലവാരമുള്ള ടെക്സ്റ്റ് .ട്ട്‌പുട്ട് ഉള്ള വേഗതയേറിയതും ലളിതവുമായ പ്രമാണ സ്കാനർ അപ്ലിക്കേഷൻ.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "സ്വകാര്യത", "description": "Privacy" },
+  "linkSupport": { "message": "പിന്തുണ", "description": "Support" },
+  "linkDonate": { "message": "സംഭാവനചെയ്യുക", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Chrome- നായി ഡൗൺലോഡുചെയ്യുക",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "ട്യൂട്ടോറിയൽ", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "ഉപാധികളും നിബന്ധനകളും",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "പ്രധാന സവിശേഷതകൾ",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "സവിശേഷതകൾ", "description": "Features" },
+  "subHeadOne": {
+    "message": "നിങ്ങളുടെ ഫോൾഡറിൽ നിന്നോ ഇന്റർനെറ്റിൽ നിന്നോ ചിത്രം സ്കാൻ ചെയ്യുക.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "ഇൻറർനെറ്റിലെ [നിങ്ങളുടെ ബ്ര browser സർ എക്സ്റ്റൻഷൻ ഉപയോഗിച്ച്] ഏതെങ്കിലും വെബ്‌പേജിൽ ഇമേജ് സ്കാൻ ചെയ്യുക അല്ലെങ്കിൽ ഞങ്ങളുടെ മികച്ച കൃത്യത OCR സാങ്കേതികവിദ്യ ഉപയോഗിച്ച് വാചകം ലഭിക്കുന്നതിന് ഞങ്ങളുടെ വെബ്സൈറ്റിൽ നിങ്ങളുടെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "ഒന്നിലധികം ഭാഷാ പിന്തുണ.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "100+ ഭാഷയും അതിന്റെ വേരിയന്റുകളും പിന്തുണയ്ക്കുന്നു. ഏത് ഭാഷയുടെയും പ്രമാണം സ്കാൻ ചെയ്ത് ഞങ്ങളുടെ ഇമേജ് ടു ടെക്സ്റ്റ് (OCR) അപ്ലിക്കേഷൻ ഉപയോഗിച്ച് വാചകം നേടുക.",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "ആമുഖം",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "Pdfs സ്കാൻ ചെയ്യുക.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "ക്രോപ്പ്, സ്കാൻ സ്ക്രീൻ.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "പ്ലേ ചെയ്യുക. വിവർത്തനം ചെയ്യുക.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "പിഡിഎഫുകളിൽ ഡോക്യുമെന്റ് സ്കാൻ ചെയ്യാനും ടെക്സ്റ്റ് നേടാനും സന്ദർഭ മെനുവിൽ നിന്ന് \"പി‌ഡി‌എഫ് ചെയ്യാൻ ഒ‌സി‌ആർ അപ്‌ലോഡ് ചെയ്യുക\" ഓപ്ഷനിൽ ക്ലിക്കുചെയ്യുക.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "സ്‌ക്രീൻ ക്രോപ്പറിൽ നിന്നുള്ള വിപുലീകരണ ഐക്കണിൽ ക്ലിക്കുചെയ്യുക ദൃശ്യമാകും. തുടർന്ന് + ബട്ടണിൽ ക്ലിക്കുചെയ്യുക, ക്രോപ്പ് ചെയ്ത സ്‌ക്രീൻ സ്‌കാൻ ചെയ്‌ത് നിങ്ങൾക്ക് വാചകം ലഭിക്കും.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "ഞങ്ങളുടെ ടെക്സ്റ്റ് ടു സ്പീച്ച് ടെക്നോളജി ഉപയോഗിച്ച് OCR ടെക്സ്റ്റ് പ്ലേ ചെയ്യുക. നിങ്ങൾക്ക് ആവശ്യമുള്ള ഏത് ഭാഷയിലും OCR വാചകം വിവർത്തനം ചെയ്യുക.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "ലിങ്കുകൾ", "description": "Links" },
+  "labelLegal": { "message": "നിയമപരമായ", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "ട്യൂട്ടോറിയൽ കാണുക",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "പ്രീമിയം വാങ്ങുക",
+    "description": "Buy Premium"
+  }
+}

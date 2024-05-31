@@ -1,0 +1,136 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Закріпіть розширення з меню головоломки вище.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Витягніть текст з будь-якої сторінки / pdf в Інтернеті",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "Ходімо!", "description": "Let's go!" },
+  "loginLabel": { "message": "Увійти", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Дивіться підручник",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "Результати OCR",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Говори", "description": "Speak" },
+  "translateLabel": { "message": "Перекласти", "description": "Translate" },
+  "extractPdfLabel": { "message": "Витяг PDF", "description": "Extract Pdf" },
+  "copyLabel": { "message": "Копіювати", "description": "Copy" },
+  "contactLabel": { "message": "Зв'язок", "description": "Contact" },
+  "shareLabel": { "message": "Поділитися", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Зображення зроблено для OCR (оптичне розпізнавання символів).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Оцініть нас", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Робимо для вас речі з OCR ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Перетягніть сюди деякі файли або натисніть, щоб вибрати файли.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf взято для OCR (оптичне розпізнавання символів).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Витяг тексту з цього екрана",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Витягнути текст із цього зображення",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "завантажити PDF для вилучення тексту з",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Пожертвувати", "description": "Donate" },
+  "appName": {
+    "message": "Зображення в текст (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Почніть безкоштовно",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "Швидкий і простий додаток для сканування документів із високоякісним текстом.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Конфіденційність", "description": "Privacy" },
+  "linkSupport": { "message": "Підтримка", "description": "Support" },
+  "linkDonate": { "message": "Пожертвувати", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Завантажте для Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Підручник", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Правила та умови",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Основні характеристики",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Особливості", "description": "Features" },
+  "subHeadOne": {
+    "message": "Скануйте зображення зі своєї папки або Інтернету.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Скануйте зображення на будь-якій веб-сторінці [за допомогою розширення веб-переглядача] в Інтернеті або завантажте своє зображення на наш веб-сайт, щоб отримати текст із використанням нашої найкращої технології OCR.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Підтримка кількох мов.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Підтримує 100+ мови та його варіанти. Скануйте документ будь-якою мовою та отримуйте текст за допомогою нашої програми \"Зображення в текст\" (OCR).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Починаємо",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "Сканувати PDF-файли.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "Екран обрізання та сканування.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "Грати. Перекласти.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "Клацніть на опцію \"завантажити PDF для розпізнавання тексту\" у контекстному меню, щоб виконати сканування документів на Pdfs та отримати текст.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Клацніть на піктограму розширення на екрані Знизувач екрана. потім натисніть на кнопку +, обрізаний екран буде сканований, і ви отримаєте текст.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Відтворіть текст OCR, використовуючи нашу технологію перетворення тексту в мову. Перекладіть текст OCR будь-якою мовою, яку ви хочете.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Посилання", "description": "Links" },
+  "labelLegal": { "message": "Юридична", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Дивіться підручник",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": {
+    "message": "Придбайте Преміум",
+    "description": "Buy Premium"
+  }
+}

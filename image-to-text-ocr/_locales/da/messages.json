@@ -1,0 +1,133 @@
+{
+  "pinMenuMessageLabel": {
+    "message": "Fastgør udvidelsen fra puslespilmenuen ovenfor.",
+    "description": "Pin the extension from puzzle menu above."
+  },
+  "mainWelcomeHeading": {
+    "message": "Uddrag tekst fra enhver side / pdf på internettet",
+    "description": "Extract text from any page/pdf on the internet"
+  },
+  "letsGoLabel": { "message": "Lad os gå!", "description": "Let's go!" },
+  "loginLabel": { "message": "Log på", "description": "Login" },
+  "watchTutorialLabel": {
+    "message": "Se vejledning",
+    "description": "Watch Tutorial"
+  },
+  "ocrResultsLabel": {
+    "message": "OCR-resultater",
+    "description": "OCR Results"
+  },
+  "speakLabel": { "message": "Tale", "description": "Speak" },
+  "translateLabel": { "message": "Oversætte", "description": "Translate" },
+  "extractPdfLabel": { "message": "Uddrag Pdf", "description": "Extract Pdf" },
+  "copyLabel": { "message": "Kopi", "description": "Copy" },
+  "contactLabel": { "message": "Kontakt", "description": "Contact" },
+  "shareLabel": { "message": "Del", "description": "Share" },
+  "littleInfoLabel": {
+    "message": "Billedet taget til OCR (Optical Character Recognition).",
+    "description": "Image taken for OCR (Optical Character Recognition)."
+  },
+  "rateUsLabel": { "message": "Bedøm os", "description": "Rate Us" },
+  "ocrLoadingLabel": {
+    "message": "Gør OCR-ting til dig ....",
+    "description": "Doing OCR stuff for You...."
+  },
+  "pdfDragInfoLabel": {
+    "message": "Træk 'n' slip nogle filer her, eller klik for at vælge filer.",
+    "description": "Drag 'n' drop some files here, or click to select files."
+  },
+  "littleInfoPdfLabel": {
+    "message": "Pdf taget til OCR (Optical Character Recognition).",
+    "description": "Pdf taken for OCR (Optical Character Recognition)."
+  },
+  "extractTextFromScreenLabel": {
+    "message": "Uddrag tekst fra dette skærmbillede",
+    "description": "Extract Text from this screen"
+  },
+  "extractTextFromImageLabel": {
+    "message": "Uddrag tekst fra dette billede",
+    "description": "Extract Text from this image"
+  },
+  "uploadPdfLabel": {
+    "message": "upload pdf for at udtrække tekst fra",
+    "description": "upload pdf to extract text from"
+  },
+  "donateLabel": { "message": "Doner", "description": "Donate" },
+  "appName": {
+    "message": "Billede til tekst (OCR)",
+    "description": "Image to Text (OCR)"
+  },
+  "getStarted": {
+    "message": "Kom godt i gang gratis",
+    "description": "Get Started for Free"
+  },
+  "appDescription": {
+    "message": "En hurtig og enkel dokumentscanner-app med tekstkvalitet i høj kvalitet.",
+    "description": "A Fast and simple document scanner app with high quality text output."
+  },
+  "linkPrivacy": { "message": "Privatliv", "description": "Privacy" },
+  "linkSupport": { "message": "Support", "description": "Support" },
+  "linkDonate": { "message": "Doner", "description": "Donate" },
+  "linkDownloadForChrome": {
+    "message": "Download til Chrome",
+    "description": "Download for Chrome"
+  },
+  "linkTutorial": { "message": "Vejledning", "description": "Tutorial" },
+  "linkTermsAndConditions": {
+    "message": "Vilkår og betingelser",
+    "description": "Terms and Conditions"
+  },
+  "headKeyFeatures": {
+    "message": "Nøglefunktioner",
+    "description": "Key Features"
+  },
+  "headFeatures": { "message": "Funktioner", "description": "Features" },
+  "subHeadOne": {
+    "message": "Scan billede fra din mappe eller internettet.",
+    "description": "Scan Image from your folder or Internet."
+  },
+  "subHeadOneDesc": {
+    "message": "Lav billedscanning på enhver webside [ved hjælp af din browserudvidelse] på internettet, eller upload dit billede på vores websted for at få tekst ved hjælp af vores bedste nøjagtighed OCR-teknologi.",
+    "description": "Do Image scan on any webpage [using our browser extenion] on the internet or uplaod your image on our website to get text using our best accuracy OCR technology."
+  },
+  "subHeadTwo": {
+    "message": "Understøttelse af flere sprog.",
+    "description": "Multiple Language Support."
+  },
+  "subHeadTwoDesc": {
+    "message": "Understøtter 100+ sprog og dets varianter. Scan dokument på ethvert sprog, og få tekst ved hjælp af vores OCR-app (Image to Text).",
+    "description": "Supports 100+ language and its variants. Scan document of any language and get Text using our Image to Text (OCR) app."
+  },
+  "labelGettingStarted": {
+    "message": "Kom godt i gang",
+    "description": "Getting Started"
+  },
+  "headF1": { "message": "Scan Pdfs.", "description": "Scan Pdfs." },
+  "headF2": {
+    "message": "Beskær og scan skærm.",
+    "description": "Crop and Scan Screen."
+  },
+  "headF3": {
+    "message": "Spil. Oversætte.",
+    "description": "Play. Translate."
+  },
+  "headF1Desc": {
+    "message": "Klik på indstillingen \"upload pdf for at lave OCR\" fra kontekstmenuen for at udføre Dokumentscanning på Pdfs og hente tekst.",
+    "description": "Click on the option \"upload pdf to do OCR\" from context menu to do Document scan on Pdfs and get Text."
+  },
+  "headF2Desc": {
+    "message": "Klik på udvidelsesikonet fra Screen cropper vises. Klik derefter på + knappen, den beskårne skærm scannes, og du får teksten.",
+    "description": "Click on the extension icon from Screen cropper will appear. then Click on the + button, cropped screen will be scanned and you will get the Text."
+  },
+  "headF3Desc": {
+    "message": "Spil OCR-teksten ved hjælp af vores Tekst til tale-teknologi. Oversæt OCR-tekst på ethvert sprog, du ønsker.",
+    "description": "Play the the OCR Text using our Text to Speech Technology. Translate OCR Text in any language you want."
+  },
+  "labelLinks": { "message": "Links", "description": "Links" },
+  "labelLegal": { "message": "gyldige", "description": "Legal" },
+  "labelWatchTutorial": {
+    "message": "Se vejledning",
+    "description": "Watch Tutorial"
+  },
+  "labelBuyPremium": { "message": "Køb Premium", "description": "Buy Premium" }
+}
