@@ -1,0 +1,10 @@
+{
+    "name": "TimeFlies",
+    "description": "How much time has passed since the start of this day / month / year?",
+    "version": "1.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon":"44649351.png"
+    }
+}
