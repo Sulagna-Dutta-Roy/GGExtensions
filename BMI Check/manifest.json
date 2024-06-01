@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "BMI Check Extension",
+    "version": "1.0",
+    "description": "This provides a BMI checking extension to input weight and height and outputs your body mass index!",
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
