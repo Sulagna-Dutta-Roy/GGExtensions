@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div id="main">
+        <button id="start">Start Game</button>
+        <button id="info">Info</button>
+        <br/>
+        <span class="dif">Difficulty:</span>
+        <br/>
+        <button id="btn-left" onclick="changeLvl(0)">&lt</button>
+        <span class="dif" >' + dif[lvl] + '  </span>
+        <button id="btn-right" onclick="changeLvl (1)" >&gt</button>';
+    </div>
+    <div id="infdiv">Drag available units into the deployment area.<br /><br />You win, when one of your units gets to
+        the green line at the top of the field.<br /><br />Don't let enemies to reach your base.<br /><br />Good luck,
+        commander! May the force be with you!</div>
+    <div id="log"></div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="modal-text"></p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
