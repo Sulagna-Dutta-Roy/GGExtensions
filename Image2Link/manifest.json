@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Image2Link Generator Extension",
+    "version": "1.0",
+    "description": "A simple Link Generator from Uploaded Image extension.",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": ["activeTab"]
+}

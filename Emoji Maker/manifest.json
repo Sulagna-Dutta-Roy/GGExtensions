@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Emoji Maker Game",
+    "version": "1.0",
+    "description": "Create your own emojis with this fun game!",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
+  

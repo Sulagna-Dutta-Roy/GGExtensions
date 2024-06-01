@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Space Shooter Extension",
+    "version": "1.0",
+    "description": "Space Shooter Extension",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
+  

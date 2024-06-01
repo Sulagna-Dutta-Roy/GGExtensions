@@ -1,0 +1,130 @@
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* make scrollbar invisible */
+}
+
+#searchBar {
+  float: left;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#historyDiv {
+  color: white;
+  font-size: 16px;
+  max-width: 1020px;
+  min-width: 320px;
+  max-height: 98vh;
+  min-height: 500px;
+  position: absolute;
+  top: 10px;
+  left: 260px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.history {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 150px;
+  word-wrap: break-word;
+  padding: 10px;
+  display: inline-block;
+}
+
+.title {
+  color: #FF5733; /* Bright orange color */
+  float: left;
+  position: relative;
+  left: 15px;
+  bottom: 15px;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+img {
+  float: left;
+  position: relative;
+  left: 5px;
+  top: 2px;
+  margin-right: 8px;
+}
+
+.imageDiv {
+  background-color: white;
+  width: 310px;
+  height: 20px;
+  position: relative;
+  right: 0;
+  overflow-y: hidden;
+}
+
+.removeButton {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  width: 50px;
+  border: none;
+  background-color: white;
+}
+
+.urlDiv {
+  position: relative;
+  right: 0;
+  top: -10px;
+  height: 90px;
+  width: 300px;
+  overflow-y: hidden;
+}
+
+.removeCheck {
+  position: relative;
+  left: 230px;
+  bottom: -15px;
+  height: 30px;
+}
+
+#searchSubmit {
+  height: 30px;
+  width: 50px;
+  border: none;
+  background-color: greenyellow;
+}
+
+#deleteSelected {
+  height: 30px;
+  width: 185px;
+  border: none;
+  background-color: lightcyan;
+}
+
+#removeAll {
+  height: 30px;
+  width: 185px;
+  border: none;
+  background-color: lightsalmon;
+}
+
+#seeAll {
+  height: 30px;
+  width: 185px;
+  border: none;
+  background-color: lightseagreen;
+}
+
+#searchInput {
+  height: 30px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+  color: #FF5733; /* Bright orange color */
+}
+body{
+    background-color: black;
+}

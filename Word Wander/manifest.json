@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Word Wander",
+    "version": "1.0",
+    "description": "A browser extension to display inspiring words or quotes.",
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
