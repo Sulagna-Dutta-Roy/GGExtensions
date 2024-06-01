@@ -1,0 +1,64 @@
+
+body {
+    background-image: url('bg.png');
+    font-family: Georgia, 'Times New Roman', Times, serif;;
+    margin: 10px;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    max-width: 400px;
+    align-self: center;
+    margin-top: 250px;
+    margin-left: 500px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3e4754;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #569b96;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #215370;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#prayerTimes {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
