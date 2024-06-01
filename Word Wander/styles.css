@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    min-width: 100px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#wordDisplay {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#generateBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generateBtn:hover {
+    background-color: #0056b3;
+}
