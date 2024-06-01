@@ -1,0 +1,37 @@
+#canvas
+{
+    border: 1px solid black;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+#colors button
+{
+    width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin-top: 0px;
+}
+#black 
+{
+    background: black;
+}
+#pink 
+{
+    background: pink;
+}
+#red
+{
+    background: red;
+}
+#green 
+{ 
+    background: green;
+}
+#blue 
+{
+    background: blue;
+}
+#orange 
+{
+    background: orange;
+}
