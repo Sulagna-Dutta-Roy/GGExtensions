@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 200px;
+    padding: 10px;
+  }
+  
+  #calculator {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, button {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  button{
+    background-color:aquamarine;
+    cursor: pointer;
+  }
+  
+  #result {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
