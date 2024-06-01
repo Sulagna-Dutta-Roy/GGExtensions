@@ -1,0 +1,83 @@
+body {
+    color: #3d3d3d;
+    background-color: lightslategray; /* Light gray background */
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    margin: 0;
+    width: 320px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+span {
+    font-size: 14px;
+}
+
+#github {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+}
+
+#github:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#progress > div {
+    font-size: 14px;
+    margin: 10px auto;
+}
+
+#current-time {
+    font-size: 15px;
+    margin: 10px auto;
+}
+
+.progress-bar-container {
+    position: relative;
+    margin: 20px 0;
+    border: #dcdcdc solid 4px;
+    border-radius: 15px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 15px;
+    background-color:gray;
+    margin: 0;
+    box-sizing: border-box;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress {
+    position: absolute;
+    z-index: 100;
+    padding: 1px 0 1px 10px;
+}
+
+.tick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 2px solid #1a1a1a;
+    border-right: 1px solid transparent;
+    box-sizing: border-box;
+}

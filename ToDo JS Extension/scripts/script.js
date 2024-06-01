@@ -26,11 +26,11 @@ addBtn.onclick = ()=>{ //when user click on plus icon button
   }
   if (editIndex !== null) {
     // Update the todo item
-    listArray[editIndex] = userEnteredValue;
+    listArray[editIndex].text = userEnteredValue;
     editIndex = null;
   } else {
     // Add new todo item
-    listArray.push(userEnteredValue); //pushing or adding new value in array
+    listArray.push({ text: userEnteredValue, completed: false }); //pushing or adding new value in array
   }
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
   showTasks(); //calling showTask function
@@ -45,7 +45,7 @@ function showTasks(){
     listArray = JSON.parse(getLocalStorageData); 
   }
   const pendingTasksNumb = document.querySelector(".pendingTasks");
-  pendingTasksNumb.textContent = listArray.length; //passing the array length in pendingtask
+  pendingTasksNumb.textContent = listArray.filter(task => !task.completed).length; //passing the array length in pendingtask
   if(listArray.length > 0){ //if array length is greater than 0
     deleteAllBtn.classList.add("active"); //active the delete button
   }else{
@@ -53,7 +53,12 @@ function showTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li data-index="${index}">${element}<span class="icon delete-btn"><i class="fas fa-trash"></i></span><span class="icon edit-icon"><i class="fas fa-edit"></i></span></li>`;
+    newLiTag += `<li data-index="${index}" class="${element.completed ? 'completed' : ''}">
+      ${element.text}
+      <span class="icon delete-btn"><i class="fas fa-trash"></i></span>
+      <span class="icon edit-icon"><i class="fas fa-edit"></i></span>
+      <span class="icon check-icon"><i class="fas fa-check"></i></span>
+    </li>`;
   });
   todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
   inputBox.value = ""; //once task added leave the input field blank
@@ -80,7 +85,16 @@ todoList.addEventListener("click", function(event) {
     const index = target.closest("li").dataset.index;
     editTask(index);
   }
+  // Check if the click event targets the check button icon directly
+  if (target.classList.contains("fa-check")) {
+    const index = target.closest("li").dataset.index;
+    toggleCompleteTask(index);
+  } else if (target.classList.contains("check-btn")) {
+    const index = target.closest("li").dataset.index;
+    toggleCompleteTask(index);
+  }
 });
+
 // delete task function
 function deleteTask(index){
   let getLocalStorageData = localStorage.getItem("New Todo");
@@ -94,9 +108,18 @@ function deleteTask(index){
 function editTask(index) {
   let getLocalStorageData = localStorage.getItem("New Todo");
   listArray = JSON.parse(getLocalStorageData);
-  inputBox.value = listArray[index]; // populate input field with the todo text
+  inputBox.value = listArray[index].text; // populate input field with the todo text
   editIndex = index; // set edit index
   addBtn.classList.add("active"); // activate the add button
+}
+
+// toggle complete task function
+function toggleCompleteTask(index) {
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  listArray = JSON.parse(getLocalStorageData);
+  listArray[index].completed = !listArray[index].completed; // toggle the completed status
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks(); //call the showTasks function
 }
 
 // delete all tasks function
