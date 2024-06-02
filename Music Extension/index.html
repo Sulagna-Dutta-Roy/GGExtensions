@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo-Fi Music Player</title>
+    <style>
+        /* Some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #player {
+            margin: 20px auto;
+            width: 300px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="player">
+        <audio id="audio" controls autoplay loop>
+            <source src="meditate.mp3" type="audio/mp3">
+        </audio>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
