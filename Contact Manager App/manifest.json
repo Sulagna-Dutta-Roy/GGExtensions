@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Contact Manager Website",
+    "version":"1.0",
+    "description":"An Attractive Website to manage all your contacts",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}
