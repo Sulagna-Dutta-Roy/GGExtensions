@@ -1,0 +1,169 @@
+/* mobile responsiveness design */
+@media screen and (max-width: 990px) {
+  .contact_us {
+    flex-direction: column;
+    width: 100%;
+  }
+  form,
+  .cbox {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    padding: 45px;
+  }
+
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background: #484872;
+    margin-top: -900px;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-menu {
+    margin-top: 602px;
+    border-bottom-right-radius: 30%;
+  }
+
+  .nav-links li {
+    margin: 30px auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+	 .containerx {
+	  top: 40%;
+	  bottom: 40%;
+	  transform-style: preserve-3d;
+	}
+	
+	#about_us div {
+		padding: 10px;
+		display: block;
+		align-items: normal;
+	}
+	
+	.cards {
+		position: relative;
+		width: 90vw;
+		height: 100%;
+	}
+	
+	#about-quad {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+  /*events*/
+  .row {
+    flex-direction: column;
+  }
+
+  .row .col {
+    margin: 20px auto;
+  }
+
+  .col img {
+    max-width: 90%;
+  }
+
+  /*explore*/
+  .explore-content {
+    width: 100%;
+  }
+
+  /*tours*/
+  .tours {
+    width: 100%;
+  }
+
+  /*footer*/
+  .footer {
+    padding: 10px;
+  }
+  .content-col {
+    width: 100%;
+  }
+  #about_us p {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #about_us p {
+    width: 85%;
+    padding-top: 7em;
+    margin: auto;
+  }
+  form,
+  .cbox {
+    width: 90%;
+  }
+  .ctn {
+    margin: auto;
+  }
+
+  .explore-content {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+  }
+
+  .explore-content .ctn {
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #about_us p {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 470px) {
+  .ctn {
+    padding: 13px 25px;
+  }
+  .c_boxx a p {
+    font-size: 17.5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .ctn {
+    padding: 13px 25px;
+  }
+  .c_boxx a p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 850px) {
+  .content-col {
+    text-align: center;
+  }
+  .content-col .line {
+    margin: 0.5rem auto;
+  }
+  .content-col .ctn {
+    margin: 0 auto;
+    position: inherit;
+  }
+  .content-col p {
+    max-width: 75%;
+    text-align: justify;
+  }
+}

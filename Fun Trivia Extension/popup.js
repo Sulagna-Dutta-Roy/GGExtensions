@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let loader=document.getElementById("preloader");
+    window.addEventListener("load",function(){
+     loader.style.display="none"})
     const triviaQuestions = [
         { question: "What is the capital of France?", answer: "Paris" },
         { question: "Which planet is known as the Red Planet?", answer: "Mars" },

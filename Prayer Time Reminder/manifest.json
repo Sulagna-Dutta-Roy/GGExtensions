@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Prayer Times Extension",
+  "version": "1.0",
+  "description": "Get accurate Muslim prayer times based on your location.",
+  "permissions": ["geolocation"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "background": {
+    "service_worker": "popup.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "host_permissions": [
+    "https://api.aladhan.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "style.css",
+        "icon-16.png",
+        "icon-48.png",
+        "icon-128.png",
+        "popup.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
