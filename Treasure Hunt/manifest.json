@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Treasure Hunt",
+  "description": "A simple treasure hunt game.",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    "assets/treasure.png",
+    "assets/wrong.png",
+    "assets/cell-bg.png"
+  ]
+}
+
