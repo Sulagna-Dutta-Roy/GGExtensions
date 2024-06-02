@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h3 {
+    color: #007bff;
+  }
+  
+  #difficulty {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  

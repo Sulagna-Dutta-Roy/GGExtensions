@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "HTML CSS Helper",
+    "version": "1.0",
+    "description": "Shows syntax and results of HTML and CSS tags",
+    "action": {
+      "default_popup": "popup.html"
+      
+    },
+    "permissions": []
+  }
+  
