@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Calculator</h1>
+        <form id="calorieForm">
+            <label for="carbs">Carbs (g):</label>
+            <input type="number" id="carbs" name="carbs" min="0">
+            <label for="fruits">Fruits (g):</label>
+            <input type="number" id="fruits" name="fruits" min="0">
+            <label for="fats">Fats (g):</label>
+            <input type="number" id="fats" name="fats" min="0">
+            <label for="junks">Junks (g):</label>
+            <input type="number" id="junks" name="junks" min="0">
+            <label for="drinks">Drinks (ml):</label>
+            <input type="number" id="drinks" name="drinks" min="0">
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
