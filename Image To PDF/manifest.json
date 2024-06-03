@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Image to PDF Converter",
+    "description": "Converts images to PDF format",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "downloads"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/*.png",
+                "images/*.jpg",
+                "images/*.jpeg"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'script.js'; object-src 'self'",
+        "sandbox": [
+            "allow-scripts"
+        ]
+    }
+}
