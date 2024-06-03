@@ -57,33 +57,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Play a card
-  function playCard(cardIndex) {
-    const card =
-      currentPlayer === "player"
-        ? playerHand[cardIndex]
-        : computerHand[cardIndex];
-    const topCard = discardPile[discardPile.length - 1];
+// Play a card
+function playCard(cardIndex) {
+  const card =
+    currentPlayer === "player"
+      ? playerHand[cardIndex]
+      : computerHand[cardIndex];
+  const topCard = discardPile[discardPile.length - 1];
 
-    if (isValidMove(card, topCard)) {
-      discardPile.push(card);
-      currentPlayer === "player"
-        ? playerHand.splice(cardIndex, 1)
-        : computerHand.splice(cardIndex, 1);
-      displayDiscardPile();
+  if (isValidMove(card, topCard)) {
+    discardPile.push(card);
+    currentPlayer === "player"
+      ? playerHand.splice(cardIndex, 1)
+      : computerHand.splice(cardIndex, 1);
+    displayDiscardPile();
+    displayPlayerHand();
+    displayComputerHand();
+    checkWinner();
+    if (currentPlayer === "player" && playerHand.length === 1) {
+      alert("UNO!");
+    }
+    if (card.type === "wild+4") {
+      // Draw 4 cards for the next player
+      const nextPlayerHand = currentPlayer === "player" ? computerHand : playerHand;
+      for (let i = 0; i < 4; i++) {
+        nextPlayerHand.push(drawCard());
+      }
       displayPlayerHand();
       displayComputerHand();
-      checkWinner();
-      if (currentPlayer === "player" && playerHand.length === 1) {
-        alert("UNO!");
-      }
-      handleSpecialCard(card);
-      if (currentPlayer === "computer") {
-        setTimeout(computerPlay, 1000); // Add a delay to simulate computer thinking
-      }
-    } else {
-      alert("Invalid move! You can't play that card.");
     }
+    if (card.type === "+2") {
+      // Draw 2 cards for the next player
+      const nextPlayerHand = currentPlayer === "player" ? computerHand : playerHand;
+      for (let i = 0; i < 2; i++) {
+        nextPlayerHand.push(drawCard());
+      }
+      displayPlayerHand();
+      displayComputerHand();
+    }
+    handleSpecialCard(card);
+    if (currentPlayer === "computer") {
+      setTimeout(computerPlay, 1000); // Add a delay to simulate computer thinking
+    }
+  } else {
+    alert("Invalid move! You can't play that card.");
   }
+}
+
 
   // Handle special cards
   // Handle special cards
