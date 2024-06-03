@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Media Time Limiter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Time Limiter</h1>
+  <div id="sites">
+    <div class="site">
+      <label for="facebook">Facebook (minutes):</label>
+      <input type="number" id="facebook" class="time-input" min="1" value="30">
+    </div>
+    <div class="site">
+      <label for="twitter">Twitter (minutes):</label>
+      <input type="number" id="twitter" class="time-input" min="1" value="30">
+    </div>
+    <div class="site">
+      <label for="instagram">Instagram (minutes):</label>
+      <input type="number" id="instagram" class="time-input" min="1" value="30">
+    </div>
+  </div>
+  <button id="save">Save</button>
+  <button id="reset">Reset Timers</button>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -6,12 +6,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 400px;
+    height: 100vh;
 }
 
 .container {
-    background-color: #fff;
+    background-color:#6B8A7A;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -21,7 +20,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #254336;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -60,14 +59,14 @@ h1 {
     font-size: 14px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #254336;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #6B8A7A;
 }
 
 .feedback {
@@ -75,14 +74,14 @@ h1 {
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
-    color: #dc3545; /* Red color for feedback */
+    color: #B7B597; /* Red color for feedback */
 }
 
 .score {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    color: #28a745; /* Green color for score */
+    color: #254336; /* Green color for score */
 }
 
 .modal {
@@ -124,3 +123,13 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
+#preloader{
+    background: #000 url(prelo.gif) no-repeat center center;
+    background-size: 50%;
+    height:217px;
+    width: 282px;
+    position: fixed;
+    z-index: 10;
+  
+  }
+  

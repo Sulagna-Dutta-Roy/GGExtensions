@@ -6,7 +6,9 @@
     font-family: "Poppins", sans-serif;
 
 }
-
+body{
+    background-color: #99beda;
+}
 nav {
     display: flex;
     align-items: center;
@@ -46,10 +48,19 @@ main {
     max-width: 80vw;
     margin: auto;
     padding: 15px;
+    position: relative;
+    top:19vh;
+    left: 18vw;
 }
 
 .container h1 {
     padding: 12px 0;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container h2 {
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 input[type='text'] {
