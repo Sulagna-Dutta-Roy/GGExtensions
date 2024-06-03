@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Play a card
 // Play a card
 function playCard(cardIndex) {
   const card =
@@ -105,42 +104,32 @@ function playCard(cardIndex) {
 }
 
 
-  // Handle special cards
-  // Handle special cards
-  // Handle special cards
-  function handleSpecialCard(card) {
-    if (card.type === "reverse" || card.type === "skip") {
-      // Current player plays again, no need to switch turn
-      if (currentPlayer === "computer") {
-        setTimeout(computerPlay, 1000); // Add a delay to simulate computer thinking
-        switchTurn();
-      }
-    } else if (card.type === "wild" || card.type === "wild+4") {
-      let selectedColor;
-      if (currentPlayer === "player") {
-        // Prompt player to choose a color
-        selectedColor = prompt(
-          "Choose a color (red, yellow, green, blue):"
-        ).toLowerCase();
-      } else {
-        // Computer chooses a random color
-        selectedColor = colors[Math.floor(Math.random() * colors.length)];
-        alert(`Computer has chosen ${selectedColor}!`);
-      }
-      if (selectedColor && colors.includes(selectedColor)) {
-        discardPile.push({ color: selectedColor, type: card.type });
-      } else {
-        switchTurn();
-      }
-      switchTurn();
+ // Handle special cards
+function handleSpecialCard(card) {
+  if (card.type === "reverse") {
+    switchTurn();
+    switchTurn();
+  } else if (card.type === "skip") {
+    switchTurn();
+    switchTurn();
+  } else if (card.type === "wild" || card.type === "wild+4") {
+    let selectedColor;
+    if (currentPlayer === "player") {
+      selectedColor = prompt("Choose a color (red, yellow, green, blue):").toLowerCase();
     } else {
-      // Switch turn if it's not a reverse, skip, or wild card
+      selectedColor = colors[Math.floor(Math.random() * colors.length)];
+      alert(`Computer has chosen ${selectedColor}!`);
+    }
+    if (selectedColor && colors.includes(selectedColor)) {
+      discardPile.push({ color: selectedColor, type: card.type });
+    } else {
       switchTurn();
     }
+    switchTurn();
+  } else {
+    switchTurn();
   }
-
-  // Computer player logic
-  // Computer player logic
+}
   function computerPlay() {
     let playableCards = computerHand.filter((card) =>
       isValidMoveForComputer(card, discardPile[discardPile.length - 1])
@@ -154,7 +143,6 @@ function playCard(cardIndex) {
     }
   }
 
-  // Check if a move is valid for the computer
   function isValidMoveForComputer(card, topCard) {
     if (card.type === "wild" || card.type === "wild+4") {
       return true;
