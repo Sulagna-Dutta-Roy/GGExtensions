@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muslim Prayer Reminder</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Know Your Prayer Timings</h1>
+        <div id="prayerTimes"></div>
+        <div class="input-container">
+            <div class="input-box">
+                <label for="cityInput">City</label>
+                <input type="text" id="cityInput">
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="input-box">
+                <label for="countryInput">Country</label>
+                <input type="text" id="countryInput">
+            </div>
+        </div>
+        <button id="getPrayerTimes">Get Prayer Time</button>
+        
+    </div>
+    <audio id="notificationSound" src="notification.mp3"></audio>
+    <script src="popup.js"></script>
+</body>
+</html>

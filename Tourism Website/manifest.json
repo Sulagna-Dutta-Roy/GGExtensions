@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Tourism Website",
+    "version":"1.0",
+    "description":"An Attractive Rourism Website",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

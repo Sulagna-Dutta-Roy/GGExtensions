@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Clash of Tanks",
+    "version": "1.0",
+    "description": "A tank battle game extension",
+
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": ["activeTab"]
+}
