@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Aqua Sort",
+    "version": "1.0",
+    "description": "A simple aqua sort game extension",
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
