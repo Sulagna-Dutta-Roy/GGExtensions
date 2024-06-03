@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Decision tree",
+  "version": "1.0",
+  "description": "This interactive tool will help users make decisions based on a series of questions and answers. The decision tree will visually represent different decision paths and outcomes, allowing users to navigate through the decision-making process more easily and logically.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
