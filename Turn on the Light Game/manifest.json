@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Turn on the light",
+    "version": "1.0",
+    "description": "A simple Turn on the light game.",
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "jquery.min.js",
+                "hammer.js",
+                "script.js"
+            ]
+        }
+    ]
+}
