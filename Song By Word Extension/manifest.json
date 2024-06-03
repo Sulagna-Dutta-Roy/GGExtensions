@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Song Finder",
+    "version": "1.0",
+    "description": "Find songs by entering a word or phrase.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+.container {
+    height: auto;
+    width: 300px;
+    text-align: center;
+}
+
+#searchInput {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#searchButton {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.song {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
