@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Video Compressor",
+    "version": "1.0",
+    "description": "Compress videos using an API",
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
