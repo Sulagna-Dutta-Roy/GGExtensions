@@ -1,0 +1,11 @@
+{
+    "name": "Western-Aim",
+    "version": "1.0.0",
+    "description": "it a funny game",
+    "manifest_version": 3,
+    "author": "Ramakrushna Biswal",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Western-Aim"
+    }
+}
