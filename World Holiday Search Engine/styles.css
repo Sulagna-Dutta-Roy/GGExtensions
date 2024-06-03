@@ -1,0 +1,139 @@
+body {
+    margin: auto 0;
+    text-align: center;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/006/858/865/small/squared-paper-seamless-pattern-for-school-notebook-millimeter-graph-paper-grid-graph-4x4-per-inch-notebook-for-writing-hieroglyphs-editable-stroke-illustration-on-white-background-free-vector.jpg');
+    background-color: lightblue;
+    font-family: sans-serif;
+  }
+  
+  form{
+    background: rgb(157, 221, 221);
+  
+    width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 10px;
+  
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 5;
+  }
+  
+  #button-container {
+    grid-column: span 2;
+  
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  
+  }
+  
+  main {
+    background: rgb(157, 221, 221);
+  }
+  
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  p, h3 {
+    padding: 0 10px;
+  }
+  
+  input {
+    margin: 5px;
+    width: 250px;
+    background-color: rgb(250, 237, 215);
+    border: none;
+  }
+  
+  select {
+    margin: 5px;
+    width: 254px;
+    background: rgb(250, 237, 215);
+    border: none;
+  }
+  
+  section {
+    display: inline-block;
+    text-align: center;
+  
+    width: 30%;
+    height: 325px;
+  
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 10%;
+    background: rgb(250, 237, 215);
+  }
+  
+  
+  button {
+    place-self: center;
+  }
+  
+  ::placeholder {
+    padding: 0 0 0 3px;
+  }
+  
+  #title {
+    background-color: rgb(157, 221, 221);
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto 10px auto;
+    padding: 0 0 5px 0;
+  }
+  
+  #title p {
+    padding: 5px 0 0 0;
+  }
+  
+  #title h1 {
+    padding: 0 0 10px 0;
+  }
+  
+  #input-button, #today-button, #reset-button{
+    border: 1px solid black;
+    width: 150px;
+    height: 20px;
+    background: rgb(205, 235, 238);
+    border-radius: 5px;
+  }
+  
+  #card-container {
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 20px;
+  
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  
+  .first-choice {
+    color: rgb(119,119,119);
+  }
+  
+  @media only screen and (max-width: 650px) {
+    section {
+        width: 90%;
+        height: 300px
+    }
+  
+    form {
+        width: 300px;
+        margin: 0 auto;
+  
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-items: center;
+    }
+  
+    #button-container {
+        grid-column: span 1;
+        flex-direction: column-reverse;
+        padding: 5px 0 0 0;
+    }
+  }
