@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Paint panel extension",
+    "version": "1.0",
+    "description": "A simple Paint panel extension to draw.",
+    "permissions": ["storage"],
+    "browser_action": {
+        "default_popup": "index.html"
+    }
+}

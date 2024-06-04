@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Hash It",
+  "version": "1.0",
+  "description": "Hash everything that can be hashed right from your browser.",
+  "permissions": ["storage","scripting"],
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["hash.js", "crypto.min.js"]
+    }
+  ]
+}

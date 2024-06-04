@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Bookmark Landing Page",
+    "version":"1.0",
+    "description":"An attract landing page with custom css for bookmark",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

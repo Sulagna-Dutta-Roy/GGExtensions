@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-
-    <title>Image gallery</title>
-
+    <title>Image Gallery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-  </head>
-
-  <body>
-    <h1>Image gallery </h1>
-
-    <div class="full-img">
-      <img class="displayed-img" src="assets/pic1.jpg">
-      <div class="overlay"></div>
-      <button class="dark">Darken</button>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <h1 class="text-center my-4">Image Gallery</h1>
+        <div class="row justify-content-center">
+            <div class="col-12 mb-4">
+                <div class="full-img position-relative">
+                    <img class="displayed-img img-fluid" src="assets/pic1.jpg" alt="Displayed Image">
+                    <div class="overlay"></div>
+                    <button class="btn btn-light dark position-absolute" style="top: 10px; left: 10px;">Darken</button>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="thumb-bar d-flex justify-content-center">
+                </div>
+            </div>
+            <div class="col-12 text-center mt-4">
+                <button class="btn btn-primary refresh-btn">Refresh</button>
+            </div>
+        </div>
     </div>
-
-    <div class="thumb-bar">
-
-
-    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
-  </body>
+</body>
 </html>
