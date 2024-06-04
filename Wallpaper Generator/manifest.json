@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Random Wallpaper Extension",
+    "version": "1.0",
+    "description": "Generates a random wallpaper along with its extension.",
+    "permissions": ["activeTab", "storage"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "./assets/logo.png"
+      }
+    },
+    "icons": {
+      "16": "./assets/logo.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
