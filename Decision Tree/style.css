@@ -1,0 +1,108 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+
+}
+
+.decision-tree-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 500px;
+    height: 500px;
+    overflow: scroll;
+    padding: 15px;
+}
+
+.tree {
+    width: 80%;
+    border: 1px solid #ccc;
+    background: white;
+    padding: 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 1px;
+    background: #000;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #000;
+}
+
+.control-btn {
+    margin-left: 10px;
+    padding: 3px 6px;
+    font-size: 0.8em;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.control-btn:hover {
+    background: #0056b3;
+}
+
+.edit-btn {
+    background: #ffc107;
+}
+
+.edit-btn:hover {
+    background: #e0a800;
+}
+.expand-collapse-btn{
+    background-color: transparent;
+    border: none;
+}
+.expand-collapse-btn:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+.collapse {
+    display: none;
+}

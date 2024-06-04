@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Comments Remover</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-3">Code Comments Remover</h1>
+        <div class="form-group">
+            <textarea class="form-control" id="codeInput" placeholder="Paste your code here..." rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="languageSelector">Select Language:</label>
+            <select class="form-control" id="languageSelector">
+                <option value="c_cpp_java_js_cs">C, C++, Java, JavaScript, C#</option>
+                <option value="python">Python</option>
+                <option value="html">HTML</option>
+                <option value="bash_perl_ruby">Bash, Perl, Ruby</option>
+            </select>
+        </div>
+        <button class="btn btn-primary btn-block" id="removeCommentsButton">Remove Comments</button>
+        <div class="form-group my-3">
+            <textarea class="form-control" id="codeOutput" placeholder="Your code without comments will appear here..." rows="10"></textarea>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

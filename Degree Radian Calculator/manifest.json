@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Degree-Radian Calculator",
+    "version": "1.0",
+    "description": "Concerts angle from degree to radian and vice versa",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+    }
+}

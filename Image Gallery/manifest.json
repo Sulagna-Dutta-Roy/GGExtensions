@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Image Gallery",
+    "version": "1.0",
+    "description": "A simple image gallery Chrome extension",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "activeTab",
+      "https://api.unsplash.com/"
+    ]
+  }
+  
