@@ -5,18 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lo-Fi Music Player</title>
     <style>
-        /* Some basic styling */
+        /* Spotify-inspired styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
             text-align: center;
             margin: 20px;
         }
         #player {
             margin: 20px auto;
             width: 300px;
+            padding: 20px;
+            background-color: #1DB954;
+            border-radius: 8px;
+        }
+        audio {
+            width: 100%;
+            border-radius: 4px;
         }
         button {
+            background-color: #1DB954;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px 20px;
             margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1AA34A;
+        }
+        button:focus {
+            outline: none;
         }
     </style>
 </head>
@@ -32,4 +55,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
