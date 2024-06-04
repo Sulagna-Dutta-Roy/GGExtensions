@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "AQI Calculator",
+    "version": "1.0",
+    "description": "Calculate the Air Quality Index (AQI) and determine the air quality level.",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/favicon-16.png",
+            "48": "assets/favicon-48.png",
+            "128": "assets/favicon-128.png"
+        }
+    },
+    "icons": {
+        "16": "assets/favicon-16.png",
+        "48": "assets/favicon-48.png",
+        "128": "assets/favicon-128.png"
+    },
+    "permissions": []
+}
