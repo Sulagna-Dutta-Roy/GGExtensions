@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Planner</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1>Workout Planner</h1>
+    <form id="workout-form">
+        <input type="text" id="workout-name" placeholder="Day" required>
+        <input type="text" id="workout-type" placeholder="Workout Type" required>
+        <input type="number" id="workout-duration" placeholder="Duration (minutes)" required>
+        <textarea id="workout-notes" placeholder="Notes"></textarea>
+        <button type="submit">Add Workout</button>
+    </form>
+    <div class="my-workouts-container">
+        <h2>My Workouts</h2>
+        <div id="workout-list" class="my-workouts"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
