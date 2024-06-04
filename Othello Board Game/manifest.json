@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Othello Board Game",
+    "version":"1.0",
+    "description":"It is a game that makes you joy",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

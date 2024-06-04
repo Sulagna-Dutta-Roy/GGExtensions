@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Code Comments Remover",
+    "version": "1.0",
+    "description": "A Chrome extension to remove comments from code.",
+    "permissions": [],
+    "action": {
+      "default_popup": "popup.html"
+     
+    }
+  }
+  
