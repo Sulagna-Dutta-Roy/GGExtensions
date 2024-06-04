@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Doodle Jump",
+    "version": "1.0",
+    "description": "A Doodle Jump as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  
