@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Saver</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-3" style="width: 450px; height: fit-content;padding: 30px;">
+    <h1 class="text-center">File Saver</h1>
+    <div class="form-group">
+      <input type="file" class="form-control-file" id="fileInput">
+    </div>
+    <button class="btn btn-primary btn-block" id="saveFile">Save File</button>
+    <div class="form-group mt-3">
+      <select class="form-control" id="fileList"></select>
+    </div>
+    <button class="btn btn-success btn-block" id="downloadFile">Download File</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
