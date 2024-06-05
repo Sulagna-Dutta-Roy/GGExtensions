@@ -7,7 +7,7 @@
     body {
         width: 300px;
         height: 300px;
-        background: url('Back.jpg') no-repeat center center;
+        background: url('Back.jpg')  repeat center center;
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -24,12 +24,12 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     .fact-container {
-        padding: 16px;
+        padding: 18px;
         border-radius: 0.5rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.9);
         text-align: center;
-    }
+      }
     #fact {
         font-size: 1.125rem;
         color: #333333;
@@ -54,11 +54,11 @@
 </head>
 <body>
   <h1>Random Math Fact</h1>
-  <div class="fact-container">
-    <p id="fact">Click the button to get a fact!</p>
-  </div>
-  <button id="generate-fact">Get Fact</button>
 
+    <div class="fact-container">
+      <p id="fact">Click the button to get a fact!</p>
+    </div>
+    <button id="generate-fact">Get Fact</button>
   <script src="script.js"></script>
 </body>
 </html>

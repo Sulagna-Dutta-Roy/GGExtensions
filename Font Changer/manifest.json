@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Font Changer",
+    "version": "1.0.0",
+    "description": "An extension to change fonts of web page for better readability",
+    "browser_action":{
+        "default_popup": "popup.html"
+    },
+    "permissions":["activeTab", "<all_urls>"],
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["override.js"]
+
+        } 
+   ],
+   "icons": {
+    "16": "icons/extn_icon.png",
+    "48": "icons/extn_icon.png"
+  }
+   
+
+}
