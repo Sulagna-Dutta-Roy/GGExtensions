@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyGrammarly</title>
+  <script src="./js/vue.js"></script>
+  <script src="./js/latex_util.js"></script>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      padding: 5px;
+      flex-direction: column;
+    }
+
+    .top_bar button {
+      width: 10em;
+    }
+
+    #the_textarea {
+      padding: 5px;
+      margin-top: 5px;
+      width: calc(100% - 10px);
+      font-size: 1.5em;
+      flex-grow: 1;
+      overflow-y: auto;
+      border: 1px lightgrey solid;
+      /*outline: none;*/
+      /*outline:1px darkblue solid;*/
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      resize: none;
+    }
+
+    .the_help {
+      color: gray;
+      font-size: 0.5em;
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+
+    .the_help:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <div class="top_bar">
+    <button @click="latex2text">Convert</button>
+    <button @click="writeBack">Write Back</button>
+    <span class="the_help" @click="showHelp">Help</span>
+  </div>
+  <textarea id="the_textarea" v-model="content"></textarea>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      content: null,
+    },
+    methods: {
+      async latex2text() {
+        const text = this.content
+        const [new_text, mapping] = trans(text)
+        this.content = new_text
+        this.mapping = mapping
+      },
+      async writeBack() {
+        if (!this.content) {
+          return
+        }
+        this.content = go_back(this.content, this.mapping)
+      },
+      showHelp() {
+        window.open("https://www.huacishu.com/2022/08/27/my_grammarly/", '_blank').focus();
+      }
+
+    },
+  })
+</script>
+
+</body>
+</html>
