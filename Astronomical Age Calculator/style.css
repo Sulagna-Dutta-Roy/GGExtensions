@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('./assets/background.jpg');
+    background-image: url('./assets/background.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,21 +35,21 @@ body {
 h1 {
     margin-bottom: 20px;
     font-size: 18px;
-    color: #61dafb;
+    color:  #fbf161;
 }
 
 label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #61dafb;
+    color:  #fbf161;
 }
 
 input, select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #61dafb;
+    border: 1px solid #fbf161;
     border-radius: 5px;
     font-size: 14px;
     box-sizing: border-box;
@@ -61,7 +61,7 @@ button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #61dafb;
+    background-color: #fbf161;
     color: black;
     border: none;
     border-radius: 5px;
@@ -71,11 +71,11 @@ button {
 }
 
 button:hover {
-    background-color: #21a1f1;
+    background-color: #89f121;
 }
 
 #result {
     margin-top: 10px;
     font-size: 16px;
-    color: #61dafb;
+    color:  #fbf161;
 }
