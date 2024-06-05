@@ -5,6 +5,7 @@ body {
     user-select: none;
     width: 100vh;
     height: 100vh;
+    overflow: hidden;
 }
 
 #game {
@@ -127,11 +128,13 @@ body {
 }
 
 #restart {
-    left: 0;
+    left: 5vw;
+    margin-bottom: 5vh;
 }
 
 #home {
-    left: calc(100vw - 150px);
+    right: 5vw;
+    bottom: 5vh;
 }
 
 .game-buttons {
@@ -167,11 +170,13 @@ body {
     top: calc(100vh - 80px);
     width: 150px;
     height: 30px;
-    left: 10px;
+    left: 5vw;
+    font-weight: 800;
+    bottom: 5vh;
     font-size: 20px;
 }
 
-#rules-btn {
+/* #rules-btn {
     position: fixed;
     left: calc(100vw - 200px);
     top: calc(100vh - 50px);
@@ -183,7 +188,7 @@ body {
     font-size: 25px;
     line-height: 50px;
     font-weight: 500;
-}
+} */
 
 #rules-page {
     display: none;
