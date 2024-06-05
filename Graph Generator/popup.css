@@ -10,15 +10,16 @@ body {
     flex-direction: column;
 }
 
-h1, h2 {
-    font-size: 16px;
+h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 label {
     margin-top: 10px;
 }
 
-input, button, textarea {
+input, button {
     margin-top: 5px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -28,4 +29,9 @@ input, button, textarea {
 
 button {
     cursor: pointer;
+    margin-top: 15px;
+}
+
+#graph {
+    margin-top: 20px;
 }
