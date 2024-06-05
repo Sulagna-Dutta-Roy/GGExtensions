@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Bar Graph Generator",
+  "version": "1.0",
+  "description": "Generate a bar graph from data input.",
+  "permissions": [],
+  "action": {
+    "default_popup": "index.html"
+  }
+}

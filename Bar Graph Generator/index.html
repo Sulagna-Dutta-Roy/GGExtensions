@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphing Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="group">
+            <div class="canvas-container">
+                <canvas id="graph" width="300" height="200"></canvas>
+            </div>
+            <div class="dataEntry">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" value="Sample">
+                    </div>
+                    <div class="field">
+                        <label for="value">Value</label>
+                        <input type="number" id="value" value="20">
+                    </div>
+                    <div class="field">
+                        <label for="division">Divisions</label>
+                        <input type="number" id="division" value="10">
+                    </div>
+                    <div class="field">
+                        <label for="color">Color</label>
+                        <input type="color" id="color">
+                    </div>
+                </div>
+                <div class="actionBtns">
+                    <button class="btn" id="addBtn">Add</button>
+                    <button class="btn" id="refreshBtn">Update</button>
+                    <button class="btn" id="addRandomBtn">Random</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
