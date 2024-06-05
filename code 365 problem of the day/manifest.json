@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Code 360 Problem of the Day",
+    "version": "1.0",
+    "description": "Shows the Code 360 Problem of the Day and redirects to the problem page.",
+    "action": {
+      "default_popup": "welcome.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  
