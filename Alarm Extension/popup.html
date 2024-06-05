@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Countdown Timer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.1" />
+  </head>
+  <body>
+    <div class="timer">
+      <div class="timer__controls">
+        <button data-time="20" class="timer__button">20 Secs</button>
+        <button data-time="300" class="timer__button">Work 5</button>
+        <button data-time="900" class="timer__button">Quick 15</button>
+        <button data-time="1200" class="timer__button">Snack 20</button>
+        <button data-time="3600" class="timer__button">Lunch Break</button>
+        <form name="customForm" id="custom">
+          <input
+            type="text"
+            name="minutes"
+            placeholder="Enter Minutes"
+            autocomplete="off"
+          />
+        </form>
+      </div>
+      <div class="display">
+        <h1 class="display__time-left">0:00</h1>
+        <p class="display__end-time">&nbsp;</p>
+        <div>
+          <button class="reset">RESET</button>
+          <button class="pause">PAUSE</button>
+        </div>
+        <small id="author">
+         
+          >. Credit:<a href="http://Javascript30.com/" target="_blank"
+            >Javascript30.com</a
+          >
+        </small>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
