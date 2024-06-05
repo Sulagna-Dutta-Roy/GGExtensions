@@ -135,8 +135,8 @@ button,
 }
 /* Grid */
 .grid {
-  width: 700px;
-  height: 700px;
+  width: 500px;
+  height: 500px;
   /* New to learn (grid)*/
   display: grid;
   grid-template-columns: repeat(9, 1fr);
