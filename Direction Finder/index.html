@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direction Finder</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="controls">
+        <div class="control-item">
+            <label for="origin">Origin:</label>
+            <input type="text" id="origin" placeholder="e.g., 51.505, -0.09" />
+            <button onclick="useCurrentLocation()">Use Current Location</button>
+        </div>
+        <div class="control-item">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" placeholder="e.g., 51.515, -0.1" />
+        </div>
+        <div class="control-item">
+            <label for="travel-mode">Travel Mode:</label>
+            <select id="travel-mode">
+                <option value="driving">Driving</option>
+                <option value="walking">Walking</option>
+                <option value="cycling">Cycling</option>
+            </select>
+        </div>
+        <button onclick="getDirections()">Get Directions</button>
+    </div>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
