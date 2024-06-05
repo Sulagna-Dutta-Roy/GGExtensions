@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Cubic Equation Calculator",
+    "version": "1.0",
+    "description": "A simple cubic equation calculator.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "assets/icon16.webp",
+        "48": "assets/icon48.webp",
+        "128": "assets/icon128.webp"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  
