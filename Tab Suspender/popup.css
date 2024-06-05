@@ -1,0 +1,31 @@
+/* popup.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    font-size: 16px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, button, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
