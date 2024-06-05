@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+#steps {
+    margin-top: 20px;
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#steps h2 {
+    color: #555;
+    
+}
+
+#steps ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+#steps ol li {
+    margin-bottom: 10px;
+}
+
+#steps ol li:last-child {
+    margin-bottom: 0;
+}
+
+#steps p {
+    margin-top: 10px;
+    color: #777;
+}
+
+#steps a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#steps a:hover {
+    text-decoration: underline;
+}
