@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Fitness body Website ",
+    "version":"1.0",
+    "description":"It is a gFitness Body Website",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}
