@@ -1,21 +1,46 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-	    <div id='colors'>
-	        <button id='black'></button>
-		    <button id='red'></button>
-		    <button id='green'></button>
-		    <button id='blue'></button>
-		    <button id='orange'></button>
-		    <button id='pink'></button>
-	    </div>
-	    <canvas id='canvas' width='300' height='200'></canvas>
-	    <div>
-            <button id='clearButton'>Clear</button>
-	    </div>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="styles/nano.min.css">
+    <title>🖌️🎨 Lets Draw 🖌️🎨</title>
+</head>
+
+<body>
+    <div id="loader">
+        <div id="loader-logo"><span class="material-icons" style="font-size:100px;padding:0;">brush</span></div>
+    </div>
+    <div id="main">
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id="tools">
+            <button id="selectColor">
+                <div id="c-border"></div>
+            </button>
+            <button id="selectPen"><span class="material-icons">brush</span></button>
+            <button id="selectEraser">
+                <div id="eraser-svg"></div>
+            </button>
+            <button id="clear"><span class="material-icons">delete</span></button>
+            <a id="link" target="_blank"><button id="settings"><span class="material-icons">settings</span></button></a>
+        </div>
+        <div id="options">
+            <div id="strokePreviewContainer">
+                <div id="stroke-preview"></div>
+            </div>
+            <div id="strokeSliderContainer">
+                <input class="mdl-slider mdl-js-slider" id="strokeSlider" type="range" min="1" max="50" value="5"
+                    tabindex="0">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="scripts/material.min.js"></script>
+    <script src="scripts/pickr.es5.min.js"></script>
+</body>
+
 </html>
