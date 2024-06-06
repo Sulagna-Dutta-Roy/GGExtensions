@@ -3,27 +3,49 @@
 body {
     font-family: Raleway;
     user-select: none;
+    z-index: 100000;
     width: 100vh;
     height: 100vh;
     overflow: hidden;
 }
 
+#easy {
+    background-color: #9c85ef;
+}
+#medium {
+    background-color: #856be4;
+}
+#hard {
+    background-color: #785be1;
+}
+#very-hard {
+    background-color: #6948e0;
+}
+#impossible {
+    background-color: #5a35df;
+
+}
 #game {
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
+    /* background: url(bg.jpg); */
     background-color: white;
 }
 
 #menu {
-    position: absolute;
-    margin-top: 0;
-    left: 0;
+    /* position: absolute; */
+    /* margin-top: 0; */
+    /* left: 50%; */
     height: 100vh;
-    width: 100vw;
-    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* width: 100vw; */
+    background: #f2ecff;
     overflow-y:scroll;
     overflow-x: hidden;
     /*display: none;*/
@@ -33,28 +55,33 @@ body {
     position: relative;
     margin-top: 0;
     left: 0;
-    height: 50px;
+    height: 60px;
     width: 100vw;
-    background-color: yellow;
+    color:#fff;
+    background-color: #110a28;
     font-size: 30px;
-    line-height: 50px;
+    line-height: 60px;
     text-align: center;
     font-weight: 900;
 }
 
 .lvl {
-    position: relative;
-    margin-top: 30px;
-    left: 10px;
-    width: calc(100vw - 20px);
     height: 80px;
     color: white;
-    background-color: darkgreen;
+    width: 300px;
+    /* display: flex; */
+    /* align-items: center; */
+    left: 50%;
+    transition: transform 0.3s ease;
+    /* position: absolute; */
+    /* justify-content: center; */
+    margin-top: 30px;
+    background-color: #ce4bf2;
     text-align: center;
     font-size: 30px;
     font-weight: 600;
     line-height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #level {
@@ -71,7 +98,8 @@ body {
 }
 
 .lvl:hover {
-    background-color: green;
+    background-color: #be32e5;
+    transform: scale(1.1); 
 }
 
 .test-tube {
@@ -129,7 +157,7 @@ body {
 
 #restart {
     left: 5vw;
-    margin-bottom: 5vh;
+    bottom: 5vh;
 }
 
 #home {
@@ -139,61 +167,64 @@ body {
 
 .game-buttons {
     position: fixed;
-    top: calc(100vh - 50px);
+    bottom: 5vh;
+    /* top: calc(100vh - 50px); */
     height: 50px;
-    width: 150px;
+    width: 12vw;
     font-size: 25px;
     font-weight: 600;
     text-align: center;
     line-height: 50px;
-    background-color: lightgreen;
-    border-radius: 10px 10px 0 0;
+    background-color: #886af5;
+    border-radius: 10px;
 }
 
 #lvl-heading {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 10vh;
     width: 100vw;
-    background-color: yellow;
-    border-radius: 0 0 25px 25px;
+    background-color: #50b4f2;
+    /* border-radius: 0 0 25px 25px; */
     font-size: 40px;
     font-weight: 800;
-    line-height: 50px;
+    line-height: 10vh;
     text-align: center;
     letter-spacing: 5px;
 }
 
 #moves {
     position: fixed;
-    top: calc(100vh - 80px);
+    bottom: 12vh;
+    /* top: calc(100vh - 80px); */
     width: 150px;
     height: 30px;
     left: 5vw;
     font-weight: 800;
-    bottom: 5vh;
+    /* bottom: 5vh; */
     font-size: 20px;
 }
 
-/* #rules-btn {
-    position: fixed;
-    left: calc(100vw - 200px);
-    top: calc(100vh - 50px);
+#rules-btn {
     height: 50px;
     width: 200px;
-    background-color: lightgreen;
-    border-radius: 20px 20px 0 0;
+    border-radius:10px;
+    background-color: #fff;
+    color: #000000;
+    /* border-radius: 20px 20px 0 0; */
     text-align: center;
     font-size: 25px;
     line-height: 50px;
-    font-weight: 500;
-} */
+    font-weight: 700;
+}
 
 #rules-page {
     display: none;
     z-index: 1000;
     position: absolute;
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+    opacity: 1;
     top: 0;
     left: 0;
     height: 100vh;
@@ -216,6 +247,7 @@ body {
 #rules-heading {
     position: absolute;
     top: 10px;
+    font-weight: 700;
     left: 0;
     height: 30px;
     width: 100%;
