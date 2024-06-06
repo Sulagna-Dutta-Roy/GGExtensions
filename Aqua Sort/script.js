@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("very-hard").addEventListener("click", function() {
         OpenLevel(3);
     });
+    document.getElementById('about-btn').addEventListener('click', function() {
+        window.location.href = 'aboutus.html'; // Replace 'about.html' with the actual path to your About Us page
+    });
+    
     document.getElementById("impossible").addEventListener("click", function() {
         OpenLevel(7);
     });
