@@ -1,20 +1,20 @@
 {
-    "name": "World Holiday Search Engine",
-    "short_name": "Holiday Search",
-    "description": "A search engine to discover holidays celebrated around the world.",
-    "version": "1.0.0",
-    "author": "Calendrific",
-   
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#009688",
-    "orientation": "any",
-    "scope": "/",
-    "permissions": [],
-    "serviceworker": {
-      "src": "service-worker.js",
-      "scope": "/"
-    }
-  }
-  
+  "manifest_version": 3,
+  "name": "World Holiday  Extension",
+  "version": "1.0",
+  "description": "Displays the holidays around the world.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
