@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 200px;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  #feedList {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .feed-item {
+    margin-bottom: 10px;
+  }
+  
+  .feed-item a {
+    text-decoration: none;
+    color: #0073e6;
+  }
+  
+  #guide {
+    margin-top: 20px;
+  }
+  
+  #guide ol {
+    padding-left: 20px;
+  }
+  
