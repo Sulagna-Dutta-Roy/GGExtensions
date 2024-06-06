@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Ip Address Tracker",
+    "version":"1.0",
+    "description":"A Website for tracking ip addresses",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

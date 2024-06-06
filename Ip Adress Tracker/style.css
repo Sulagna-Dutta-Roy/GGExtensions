@@ -1,0 +1,242 @@
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --white: #FFF;
+    --blue: #45409C;
+}
+
+* {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-size: 18px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.top {
+    height: 40vh;
+    padding: 1.25rem;
+    background: url(images/pattern-bg.png) no-repeat top center/cover;
+}
+
+.title {
+    color: var(--white);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+form {
+    margin: .75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ip-input {
+    width: min(500px, 70%);
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--dark-gray);
+    border-top-left-radius: .75rem;
+    border-bottom-left-radius: .75rem;
+}
+
+button[type="submit"] {
+    padding: 1rem 1.25rem;
+    border: 1.5px solid var(--very-dark-gray);
+    border-top-right-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    background-color: var(--very-dark-gray);
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: hsl(0, 0%, 28%);
+    border: 1.5px solid hsl(0, 0%, 28%);
+}
+
+.info {
+    position: relative;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    width: 80%;
+    min-height: 20vh;
+    top: 20%;
+    z-index: 500;
+    border-radius: 1rem;
+    background-color: var(--white);
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 25%;
+    padding: 0 1.5rem;
+    border-left: 1px solid var(--dark-gray);
+}
+
+.ip-info-box {
+    border-left: none;
+}
+
+.box>span {
+    display: block;
+}
+
+.field-name {
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.info-field {
+    margin-top: .7rem;
+    font-weight: 500;
+    letter-spacing: .2px;
+    word-wrap: break-word;
+}
+
+#modal {
+    width: 350px;
+    height: 150px;
+    margin: auto;
+    border: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    letter-spacing: 1px;
+}
+
+#close-btn {
+    font-weight: 500;
+    margin-top: auto;
+    padding: .3rem .4rem;
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    border-radius: .25rem;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: all .15s ease-out;
+}
+
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+#close-btn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#map {
+    height: 70vh;
+}
+
+.footer {
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 2rem .5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer p>a {
+    font-weight: 500;
+    color: var(--white);
+}
+
+.social {
+    margin-top: 1rem;
+}
+
+.social a {
+    margin: .5em;
+    font-size: 1.75em;
+    color: var(--white);
+}
+
+i {
+    transition: all .2s ease-out;
+}
+
+.social a:hover i {
+    transform: scale(1.2);
+}
+
+@media (max-width: 920px) {
+    .info-field {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 770px) {
+    #ip-input {
+        width: min(380px, 70%);
+    }
+
+    .info {
+        width: 85vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .top {
+        height: 35vh;
+        padding: .7rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        width: 75vw;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.1rem;
+        top: 12%;
+    }
+
+    .box {
+        width: 100%;
+        border: none;
+    }
+}
+
+@media (min-height: 1000px) {
+    main {
+        min-height: 90vh;
+    }
+
+    .top {
+        height: 25vh;
+    }
+
+    .info {
+        top: 25%;
+        min-height: 15vh;
+    }
+
+    #map {
+        height: 65vh;
+    }
+}
