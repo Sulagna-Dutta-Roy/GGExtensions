@@ -81,8 +81,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .tip-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
     color: white;
     margin-bottom: 12px;
 }
@@ -95,7 +95,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #9c60ff;
     border-radius: 5px;
     text-align: center;
-    padding: 10px;
+    padding: 7px 0px;
     cursor: pointer;
     font: inherit;
     color: inherit;
@@ -108,6 +108,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .tip.selected {
     outline: 4px solid rgba(255, 162, 0, 0.888);
+}
+
+.discount{
+    margin-top: .5em;
 }
 
 .gray-input {

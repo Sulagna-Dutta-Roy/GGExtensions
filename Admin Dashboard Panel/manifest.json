@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Admin Panel Dashboard",
+    "version":"1.0",
+    "description":"An Attractive Admin Panel",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}
