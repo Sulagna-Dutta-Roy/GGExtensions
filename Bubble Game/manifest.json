@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Bubble Trading",
+    "version":"1.0",
+    "description":"An Attractive bubble game that makes users joy",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

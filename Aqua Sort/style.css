@@ -3,9 +3,14 @@
 body {
     font-family: Raleway;
     user-select: none;
+    z-index: 100000;
     width: 100vh;
     height: 100vh;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
+
 
 #game {
     position: absolute;
@@ -13,16 +18,21 @@ body {
     left: 0;
     height: 100vh;
     width: 100vw;
+    /* background: url(bg.jpg); */
     background-color: white;
 }
 
 #menu {
-    position: absolute;
-    margin-top: 0;
-    left: 0;
+    /* position: absolute; */
+    /* margin-top: 0; */
+    /* left: 50%; */
     height: 100vh;
-    width: 100vw;
-    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* width: 100vw; */
+    background: url(bg1.jpg);
     overflow-y:scroll;
     overflow-x: hidden;
     /*display: none;*/
@@ -32,52 +42,43 @@ body {
     position: relative;
     margin-top: 0;
     left: 0;
-    height: 50px;
+    height: 60px;
     width: 100vw;
-    background-color: yellow;
+    color:#fff;
+    background-color: #110a28;
     font-size: 30px;
-    line-height: 50px;
+    line-height: 60px;
     text-align: center;
     font-weight: 900;
 }
 
-.lvl {
-    position: relative;
-    margin-top: 30px;
-    left: 10px;
-    width: calc(100vw - 20px);
-    height: 80px;
-    color: white;
-    background-color: darkgreen;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 80px;
-    border-radius: 20px;
-}
+
 
 #level {
-    z-index: 1;
+    z-index: 100;
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: white;
+    background:white;
+    background-size: cover;
+    /* background-color: white; */
     overflow-y: scroll;
     overflow-x: hidden;
     display: none;
 }
 
-.lvl:hover {
-    background-color: green;
-}
+/* .lvl:hover {
+    background-color: #be32e5;
+    transform: scale(1.1); 
+} */
 
 .test-tube {
     position: absolute;
     height: 130px;
     width: 40px;
-    border: 2px solid rgb(150,150,150);
+    border: 2.2px solid rgb(0, 0, 0);
     border-radius: 2px 2px 20px 20px;
     background-position: 0 10px;
     overflow: hidden;
@@ -113,7 +114,8 @@ body {
     top: 10px;
     width: 40px;
     height: 10px;
-    background-color: white;
+    color: transparent;
+    /* background-color: white; */
     z-index: 1000;
     transition: 1s;
 }
@@ -127,68 +129,76 @@ body {
 }
 
 #restart {
-    left: 0;
+    left: 5vw;
+    bottom: 5vh;
+    cursor: pointer;
 }
 
 #home {
-    left: calc(100vw - 150px);
+    right: 5vw;
+    bottom: 5vh;
 }
 
 .game-buttons {
     position: fixed;
-    top: calc(100vh - 50px);
+    bottom: 5vh;
+    /* top: calc(100vh - 50px); */
     height: 50px;
-    width: 150px;
+    width: 12vw;
     font-size: 25px;
     font-weight: 600;
     text-align: center;
     line-height: 50px;
-    background-color: lightgreen;
-    border-radius: 10px 10px 0 0;
+    background-color: #886af5;
+    border-radius: 10px;
 }
 
 #lvl-heading {
     position: absolute;
     top: 0;
     left: 0;
-    height: 50px;
+    height: 10vh;
     width: 100vw;
-    background-color: yellow;
-    border-radius: 0 0 25px 25px;
+    background-color: #50b4f2;
+    /* border-radius: 0 0 25px 25px; */
     font-size: 40px;
     font-weight: 800;
-    line-height: 50px;
+    line-height: 10vh;
     text-align: center;
     letter-spacing: 5px;
 }
 
 #moves {
     position: fixed;
-    top: calc(100vh - 80px);
+    bottom: 12vh;
+    /* top: calc(100vh - 80px); */
     width: 150px;
     height: 30px;
-    left: 10px;
+    left: 5vw;
+    font-weight: 800;
+    /* bottom: 5vh; */
     font-size: 20px;
 }
 
 #rules-btn {
-    position: fixed;
-    left: calc(100vw - 200px);
-    top: calc(100vh - 50px);
     height: 50px;
     width: 200px;
-    background-color: lightgreen;
-    border-radius: 20px 20px 0 0;
+    border-radius:10px;
+    background-color: #fff;
+    color: #000000;
+    /* border-radius: 20px 20px 0 0; */
     text-align: center;
     font-size: 25px;
     line-height: 50px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 #rules-page {
     display: none;
     z-index: 1000;
     position: absolute;
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+    opacity: 1;
     top: 0;
     left: 0;
     height: 100vh;
@@ -211,6 +221,7 @@ body {
 #rules-heading {
     position: absolute;
     top: 10px;
+    font-weight: 700;
     left: 0;
     height: 30px;
     width: 100%;
@@ -247,7 +258,52 @@ body {
 }
 
 
-
+button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    /* background-color: #212121; */
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    /* background-color: #212121; */
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
 
 
 

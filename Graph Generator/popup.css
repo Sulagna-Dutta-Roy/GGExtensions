@@ -1,0 +1,37 @@
+/* popup.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, button {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#graph {
+    margin-top: 20px;
+}

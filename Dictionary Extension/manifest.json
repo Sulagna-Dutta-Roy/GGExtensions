@@ -1,6 +1,6 @@
 {
   "name": "Dictionary Extensions",
-  "description": "Dictionary Extensions to find meaning of words.",
+  "description": "Dictionary Extensions to find the meaning of words.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
@@ -14,13 +14,14 @@
     "128": "src/dictionary.png"
   },
   "action": {
-    "default_icon": "src/dictionary.png"
+    "default_icon": "src/dictionary.png",
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
       "all_frames": true,
       "matches": ["<all_urls>"],
-      "js": ["scripts/content.js","scripts/sweetalert.js"]
+      "js": ["scripts/content.js", "scripts/sweetalert.js"]
     }
   ],
   "background": {

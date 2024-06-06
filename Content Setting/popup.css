@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  width: 300px;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  /* Text color for the legend */
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dt {
+  width: 45%;
+  margin-bottom: 10px;
+}
+
+dd {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  /* Background color for the select box */
+  color: #333;
+  font-size: 14px;
+}

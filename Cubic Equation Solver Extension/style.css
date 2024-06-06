@@ -1,0 +1,128 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #5a5766;
+    margin: 0;
+    padding: 0;
+    background-color: #00144d;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: -4px -1px 25px rgba(226, 68, 203, 0.3);
+    width: 400px;
+    height: 600px;
+}
+
+.calculator {
+    background-color: #00144d;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+}
+
+h1 {
+    color: #f5e20e;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #00ff6a;
+}
+
+.equation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #FAEF5D;
+}
+
+.inputs {
+    color: #FAEF5D;
+}
+
+input {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #48435c;
+    border-radius: 5px;
+    color: #158035;
+    background-color: #DCF2F1;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    background-color: #48435c;
+    color: #edffec;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#roots {
+    font-family: "Space Mono", sans-serif;
+    margin-top: 20px;
+    color: #FFC436;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#roots h2 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+#roots h2:hover {
+    color: #32CD32; /* LimeGreen color on hover */
+}
+
+#roots ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#roots li {
+    margin-bottom: 10px;
+}
+
+.sol {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.8px);
+    -webkit-backdrop-filter: blur(1.8px);
+    border-radius: 10px;
+}
+
+.css-button-rounded--yellow {
+    font-size: large;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #ffd819;
+    background: #ffd819;
+    margin-top: 1rem;
+}
+
+.css-button-rounded--yellow:hover {
+    background: #fff;
+    color: #ffd819;
+}

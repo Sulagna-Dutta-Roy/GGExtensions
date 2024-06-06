@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Alarm Clock Website",
+    "version":"1.0",
+    "description":"An Attractive Alarm Clock to save time ",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

@@ -1,25 +1,40 @@
 const billAmountInput = document.querySelector('#bill-amount')
 const customTipInput = document.querySelector('.custom-tip')
+const discountInput = document.querySelector(".discount")
 const numberOfPeopleInput = document.querySelector('.number-of-people')
 const generateBillBtn = document.querySelector('.generate-bill-btn')
 const tipAmountOutput = document.querySelector('.tip-amount span')
 const totalBillOutput = document.querySelector('.total span')
+const discountAmountOutput = document.querySelector('.discount-amount span')
 const eachPersonBillOutput = document.querySelector('.each-person-bill span')
 const tipsContainer = document.querySelector('.tip-container')
 const resetBtn = document.querySelector('.reset-btn')
 
 let tipPercentage = 0
+let discountPercentage = 0
+
+const DisableEnableGenerateBill = ()=>{
+    if (Number(numberOfPeopleInput.value)>=1 &&
+        Number(discountPercentage)>=0 && Number(discountPercentage<=100) &&
+        Number(tipPercentage)>=0 && Number(tipPercentage)<=100) {
+        generateBillBtn.disabled = false
+    } else {
+        generateBillBtn.disabled = true
+    }
+}
 
 generateBillBtn.addEventListener('click', () => {
     const billAmount = parseInt(billAmountInput.value)
     const numberOfPeople = parseInt(numberOfPeopleInput.value)
 
     const tipAmount = billAmount * (tipPercentage / 100)
-    const totalBill = billAmount + tipAmount
+    const discountAmount =billAmount *(discountPercentage/100) 
+    const totalBill = billAmount + tipAmount - discountAmount
     const eachPersonBill = totalBill / numberOfPeople
 
     tipAmountOutput.innerText = `₹${tipAmount}`
     totalBillOutput.innerText = `₹${totalBill}`
+    discountAmountOutput.textContent = "₹" + discountAmount
     eachPersonBillOutput.innerText = `₹${eachPersonBill}`
 
     resetBtn.disabled = false
@@ -35,12 +50,7 @@ tipsContainer.addEventListener('click', (e) => {
         e.target.classList.add('selected')
         tipPercentage = parseInt(e.target.innerText)
         customTipInput.value = ''
-
-        if (numberOfPeopleInput.value && tipPercentage) {
-            generateBillBtn.disabled = false
-        } else {
-            generateBillBtn.disabled = true
-        }
+        DisableEnableGenerateBill()
     }
 })
 
@@ -49,12 +59,12 @@ customTipInput.addEventListener('input', () => {
         ;[...tipsContainer.children].forEach((tip) =>
             tip.classList.remove('selected')
         )
+    DisableEnableGenerateBill() 
+})
 
-    if (numberOfPeopleInput.value && tipPercentage) {
-        generateBillBtn.disabled = false
-    } else {
-        generateBillBtn.disabled = true
-    }
+discountInput.addEventListener("input", ()=>{
+    discountPercentage = parseInt(discountInput.value);
+    DisableEnableGenerateBill()
 })
 
 resetBtn.addEventListener('click', () => {
@@ -64,6 +74,7 @@ resetBtn.addEventListener('click', () => {
     numberOfPeopleInput.value = ''
     tipAmountOutput.innerText = ''
     totalBillOutput.innerText = ''
+    discountAmountOutput.textContent = ''
     eachPersonBillOutput.innerText = ''
         ;[...tipsContainer.children].forEach((tip) =>
             tip.classList.remove('selected')
@@ -78,17 +89,13 @@ billAmountInput.addEventListener('input', () => {
         customTipInput.disabled = false
         numberOfPeopleInput.disabled = false
         tipsContainer.classList.remove('disabled')
+        discountInput.disabled = false;
     } else {
         customTipInput.disabled = true
         numberOfPeopleInput.disabled = true
+        discountInput.disabled = true
         tipsContainer.classList.add('disabled')
     }
 })
 
-numberOfPeopleInput.addEventListener('input', () => {
-    if (numberOfPeopleInput.value && tipPercentage) {
-        generateBillBtn.disabled = false
-    } else {
-        generateBillBtn.disabled = true
-    }
-})
+numberOfPeopleInput.addEventListener('input', DisableEnableGenerateBill )

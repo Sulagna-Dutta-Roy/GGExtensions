@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Task Reminder",
+    "version": "1.0",
+    "author": "sambitmondal2005@gmail.com",
+    "description": "A simple task reminder that sends push notifications.",
+    "permissions": [
+        "notifications",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "./scripts/background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    }
+}

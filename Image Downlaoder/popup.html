@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Downloader</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" style="width: 450px; padding:30px; height: fit-content;">
+    <h1 class="text-center">Image Downloader</h1>
+    <form id="download-form">
+      <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input type="url" class="form-control" id="imageUrl" placeholder="Enter image URL" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Download</button>
+    </form>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

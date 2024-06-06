@@ -26,12 +26,14 @@
                 <button class="tip">75%</button>
             </div>
             <input class="custom-tip gray-input" type="number" placeholder="Custom Tip in Percentage" disabled />
+            <input class="custom-tip gray-input discount" type="number" placeholder="Custom discount in Percentage" min="0" max="100" disabled />
             <p>Number of People</p>
             <input class="number-of-people gray-input" type="number" placeholder="Number of people" disabled />
             <button class="generate-bill-btn" disabled>Generate Bill</button>
         </div>
         <div class="bill-output">
             <p class="tip-amount">Tip amount <span></span></p>
+            <p class="discount-amount">Discount Amount <span></span></p>
             <p class="total">Total <span></span></p>
             <p class="each-person-bill">Each Person Bill <span></span></p>
             <button class="reset-btn" disabled>Reset</button>

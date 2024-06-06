@@ -1,0 +1,73 @@
+body {
+    font-family:'Futura Std Condensed';
+    font-weight:bold;
+    margin-left: 500px;
+    background-image: url('background.jpg');
+    background-size: cover; /* Cover the entire element */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed;
+    width: 30%;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(111, 110, 110);
+    margin-left:100px;
+    margin-top: 200px;
+    font-size: 45px;
+}
+h2{
+    color:rgb(91, 23, 89)
+}
+
+form {
+    margin-bottom: 20px;
+    align-self: center;
+    margin-top: 100px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:104%;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    width:104%;
+}
+
+button:hover {
+    opacity: 0.8;
+    
+}
+
+.workout-item {
+    margin-bottom: 10px;
+}
+
+.my-workouts-container{
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 4px;
+    display: flexbox;
+    height: auto;
+    width: 104%;
+    overflow-wrap: break-word;
+
+}
+

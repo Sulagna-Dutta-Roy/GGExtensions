@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Image Downloader",
+    "version": "1.0",
+    "description": "A Chrome extension to download images from provided links.",
+    "permissions": [
+      "downloads"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  

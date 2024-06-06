@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "File Saver",
+    "version": "1.0",
+    "description": "Save files in local storage and download them later.",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+      
+    }
+  }
+  
