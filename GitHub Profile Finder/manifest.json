@@ -3,7 +3,7 @@
     "name": "GitHub Profile Finder",
     "version": "1.0",
     "description": "Find and display GitHub profiles from the current web page.",
-    "author": "sambitmondal2005@gmail.com",
+    "author": "Sambit Mondal",
     "permissions": [
         "activeTab",
         "scripting"
