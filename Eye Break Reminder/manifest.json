@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Eye Break Reminder",
+    "description": "A Chrome extension to remind users to take breaks from their screen.",
+    "version": "1.0",
+    "permissions": ["storage", "alarms"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+   
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
