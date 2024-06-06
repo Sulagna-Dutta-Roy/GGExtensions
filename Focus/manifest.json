@@ -1,13 +1,12 @@
 {
-    "manifest_version": 3,
-    "name": "Website Blocker",
-    "description": "Replaces distracting websites with a page having tasks assigned to user.",
-    "version": "1.0",
-    "content_scripts": [
-      {
-        "matches": ["https://www.youtube.com/*","https://www.instagram.com/accounts/login/?hl=en"],
-        "css": ["./stylee.css"],
-        "js": ["./index1.js"]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "Website Blocker",
+  "description": "Replaces distracting websites with a page having tasks assigned to user.",
+  "version": "1.0",
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "permissions": [
+      "activeTab"
+  ]
+}

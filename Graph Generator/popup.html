@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Graph Generator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>3D Graph Generator</h1>
+        <form id="data-form">
+            <label for="x-data">X Data (comma-separated):</label>
+            <input type="text" id="x-data">
+            <label for="y-data">Y Data (comma-separated):</label>
+            <input type="text" id="y-data">
+            <label for="z-data">Z Data (comma-separated):</label>
+            <input type="text" id="z-data">
+            <button type="button" id="generate-graph">Generate Graph</button>
+        </form>
+        <div id="graph"></div>
+    </div>
+    <script src="plotly.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Timely Clone ",
+    "version":"1.0",
+    "description":"A timely website is one that offers relevant, up-to-date, and accurate information on a particular topic or range of topics. These websites are typically frequently updated to ensure they reflect the latest news, trends, data, and user interests. Some characteristics of timely website",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

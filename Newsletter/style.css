@@ -1,0 +1,331 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url('fonts/Roboto-Regular.ttf');
+  }
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url('fonts/Roboto-Bold.ttf');
+ }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: hsl(234, 29%, 20%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.initialForm {
+    transition: 300ms;
+    opacity: 1;
+    display: block;
+}
+
+
+.thankYouPage {
+    transition: 300ms;
+    opacity: 0;
+    display: none;
+}
+
+.card {
+    background-color: white;
+    width: clamp(3rem, 70vw, 55rem);
+    height: clamp(4rem, 60vw, 39rem);
+    border-radius: 40px;
+    display: flex;
+}
+
+.leftSide {
+    width: 50%;
+    margin: 7%;
+    margin-top: 7%;
+    color: hsl(234, 29%, 20%);
+    font-family: 'Roboto-Regular', serif;
+}
+
+.rightSide {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightSide > img {
+    object-fit: cover;
+    object-position: right;
+    width: 100%;
+    height: 93%;
+    margin-right: 1.2rem;
+    border-radius: 20px;
+    transition: 300ms;
+}
+
+.rightSide > img:hover {
+    border-radius: 0px;
+}
+
+h1 {
+    font-family: 'Roboto-Bold', serif;
+    font-size: clamp(0.3rem, 4vw, 3.5rem);
+    line-height: 3.6rem;
+    font-weight: 400;
+    margin-bottom: clamp(0.3rem, 2vw, 2rem);
+}
+
+p {
+    font-size: clamp(0.1rem, 1.3vw, 1rem);
+}
+
+ul {
+    padding-left: 0px;
+}
+
+li {
+    line-height: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: -10px;
+}
+
+.emailInput {
+    margin-top: clamp(0.1rem, 2vw, 2rem);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label > p {
+    font-family: 'Roboto-Bold', serif;
+    font-size: clamp(0.1rem, 1.5vw, 0.8rem);
+    margin-bottom: 0.5rem;
+}
+
+.wrongInput {
+    color: hsl(4, 100%, 67%);
+}
+
+#email {
+    height: clamp(1rem, 4vw, 3rem);
+    border-radius: 10px;
+    border: 1px solid hsl(231, 7%, 60%);
+    margin-bottom: clamp(0.1rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.4rem, 1.4vw, 1rem);
+    font-family: 'Roboto-Regular', serif;
+    padding-left: 1.8rem;
+    color: hsl(234, 29%, 20%);
+}
+
+.submit {
+    width: 100%;
+    height: clamp(1rem, 5vw, 3.5rem);
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-size: clamp(0.4rem, 1.5vw, 1rem);
+    font-family: 'Roboto-Bold', serif;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.submit:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+
+.card2 {
+    background-color: white;
+    width: clamp(3rem, 70vw, 23rem);
+    height: clamp(4rem, 60vw, 25rem);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: hsl(234, 29%, 20%);
+    font-family: 'Roboto-Regular', serif;
+    padding: clamp(0.1rem, 7vw, 4rem);
+    padding-top: 3rem;
+}
+
+.card2 > h1 {
+    font-family: 'Roboto-Bold', serif;
+    font-size: clamp(0.3rem, 10vw, 3.5rem);
+    line-height: 3rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.card2 > p {
+    margin-bottom: clamp(0.3rem, 3vw, 3rem);
+    font-size: clamp(0.1rem, 3vw, 1rem);
+}
+
+.card2 > .submit {
+    width: 100%;
+    height: clamp(1rem, 20vw, 3.5rem);
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-size: clamp(0.4rem, 10vw, 1rem);
+    font-family: 'Roboto-Bold', serif;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.card2 > .submit:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+
+
+
+
+@media (max-width: 720px) {
+    .card {
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0px;
+        flex-direction: column-reverse;
+    }
+
+    .leftSide {
+        width: 100%;
+        margin: 7%;
+        color: hsl(234, 29%, 20%);
+        font-family: 'Roboto-Regular', serif;
+    }
+
+    h1 {
+        font-family: 'Roboto-Bold', serif;
+        font-size: clamp(0.3rem, 9vw, 3.5rem);
+        line-height: clamp(0.4rem, 15vw, 6rem);
+        font-weight: 400;
+        margin-bottom: clamp(0.3rem, 2vw, 2rem);
+    }
+    
+    p {
+        font-size: clamp(0.1rem, 3vw, 1rem);
+    }
+    
+    ul {
+        padding-left: 0px;
+    }
+    
+    li {
+        line-height: 1rem;
+        display: flex;
+        gap: 1rem;
+        margin-bottom: -10px;
+    }
+
+    li > img {
+        width: clamp(0.1rem, 4vw, 1.5rem);
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    label > p {
+        font-family: 'Roboto-Bold', serif;
+        font-size: clamp(0.1rem, 3vw, 0.8rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .wrongInput {
+        padding-right: clamp(0.3rem, 15vw, 7rem);
+    }
+
+    #email {
+        width: clamp(0.5rem, 81vw, 36rem);
+        height: clamp(1rem, 4vw, 3rem);
+        border-radius: 10px;
+        border: 1px solid hsl(231, 7%, 60%);
+        margin-bottom: clamp(0.1rem, 1.5vw, 1.5rem);
+        font-size: clamp(0.4rem, 2vw, 1rem);
+        font-family: 'Roboto-Regular', serif;
+        padding-left: 1.8rem;
+        color: hsl(234, 29%, 20%);
+    }
+    
+    .submit {
+        width: clamp(0.5rem, 87vw, 38rem);
+        height: clamp(1rem, 5vw, 3.5rem);
+        border-radius: 10px;
+        border: none;
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        font-size: clamp(0.4rem, 2vw, 1rem);
+        font-family: 'Roboto-Bold', serif;
+        cursor: pointer;
+        transition: 300ms;
+    }
+    
+    .rightSide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rightSide > img {
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        height: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .card2 {
+        border-radius: 0px;
+        width: 92%;
+        height: 100vh;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 4%;
+        position: relative;
+    }
+
+    .card2 > h1 {
+        font-family: 'Roboto-Bold', serif;
+        font-size: clamp(0.3rem, 12vw, 3.5rem);
+        line-height: clamp(0.5rem, 12vw, 4rem);
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    
+    .card2 > p {
+        margin-bottom: clamp(0.3rem, 3vw, 3rem);
+        font-size: clamp(0.1rem, 4vw, 1.2rem);
+    }
+
+    .card2 > .submit {
+        width: 50%;
+        height: clamp(1rem, 13vw, 3.5rem);
+        border-radius: 10px;
+        border: none;
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        font-size: clamp(0.4rem, 4vw, 1rem);
+        font-family: 'Roboto-Bold', serif;
+        cursor: pointer;
+        transition: 300ms;
+        position: absolute;
+        bottom: 12%;
+    }
+
+}

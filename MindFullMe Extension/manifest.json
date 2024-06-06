@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "MindfulMe",
+  "version": "1.0",
+  "description": "Take regular breaks and practice mindfulness.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "notifications"
+  ]
+}

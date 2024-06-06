@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Simon Game",
+    "version": "1.1",
+    "description": "A simon says chrome extension version game.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_size": [
+            400,
+            400
+        ],
+        "default_icon": {
+            "16": "16.png",
+            "32":"32.png",
+            "128":"128.png"
+        }
+    }
+}

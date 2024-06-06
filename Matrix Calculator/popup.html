@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Matrix Calculator</h1>
+        <div class="matrices">
+            <div>
+                <h2>Matrix A</h2>
+                <table id="matrixA">
+                    <tr>
+                        <td><input type="number" id="a00"></td>
+                        <td><input type="number" id="a01"></td>
+                        <td><input type="number" id="a02"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="a10"></td>
+                        <td><input type="number" id="a11"></td>
+                        <td><input type="number" id="a12"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="a20"></td>
+                        <td><input type="number" id="a21"></td>
+                        <td><input type="number" id="a22"></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Matrix B</h2>
+                <table id="matrixB">
+                    <tr>
+                        <td><input type="number" id="b00"></td>
+                        <td><input type="number" id="b01"></td>
+                        <td><input type="number" id="b02"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="b10"></td>
+                        <td><input type="number" id="b11"></td>
+                        <td><input type="number" id="b12"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="b20"></td>
+                        <td><input type="number" id="b21"></td>
+                        <td><input type="number" id="b22"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="operations">
+            <button id="addBtn">Add</button>
+            <button id="subtractBtn">Subtract</button>
+            <button id="multiplyBtn">Multiply</button>
+            <button id="determinantABtn">Det(A)</button>
+            <button id="determinantBBtn">Det(B)</button>
+            <button id="transposeABtn">Transpose(A)</button>
+            <button id="transposeBBtn">Transpose(B)</button>
+        </div>
+        <div class="result">
+            <h2>Result</h2>
+            <table id="resultMatrix">
+                <tr>
+                    <td id="r00">0</td>
+                    <td id="r01">0</td>
+                    <td id="r02">0</td>
+                </tr>
+                <tr>
+                    <td id="r10">0</td>
+                    <td id="r11">0</td>
+                    <td id="r12">0</td>
+                </tr>
+                <tr>
+                    <td id="r20">0</td>
+                    <td id="r21">0</td>
+                    <td id="r22">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

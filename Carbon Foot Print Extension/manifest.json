@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Carbon Footprint Calculator",
+    "version": "1.0",
+    "description": "Calculates your carbon footprint based on miles driven.",
+    "permissions": ["activeTab"],
+    "background": {
+      "scripts": ["popup.js"]
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
