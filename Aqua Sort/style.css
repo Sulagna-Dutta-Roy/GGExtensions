@@ -7,24 +7,11 @@ body {
     width: 100vh;
     height: 100vh;
     overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
-#easy {
-    background-color: #9c85ef;
-}
-#medium {
-    background-color: #856be4;
-}
-#hard {
-    background-color: #785be1;
-}
-#very-hard {
-    background-color: #6948e0;
-}
-#impossible {
-    background-color: #5a35df;
 
-}
 #game {
     position: absolute;
     top: 0;
@@ -45,7 +32,7 @@ body {
     align-items: center;
     /* justify-content: center; */
     /* width: 100vw; */
-    background: #f2ecff;
+    background: url(bg1.jpg);
     overflow-y:scroll;
     overflow-x: hidden;
     /*display: none;*/
@@ -65,48 +52,33 @@ body {
     font-weight: 900;
 }
 
-.lvl {
-    height: 80px;
-    color: white;
-    width: 300px;
-    /* display: flex; */
-    /* align-items: center; */
-    left: 50%;
-    transition: transform 0.3s ease;
-    /* position: absolute; */
-    /* justify-content: center; */
-    margin-top: 30px;
-    background-color: #ce4bf2;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 80px;
-    border-radius: 10px;
-}
+
 
 #level {
-    z-index: 1;
+    z-index: 100;
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: white;
+    background:white;
+    background-size: cover;
+    /* background-color: white; */
     overflow-y: scroll;
     overflow-x: hidden;
     display: none;
 }
 
-.lvl:hover {
+/* .lvl:hover {
     background-color: #be32e5;
     transform: scale(1.1); 
-}
+} */
 
 .test-tube {
     position: absolute;
     height: 130px;
     width: 40px;
-    border: 2px solid rgb(150,150,150);
+    border: 2.2px solid rgb(0, 0, 0);
     border-radius: 2px 2px 20px 20px;
     background-position: 0 10px;
     overflow: hidden;
@@ -142,7 +114,8 @@ body {
     top: 10px;
     width: 40px;
     height: 10px;
-    background-color: white;
+    color: transparent;
+    /* background-color: white; */
     z-index: 1000;
     transition: 1s;
 }
@@ -158,6 +131,7 @@ body {
 #restart {
     left: 5vw;
     bottom: 5vh;
+    cursor: pointer;
 }
 
 #home {
@@ -284,7 +258,52 @@ body {
 }
 
 
-
+button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    /* background-color: #212121; */
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    /* background-color: #212121; */
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
 
 
 
