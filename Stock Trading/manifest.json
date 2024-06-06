@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Stock Trading",
+    "version":"1.0",
+    "description":"An Attractive Stock Trading App",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}
