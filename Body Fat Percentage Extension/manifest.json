@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Body Fat Percentage Calculator",
+    "version": "1.0",
+    "description": "Calculates your body fat percentage using neck, waist, hip (optional), and height measurements.",
+    "permissions": [],
+    "background": {
+      "scripts": []
+    },
+    "action": {
+      "default_popup": "popup.html"  
+    }
+  }
+  
