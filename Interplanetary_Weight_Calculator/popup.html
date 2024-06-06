@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Interplanetary Weight Calculator</h1>
+  <p>Ever wondered how much you'd weigh on Mars? Or Jupiter? Or how about the Moon? Well, wonder no more! This handy tool will tell you your weight on other planets and moons. Just don't take it too seriously if you're heavier on Jupiter!</p>
+  <label for="weight">Your Weight on Earth (kg):</label><br>
+  <input type="number" id="weight" name="weight"><br>
+  <label for="planet">Choose a planet, moon, or dwarf planet:</label><br>
+  <select id="planet" name="planet">
+    <option value="0.38">Mercury</option>
+    <option value="0.91">Venus</option>
+    <option value="1.00">Earth</option>
+    <option value="0.38">Mars</option>
+    <option value="2.34">Jupiter</option>
+    <option value="0.93">Saturn</option>
+    <option value="0.92">Uranus</option>
+    <option value="1.12">Neptune</option>
+    <option value="0.06">Pluto (Dwarf Planet)</option>
+    <option value="0.03">Eris (Dwarf Planet)</option>
+    <option value="0.04">Haumea (Dwarf Planet)</option>
+    <option value="0.05">Makemake (Dwarf Planet)</option>
+    <option value="0.025">Ceres (Dwarf Planet)</option>
+    <option value="0.023">Vesta (Minor Planet)</option>
+    <option value="0.17">Moon (of Earth)</option>
+    <option value="0.183">Europa (Moon of Jupiter)</option>
+    <option value="0.14">Titan (Moon of Saturn)</option>
+    <!-- Add more planets, moons, and dwarf planets here -->
+  </select><br>
+  <button id="calculate">Calculate</button>
+  <p id="result"></p>
+  <p>Remember, it's not you, it's the gravity!</p>
+  <p class="footer">Made by Winter262005</p>
+  <script src="popup.js"></script>
+</body>
+</html>
