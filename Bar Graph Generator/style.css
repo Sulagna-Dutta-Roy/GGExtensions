@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.fc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.canvas-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    overflow: hidden;
+}
+
+#graph {
+    background-color: #FFFFFF;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dataEntry {
+    border-top: 1px solid #ccc;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.fields .field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    margin-bottom: 5px;
+}
+
+.field input {
+    height: 2rem;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.actionBtns {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.actionBtns .btn {
+    flex: 1;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #668DE5;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.actionBtns .btn:hover {
+    background-color: #5578C5;
+}
