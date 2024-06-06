@@ -40,7 +40,7 @@
         color: #333333;
         margin-bottom: 16px;
     }
-    button {
+    #generate-fact {
         display: block;
         margin: 0 auto;
         padding: 10px 20px;
@@ -52,19 +52,32 @@
         cursor: pointer;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    #reset {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #ffffff;
+        background-color: #4d895a; /* blue-500 */
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     button:hover {
         background-color: #2563eb; /* blue-600 */
     }
   </style>
 </head>
 <body>
-  <h1>Random Math Fact</h1>
   <div class="container">
+  <h1>Random Math Fact</h1>
 
     <div class="fact-container">
       <p id="fact">Click the button to get a fact!</p>
     </div>
     <button id="generate-fact">Get Fact</button>
+    <button id="reset">Reset</button>
   </div>
 
   <script src="script.js"></script>
