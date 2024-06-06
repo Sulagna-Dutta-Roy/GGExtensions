@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "AI UI/UX Designer",
+    "version": "1.0",
+    "description": "Navigate to AI UI/UX Designer for quick and easy design suggestions.",
+    "action": {
+      "default_popup": "welcome.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  
