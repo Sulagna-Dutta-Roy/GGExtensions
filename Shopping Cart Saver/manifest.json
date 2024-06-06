@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Shopping Cart Saver",
+    "version": "1.0",
+    "description": "Save items you want to buy while browsing online stores.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+    }
+  
+  
