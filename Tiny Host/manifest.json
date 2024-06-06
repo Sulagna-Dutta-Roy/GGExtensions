@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Tiny Host",
+    "version": "1.0",
+    "description": "Navigate to Tiny Host for quick and easy live server functionality.",
+    "action": {
+      "default_popup": "welcome.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  
