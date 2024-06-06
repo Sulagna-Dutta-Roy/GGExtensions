@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup</title>
+    <link href="./style.css" rel="stylesheet">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <section class="initialForm">
+        <main class="card">
+            <section class="leftSide">
+                <h1>Stay updated!</h1>
+                <p>Join 60,000+ product managers recieving monthly updates on:</p>
+                <ul>
+                    <li><img src="./images/icon-list.svg" alt="List Icon"><p>Product discovery and building what matters</p></li>
+                    <li><img src="./images/icon-list.svg" alt="List Icon"><p>Measuring to ensure updates are a success</p></li>
+                    <li><img src="./images/icon-list.svg" alt="List Icon"><p>And much more!</p></li>
+                </ul>
+                <form class="emailInput" name="signUp" onsubmit="event.preventDefault(); ValidateEmail(document.signUp.email);">
+                    <label for="email">
+                        <p>Email address</p>
+                        <p class="wrongInput"></p>
+                    </label>
+                    <input id="email" name="email" placeholder="email@company.com">
+                    <input class="submit" type="submit" value="Subscribe to monthly newsletter">
+                </form>
+            </section>
+            <section class="rightSide">
+                <img src="./images/illustration-sign-up-desktop.svg" alt="Signup Illustration">
+            </section>
+        </main>
+    </section>  
+    <section class="thankYouPage">
+        <main class="card2">
+            <img src="./images/icon-success.svg" alt="Success Icon">
+            <h1>Thanks for subscribing!</h1>
+            <p class="confirmationMessage"></p>
+            <button class="submit dismissButton">Dismiss message</button>
+        </main>
+    </section>
+</body>
+</html>
