@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MindfulMe</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1>MindfulMe</h1>
+        <div class="buttons">
+            <button id="start-break">Start Break</button>
+            <button id="start-meditation">Start Meditation</button>
+            <button id="start-stretching">Start Stretching</button>
+            <button id="customize">Customize</button>
+        </div>
+
+        <div id="breathing-exercise" class="hidden">
+            <p>Breathe in...</p>
+            <div class="breath-circle"></div>
+        </div>
+
+        <div id="meditation-session" class="hidden">
+            <p>Meditation Session</p>
+            <video autoplay muted loop>
+                <source src="meditation.mp4" type="video/mp4" >
+                Your browser does not support the video element.
+            </video>
+        </div>
+
+        <div id="stretching-routine" class="hidden">
+            <p>Stretching Routine</p>
+            <div class="stretch-animation"></div>
+        </div>
+
+        <div id="calming-visuals">
+            <video autoplay muted loop>
+                <source src="calming-visuals.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
