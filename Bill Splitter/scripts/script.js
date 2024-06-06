@@ -14,7 +14,9 @@ let tipPercentage = 0
 let discountPercentage = 0
 
 const DisableEnableGenerateBill = ()=>{
-    if (numberOfPeopleInput.value && Number(discountPercentage)>=0 && tipPercentage) {
+    if (Number(numberOfPeopleInput.value)>=1 &&
+        Number(discountPercentage)>=0 && Number(discountPercentage<=100) &&
+        Number(tipPercentage)>=0 && Number(tipPercentage)<=100) {
         generateBillBtn.disabled = false
     } else {
         generateBillBtn.disabled = true
@@ -27,7 +29,6 @@ generateBillBtn.addEventListener('click', () => {
 
     const tipAmount = billAmount * (tipPercentage / 100)
     const discountAmount =billAmount *(discountPercentage/100) 
-    console.log(discountAmount)
     const totalBill = billAmount + tipAmount - discountAmount
     const eachPersonBill = totalBill / numberOfPeople
 
@@ -73,6 +74,7 @@ resetBtn.addEventListener('click', () => {
     numberOfPeopleInput.value = ''
     tipAmountOutput.innerText = ''
     totalBillOutput.innerText = ''
+    discountAmountOutput.textContent = ''
     eachPersonBillOutput.innerText = ''
         ;[...tipsContainer.children].forEach((tip) =>
             tip.classList.remove('selected')
