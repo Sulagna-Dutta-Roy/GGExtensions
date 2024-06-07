@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    color: #333;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .typewriter {
+    font-size: 24px;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  #start-python-editor {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #python-editor-link {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+  }
