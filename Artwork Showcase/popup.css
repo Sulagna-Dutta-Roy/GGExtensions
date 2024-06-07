@@ -4,79 +4,113 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #artwork-container {
-    width: 100vw;
-    height: 100vh;
-    /* top:50%; */
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    /* border: 2px solid black; */
-    /* margin: 50px auto; */
+    width: 80vw;
+    max-width: 1200px;
+    height: 80vh;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* overflow: auto;Add overflow scrolling*/
-    /* display: flex;
-    flex-direction: row; */
-    /* justify-content: center; */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    overflow: hidden;
 }
 
-
+.artwork {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+}
 
 .artwork img {
-    left: 5vw;
-    margin-left: 5vw;
-    /* position: absolute; */
     width: 100%;
-    border: 2px solid black;
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     transition: transform 0.3s ease;
 }
 
+.artwork img:hover {
+    transform: scale(1.05);
+}
 
 .artwork-content {
-    position: absolute;
-    left: 35vw;
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 #artwork-title {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 #artwork-artist {
-    font-size: 18px;
+    font-size: 1.25rem;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 #artwork-description {
-    font-size: 16px;
+    font-size: 1rem;
     color: #444;
     line-height: 1.5;
-    padding-right: 5vw;
-
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 #next-button {
-    height: 7vh;
-    width: 8vw;
+    align-self: flex-start;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
-    font-size: 18px;
-    text-align: center;
+    font-size: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #next-button:hover {
     background-color: #0056b3;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #artwork-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .artwork {
+        width: 100%;
+        height: 50vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .artwork img {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .artwork-content {
+        padding: 20px;
+    }
 }
