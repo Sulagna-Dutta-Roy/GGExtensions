@@ -1,17 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     padding: 10px;
-    width: 300px;
+    width: 400px;
   }
   
-  h1, h2 {
+  h1 {
     color: #333;
   }
   
-  input[type="text"] {
+  textarea {
     width: calc(100% - 22px);
+    height: 100px;
     padding: 10px;
-    margin: 5px 0;
+    margin-bottom: 10px;
     box-sizing: border-box;
   }
   
@@ -28,7 +29,20 @@ body {
     background-color: #45a049;
   }
   
-  #decks {
+  .json-output {
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
     margin-top: 10px;
   }
   
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  .string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
