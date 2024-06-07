@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Trigonometric Calculator",
+  "version": "1.0",
+  "description": "Trigonometric calculator that can compute values for sine, cosine, tangent, and their inverses for given angles.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}
