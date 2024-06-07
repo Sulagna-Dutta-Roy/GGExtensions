@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e274d5, #dfa1fe);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 400px;
+
+}
+
+header {
+    font-size: 2.5rem;
+    font-family: cursive;
+    padding: 1em;
+    font-weight: bold;
+    color: #f7f6f6;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgb(39, 38, 38);
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#container {
+    max-width: 300px;
+    margin: 20px auto;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #6498e6, #91a7e5);
+    background-color: #76a7d0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+input {
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #6b75f9;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a0458e;
+}
+
+#result {
+    font-size: 4.5rem;
+    color: #f8f5f7;
+    width: 96%;
+    margin: 0 2%;
+    height: 100%;
+    overflow: auto;
+    transition: all 0.5s;
+
+}
+
+#result p {
+    word-wrap: break-word;
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container>p {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    #output {
+        font-size: 1rem;
+        height: 65%;
+    }
+}
+
+/* For small devices */
+@media (max-width: 450px) {
+    h1 {
+        font-size: 1rem;
+    }
+
+    .container>p {
+        font-size: 0.7rem;
+    }
+
+    input {
+        margin: 1.5rem 0;
+    }
+
+    #output {
+        font-size: 1rem;
+        height: 68%;
+    }
+}
