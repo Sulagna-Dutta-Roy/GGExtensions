@@ -1,0 +1,12 @@
+{
+    "title": "Credit Card Payoff Calculator",
+    "placeholder_texts": {
+      "balance": "Enter balance (in ₹)",
+      "apr": "Enter APR (in %)",
+      "payment": "Enter monthly payment (in ₹)"
+    },
+    "button_labels": {
+      "calculate": "Calculate",
+      "reset": "Reset"
+    }
+  }
