@@ -1,6 +1,6 @@
 body {
-    width: 400px;
-    font-family: Arial, sans-serif;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -8,66 +8,79 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-
 #searchInput {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    background-color: #007bff;
+    background-color: #ff6f61;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff4a3d;
 }
 
 #animeResults {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .anime-card {
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .anime-card img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
 }
 
 .anime-card h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #333;
 }
 
 .anime-card p {
     font-size: 16px;
-    margin-bottom: 10px;
+    
 }
