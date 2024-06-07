@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Bitwise Operation Calculator",
+    "version": "1.0",
+    "description": "A calculator for performing bitwise operations.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "assets/icon16.jpg",
+        "48": "assets/icon48.jpg",
+        "128": "assets/icon128.jpg"
+      }
+    },
+    "icons": {
+      "16": "assets/icon16.jpg",
+      "48": "assets/icon48.jpg",
+      "128": "assets/icon128.jpg"
+    },
+    "permissions": []
+  }
+  

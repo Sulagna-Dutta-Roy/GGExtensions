@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "RSS Finder",
+    "version": "1.0",
+    "description": "Automatically detect and display available RSS feeds on any website, allowing you to subscribe with a single click.",
+    "permissions": [
+      "activeTab",
+      "notifications",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+   
+  }
+  

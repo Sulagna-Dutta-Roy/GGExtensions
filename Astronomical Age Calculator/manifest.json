@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Astronomical Age Calculator Extension",
+    "version": "1.0",
+    "description": "Calculate your age in other worlds!",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/favicon-16.jpg",
+            "48": "assets/favicon-48.jpg",
+            "128": "assets/favicon-128.jpg"
+        }
+    },
+    "icons": {
+        "16": "assets/favicon-16.jpg",
+        "48": "assets/favicon-48.jpg",
+        "128": "assets/favicon-128.jpg"
+    },
+    "permissions": []
+}

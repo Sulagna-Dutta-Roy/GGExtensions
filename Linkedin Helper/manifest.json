@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Helper",
+    "version": "1.0",
+    "description": "Enhance your LinkedIn experience with profile analysis, automated messaging, and job alerts.",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "alarms",
+      "notifications",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+  
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": [
+      "https://www.linkedin.com/*"
+    ]
+  }
+  

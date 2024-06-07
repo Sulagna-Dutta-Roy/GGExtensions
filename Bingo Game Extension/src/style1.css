@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #e67e22;
+    margin: 0;
+}
+
+.content {
+    line-height: 1.6;
+}
+
+.content .intro, .content .steps, .content .patterns, .content .tips {
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #e67e22;
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.content h3 {
+    font-size: 1.5em;
+    color: #e67e22;
+    margin-top: 0;
+}
+
+.content p, .content ol, .content ul {
+    font-size: 1.2em;
+}
+
+.content ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    background: #e67e22;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.content ul li strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .content h2 {
+        font-size: 1.5em;
+    }
+
+    .content h3 {
+        font-size: 1.2em;
+    }
+
+    .content p, .content ol, .content ul {
+        font-size: 1em;
+    }
+}

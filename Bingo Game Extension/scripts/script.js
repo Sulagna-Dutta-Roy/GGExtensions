@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         Array(12).fill(false), // User win states
         Array(12).fill(false)  // Computer win states
     ];
-
+    document.getElementById('about-button').addEventListener('click', function() {
+        window.location.href = 'aboutus.html'; // Replace 'about.html' with the actual path to your About Us page
+    });
+    
     const winningPositions = [
         [0, 1, 2, 3, 4],
         [5, 6, 7, 8, 9],

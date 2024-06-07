@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Keyboard Shortcut Customizer",
+    "version": "1.0",
+    "description": "Customize your keyboard shortcuts",
+    "permissions": [
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Y"
+        }
+      }
+    }
+  }
+  

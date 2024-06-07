@@ -3,7 +3,33 @@ body {
     height: 300px;
     background-color: aliceblue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+header {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(222, 6, 6);
+    margin-top: 20px;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 p {

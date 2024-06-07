@@ -17,6 +17,10 @@ checkButton.addEventListener("click", () => {
     // Update guessed number, disable input, check button text and color.
     [guess.textContent, input.disabled] = ["Congratulations!!", true];
     [checkButton.textContent, guess.style.color] = ["Replay", "#333"];
+    checkButton.addEventListener("click",()=>{
+      window.location.reload();
+
+    })
     //Check if input value is > random number and within 1-99 range.
   } else if (inputValue > randomNum && inputValue < 100) {
     // Update the guess text and remaining chances

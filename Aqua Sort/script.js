@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("very-hard").addEventListener("click", function() {
         OpenLevel(3);
     });
+    document.getElementById('about-btn').addEventListener('click', function() {
+        window.location.href = 'aboutus.html'; // Replace 'about.html' with the actual path to your About Us page
+    });
+    
     document.getElementById("impossible").addEventListener("click", function() {
         OpenLevel(7);
     });
@@ -23,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-var game,level,color=["red","blue","yellow","green","purple","lightgreen","lightblue","orange","brown","pink"],water=[],w=[],currentLevel,clicked=[],transferring=false,t=false,size=1,sizechange=0.05,won=false,moves=0;
+var game,level,color=["#fb3649","#099ffc","#ffe047","rgb(178, 255, 83)","#ca64fb","#83f28f","#add8e6","#ffa500","#b7410e","#f39ec7"],water=[],w=[],currentLevel,clicked=[],transferring=false,t=false,size=1,sizechange=0.05,won=false,moves=0;
 var testTubePosition = {
     0: [[-110,130], [-20, 130], [70, 130], [-65,320], [15, 320]],
     1: [[-110,130], [-20, 130], [70, 130],[-110,320], [-20, 320], [70, 320]],
@@ -243,6 +247,9 @@ window.Restart = function() {
     water = w.map((a)=>[...a]);
     won=false;
     ApplyInfo(w);
+    
+    window.location.href = 'index.html'; // Replace 'index.html' with the URL of your main page
+    
 }
 
 window.ShowMenu = function() {

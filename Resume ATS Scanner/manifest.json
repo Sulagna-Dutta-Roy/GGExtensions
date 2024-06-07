@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Resume ATS Scanner",
+    "version": "1.0",
+    "description": "Navigate to the Resume ATS Scanner to make your resume job-friendly.",
+    "action": {
+      "default_popup": "welcome.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  
