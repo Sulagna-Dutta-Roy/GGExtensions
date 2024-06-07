@@ -1,10 +1,18 @@
 {
     "manifest_version": 3,
-    "name": "Tic-Tac-Toe Game Extension JS",
+    "name": "Professional Email Generator Extension JS",
     "version": "1.0",
-    "description": "Multiplayer Tic-Tac-Toe game extension built in pure HTML CSS JS...",
+    "description": "Professional email Generator extension built in pure HTML CSS JS...",
+    "author": "sambitmondal2005@gmail.com",
+    "icons": {
+        "48": "game-28-48.png",
+        "128": "game-28-128.png"
+    },
     "permissions": [
         "storage"
+    ],
+    "optional-permissions": [
+        "tabs"
     ],
     "action": {
         "default_popup": "index.html"
