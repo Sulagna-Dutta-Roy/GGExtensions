@@ -15,8 +15,8 @@ document.getElementById('calculate').addEventListener('click', function(event) {
         const coeff = binomialCoefficient(n, k);
         const item = coeff * Math.pow(a, n-k) * Math.pow(b, k);
         const full_item = k===0 ? item : k===1 ? item + `x` : item + `x<sup>${k}</sup>`;
-        result += `${full_item}`;
-        if (k < n) result += ' + ';
+
+        result = k == 0 && item > 0 ? result + `${full_item}` : item > 0 ? result + ` +${full_item}` : result + ` ${full_item}`
     }
     
     document.getElementById('result').innerHTML = result;
