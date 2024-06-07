@@ -3,7 +3,7 @@ body {
     font-size:25px;
     font-weight:bold;
     margin:0 0 0 0;
-    background-color:#f0f0f0;
+    background-color: aquamarine;
 }
 * {
     -webkit-touch-callout:none;
@@ -13,6 +13,7 @@ body {
     user-select:none;
 }
 #game {
+    
     position:relative;
     margin:auto;
     width:360px;
