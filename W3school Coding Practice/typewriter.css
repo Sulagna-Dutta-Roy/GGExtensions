@@ -1,0 +1,25 @@
+#welcome-container {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: black;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  #welcome-message {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
