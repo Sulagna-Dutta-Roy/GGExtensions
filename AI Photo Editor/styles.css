@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .typewriter {
+    font-size: 24px;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  #edit-photo {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #2575fc;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #ai-photo-editor-link {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #2575fc;
+    text-decoration: none;
+  }
+  
