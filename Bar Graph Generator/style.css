@@ -8,24 +8,28 @@
 
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #f4f4f4;
 }
 
 body {
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-}
-
-.fc {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .canvas-container {
@@ -33,11 +37,15 @@ body {
     align-items: center;
     justify-content: center;
     height: 50%;
-    overflow: hidden;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
 }
 
 #graph {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .group {
@@ -47,52 +55,64 @@ body {
 }
 
 .dataEntry {
-    border-top: 1px solid #ccc;
     width: 100%;
-    background-color: #FFFFFF;
-    padding: 10px;
+    padding: 20px;
+    background-color: #ffffff;
 }
 
 .fields {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 15px;
 }
 
-.fields .field {
+.field {
     display: flex;
     flex-direction: column;
 }
 
 .field label {
     margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
 }
 
 .field input {
-    height: 2rem;
+    height: 2.5rem;
     border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 5px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.field input:focus {
+    border-color: #668DE5;
 }
 
 .actionBtns {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .actionBtns .btn {
     flex: 1;
-    height: 2rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #668DE5;
-    color: #FFF;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 .actionBtns .btn:hover {
     background-color: #5578C5;
+    transform: scale(1.05);
 }
