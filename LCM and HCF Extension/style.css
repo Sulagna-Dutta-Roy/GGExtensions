@@ -1,0 +1,93 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(50deg, #74134e, #9d0823);
+    margin: 0;
+    padding: 0;
+    list-style: 1.6;
+    height: 400px;
+    width: 400px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@media screen and (max-width:400px) {
+    #formula {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+}
+
+.cal {
+    text-align: center;
+    color: #ddd;
+}
+
+h1 {
+    margin: 40px 0;
+}
+
+input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#result {
+    margin: 1.4rem 0;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+
+.gcd {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+abel {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #016f10;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a09e;
+}
+
+#result {
+    margin-top: 16px;
+    font-weight: bold;
+    color: #020101;
+}
