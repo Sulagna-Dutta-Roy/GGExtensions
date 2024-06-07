@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.content {
+    min-width: 250px;
+    height: auto;
+    margin: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color:white;
+    border: 1px solid #4caf50;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+#breathing-exercise {
+    margin-top: 20px;
+}
+
+.breath-circle {
+    width: 100px;
+    height: 100px;
+    margin: 1.5rem auto;
+    border-radius: 50%;
+    background-color: lightblue;
+    animation: breathe 8s infinite;
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+.stretch-animation {
+    width: 100px;
+    height: 100px;
+    margin: 1.5rem auto;
+    background-color: lightgreen;
+    animation: stretch 4s infinite;
+}
+
+@keyframes stretch {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}

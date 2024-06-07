@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Net Salary Calculator",
+    "version": "1.0",
+    "description": "A simple net salary calculator.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
+  

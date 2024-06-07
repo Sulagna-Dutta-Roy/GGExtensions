@@ -1,0 +1,13 @@
+{
+  "name": "Content settings",
+  "version": "0.3",
+  "description": "This extension leverages chrome.contentSettings to reveal and manage the settings associated with a specific webpage directly within the extension's popup interface.",
+  "permissions": [
+    "contentSettings",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}

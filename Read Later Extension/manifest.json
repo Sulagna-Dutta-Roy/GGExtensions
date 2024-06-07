@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Read Later",
+    "version": "1.0",
+    "description": "Save articles, blog posts, and other web content to read later.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  

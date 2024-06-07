@@ -1,53 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <style>
         body {
-            width: 300px;
-            height: 300px;
-            background: url('AnimeWall.jpg') no-repeat center center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+            background: url('./AnimeWall.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: #333;
         }
+
         .container {
-            padding: 8px;
+            padding: 2rem;
             border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: white;
+            /* background-color: rgba(255, 255, 255, 0.5); */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+            overflow-y: auto;
         }
-        .Anime {
+
+        h1 {
+            font-size: 2rem;
+            color: #51ff00 ;
+            margin-bottom: 1.5rem;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        input[type="text"] {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+            width: 70%;
+            max-width: 400px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #f63b3b;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            margin-left: 0.5rem;
+        }
+
+        button:hover {
+            background-color: #2563eb;
+        }
+
+        .results {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .anime-item {
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            width: 100%;
+            max-width: 300px;
+            text-align: left;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: auto 10px;
-            font-size: 1.125rem;
-            color: #3b82f6; /* blue-500 */
+        }
+
+        .anime-item:hover{
+            background-color: #f6f63b;
+            color: #000000;
+            cursor: pointer;
+            scale: 1.05;
+        }
+
+        .anime-item img {
+            width: 100%;
+            object-fit: cover;
+            height: 45vh;
             border-radius: 0.5rem;
-            border: 1px solid lightblue;
-            padding: 10px;
+            margin-bottom: 1rem;
         }
-        .quote {
-            font-size: 1.125rem;
-            margin-bottom: 8px;
+
+        .anime-item h2 {
+            font-size: 1.25rem;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
         }
-        .anime,
-        .author {
-            font-size: 1rem;
-            color: #333;
+
+        .anime-item p {
+            margin: 0.25rem 0;
+        }
+
+        .anime-item a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+
+        .anime-item a:hover {
+            text-decoration: underline;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #3f3f3f;
+            opacity: 0.5;
+            z-index: 0;
         }
     </style>
-    <title>Random Anime Quote</title>
+    <title>Anime Search</title>
 </head>
+
 <body>
+    <div class="overlay"></div>
     <div class="container">
-        <p id="quote" class="quote">Loading...</p>
-        <p id="anime" class="anime"></p>
-        <p id="author" class="author"></p>
+        <h1>Anime Search</h1>
+        <div class="form">
+            <input type="text" name="query" placeholder="Search for an anime" required>
+            <button type="submit">Search</button>
+        </div>
+        <div class="results">
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
