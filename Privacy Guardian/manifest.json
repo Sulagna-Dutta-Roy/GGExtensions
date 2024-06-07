@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Privacy Guardian",
+    "version": "1.0",
+    "description": "An extension to protect user privacy by blocking trackers and anonymizing browsing data.",
+    "author": "Sambit Mondal",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "cookies",
+        "storage",
+        "activeTab",
+        "tabs",
+        "scripts"
+    ],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "game-28-48.png",
+            "128": "game-28-128.png"
+        }
+    },
+    "icons": {
+        "48": "game-28-48.png",
+        "128": "game-28-128.png"
+    }
+}
