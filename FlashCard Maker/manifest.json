@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Flashcard Maker",
+    "version": "1.0",
+    "description": "Create, manage, and study flashcards within your browser.",
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
