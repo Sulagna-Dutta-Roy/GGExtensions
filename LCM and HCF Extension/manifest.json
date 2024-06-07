@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "LCM and HCF Calculator",
+    "version": "1.0",
+    "description": "LCM and HCF Calculator.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
