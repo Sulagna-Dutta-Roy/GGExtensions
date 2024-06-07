@@ -1,10 +1,44 @@
 body {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
+
 
 #board {
     background-color: black;
     border-top: 5px solid skyblue;
     border-left: 5px solid skyblue;
     border-right: 5px solid skyblue;
+}
+
+.instructions {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.instructions h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.instructions p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+canvas {
+    border: 2px solid #000;
+    background-color: #000;
 }
