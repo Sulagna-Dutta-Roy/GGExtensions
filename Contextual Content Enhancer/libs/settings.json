@@ -1,0 +1,8 @@
+{
+    "textToSpeech": true,
+    "translation": true,
+    "summarization": true,
+    "keywordHighlighting": true,
+    "language": "en",
+    "keywords": []
+}
