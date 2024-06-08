@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Web Dev Toolkit",
+    "version": "1.0",
+    "description": "An advanced toolkit for web developers.",
+    "author": "Sambit Mondal",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "webNavigation",
+        "declarativeNetRequest",
+        "debugger"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "game-28-48.png",
+            "128": "game-28-128.png"
+        }
+    },
+    "icons": {
+        "48": "game-28-48.png",
+        "128": "game-28-128.png"
+    }
+}
