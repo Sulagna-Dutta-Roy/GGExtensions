@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contextual Content Enhancer</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+        <label>
+            <input type="checkbox" id="textToSpeech">
+            Text-to-Speech
+        </label>
+        <label>
+            <input type="checkbox" id="translation">
+            Translation
+        </label>
+        <label>
+            <input type="checkbox" id="summarization">
+            Summarization
+        </label>
+        <label>
+            <input type="checkbox" id="keywordHighlighting">
+            Keyword Highlighting
+        </label>
+        <label>
+            Language:
+            <input type="text" id="language" placeholder="Enter language code (e.g., en)">
+        </label>
+        <label>
+            Keywords:
+            <textarea id="keywords" placeholder="Enter keywords, separated by commas"></textarea>
+        </label>
+        <button id="saveSettings">Save Settings</button>
+    </div>
+    <script src="scripts/popup.js"></script>
+</body>
+
+</html>
