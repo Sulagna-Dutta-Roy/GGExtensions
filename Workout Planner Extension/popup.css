@@ -2,7 +2,7 @@ body {
     font-family:'Futura Std Condensed';
     font-weight:bold;
     margin-left: 500px;
-    background-image: url(background.jpg);
+    background-image: url('background.jpg');
     background-size: cover; /* Cover the entire element */
     background-position: center center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */

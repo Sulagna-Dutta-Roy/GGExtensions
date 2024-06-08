@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Binomial Expansion Calculator",
+  "version": "1.0",
+  "description": "Binomial Expansion Calculator that can calculate the binomial expansion using the binomial theorem and display the result dynamically.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}

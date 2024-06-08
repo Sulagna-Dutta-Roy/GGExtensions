@@ -8,5 +8,9 @@ document.getElementById('generate-fact').addEventListener('click', function() {
         console.error('Error fetching the math fact:', error);
         document.getElementById('fact').innerText = 'Could not fetch a fact. Please try again.';
       });
-  });
-  
+    });
+    
+document.getElementById('reset').addEventListener('click',()=>{
+  document.getElementById('fact').innerText = "Click the button to get a fact!";
+
+})

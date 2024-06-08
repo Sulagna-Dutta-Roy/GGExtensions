@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Shortcut Customizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Keyboard Shortcut Customizer</h1>
+        <form id="shortcut-form">
+            <label for="action">Action:</label>
+            <select id="action">
+                <option value="save">Save</option>
+                <option value="open">Open</option>
+                <option value="close">Close</option>
+            </select>
+            <label for="shortcut">Shortcut:</label>
+            <input type="text" id="shortcut" readonly>
+            <button type="button" id="set-shortcut">Set Shortcut</button>
+        </form>
+        <div id="shortcuts-list">
+            <h2>Current Shortcuts</h2>
+            <ul id="shortcuts"></ul>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

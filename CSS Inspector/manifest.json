@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "CSS Inspector",
+    "version": "1.0",
+    "description": "Explore and edit website styles in real-time.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  

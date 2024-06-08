@@ -10,4 +10,4 @@ fetch("https://icanhazdadjoke.com/slack")
 const btn = document.getElementById("nextJokeButton");
 btn.addEventListener(("click"), ()=>{
     window.location.reload();
-})
+});

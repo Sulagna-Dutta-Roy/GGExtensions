@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         Array(12).fill(false), // User win states
         Array(12).fill(false)  // Computer win states
     ];
-
+    document.getElementById('about-button').addEventListener('click', function() {
+        window.location.href = 'aboutus.html'; // Replace 'about.html' with the actual path to your About Us page
+    });
+    
     const winningPositions = [
         [0, 1, 2, 3, 4],
         [5, 6, 7, 8, 9],
@@ -44,11 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
         toShow.classList.remove('hidden');
     }
 
-    function generateBoard(board, numbers) {
+    function generateUserBoard(board, numbers) {
         board.innerHTML = '';
         numbers.forEach(number => {
             const cell = document.createElement('div');
             cell.textContent = number;
+            cell.addEventListener('click', () => {
+                if (userTurn && !cell.classList.contains('clicked')) {
+                    markNumber(userBoard, number);
+                    markNumber(computerBoard, number);
+                    userTurn = false;
+                    turnIndicator.textContent = "Computer's Turn";
+                    setTimeout(playComputerTurn, 1000);
+                }
+            });
+            board.appendChild(cell);
+        });
+    }
+    function generateComputerBoard(board, numbers) {
+        board.innerHTML = '';
+        numbers.forEach(number => {
+            const cell = document.createElement('div');
+            cell.textContent = '?';
             cell.addEventListener('click', () => {
                 if (userTurn && !cell.classList.contains('clicked')) {
                     markNumber(userBoard, number);
@@ -136,8 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
         userTurn = true;
         data = [Array(12).fill(false), Array(12).fill(false)];
         turnIndicator.textContent = "User's Turn";
-        generateBoard(userBoard, userNumbers);
-        generateBoard(computerBoard, computerNumbers);
+        generateUserBoard(userBoard, userNumbers);
+        generateComputerBoard(computerBoard, computerNumbers);
         switchPage(gamePage);
     });
 

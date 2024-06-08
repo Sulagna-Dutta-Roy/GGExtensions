@@ -1,0 +1,9 @@
+{
+    "title": "Electricity Bill Calculator",
+    "labels": {
+      "units": "Enter units consumed:",
+      "rate": "Enter rate per unit (in INR):",
+      "additionalCharges": "Enter additional charges (in INR):",
+      "billAmount": "Electricity Bill Amount: "
+    }
+  }

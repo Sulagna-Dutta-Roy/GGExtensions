@@ -5,134 +5,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            min-height: 100vh;
-            background: url('./AnimeWall.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-        }
+       body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: url('./AnimeWall.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
 
-        .container {
-            padding: 2rem;
-            border-radius: 0.5rem;
-            /* background-color: rgba(255, 255, 255, 0.5); */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            text-align: center;
-            z-index: 1;
-            overflow-y: auto;
-        }
+.container {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    z-index: 1;
+    overflow-y: auto;
+}
 
-        h1 {
-            font-size: 2rem;
-            color: #51ff00 ;
-            margin-bottom: 1.5rem;
-        }
+h1 {
+    font-size: 2.5rem;
+    color: #51ff00;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
 
-        .form {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
+.form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
 
-        input[type="text"] {
-            padding: 0.5rem;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 0.25rem;
-            width: 70%;
-            max-width: 400px;
-        }
+input[type="text"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    width: 70%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
 
-        button {
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #f63b3b;
-            border: none;
-            border-radius: 0.25rem;
-            cursor: pointer;
-            margin-left: 0.5rem;
-        }
+input[type="text"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+}
 
-        button:hover {
-            background-color: #2563eb;
-        }
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f63b3b;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-        .results {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
+button:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
 
-        .anime-item {
-            background: #fff;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem;
-            width: 100%;
-            max-width: 300px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
 
-        .anime-item:hover{
-            background-color: #f6f63b;
-            color: #000000;
-            cursor: pointer;
-            scale: 1.05;
-        }
+.anime-item {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-        .anime-item img {
-            width: 100%;
-            object-fit: cover;
-            height: 45vh;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
+.anime-item:hover {
+    background-color: #f6f63b;
+    color: #000;
+    transform: scale(1.05);
+}
 
-        .anime-item h2 {
-            font-size: 1.25rem;
-            color: #3b82f6;
-            margin-bottom: 0.5rem;
-        }
+.anime-item img {
+    width: 100%;
+    object-fit: cover;
+    height: 45vh;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
 
-        .anime-item p {
-            margin: 0.25rem 0;
-        }
+.anime-item h2 {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    margin-bottom: 0.5rem;
+}
 
-        .anime-item a {
-            color: #2563eb;
-            text-decoration: none;
-            margin-top: 0.5rem;
-            font-weight: bold;
-        }
+.anime-item p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #666;
+}
 
-        .anime-item a:hover {
-            text-decoration: underline;
-        }
+.anime-item a {
+    color: #2563eb;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #3f3f3f;
-            opacity: 0.5;
-            z-index: 0;
-        }
+.anime-item a:hover {
+    text-decoration: underline;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
     </style>
     <title>Anime Search</title>
 </head>
@@ -145,8 +156,7 @@
             <input type="text" name="query" placeholder="Search for an anime" required>
             <button type="submit">Search</button>
         </div>
-        <div class="results">
-        </div>
+        <div class="results"></div>
     </div>
     <script src="script.js"></script>
 </body>

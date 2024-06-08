@@ -1,0 +1,45 @@
+body{
+    padding: 0;
+    margin: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 307px;
+    width: 250px;
+}
+
+.container{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    height: 279px;
+    width: 238px;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.result{
+    margin-bottom: 10px;
+    display: none;
+}
+.dropdown{
+    display: flex;
+    margin-bottom: 15px;
+    gap:15px;
+}
+
+
+   
+
+button{
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    height:23px;
+    border-radius: 10px;
+}

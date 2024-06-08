@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    background: #0F0E39;
+    font-family: 'Baloo Bhaijaan', cursive;
+}
+
+#grid-resize {
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+#btns {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+#btn-4, #btn-5, #btn-6, #btn-7 {
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Baloo Bhaijaan', cursive;
+    font-size: 1em;
+}
+
+#btns > .active {
+    background: #514080;
+}
+
+#btn-4:hover, #btn-5:hover, #btn-6:hover, #btn-7:hover {
+    background: #7649AB;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+#container-box {
+    display: grid;
+    grid-gap: 5px;
+    height: 50vh;
+    width: 50vh;
+    background: #7A7A7A;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.undo-btn {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#undo-btn {
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    color: #FFFFFF;
+	cursor: pointer;
+}
+
+#undo-btn:hover {
+    background: #7649AB;
+}
+
+.number-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.number-box.empty {
+    background: #939393;
+}
+
+.number-box.two {
+    background: #D5E2A8;
+    color: #2F0F0F;
+    font-size: 125%;
+}
+
+.number-box.four {
+    background: #BAC185;
+    color: #421616;
+    font-size: 125%;
+}
+
+.number-box.eight {
+    background: #B0B05E;
+    font-size: 125%;
+}
+
+.number-box.sixteen {
+    background: #9C9F50;
+    font-size: 120%;
+}
+
+.number-box.thirty-two {
+    background: #E2C951;
+    font-size: 120%;
+}
+
+.number-box.sixty-four {
+    background: #DEDD43;
+    font-size: 120%;
+}
+
+.number-box.one-twenty-eight {
+    background: #F1F73C;
+    color: #000000;
+    font-size: 115%;
+}
+
+.number-box.two-fifty-six {
+    background: #EEFF1F;
+    color: #000000;
+    font-size: 115%;
+}
+
+.number-box.five-twelve {
+    background: #FEC745;
+    /* color: #000000;     */
+    font-size: 115%;
+}
+
+.number-box.one-thousand-twenty-four {
+    background: #F5E129;
+    font-size: 105%;
+}
+
+.number-box.two-thousand-forty-eight {
+    background: #310A2E;
+    color: #FFFFFF;
+}

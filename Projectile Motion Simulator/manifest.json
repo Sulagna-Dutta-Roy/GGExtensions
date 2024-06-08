@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Projectile Motion Simulator",
+  "version": "1.0",
+  "description": "Simulate and visualize the motion of a projectile given initial parameters.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}

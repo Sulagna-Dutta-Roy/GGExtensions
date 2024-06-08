@@ -1,3 +1,4 @@
+/*placing ships at exactly 20 random locations in computer's and player's board*/
 document.addEventListener('DOMContentLoaded', () => {
     const playerBoard = document.getElementById('player-board');
     const computerBoard = document.getElementById('computer-board');
@@ -22,19 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function placeShipsRandomly(ships) {
-        for (let length of shipLengths) {
-            let placed = false;
-            while (!placed) {
-                const isHorizontal = Math.random() < 0.5;
-                const row = Math.floor(Math.random() * boardSize);
-                const col = Math.floor(Math.random() * boardSize);
-                if (canPlaceShip(row, col, length, isHorizontal, ships)) {
-                    placeShip(row, col, length, isHorizontal, ships);
-                    placed = true;
-                }
-            }
+        /*placing 20 ships*/
+        let n = 20;
+        let ship = [];
+        for( let i = 0; i < n ; i++ ) {
+            let row = Math.floor(Math.random()*10);
+            let col = Math.floor(Math.random()*10);
+            if(!ship.includes(row*boardSize + col ))ship.push(row*boardSize + col);
+            else i--;
         }
+        ships.push(ship);
+        return ships;
     }
+    //     for (let length of shipLengths) {
+    //         let placed = false;
+    //         while (!placed) {
+    //             const isHorizontal = Math.random() < 0.5;
+    //             const row = Math.floor(Math.random() * boardSize);
+    //             const col = Math.floor(Math.random() * boardSize);
+    //             if (canPlaceShip(row, col, length, isHorizontal, ships)) {
+    //                 placeShip(row, col, length, isHorizontal, ships);
+    //                 placed = true;
+    //             }
+    //         }
+    //     }
+    // }
 
     function canPlaceShip(row, col, length, isHorizontal, ships) {
         for (let i = 0; i < length; i++) {
