@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Quadratic Equation Solver",
+  "version": "1.0",
+  "description": "Quadratic Equation Solver that allows to input the coefficients a, b, c of a quadratic equation and automatically calculates the roots. The extension should also provide a graphical representation of the quadratic function, showing the vertex and axis of symmetry.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}
