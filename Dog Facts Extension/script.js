@@ -8,3 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching the Dog:', error));
 });
+
+const btn = document.querySelector(".next-fact-button");
+btn.addEventListener(('click'), ()=>{
+    window.location.reload();
+});

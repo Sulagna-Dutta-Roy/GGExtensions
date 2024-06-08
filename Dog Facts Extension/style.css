@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 80vh;
+  background: url("https://img.freepik.com/free-photo/front-view-cute-dogs-costumes_23-2148423680.jpg?t=st=1717870544~exp=1717874144~hmac=89dc993c5be006a7dc8f570ef54d0312eedb3679bf1983f95f5d7386f5f0c1df&w=1060")
+    no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.Dog {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #444;
+  border-radius: 1rem;
+  border: 2px solid #ecc458;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#DogElement:hover{
+    background-color: #ecc458;
+    transition: all .3s ease-in-out;
+}
+
+.next-fact-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.next-fact-button:hover {
+  background-color: #cc8c2b;
+  transform: translateY(-5px);
+}
