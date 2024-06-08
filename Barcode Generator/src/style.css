@@ -14,8 +14,6 @@ body {
 }
 
 .container {
-    width: 330px; /* Set width to 400px */
-    height: 330px; /* Set height to 400px */
     background-color: #ffffff;
     padding: 3rem;
     border-radius: 0.8em;
