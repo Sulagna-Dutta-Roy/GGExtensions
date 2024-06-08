@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Daily Delight</title>
+</head>
+
+<body>
+    <div class="container">
+        <button id="settings-btn" class="settings-btn">Settings</button>
+        <div id="settings" class="settings hidden">
+            <!-- <label><input type="checkbox" name="content-type" value="image"> Daily Image</label><br> -->
+            <label><input type="checkbox" name="content-type" value="fun-fact"> Fun Fact</label><br>
+            <label><input type="checkbox" name="content-type" value="joke"> Joke</label><br>
+            <label><input type="checkbox" name="content-type" value="word-of-the-day"> Word of the Day</label><br>
+            <label><input type="checkbox" name="content-type" value="trivia-quiz"> Trivia Quiz</label><br>
+            <button id="save-settings" class="save-settings-btn">Save</button>
+        </div>
+        <div class="content">
+            <div id="fun-fact" class="content-box"></div>
+            <div id="joke" class="content-box"></div>
+            <div id="word-of-the-day" class="content-box"></div>
+            <div id="trivia-quiz" class="content-box"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
