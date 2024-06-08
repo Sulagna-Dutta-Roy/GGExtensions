@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Macronutrient Calculator",
+  "version": "1.0",
+  "description": "Determines daily macronutrient needs based on personal fitness goals and activity levels.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_popup_width": 400,
+    "default_popup_height": 600
+  },
+  "permissions": []
+}
