@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom CSS Injector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      color: #007bff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    textarea {
+      font-family: Consolas, monospace;
+      width: calc(100% - 40px);
+      height: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      height: 30px;
+      background: #007bff;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+      text-align: center;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .submit,
+    .reset {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-right: 10px;
+    }
+
+    .submit:hover,
+    .reset:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="message"></div>
+  <h1>Custom CSS Injector</h1>
+
+  <ol>
+    <li>Enter your custom CSS in the textarea below</li>
+    <li>Save your changes</li>
+    <li>Visit any webpage</li>
+    <li>Click the browser extension icon to apply your CSS</li>
+  </ol>
+
+  <textarea name="custom_css" id="custom_css" placeholder="Enter your custom CSS here..."></textarea>
+
+  <br />
+  <button class="submit">Save Changes</button>
+  <button class="reset">Reset</button>
+
+  <script src="options.js"></script>
+</body>
+
+</html>
