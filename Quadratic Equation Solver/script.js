@@ -15,9 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function solveQuadratic() {
+
     const a = parseFloat(input_a.value);
     const b = parseFloat(input_b.value);
     const c = parseFloat(input_c.value);
+
+    if (!a || !b || !c) {
+        alert("Please fill all the fields a, b and n!")
+        return
+    }
     
     const discriminant = b * b - 4 * a * c;
 
