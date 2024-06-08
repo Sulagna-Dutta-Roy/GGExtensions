@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Infix Prefix Postfix Calculator",
+  "version": "1.0",
+  "description": "Infix Prefix Postfix Calculator",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": ["activeTab"]
+}
