@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Time",
+  "version": "1.0",
+  "description": "Block distracting websites during focus periods.",
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
