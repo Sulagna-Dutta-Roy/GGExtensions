@@ -1,6 +1,6 @@
 // background.js
 let player = new Audio();
-let tracks = ['audio/alb.wav','audio/cbm.wav','audio/clp.wav','audio/fls.wav','audio/lbf.mp3','audio/lgb.wav','audio/dft.mp3','audio/ssf.mp3','audio/ghf.mp3','audio/mgl.mp3']; // replace with your tracks
+let tracks = ['audio/alb.mp3','audio/cbm.mp3','audio/clp.mp3','audio/fls.mp3','audio/lbf.mp3','audio/lgb.wav','audio/dft.mp3','audio/ssf.mp3','audio/ghf.mp3','audio/mgl.mp3']; // replace with your tracks
 let currentTrackIndex = 0;
 let repeat = false; // Repeat flag
 
