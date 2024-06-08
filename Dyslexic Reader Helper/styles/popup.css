@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eeeeeb !important; 
+    width: 320px !important;
+    height: 520px;
+    padding: 1rem;
+    border: none;
+}
+.header{
+    padding: 1rem;
+    line-height: 1rem;
+}
+.OpenDyslexic, .Lexie{
+    border-radius: 0.5rem;
+    background-color: #a40e8e !important;
+    color: black;
+    padding: 1rem;
+    width: 8rem;
+}
+.right{
+    margin-left: 1rem;
+}
+.container {
+    margin: 0 auto;
+    padding-bottom: 0.75rem;
+}
+.navbar button{
+    background-color: #a40e8e !important;
+    color: #fff;
+    height: 2rem;
+    padding: 0rem 1rem;
+}
+button a{
+    text-decoration: none !important;
+    color: black;
+}
+.navbar .btn {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.options .btn {
+    color: #fff;
+    background-color: #a40e8e;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+}
+.background-change{
+    background-color: #a40e8e !important;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+.bg-change{
+    border: 1px solid black !important;
+    border-radius: 0.5rem;
+}
+.bg-change:hover{
+    background-color: black !important;
+    color: white !important;
+}
+.colorPicker{
+    margin-top: 0.4rem;
+    background-color: #eeeeeb;
+}
+.about-body{
+    height: 28rem;
+}
+.bottom{
+    margin-bottom: 2rem !important;
+}
+.options .btn:hover {
+    background-color: #a40e8e;
+    opacity: 0.8;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+h1, h2 {
+    color: #a40e8e;
+}
+p, ul {
+    color: #333;
+    line-height: 1.5;
+}
+ul {
+    padding-left: 20px;
+}
+ul li {
+    margin-bottom: 10px;
+}
