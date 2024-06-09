@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Area Calculator</title>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h1>Area Calculator</h1>
+        </header>
+        <div class="content">
+            <select id="shape" name="shape" required>
+                <option value="" disabled selected hidden>Select a shape</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+                <option value="triangle">Triangle</option>
+            </select>
+        </div>
+        <br>
+        <div class="row" id="length-row" style="display: none;">
+            <label for="length">Enter Length:</label>
+            <input type="number" id="length" name="length">
+        </div>
+        <br>
+        <div class="row" id="width-row" style="display: none;">
+            <label for="width">Enter Width:</label>
+            <input type="number" id="width" name="width">
+        </div>
+        <br>
+        <div class="row" id="radius-row" style="display: none;">
+            <label for="radius">Enter Radius:</label>
+            <input type="number" id="radius" name="radius">
+        </div>
+        <br>
+        <div class="row" id="base-row" style="display: none;">
+            <label for="base">Enter Base:</label>
+            <input type="number" id="base" name="base">
+        </div>
+        <br>
+        <div class="row" id="height-row" style="display: none;">
+            <label for="height">Enter Height:</label>
+            <input type="number" id="height" name="height">
+        </div>
+        <br>
+        <button id="myButton">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
