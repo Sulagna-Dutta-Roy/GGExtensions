@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Multiplication Table Calculator",
+    "version": "1.0",
+    "description": "Get the multiplication table of any number simply by typing the number itself and the range.",
+    "permissions": [],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+  
