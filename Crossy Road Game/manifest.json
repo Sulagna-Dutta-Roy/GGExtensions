@@ -1,0 +1,10 @@
+{
+    "name": "Crossy Road Game",
+    "short_name": "CrossyRoad",
+    "description": "A fun and engaging Crossy Road game built with Three.js",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+  }
+  
