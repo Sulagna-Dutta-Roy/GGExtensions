@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Reminder",
+    "version": "1.0",
+    "description": "Set reminders for your browser tabs.",
+    "author": "Sambit Mondal",
+    "permissions": [
+        "notifications",
+        "storage",
+        "alarms",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "game-39-48.png",
+            "128": "game-39-128.png"
+        }
+    },
+    "icons": {
+        "48": "game-39-48.png",
+        "128": "game-39-128.png"
+    }
+}
