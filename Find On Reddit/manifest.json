@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Find on Reddit",
+  "version": "1.0",
+  "description": "A browser extension to find Reddit submission threads related to the current webpage.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
