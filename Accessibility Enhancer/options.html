@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accessibility Enhancer Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Extension Options</h2>
+  <form id="optionsForm">
+    <label for="fontSize">Default Text Size:</label>
+    <select id="fontSize">
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select>
+    <label for="bgColor">Default Background Color:</label>
+    <input type="color" id="bgColor" name="bgColor" value="#ffffff">
+    <label for="contrast">Default Contrast:</label>
+    <select id="contrast">
+      <option value="normal">Normal</option>
+      <option value="high">High</option>
+    </select>
+    <button type="submit">Save</button>
+  </form>
+  <script src="options.js"></script>
+</body>
+</html>
