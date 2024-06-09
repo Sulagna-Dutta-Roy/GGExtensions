@@ -1,4 +1,4 @@
-# Catch the Falling Objects Game
+# Catch_The_Falling_Object_Game
 
 This is a simple browser-based game where you need to catch falling objects using a basket. 
 
@@ -17,11 +17,6 @@ This is a simple browser-based game where you need to catch falling objects usin
 - Monitor your remaining lives.
 - Restart the game when it's over.
 
-## Screenshots
-
-![Game Screenshot]GameZone\assets\images\Catch_the_falling_object-1.png
-
 ## Credits
 
 This game was created by Nikita Saini [github - @katarianikita2003] as a simple project.
-
