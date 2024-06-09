@@ -129,3 +129,16 @@ canvas {
   font-size: 1.1em;
   color: #333;
 }
+
+#alert {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  display: none;
+}
