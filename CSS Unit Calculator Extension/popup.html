@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Unit Converter</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1>CSS Unit Converter</h1>
+        <div class="left">
+            <label for="value">Enter Value:</label>
+            <input type="number" id="value" placeholder="Enter the value to convert">
+
+            <label for="sourceUnit">Source Unit:</label>
+            <select id="sourceUnit">
+                <option value="px">px</option>
+                <option value="rem">rem</option>
+                <option value="em">em</option>
+                <option value="vw">vw</option>
+                <option value="vh">vh</option>
+            </select>
+
+            <label for="targetUnit">Target Unit:</label>
+            <select id="targetUnit">
+                <option value="px">px</option>
+                <option value="rem">rem</option>
+                <option value="em">em</option>
+                <option value="vw">vw</option>
+                <option value="vh">vh</option>
+            </select>
+
+            <h3>Result:</h3>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
