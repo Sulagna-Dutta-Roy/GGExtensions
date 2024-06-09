@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Shopping Assistant",
+    "version": "1.0",
+    "description": "Enhance your shopping experience with price comparisons, tracking, and more.",
+    "author": "Sambit Mondal",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "contextMenus",
+        "tabs",
+        "alarms",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "./scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./scripts/content.js"
+            ],
+            "css": [
+                "./src/style.css"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "48": "game-39-48.png",
+            "128": "game-39-128.png"
+        }
+    },
+    "icons": {
+        "48": "game-39-48.png",
+        "128": "game-39-128.png"
+    }
+}
