@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number base Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Number base Calculator</h2>
+        <div id="binomial-form">
+            <div class="controls">
+                <select name="from" id="from">
+                    <option value="10" selected>Decimal (10)</option>
+                    <option value="2">Binary (2)</option>
+                    <option value="8">Octal (8)</option>
+                    <option value="16">HexaDecimal (16)</option>
+                </select>
+                <div>&rightarrow;</div>
+                <select name="to" id="to">
+                    <option value="2" selected>Binary (2)</option>
+                    <option value="10">Decimal (10)</option>
+                    <option value="8">Octal (8)</option>
+                    <option value="16">HexaDecimal(16)</option>
+                </select>
+            </div>
+            <input type="text" id="value" placeholder="Enter value">
+            <div class="controls">
+                <button id="clear">Clear</button>
+                <button id="convert">Convert</button>
+            </div>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
