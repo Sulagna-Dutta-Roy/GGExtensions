@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tab Reminder</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <h1>Tab Reminder</h1>
+    <div>
+        <label for="time">Remind me in:</label>
+        <input type="number" id="time" min="1">
+        <select id="timeUnit">
+            <option value="minutes">Minutes</option>
+            <option value="hours">Hours</option>
+        </select>
+    </div>
+    <div>
+        <label for="message">Reminder message:</label>
+        <input type="text" id="message">
+    </div>
+    <button id="setReminder">Set Reminder</button>
+    <h2>Active Reminders</h2>
+    <ul id="reminderList"></ul>
+    <script src="scripts/popup.js"></script>
+</body>
+
+</html>
