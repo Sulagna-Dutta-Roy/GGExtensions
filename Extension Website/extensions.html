@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>GitHub Extension Repository</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .header {
+        background: linear-gradient(90deg, #343a40, #495057);
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .header .logo {
+        display: flex;
+        align-items: center;
+    }
+    .header .logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .header .logo span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffdd57;
+    }
+    .header nav {
+        display: flex;
+        gap: 20px;
+    }
+    .header nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px 15px;
+        transition: background 0.3s, color 0.3s;
+        border-radius: 5px;
+    }
+    .header nav a:hover {
+        background-color: #ffdd57;
+        color: #343a40;
+    }
+    .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        background: #fff;
+        border-radius: 25px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+    .search-bar:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .search-bar input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        margin-left: 10px;
+        outline: none;
+        transition: width 0.4s ease;
+    }
+    .search-bar input:focus {
+        width: 100%;
+    }
+    .search-bar .fas.fa-search {
+        color: #777;
+        margin-right: 10px;
+    }
+    .extension-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+        list-style-type: none;
+    }
+    .extension-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: calc(33.333% - 20px);
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .extension-preview {
+        width: 90%;
+        height: 200px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: auto;
+        margin-bottom: 10px;
+        background-color: #f4f4f4;
+        padding: 10px;
+    }
+    .extension-item h2 {
+        margin: 10px 0;
+        color: #343a40;
+    }
+    .extension-item button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background 0.3s;
+    }
+    .extension-item button:hover {
+        background-color: #0056b3;
+    }
+    .footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+    .footer a {
+        color: #ffc107;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+    .sponsor-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #ff5c5c;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+        position: absolute;
+        right: 5px;
+        top: 45px;
+    }
+    .sponsor-button:hover {
+        transform: scale(1.2);
+        background-color: white;
+        color: #ff5c5c;
+        box-shadow: 5px 5px 20px #00ccff;
+    }
+    .heart {
+        font-size: 24px;
+        margin-right: 0;
+    }
+</style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+            <span>Extension Marketplace Repository</span>
+        </div>
+        <nav>
+            <a href="https://github.com/Sulagna-Dutta-Roy/GGExtensions/issues" target="_blank">Create Issue</a>
+            <a href="https://github.com/Sulagna-Dutta-Roy/GGExtensions/pulls" target="_blank">See Pull Requests</a>
+            <a href="https://github.com/Sulagna-Dutta-Roy/GGExtensions" target="_blank">Repository</a>
+        </nav>
+    </header>
+    
+<div class="container">
+    <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" id="search-input" placeholder="Search extensions..." onkeyup="searchExtensions()">
+    </div>
+    <button class="sponsor-button" onclick="window.location.href='https://github.com/sponsors/Sulagna-Dutta-Roy'">
+        <span class="heart">&#10084;</span>
+    </button>
+    <ul class="extension-list" id="extension-list">
+        <!-- Extension items will be dynamically added here -->
+    </ul>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 <a href="https://github.com/Sulagna-Dutta-Roy/GGExtensions" target="_blank">Extension Marketplace Repository</a></p>
+</footer>
+
+<script>
+    const username = 'Sulagna-Dutta-Roy';
+    const repository = 'GGExtensions';
+    const token = 'ghp_xDTr Tokengoeshere'; // Replace with your GitHub token
+
+    function createExtensionCard(extension) {
+        const listItem = document.createElement('li');
+        listItem.className = 'extension-item';
+
+        const previewDiv = document.createElement('div');
+        previewDiv.className = 'extension-preview';
+
+        // Replace iframe with the specified image for all previews
+        const previewImage = document.createElement('img');
+        previewImage.src = './Designer (1).png'; // Path to the image
+        previewImage.alt = 'Preview Image';
+        previewImage.style.width = '100%';
+        previewImage.style.height = '95%';
+        previewDiv.appendChild(previewImage);
+
+        const title = document.createElement('h2');
+        title.textContent = extension.name;
+
+        const visitButton = document.createElement('button');
+        visitButton.textContent = 'Visit';
+        visitButton.addEventListener('click', () => {
+            window.open(extension.html_url, '_blank');
+        });
+
+        listItem.appendChild(previewDiv);
+        listItem.appendChild(title);
+        listItem.appendChild(visitButton);
+
+        return listItem;
+    }
+
+    fetch(`https://api.github.com/repos/${username}/${repository}/contents`, {
+        headers: {
+            'Authorization': 'token ' + token
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            const extensions = data.filter(item => item.type === 'dir' && item.name !== '.github');
+
+            const extensionList = document.getElementById('extension-list');
+            extensions.forEach(extension => {
+                fetch(`https://api.github.com/repos/${username}/${repository}/contents/${extension.name}`, {
+                    headers: {
+                        'Authorization': 'token ' + token
+                    }
+                })
+                    .then(response => response.json())
+                    .then(files => {
+                        const htmlFile = files.find(file => file.name.endsWith('.html'));
+                        if (htmlFile) {
+                            fetch(`https://raw.githubusercontent.com/${username}/${repository}/main/${extension.name}/${htmlFile.name}`)
+                                .then(response => response.text())
+                                .then(htmlContent => {
+                                    const extensionCard = createExtensionCard(extension);
+                                    extensionList.appendChild(extensionCard);
+                                })
+                                .catch(error => console.error('Error fetching HTML content:', error));
+                        } else {
+                            console.error('HTML file not found for extension:', extension.name);
+                        }
+                    })
+                    .catch(error => console.error('Error fetching extension folder contents:', error));
+            });
+        })
+        .catch(error => console.error('Error fetching extension folders:', error));
+
+    function searchExtensions() {
+        const input = document.getElementById('search-input').value.toLowerCase();
+        const extensionItems = document.getElementsByClassName('extension-item');
+
+        let matchingCount = 0;
+        Array.from(extensionItems).forEach(item => {
+            const itemName = item.getElementsByTagName('h2')[0].textContent.toLowerCase();
+            if (itemName.includes(input)) {
+                item.style.display = '';
+                matchingCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        if (matchingCount === 1) {
+            Array.from(extensionItems).forEach(item => {
+                if (item.style.display !== 'none') {
+                    item.style.display = '';
+                }
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -6,6 +6,8 @@
 body{
     background-color: #5e548e;
     text-align: center;
+    width: 500px;
+    height: 500px;
 }  
 
 #hd{
@@ -53,6 +55,7 @@ body{
     border-radius: 1rem;
     border:none;
     color:#fff;
+    margin-top: 25px;
 }
 
 #new-btn{

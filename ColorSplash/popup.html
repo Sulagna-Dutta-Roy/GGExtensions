@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorSplash</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ColorSplash</h1>
+    <div class="color-picker">
+      <input type="color" id="colorInput" value="#ffffff">
+      <button id="applyColor" class="btn">Apply Color</button>
+    </div>
+    <button id="randomColor" class="btn">Random Color</button>
+    <button id="saveColor" class="btn">Save Color</button>
+    <div class="gradient-picker">
+      <input type="color" id="gradientStart" value="#ff0000">
+      <input type="color" id="gradientEnd" value="#0000ff">
+      <button id="applyGradient" class="btn">Apply Gradient</button>
+    </div>
+    <div id="favorites">
+      <h2>Favorites</h2>
+      <div id="favoriteColors"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "name": "Image Resizer",
+    "short_name": "Resizer",
+    "description": "A simple web app to resize images",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "icons": [],
+    "splash_pages": null
+  }
+  

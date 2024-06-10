@@ -1,0 +1,21 @@
+{
+    "name": "Word Guessing Game",
+    "short_name": "GuessGame",
+    "description": "A fun and engaging word guessing game with accessibility features",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "lang": "en-US",
+    "dir": "ltr",
+    "categories": ["games", "puzzle", "education"],
+    "shortcuts": [
+      {
+        "name": "Play Game",
+        "short_name": "Play",
+        "description": "Start playing the word guessing game",
+        "url": "/index.html"
+      }
+    ]
+}
