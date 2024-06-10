@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Text Formatter",
+    "version": "1.0",
+    "description": "Format your text quickly and easily!",
+    "permissions": ["activeTab"],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Quick Text Formatter"
+    }
+  }
