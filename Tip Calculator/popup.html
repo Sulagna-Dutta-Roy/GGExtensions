@@ -8,8 +8,12 @@
 <body>
   <div id="calculator">
     <h2>Tip Calculator</h2>
-    <input type="number" id="billAmount" placeholder="Bill Amount" step="0.01">
-    <input type="number" id="tipPercent" placeholder="Tip %" step="1">
+    <p>Total bill amount</p>
+    <input type="number" min="0" class="js-amount-btn amount-btn" placeholder="Bill Amount" step="0.01">
+    <p>Choose Tip</p>
+    <input type="number" min="0" class="js-tip-btn tip-btn" placeholder="Tip %" step="1">
+    <p>Number of people sharing</p>
+    <input type="number" min="0" class="js-people-btn people-btn" placeholder="0">
     <button id="calculateButton">Calculate</button>
     <div id="result"></div>
   </div>
