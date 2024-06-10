@@ -1,0 +1,19 @@
+{
+    "name": "Chrome Tetris Beta",
+    "description": "Chrome Tetris is a Chrome Extension that allows you to play Tetris in your web Browser in just one click no matter what webpage ",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage"],
+    "background":{
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "./Images/extensionIcon.png",
+        "32": "./Images/extensionIcon.png",
+        "48": "./Images/extensionIcon.png",
+        "128":"./Images/extensionIcon.png"
+      }
+    }
+
+  }

@@ -1,0 +1,18 @@
+/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select, button {
+  margin-bottom: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
