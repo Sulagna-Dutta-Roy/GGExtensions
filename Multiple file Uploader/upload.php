@@ -1,9 +1,12 @@
-<?php 
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+        $uploadDir = 'uploads/';
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
+        $fileName = basename($_FILES['file']['name']);
+        $uploadFile = $uploadDir . $fileName;
 
-// Specify the folder where files will be uploaded
-$folder = "uploads/";
-
-// Move the uploaded file to the specified folder
-// $_FILES['file']['tmp_name'] is the temporary file name
-// $_FILES['file']['name'] is the original file name
-move_uploaded_file($_FILES['file']['tmp_name'], $folder . time() . '_' . $_FILES['file']['name']);
+    }
+}
