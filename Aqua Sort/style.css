@@ -9,7 +9,7 @@ body {
     overflow: hidden;
     overflow-y: hidden;
     overflow-x: hidden;
-}
+    }
 
 
 #game {
@@ -18,7 +18,7 @@ body {
     left: 0;
     height: 100vh;
     width: 100vw;
-    /* background: url(bg.jpg); */
+    background: url(bg1.jpg);
     background-color: white;
 }
 
@@ -30,19 +30,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    /* width: 100vw; */
-    background: url(bg1.jpg);
-    overflow-y:scroll;
+    /*overflow-y:scroll;
     overflow-x: hidden;
     /*display: none;*/
+}
+#menu .levelbtn{
+    display: flex;
+    align-items: center;
+    margin: 20px;
 }
 
 #menu-heading {
     position: relative;
     margin-top: 0;
     left: 0;
-    height: 60px;
+    height: 8rem;
     width: 100vw;
     color:#fff;
     background-color: #110a28;
@@ -232,6 +234,8 @@ body {
 
 #rules-text {
     position: absolute;
+    letter-spacing: 1px;
+    line-height: 28px;
     top: 70px;
     left: 5%;
     width: 90%;
@@ -246,7 +250,7 @@ body {
     height: 40px;
     width: 100px;
     left: calc(100% - 100px);
-    background-color: rgb(100, 255, 100);
+    background-color:#886af5;
     font-size: 20px;
     line-height: 40px;
     text-align: center;
@@ -304,6 +308,19 @@ button {
   button:hover {
     box-shadow: inset 0px 0px 25px #1479EA;
   }
+  #won{
+    text-align: center;
+    top: 0;
+    padding-top: 200px;
+    height: 100vh;
+    position: fixed;
+    font-size: 50px;
+    font-family: 'Sigmar One', cursive;
+    background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
 
 
 
