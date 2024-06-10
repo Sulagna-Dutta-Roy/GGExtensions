@@ -9,51 +9,68 @@ function trackTime() {
         chrome.storage.local.get([activeTabUrl], result => {
             const total = result[activeTabUrl] ? result[activeTabUrl] + timeSpent : timeSpent;
             chrome.storage.local.set({
-                [activeTabUrl]: total
+                [activeTabUrl]: total }, () => {
+                console.log(`Updated time for ${activeTabUrl}: ${total} ms`);
             });
         });
+    }
+}
+
+function resetTracking() {
+    activeTabId = null;
+    activeTabUrl = null;
+    startTime = null;
+}
+
+function startTracking(tab) {
+    if (tab.url && tab.url.startsWith('http')) { // Ensure it's a valid URL
+        activeTabId = tab.id;
+        activeTabUrl = new URL(tab.url).hostname;
+        startTime = Date.now();
     }
 }
 
 chrome.tabs.onActivated.addListener(activeInfo => {
     trackTime();
     chrome.tabs.get(activeInfo.tabId, tab => {
-        activeTabId = tab.id;
-        activeTabUrl = new URL(tab.url).hostname;
-        startTime = Date.now();
+        startTracking(tab);
     });
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (tabId === activeTabId && changeInfo.url) {
         trackTime();
-        activeTabUrl = new URL(tab.url).hostname;
-        startTime = Date.now();
+        startTracking(tab);
     }
 });
 
 chrome.tabs.onRemoved.addListener(tabId => {
     if (tabId === activeTabId) {
         trackTime();
-        activeTabId = null;
-        activeTabUrl = null;
-        startTime = null;
+        resetTracking();
     }
 });
 
 chrome.windows.onFocusChanged.addListener(windowId => {
     if (windowId === chrome.windows.WINDOW_ID_NONE) {
         trackTime();
+        resetTracking();
     } else {
         chrome.windows.get(windowId, { populate: true }, window => {
             if (window.tabs.length > 0) {
                 const activeTab = window.tabs.find(tab => tab.active);
                 if (activeTab) {
-                    activeTabId = activeTab.id;
-                    activeTabUrl = new URL(activeTab.url).hostname;
-                    startTime = Date.now();
+                    startTracking(activeTab);
                 }
             }
         });
     }
 });
+
+// Periodic check to update time
+setInterval(() => {
+    trackTime();
+    if (activeTabId && activeTabUrl && startTime) {
+        startTime = Date.now(); // Reset start time
+    }
+}, 10000); // Every 10 seconds to reduce time update delay
