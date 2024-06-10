@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Water Intake Tracker",
+    "version": "1.0",
+    "description": "Track your daily water intake.",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    }
+  }
+  
