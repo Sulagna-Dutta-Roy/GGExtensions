@@ -1,0 +1,8 @@
+{
+    "manifest_version": 3,
+    "name": "✨ Emoji Lookup",
+    "version": "1.2",
+    "description": "Quickly find emoji meanings with a click!",
+    "permissions": ["activeTab", "storage"]
+  }
+  

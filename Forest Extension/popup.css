@@ -1,0 +1,17 @@
+body {  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#forest {
+  padding: 20px;
+}
+
+#trees {
+  margin-top: 20px;
+}
+
+.tree {
+  margin: 5px;
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}

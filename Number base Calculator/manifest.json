@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Number base Calculator",
+  "version": "1.0",
+  "description": "Number base Calculator is a web-based application that facilitates the conversion of numbers between different numerical bases, such as binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16).",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}
