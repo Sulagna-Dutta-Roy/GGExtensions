@@ -54,9 +54,18 @@ function startTimer() {
   clearInterval(timer);
   timeLeft = 60;
   timerElement.textContent = timeLeft;
+  const alertElement = document.getElementById("alert");
+  alertElement.style.display = "none"; // Hide the alert initially
+
   timer = setInterval(() => {
     timeLeft--;
     timerElement.textContent = timeLeft;
+
+    if (timeLeft <= 10) {
+      alertElement.style.display = "block"; // Show the alert
+      alertElement.textContent = `${timeLeft} seconds left`;
+    }
+
     if (timeLeft <= 0) {
       clearInterval(timer);
       alert(`${players[currentPlayerIndex]} ran out of time!`);
