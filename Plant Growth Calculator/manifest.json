@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Plant Growth Calculator",
+    "description": "This extension calculates the average growth rate for your plants.",
+    "version": "1.0",
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+  }
