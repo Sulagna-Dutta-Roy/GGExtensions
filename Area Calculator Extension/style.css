@@ -5,11 +5,12 @@ body {
     padding: 0;
     list-style: 1.6;
     height: 700px;
-    width: 400px;
+    text-align: center;
 }
 
 .main {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
@@ -24,6 +25,7 @@ h1 {
     background-color: rgb(234, 230, 231);
     padding: 30px;
     border: 1px solid #efeced;
+    width: 400px;
     font-weight: bold;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -31,6 +33,28 @@ h1 {
     margin: 30px;
     padding: 50px 50px 50px 50px;
     text-align: center;
+}
+
+#shape{
+    height: 40px;
+    width: 180px;
+}
+
+#myButton{
+    width: 400px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+input{
+    height: 40px;
+    font-size: 1.1rem;
+}
+label{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 4px;
 }
 
 #base {

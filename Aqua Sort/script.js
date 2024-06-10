@@ -264,7 +264,7 @@ function Won() {
     }
     won=true;
     //console.log("hello");
-    level.innerHTML = `<div id="won">CONGRATS <br>YOU WON</div><div id = "restart" class = "game-buttons" onclick = "Restart();">RESTART</div><div id = "home" class = "game-buttons" onclick = "ShowMenu();">HOME</div>`;
+    level.innerHTML = `<div id="won" >CONGRATS <br>YOU WON</div><div id = "restart" class = "game-buttons" onclick = "Restart();">RESTART</div><div id = "home" class = "game-buttons" onclick = "ShowMenu();">HOME</div>`;
 }
 
 function shuffle(x) {
