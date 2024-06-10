@@ -22,21 +22,34 @@ body {
 h1 {
     font-size: 2em;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 input {
     width: 60%;
+    height: 50px;
     border: 1px solid #000000;
     padding: 1em;
     border-radius: 0.7em;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 button {
     background-color: #0092fd;
+    height: 50px;
+    margin-left: 2px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
     color: #ffffff;
     border: none;
     width: 38%;
     border-radius: 0.7em;
-    padding: 1em;
-    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+#barcode{
+    margin-left: 35%;
 }
