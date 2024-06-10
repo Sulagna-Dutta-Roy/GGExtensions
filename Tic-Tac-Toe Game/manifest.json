@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Tac-Tic-Toe",
+    "version": "1.0",
+    "description": "ISBN Validator which checks whether a given ISBN (either ISBN-10 or ISBN-13) is valid. The application will allow users to input an ISBN and will display whether it is valid or not.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
