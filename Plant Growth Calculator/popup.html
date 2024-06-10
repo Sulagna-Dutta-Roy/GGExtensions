@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Growth Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Plant Growth Predictor</h1>
+    <form id="plant-form">
+        <label for="plant-type">Plant Species:</label>
+        <select id="plant-type">
+            <option value="succulents">Succulents</option>
+            <option value="ferns">Ferns</option>
+            <option value="flowering">Flowering Plants</option>
+            <option value="vegetables">Vegetables</option>
+        </select>
+
+        <label for="light-type">Light Conditions:</label>
+        <select id="light-type">
+            <option value="full_sunlight">Full Sunlight</option>
+            <option value="partial_shade">Partial Shade</option>
+            <option value="indirect_light">Indirect Light</option>
+        </select>
+
+        <label for="watering">Plant Watering (%):</label>
+        <input type="number" id="watering" min="0" max="100" required>
+
+        <label for="soil-type">Soil Conditions:</label>
+        <select id="soil-type">
+            <option value="sandy">Sandy</option>
+            <option value="loamy">Loamy</option>
+            <option value="clay">Clay</option>
+        </select>
+
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" min="-50" max="50" required>
+
+        <button type="submit">Calculate Prediction</button>
+    </form>
+    <p id="result"></p>
+    <script src="script.js"></script>
+</body>
+</html>
