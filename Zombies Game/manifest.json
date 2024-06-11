@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Zombie Game",
+    "version": "1.0",
+    "description": "A simple and fun zombie game.",
+    "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "48": "icon48.png"
+      }
+    },
+    "permissions": []
+  }
+  
