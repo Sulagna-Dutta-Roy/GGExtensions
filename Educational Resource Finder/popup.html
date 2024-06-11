@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Educational Resource Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 5px 0;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>Suggested Resources</h1>
+  <input type="text" id="search-query" placeholder="Enter a topic...">
+  <button id="search-button">Search</button>
+  <ul id="article-list"></ul>
+  <ul id="video-list"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>

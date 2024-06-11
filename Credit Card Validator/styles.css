@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(6, 79, 96);
+    color: rgb(6, 79, 96);
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+button {
+    background-color: rgb(6, 79, 96);
+    border: none;
+    border-radius: 25px;
+    color: white;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 17px;
+}
