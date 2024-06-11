@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Task Master",
+    "version": "1.0",
+    "description": "A feature-rich task manager for Chrome",
+    "icons": {
+        "48": "assets/icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/icon.png"
+    },
+    "permissions": ["storage"]
+}

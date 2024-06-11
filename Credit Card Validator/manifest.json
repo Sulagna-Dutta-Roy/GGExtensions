@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Credit card validator",
+    "version": "1.0",
+    "description": "Credit card validator which a. extension that checks whether a given credit card number is valid according to the Luhn algorithm.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

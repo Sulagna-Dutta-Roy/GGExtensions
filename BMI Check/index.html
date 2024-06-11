@@ -10,10 +10,10 @@
     <div class="container">
         <h2>BMI Calculator</h2>
         <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" required>
+        <input type="number" min="0" id="weight" required>
         
         <label for="height">Height (m):</label>
-        <input type="number" id="height" step="0.01" required>
+        <input type="number" min="0" id="height" step="0.01" required>
         
         <button onclick="calculateBMI()">Calculate BMI</button>
         
