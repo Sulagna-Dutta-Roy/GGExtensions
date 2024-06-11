@@ -26,7 +26,7 @@ document.getElementById('suggestBtn').addEventListener('click', async () => {
   });
   
   async function getYouTubeSuggestions(keyword) {
-    const apiKey = 'AIzaSyAfe05gfcrzwKPWVXn89cXREounHrn1wEc';  // Replace with your YouTube Data API key
+    const apiKey = 'API_KEY';  // Replace with your YouTube Data API key
     const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=how+to+make+a+DIY+${keyword}&key=${apiKey}`);
     const data = await response.json();
     return data.items;
