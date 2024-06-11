@@ -1,0 +1,30 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
