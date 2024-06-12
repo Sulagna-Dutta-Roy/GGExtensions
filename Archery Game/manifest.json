@@ -1,0 +1,13 @@
+{
+    "name": "Archery Game",
+    "short_name": "Archery",
+    "description": "An interactive archery game built with SVG and JavaScript.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#222222",
+    "theme_color": "#222222",
+    "orientation": "portrait",
+    "scope": "/",
+    "lang": "en-US"
+  }
+  

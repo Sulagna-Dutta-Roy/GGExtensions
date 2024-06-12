@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Mindful Instagram",
+  "version": "1.0",
+  "description": "Hides non-essential elements on Instagram to help you stay focused on what matters.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "tabs"],
+  "options_page": "options.html"
+}
