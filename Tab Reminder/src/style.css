@@ -2,23 +2,56 @@ body {
     font-family: Arial, sans-serif;
     padding: 10px;
     width: 300px;
+    background-color: gainsboro;
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 40px;
 }
 
 label {
+    font-family: "DM-mono", monospace;
     display: block;
     margin-top: 10px;
+    font-size: 15px;
 }
 
 input {
     width: 50px;
     margin-top: 5px;
+    padding: 7px 15px;
+    color: black;
+    font-size: 12px;
+    border: 1.5px solid black;
 }
 
 button {
     margin-top: 10px;
     padding: 5px 10px;
+}
+
+#message {
+    width: 200px;
+}
+
+#time {
+    width: 100px;
+}
+
+#setReminder {
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#timeUnit {
+    padding: 6px 20px;
+    margin-top: 5px;
+    border: 1.5px solid black;
 }
