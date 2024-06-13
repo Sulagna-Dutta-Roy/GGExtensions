@@ -30,13 +30,14 @@ h1 {
 }
 
 main {
-    margin-top: 70px;
+    margin-top: 60px;
     /* Add space to ensure main content is below the fixed header */
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    margin-left: 700px;
 }
 
 .container {
