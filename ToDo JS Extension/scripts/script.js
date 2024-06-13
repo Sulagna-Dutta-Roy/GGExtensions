@@ -2,10 +2,65 @@ const inputBox = document.querySelector(".inputField input[type='text']");
 const timeInput = document.querySelector(".inputField input[type='number']");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
-const deleteAllBtn = document.querySelector(".footer button");
-
+const deleteAllBtn = document.querySelector(".footer button"),
+      todos=localStorage.getItem('stored'),
+      add_todo=document.getElementById('add_todo');
 let editIndex = null;
 
+function handleRemove(index){
+const todoList_con = document.querySelector(".todoList"),
+       todos=JSON.parse(localStorage.getItem('stored'));
+let childer=todoList_con.children[index]
+todoList_con.removeChild(childer)
+let finder_val=todos[index]
+let todo=todos.filter(item =>item!==finder_val)
+localStorage.setItem('stored',JSON.stringify(todo))
+}
+function handle_todoList(datas){
+const todoList_con = document.querySelector(".todoList");
+  datas.map((item,index) =>{
+   let div=document.createElement('div')
+   let p=document.createElement('p')
+   let p2=document.createElement('p')
+   let img=document.createElement('img')
+   img.setAttribute('src','https://cdn-icons-png.flaticon.com/128/2732/2732657.png')
+   img.setAttribute('alt','close')
+   img.style.height="15px"
+   img.style.width="15px"
+   img.setAttribute('onClick', `handleRemove(${index})`);
+   p.textContent=`${item.todo}`
+   p.style.width="75%"
+   p2.textContent=`${item.time} M`
+   div.appendChild(p)
+   div.appendChild(p2)
+   div.appendChild(img)
+   div.style.display="flex"
+   div.style.width="100%"
+   div.style.justifyContent="space-between"
+   div.style.alignItems="center"
+   todoList_con.appendChild(div)
+  })
+}
+if(todos){
+  let datas=JSON.parse(todos)
+  handle_todoList(datas)
+}
+add_todo.addEventListener('click',()=>{
+  const inputBox = document.querySelector(".inputField input[type='text']").value,
+        timeInput = document.querySelector(".inputField input[type='number']").value;
+  let data=localStorage.getItem('stored')
+  if(data){
+  let datas=JSON.parse(data)
+  let userInputs={todo:inputBox,time:timeInput,Time:new Date().toISOString()}
+  datas.push(userInputs)
+  handle_todoList([{todo:inputBox,time:timeInput}])
+  localStorage.setItem('stored',JSON.stringify(datas))
+  }
+  else{
+    let datas=[{todo:inputBox,time:timeInput,Time:new Date().toISOString()}]
+    localStorage.setItem('stored',JSON.stringify(datas))
+  }
+})
 inputBox.onkeyup = () => {
   let userEnteredValue = inputBox.value; //getting user entered value
   if (userEnteredValue.trim() != 0) { 

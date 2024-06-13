@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-    <link rel="stylesheet" href="css/number-box.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Number-Box</title>
-</head>
+  </head>
 
-<body>
-<div class="container">
-    <div id="grid-resize">
+  <body>
+    <div class="container">
+      <div id="grid-resize">
         <div>Choose Grid Size</div>
         <div id="btns">
-            <button id="btn-4" title="Grid Size: 4">4</button>
-            <button id="btn-5" title="Grid Size: 5">5</button>
-            <button id="btn-6" title="Grid Size: 6">6</button>
-            <button id="btn-7" title="Grid Size: 7">7</button>
+          <button id="btn-4" title="Grid Size: 4">4</button>
+          <button id="btn-5" title="Grid Size: 5">5</button>
+          <button id="btn-6" title="Grid Size: 6">6</button>
+          <button id="btn-7" title="Grid Size: 7">7</button>
         </div>
-    </div>
-    <div id="container-box"></div>
-    <div class="undo-btn">
+      </div>
+      <div id="container-box"></div>
+      <div class="undo-btn">
         <button id="undo-btn" title="Undo">
-            <i class="fa fa-undo"></i>
+          <i class="fa fa-undo"></i>
         </button>
+      </div>
     </div>
-</div>
-<script src="js/jquery-3.2.1.js"></script>
-<script src="js/number-box.js"></script>
-</body>
-
+    <p class="instructions">Use arrow keys to play</p>
+    <script src="js/jquery.js"></script>
+    <script src="js/number-box.js"></script>
+  </body>
 </html>
