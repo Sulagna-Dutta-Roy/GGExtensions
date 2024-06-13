@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A2B33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1E3640;
+    border-radius: 0.6rem;
+    min-width: 25rem;
+    box-shadow: 0 0px 10px rgb(0,0,0); 
+  }
+  h1{color: #A9BEC8;}
+  .options{color: rgb(255 255 255 / 74%); font-size: 1.3rem;text-align: center;}
+  #winnerText{color: #0cff0c; font-size: 1.3rem;}
+  .coin{
+    transform-style: preserve-3d;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(180deg);
+  }
+  select{display: none;}
+  .animation{
+    animation: spin 0.3s linear infinite;
+  }
+  .buttons{display: flex;justify-content: center; align-items: center;gap: 2rem;}
+  .head,.tail{
+    height: 50px;
+    padding-bottom: 5px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    box-shadow: inset 0 -3px 2px rgba(0, 0, 0, .3);
+   }
+   .head{background-color: green;border: 2px solid transparent;}
+   .head:hover{border: 2px solid green;background-color: transparent;box-shadow: unset;}
+   .tail{background-color: red;border: 2px solid transparent;}
+   .tail:hover{border: 2px solid red;background-color: transparent;box-shadow: unset;}
+  @keyframes spin {
+    0%{
+      transform: rotateX(360deg);
+    }
+    100%{
+      transform: rotateX(0deg);
+    }
+  }
+  .Head,.Tail{
+    inset: 0;
+    position: absolute;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Head p,.Tail p{
+    font-size: 4rem;
+  }
+  .Head span,.Tail span{
+    font-size: 1rem;
+  }
+  .Head{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset 0 0 10px #0004;
+    background: #F7AB4B;
+    outline: 5px solid #F7AB4B;
+    transform: rotateY(360deg) rotateX(183deg);
+  }
+  .Head img,.Tail img{width: 100%;height: 100%;object-fit: contain;position: absolute;}
+  .Tail img{height: 120%;width: 120%;}
+  .Tail{
+    background: #FCF8B8;
+    outline: 5px solid #FCF8B8;
+    transform: translateZ(10px);
+  }
+  .options {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  @media (max-width:425px) {
+    .container{
+      max-width: 90%;
+    }
+  }
+  
