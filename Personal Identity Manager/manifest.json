@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Digital Identity Manager",
+    "version": "1.0",
+    "description": "Manage and securely store your digital identities.",
+    "author": "Sambit Mondal",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "identity"
+    ],
+    "background": {
+        "service_worker": "./scripts/background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon.png",
+            "48": "images/icon.png",
+            "128": "images/icon.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./scripts/content.js"
+            ]
+        }
+    ]
+}
