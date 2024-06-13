@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Riddle Room",
+    "version": "1.0",
+    "description": "A riddle room game as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

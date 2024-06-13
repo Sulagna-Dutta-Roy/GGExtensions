@@ -4,8 +4,8 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 307px;
-    width: 250px;
+    height: 500px;
+    width: 1200px;
 }
 
 .container{
@@ -14,8 +14,8 @@ body{
     flex-direction: column;
     align-items: center;
     border: 1px solid black;
-    height: 279px;
-    width: 238px;
+    height: 350px;
+    width: 350px;
 }
 form{
     display:flex;
@@ -26,6 +26,10 @@ form{
 .result{
     margin-bottom: 10px;
     display: none;
+    font-size: 17px;
+    color: black;
+    font-family: "DM-mono", monospace;
+    font-weight: bold;
 }
 .dropdown{
     display: flex;
@@ -33,13 +37,40 @@ form{
     gap:15px;
 }
 
-
-   
-
 button{
     background-color: black;
-    color: aliceblue;
+    color: white;
     border: none;
-    height:23px;
     border-radius: 10px;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-family: Arial;
+    font-weight: bold;
+    width: 160px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+p {
+    font-family: "DM-mono", monospace;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.input {
+    padding: 7px 20px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
+
+select {
+    padding: 7px 10px;
+    margin-top: 2px;
+    border: 1.5px solid black;
+    border-radius: 5px;
 }

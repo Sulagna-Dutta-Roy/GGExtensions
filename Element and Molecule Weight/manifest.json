@@ -1,0 +1,55 @@
+{
+    "doctype": "html",
+    "html": {
+        "lang": "en",
+        "head": {
+            "meta": [
+                { "charset": "UTF-8" },
+                { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
+            ],
+            "link": [
+                { "rel": "stylesheet", "href": "popup.css" }
+            ],
+            "title": "Molecular Weight Calculator"
+        },
+        "body": {
+            "div": {
+                "class": "glassmorphic-card",
+                "div": [
+                    {
+                        "class": "header",
+                        "h1": "Molecular Weight Calculator"
+                    },
+                    {
+                        "class": "calculator-container",
+                        "label": {
+                            "for": "chemicalFormula",
+                            "text": "Enter Chemical Formula:"
+                        },
+                        "input": {
+                            "type": "text",
+                            "id": "chemicalFormula",
+                            "placeholder": "e.g., H2O, C6H12O6",
+                            "class": "monospace-font"
+                        },
+                        "button": {
+                            "onclick": "calculateMolecularWeight()",
+                            "text": "Calculate"
+                        },
+                        "p": {
+                            "id": "result",
+                            "span": {
+                                "id": "output",
+                                "class": "monospace-font",
+                                "text": "~Enter a chemical formula to see~"
+                            }
+                        }
+                    }
+                ]
+            },
+            "script": {
+                "src": "popup.js"
+            }
+        }
+    }
+}
