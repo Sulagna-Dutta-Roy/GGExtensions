@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Bubble Popping Game",
+    "description": "A fun bubble popping game to test reflexes and number recognition skills.",
+    "version": "1.0",
+    "icons": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icons/icon48.png"
+      }
+    },
+    "permissions": [],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["style.css"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["Bubbles.jpg", "script.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
