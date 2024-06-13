@@ -1,12 +1,17 @@
 {
     "manifest_version": 3,
-    "name": "QR Reader",
+    "name": "Typing Speed Check",
     "version": "1.0",
-    "description": "Simple QR Reader",
+    "description": "This extension will help you to improve your typing speed.",
     "permissions": [
       "storage"
     ],
     "action": {
+      "default_icon": {
+        "16": "./icons/icon16.png",
+        "48": "./icons/icon48.png",
+        "128": "./icons/icon128.png"
+      },
       "default_popup": "index.html"
     },
     "web_accessible_resources": [

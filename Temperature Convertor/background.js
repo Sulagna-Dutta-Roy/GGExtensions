@@ -17,38 +17,44 @@ toSelect.addEventListener("change", () => {
 
 btn.addEventListener("click", (event) => {
   event.preventDefault();
-   ip = parseFloat(document.querySelector(".input").value.trim());
-   
-  if (from === to) {
-     results(ip);
-     return;
-  } else if (from === "C") {
-    if (to === "F") {
-      temp = (ip * 9) / 5 + 32;
-      results(temp);
-    } else if (to === "K") {
-      temp = ip + 273.15;
-      results(temp);
-    }
-  } else if (from === "F") {
-    if (to === "C") {
-      temp = ((ip - 32) * 5) / 9;
-      results(temp);
-    } else if (to === "K") {
-      temp = ((ip - 32) * 5) / 9 + 273.15;
-      results(temp);
-    }
-  } else if (from === "K") {
-    if (to === "F") {
-      temp = ((ip - 273.15) * 9) / 5 + 32;
-      results(temp);
-    
-    } else if (to === "C") {
-      temp = ip - 273.15;
-      results(temp);
+  ip = parseFloat(document.querySelector(".input").value.trim());
+
+  if(isNaN(ip)) {
+    result.style.display="block";
+    result.innerHTML = 'Please enter a value';
+    return;
+  }
+  else {
+    if (from === to) {
+      results(ip);
+      return;
+    } else if (from === "C") {
+      if (to === "F") {
+        temp = (ip * 9) / 5 + 32;
+        results(temp);
+      } else if (to === "K") {
+        temp = ip + 273.15;
+        results(temp);
+      }
+    } else if (from === "F") {
+      if (to === "C") {
+        temp = ((ip - 32) * 5) / 9;
+        results(temp);
+      } else if (to === "K") {
+        temp = ((ip - 32) * 5) / 9 + 273.15;
+        results(temp);
+      }
+    } else if (from === "K") {
+      if (to === "F") {
+        temp = ((ip - 273.15) * 9) / 5 + 32;
+        results(temp);
+      
+      } else if (to === "C") {
+        temp = ip - 273.15;
+        results(temp);
+      }
     }
   }
-  
 
 });
 

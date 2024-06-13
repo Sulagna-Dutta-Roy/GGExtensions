@@ -1,0 +1,53 @@
+.popup-container {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.popup-container h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.popup-container h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.popup-container button {
+    margin: 5px 0;
+}
+
+.popup-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popup-container li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-container li button {
+    margin-left: 10px;
+}
+
+#quizContainer,
+#progressContainer {
+    margin-top: 10px;
+}
+
+#quizContainer div {
+    margin-bottom: 10px;
+}
+
+#quizContainer h3 {
+    margin-bottom: 10px;
+}

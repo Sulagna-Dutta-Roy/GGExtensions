@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+}
+#instruction{
+   
+    color: white;
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    font-size: 50px;
+
+}
+span{
+    color:royalblue;
+}
+#canvas1{
+    border: 5px solid black;
+    position: relative;
+    top: 40vh;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    max-height: 100%;
+    font-family: 'Creepster', cursive;
+
+}
+#player,#layer1,#layer2,#layer3,#layer4,#layer5,
+#enemy_fly,#enemy_plant,#enemy_spider,#fire,
+#collisionAnimation,#lives{
+    display: none;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Digital Identity Manager</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Digital Identities</h1>
+        <div id="identities"></div>
+        <button id="addIdentity">Add Identity</button>
+    </div>
+
+    <div id="addIdentityForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Identity</h2>
+            <label>Name:</label>
+            <input type="text" id="name">
+            <label>Email:</label>
+            <input type="text" id="email">
+            <label>Password:</label>
+            <input type="password" id="password">
+            <button id="saveIdentity">Save</button>
+        </div>
+    </div>
+
+    <script src="scripts/popup.js"></script>
+</body>
+
+</html>

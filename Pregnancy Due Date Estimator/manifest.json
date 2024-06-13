@@ -1,0 +1,47 @@
+{
+    "doctype": "html",
+    "lang": "en",
+    "head": {
+      "meta": [
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      ],
+      "link": [
+        {
+          "rel": "stylesheet",
+          "href": "popup.css"
+        }
+      ],
+      "title": "Pregnancy Due Date Calculator"
+    },
+    "body": {
+      "div": {
+        "class": "calculator-container",
+        "h1": "Pregnancy Due Date Calculator",
+        "div": {
+          "label": {
+            "for": "lastMenstrualDate",
+            "text": "Last Menstrual Period:"
+          },
+          "input": {
+            "type": "date",
+            "id": "lastMenstrualDate"
+          }
+        },
+        "button": {
+          "onclick": "calculateDueDate()",
+          "text": "Calculate Due Date"
+        },
+        "div#result": ""
+      },
+      "script": {
+        "src": "popup.js"
+      }
+    }
+  }
+  
