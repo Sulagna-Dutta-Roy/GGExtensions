@@ -1,0 +1,113 @@
+{
+    "doctype": "html",
+    "lang": "en",
+    "head": {
+      "meta": [
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      ],
+      "title": "Recipe Cost Calculator",
+      "link": [
+        {
+          "href": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
+          "rel": "stylesheet"
+        },
+        {
+          "href": "popup.css",
+          "rel": "stylesheet"
+        }
+      ]
+    },
+    "body": {
+      "div": {
+        "class": "container",
+        "h1": "Recipe Cost Calculator",
+        "form": {
+          "id": "ingredient-form",
+          "div": [
+            {
+              "class": "form-group",
+              "label": {
+                "for": "ingredient-name",
+                "text": "Ingredient:"
+              },
+              "input": {
+                "type": "text",
+                "id": "ingredient-name",
+                "placeholder": "Enter ingredient name"
+              }
+            },
+            {
+              "class": "form-group",
+              "label": {
+                "for": "ingredient-quantity",
+                "text": "Quantity:"
+              },
+              "input": {
+                "type": "number",
+                "id": "ingredient-quantity",
+                "placeholder": "Enter quantity"
+              }
+            },
+            {
+              "class": "form-group",
+              "label": {
+                "for": "ingredient-unit",
+                "text": "Unit:"
+              },
+              "select": {
+                "id": "ingredient-unit",
+                "option": [
+                  {
+                    "value": "units",
+                    "text": "Units"
+                  },
+                  {
+                    "value": "kgs",
+                    "text": "Kilograms"
+                  },
+                  {
+                    "value": "pounds",
+                    "text": "Pounds"
+                  }
+                ]
+              }
+            },
+            {
+              "class": "form-group",
+              "label": {
+                "for": "ingredient-price",
+                "text": "Price per unit ($):"
+              },
+              "input": {
+                "type": "number",
+                "id": "ingredient-price",
+                "step": "0.01",
+                "placeholder": "Enter price per unit"
+              }
+            }
+          ],
+          "button": {
+            "type": "button",
+            "onclick": "addIngredient()",
+            "text": "Add Ingredient"
+          }
+        },
+        "h2": "Ingredients List",
+        "ul": {
+          "id": "ingredient-list"
+        },
+        "h2#total-cost": "Total Cost",
+        "p#total-cost": "$0.00"
+      },
+      "script": {
+        "src": "popup.js"
+      }
+    }
+  }
+  

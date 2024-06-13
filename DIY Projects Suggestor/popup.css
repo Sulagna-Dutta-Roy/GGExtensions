@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 250px;
+    padding: 20px;
+    background-color: beige;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  #keywordInput {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    height: 30px;
+    width: 40%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #suggestionsOutput {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+.youtube-suggestion{
+    padding-bottom: 8px;
+    font-size: 13px;
+}

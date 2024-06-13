@@ -1,0 +1,116 @@
+{
+    "doctype": "html",
+    "lang": "en",
+    "head": {
+      "meta": [
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0"
+        }
+      ],
+      "link": [
+        {
+          "rel": "stylesheet",
+          "href": "popup.css"
+        }
+      ],
+      "title": "Shoe Size Calculator"
+    },
+    "body": {
+      "div": {
+        "id": "converter-container",
+        "h2": "Shoe Size Calculator",
+        "form": {
+          "id": "shoeSizeConverter",
+          "label": [
+            {
+              "for": "originalSize",
+              "text": "Original Size:"
+            },
+            {
+              "for": "originalUnit",
+              "text": "Original Unit:"
+            },
+            {
+              "for": "targetUnit",
+              "text": "Target Unit:"
+            }
+          ],
+          "input": [
+            {
+              "type": "text",
+              "id": "originalSize",
+              "name": "originalSize",
+              "placeholder": "Enter shoe size"
+            },
+            {
+              "type": "submit",
+              "value": "Convert"
+            }
+          ],
+          "select": [
+            {
+              "id": "originalUnit",
+              "name": "originalUnit",
+              "onchange": "enableOptions(this)",
+              "option": [
+                {
+                  "value": "",
+                  "disabled": true,
+                  "selected": true,
+                  "text": "Select an option"
+                },
+                {
+                  "value": "US",
+                  "text": "US"
+                },
+                {
+                  "value": "UK",
+                  "text": "UK"
+                },
+                {
+                  "value": "EU",
+                  "text": "EU"
+                }
+              ]
+            },
+            {
+              "id": "targetUnit",
+              "name": "targetUnit",
+              "onchange": "enableOptions(this)",
+              "option": [
+                {
+                  "value": "",
+                  "disabled": true,
+                  "selected": true,
+                  "text": "Select an option"
+                },
+                {
+                  "value": "US",
+                  "text": "US"
+                },
+                {
+                  "value": "UK",
+                  "text": "UK"
+                },
+                {
+                  "value": "EU",
+                  "text": "EU"
+                }
+              ]
+            }
+          ]
+        },
+        "div": {
+          "id": "result"
+        }
+      },
+      "script": {
+        "src": "popup.js"
+      }
+    }
+  }
+  
