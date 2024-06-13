@@ -13,3 +13,11 @@ function displayAsciiValue() {
         asciiValueDiv.textContent = "Please enter exactly one character.";
     }
 }
+
+document.querySelector('.js-ascii-input')
+    .addEventListener('keydown', (event) => {
+        if (event.key === 'Enter'){
+            event.preventDefault();
+            displayAsciiValue();
+        }
+    });

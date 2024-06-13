@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Interactive Learning Aid",
+    "description": "A comprehensive interactive learning aid tool.",
+    "version": "1.0",
+    "author": "Sambit Mondal",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/icon.png",
+            "48": "assets/icon.png",
+            "128": "assets/icon.png"
+        }
+    },
+    "background": {
+        "service_worker": "./scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./scripts/content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
+    }
+}

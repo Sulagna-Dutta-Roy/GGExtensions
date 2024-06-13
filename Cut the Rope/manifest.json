@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Cut the Rope",
+    "version": "1.0",
+    "description": "A Cut the Rope as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
