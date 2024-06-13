@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+  }
+  
+
