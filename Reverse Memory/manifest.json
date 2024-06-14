@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Reverse Memory game",
+    "version": "1.0",
+    "description": "A reverse memory game as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

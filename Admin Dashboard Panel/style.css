@@ -44,10 +44,10 @@ body.dark{
 }
 /* === Custom Scroll Bar CSS === */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 9px;
 }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #fd0909;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--primary-color);

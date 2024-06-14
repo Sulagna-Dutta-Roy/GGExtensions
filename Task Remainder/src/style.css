@@ -83,3 +83,19 @@ button:hover {
 .task-time {
     color: #777;
 }
+
+
+@media only screen and (max-width: 600px) {
+   .container{ padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  width:500px;
+    margin-top: 70%;
+    height: 500px;
+    margin-left:10px;
+   }
+
+}
