@@ -1,0 +1,98 @@
+html{
+    background-color: transparent;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 0px;
+    background-color: transparent;
+    overflow: hidden;
+    margin: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .container {
+    min-width: 250px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #9c0303;
+  }
+  
+  label {
+    margin-top: 10px;
+    display: block;
+    color: #555;
+  }
+  
+  input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f66858;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ab3321;
+  }
+
+  .close-button{
+    background-color: transparent;
+    color:#333;
+    float:right;
+    width: auto;
+    margin: auto;
+    height: auto;
+    padding: 0px;
+
+  }
+
+  .close-button :hover{
+    background-color: transparent !important;
+    color:red !important;
+  }
+  
+  p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  .result{
+    font-size: 14px;
+    color: grey;
+
+  }
+
+  .on-time {
+    color: green;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .late {
+    color: rgb(180, 24, 50);
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
