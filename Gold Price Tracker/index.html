@@ -6,18 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gold and Silver Prices</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .price {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        #goldPrice {
+            color: #b58900;
+        }
+        
+        #silverPrice {
+            color: #6c757d;
+        }
+    </style>
 </head>
 
 <body class="bg-blue-100">
     <div class="container">
-        <h1 class="text-3xl font-bold text-blue-900 mb-4">Gold and Silver Prices</h1>
-        <div class="price gold bg-yellow-100 border-yellow-300" id="goldPrice"></div>
-        <div class="price silver bg-gray-100 border-gray-300" id="silverPrice"></div>
-        <div id="goldDetails"></div>
+        <h1 class="text-3xl font-bold text-blue-900 mb-4 text-center">Gold and Silver Prices</h1>
+        <div class="price gold bg-yellow-100 border-yellow-300" id="goldPrice">Gold Price: $1800/oz</div>
+        <div class="price silver bg-gray-100 border-gray-300" id="silverPrice">Silver Price: $25/oz</div>
+        <div id="goldDetails" class="mt-4"></div>
     </div>
-
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
