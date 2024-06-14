@@ -1,6 +1,6 @@
 # 16 Puzzle Game
 
-A simple implementation of the 16-puzzle game (also known as the 15-puzzle) using HTML, CSS, and JavaScript. This game includes a timer and a move counter.
+A simple implementation of the 16 Puzzle game (also known as the 15-Puzzle) using HTML, CSS, and JavaScript. This game includes a timer and a move counter.
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@ A simple implementation of the 16-puzzle game (also known as the 15-puzzle) usin
 - [Credits](#credits)
 ## Features
 
-- Shuffle and display the 16-puzzle grid.
+- Shuffle and display the 16-Puzzle grid.
 - Track the number of moves made.
 - Timer to track the elapsed time.
 - Buttons to start and reset the game.
@@ -21,7 +21,7 @@ A simple implementation of the 16-puzzle game (also known as the 15-puzzle) usin
 1. Clone the repository or download the project files.
 
    ```sh
-   git clone https://github.com/yourusername/16-puzzle-game.git
+   git clone https://github.com/yourusername/16-Puzzle-game.git
 
 2. Navigate to the project directory.
 cd 16-puzzle-game
@@ -36,7 +36,7 @@ cd 16-puzzle-game
 5. Use the "Reset Game" button to shuffle the tiles and start over.
 
 ## Project Structure
-16-puzzle-game/
+16-Puzzle-game/
 ├── index.html
 ├── styles.css
 └── script.js
