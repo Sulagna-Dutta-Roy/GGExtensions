@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum Generator</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="main">
+
+        <div class="container">
+            <h1>Lorem Ipsum Generator</h1>
+            <div class="form">
+                <div class="form-group">
+                    <label for="numParagraphs">Number of Paragraphs:</label>
+                    <input type="text" id="numParagraphs" min="1" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="numSentences">Number of Sentences per Paragraph:</label>
+                    <input type="text" id="numSentences" min="1" value="5">
+                </div>
+            </div>
+            <button id="generateBtn">Generate Lorem Ipsum</button>
+            <div id="result" style="display: none;">
+                <div id="output"></div>
+                <button onclick="copyLorem()" style="float: right;">Copy Lorem</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
