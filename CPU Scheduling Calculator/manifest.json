@@ -1,0 +1,29 @@
+{
+    "name": "CPU Scheduling Calculator",
+    "description": "A web application for simulating CPU scheduling algorithms.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+      "activeTab"
+    ],
+    "action": {
+      "default_popup": "index.html"
+
+    },
+    "icons": {
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "index.html",
+          "css/*",
+          "js/*"
+        ],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
