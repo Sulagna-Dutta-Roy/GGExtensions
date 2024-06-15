@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Multi Step Form Extension",
+    "version": "1.0",
+    "description": "An extension for a multi-step form.",
+    "permissions": [
+      "activeTab"
+    ],
+    "action": {
+      "default_popup": "html.html"
+    },
+    "background": {
+      "service_worker": "jvs.js"
+    },
+    "icons": {
+      "128": "image.png"
+    }
+  }
+  
