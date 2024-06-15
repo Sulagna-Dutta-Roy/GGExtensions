@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Voice Commands for Browser Navigation",
+    "version": "1.0",
+    "description": "Navigate the browser using voice commands.",
+    "permissions": ["activeTab", "tabs", "microphone"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.jpg"
+      }
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.jpg"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
