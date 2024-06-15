@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 400px; 
+  height: 250px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; 
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 12px 24px; 
+  font-size: 30px; 
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #e69100;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffbb33; 
+}
+
+.alert {
+  background-color: #ffdb9b;
+  padding: 30px; 
+  width: 100%;
+  max-width: 600px; 
+  position: relative;
+  margin-top: 20px; 
+  border-radius: 8px;
+  border-left: 8px solid #ffa502;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.alert.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.alert .fas.fa-exclamation-circle {
+  position: absolute;
+  left: 10px; 
+  top: 40%; 
+  transform: translateY(-50%);
+  color: #ce8500;
+  font-size: 40px; 
+  line-height: 1;
+}
+
+.alert .msg {
+  padding: 0 20px;
+  font-size: 24px; 
+  color: #ce8500;
+}
+
+.alert .close-btn {
+  position: absolute;
+  top: 50%; 
+  right: 20px;
+  transform: translateY(-50%); 
+  background-color: #ffd080;
+  padding: 12px; 
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.alert .close-btn:hover {
+  background-color: #ffc766; 
+}
+
+.alert .close-btn .fas {
+  color: #ce8500;
+  font-size: 28px;
+  line-height: 1;
+}
