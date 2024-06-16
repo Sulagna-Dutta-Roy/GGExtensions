@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2e8b57;
+    color: white;
+}
+
+.cards {
+    margin: 20px;
+}
+
+img {
+    width: 80px; /* Adjust the width to make the cards slightly bigger */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hit {
+    background-color: #4caf50;
+    color: white;
+}
+
+#stay {
+    background-color: #f44336;
+    color: white;
+}
+
+#play-again {
+    background-color: #ffa500;
+    color: white;
+}
+
+#results {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
