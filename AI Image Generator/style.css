@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body {
+  min-width: 600px;
+}
 
 .image-generator {
   height: 40vh;
@@ -95,7 +98,7 @@
   height: 100%;
   padding: 0 25px;
   border-radius: 30px;
-  background: #4949E7;
+  background: #4949e7;
 }
 
 .generate-form .generate-btn[disabled] {
