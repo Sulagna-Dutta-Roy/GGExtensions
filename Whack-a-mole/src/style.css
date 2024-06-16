@@ -101,10 +101,8 @@ button.stop {
     position: absolute;
     height: 125px;
     z-index: 2;
-    transform: translate(-10px, -40px);
     pointer-events: none;
 }
-
 @keyframes hit {
     from {
         transform: rotate(0deg);
