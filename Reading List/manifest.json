@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Reading List",
+    "version": "1.0",
+    "description": "Save and manage a list of pages to read later.",
+    "permissions": ["activeTab", "storage"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
