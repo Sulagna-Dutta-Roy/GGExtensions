@@ -4,6 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    min-height: 300px;
+    min-width: 500px;
     background: linear-gradient(#b7e6ef, #878fb9);
     margin: 0;
     font-family: Arial, sans-serif;
