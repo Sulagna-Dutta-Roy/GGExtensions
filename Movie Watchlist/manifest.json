@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Movies Watchlist",
+    "description": "An interactice extension to keep your movies in your watchlist grouped by your taste and criteria.",
+    "version": "1.0",
+    "action": {},
+    "background":{
+        "service_worker": "./background.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["./content_scripts/ContentScript.js", "./content_scripts/content.js"],
+            "matches": ["https://www.google.com/search*"]
+        },
+        {
+            "js": ["./content_scripts/imdb.js"],
+            "matches": ["https://www.imdb.com/*"]
+        }
+    ],
+    "permissions":[
+        "identity", 
+        "storage",
+        "unlimitedStorage",
+        "tabs"
+    ],
+    "host_permissions": ["https://www.imdb.com/*"],
+    "web_accessible_resources":[
+        {
+            "resources": ["quickActionsGoogle.html", "img/img2.png"],
+            "matches": ["https://www.google.com/*"]
+        }
+    ],
+    "icons":{
+        "16": "img/img2.png",
+        "48": "img/img2.png"
+    }
+}
