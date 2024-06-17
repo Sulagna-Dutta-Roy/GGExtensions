@@ -52,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
             area = 0.5 * base * height;
         }
 
-        resultDiv.innerText = `The area is ${area.toFixed(2)} square units.`;
+        if(isNaN(area)){
+            resultDiv.innerText = 'Please enter valid inputs.';
+        }
+        else{
+            resultDiv.innerText = `The area is ${area.toFixed(2)} square units.`;
+        }
     }
 });
