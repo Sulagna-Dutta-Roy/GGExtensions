@@ -75,3 +75,10 @@ function mealRecipeModal(meal) {
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
+
+document.getElementById('search-input')
+    .addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            getMealList();
+        }
+    });
