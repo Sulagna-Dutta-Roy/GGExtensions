@@ -2,12 +2,16 @@ let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset-btn");
 let newGameButton = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
-let msgContainer2 = document.querySelector(".msg-container2");
 let msg = document.querySelector("#msg");
-let msg2 = document.querySelector("#msg2");
 let container = document.querySelector(".container");
 let count = 0;
 let playerTurn = true;
+let playerOScore = 0;
+let computerScore = 0;
+
+const playerOScoreDisplay = document.getElementById("playerO-score");
+const computerScoreDisplay = document.getElementById("computer-score");
+
 const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
@@ -26,6 +30,12 @@ const resetGame = () => {
     msgContainer.classList.add("hide");
     container.classList.remove("hide");
 }
+
+const updateScore = () => {
+    playerOScoreDisplay.innerText = playerOScore;
+    computerScoreDisplay.innerText = computerScore;
+}
+
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if (count === 9 || checkWinner() || !playerTurn) {
@@ -33,7 +43,7 @@ boxes.forEach((box) => {
         }
         if (playerTurn) {
             box.innerText = "O";
-            box.style.color = "white";
+            box.classList.add("O");
             box.disabled = true;
             playerTurn = false;
             count++;
@@ -55,7 +65,7 @@ const computerTurn = () => {
     if (availableBoxes.length > 0) {
         let randomIndex = availableBoxes[Math.floor(Math.random() * availableBoxes.length)];
         boxes[randomIndex].innerText = "X";
-        boxes[randomIndex].style.color = "cyan";
+        boxes[randomIndex].classList.add("X");
         boxes[randomIndex].disabled = true;
         playerTurn = true;
         count++;
@@ -71,13 +81,22 @@ const disableBoxes = () => {
         box.disabled = true;
     }
 }
+
 const enableBoxes = () => {
     for (let box of boxes) {
         box.disabled = false;
         box.innerText = "";
+        box.classList.remove("O", "X");
     }
 }
+
 const showWinner = (winner) => {
+    if (winner === "O") {
+        playerOScore++;
+    } else if (winner === "X") {
+        computerScore++;
+    }
+    updateScore();
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     container.classList.add("hide");
