@@ -1,23 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "Battleship Game Extension",
-    "version": "1.0",
-    "description": "Sink or be sunk! Battle against the computer in this classic game of strategy and skill.",
-    "permissions": [
-        "storage"
-    ],
-    "optional-permissions" : ["tabs"],
-    "action": {
-        "default_popup": "index.html"
-    },
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "index.html"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
-        }
-    ]
+  "manifest_version": 3,
+  "name": "Battleship Game Extension",
+  "version": "1.0",
+  "description": "Sink or be sunk! Battle against the computer in this classic game of strategy and skill.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
