@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Technical Mind Game",
+    "version": "1.0",
+    "description": "A Technical Mind Game a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions":[]
+}
