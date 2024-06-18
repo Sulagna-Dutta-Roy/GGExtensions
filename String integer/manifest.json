@@ -1,0 +1,21 @@
+{
+    "name": "String to Integer Conversion",
+    "short_name": "Converter",
+    "description": "A simple app to convert strings to their ASCII integer values.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#87CEEB",
+    "theme_color": "#212121",
+    "icons": [
+        {
+            "src": "icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
