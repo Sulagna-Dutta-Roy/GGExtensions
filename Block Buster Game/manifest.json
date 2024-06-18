@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Block buster ",
+    "version": "1.0",
+    "description": "A Block buster a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions":[]
+}
