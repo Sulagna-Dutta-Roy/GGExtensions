@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Auddle - Audio Wordle!",
+    "version": "1.0",
+    "description": "A fun game to guess the singer based on the audio clip!",
+    "icons": {
+      "48": "assets/d.svg",
+      "128": "assets/d.svg"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "assets/d.svg"
+    },
+    "permissions": [
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["script.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["assets/*", "testAudio/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+}
+  
