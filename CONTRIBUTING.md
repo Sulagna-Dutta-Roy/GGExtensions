@@ -41,7 +41,7 @@ git clone https://github.com/Your-Username/GGExtensions.git
 **3.** Add a reference(remote) to the original repository.
 
 ```bash
-git remote add upstream https://github.com/Your-Username/GGExtensions.git
+git remote add upstream https://github.com/Sulagna-Dutta-Roy/GGExtensions
 ```
 
 **4.** Check the remotes for this repository.
