@@ -1,0 +1,96 @@
+#combat {
+    background-color: #00000099;
+    position: fixed;
+    z-index: 1060;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+#combat-container {
+    margin: auto;
+    background-color: #f0f0f0;
+    height: 75%;
+    width: 75%;
+    min-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #111;
+    border-radius: 1em;
+    background-image: url("../img/grass.webp");
+    background-repeat: repeat;
+}
+
+#combat-info {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #111;
+    border-radius: 1em 1em 0 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#combat-info > div {
+    padding: 0.5em;
+    width: 50%;
+}
+
+#combat-info > div > table > tbody > tr > td:nth-child(1){
+    text-align: end;
+}
+#combat-info table {
+    margin: auto;
+}
+
+#combat-info p {
+    padding: 2px;
+    font-size: 14px;
+}
+#combat-info h1 {
+    margin: 0;
+    margin-bottom: 0.25em;
+    font-size: 18px;
+}
+
+#combat-map {
+    display: flex;
+    padding: 1em 0.5em;
+    border-radius: 0 0 1em 1em;
+    justify-content: space-between;
+    height: max-content;
+}
+
+#combat-map > div {
+    margin: auto;
+    transition: all 1s;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#combat-map > div > div {
+    margin: 0.5em;
+}
+
+.combat-unity{
+    margin: 0.1em;
+}
+
+.combat-unity img{
+    filter: drop-shadow(0px 0px 1px black);
+}
+
+.attack-allies {
+    transform: translateX(50px);
+}
+
+.attack-enemies {
+    transform: translateX(-50px);
+}

@@ -1,0 +1,10 @@
+* {
+    --body-bg-base: #6E9A76;
+    --body-bg-gradient1: #4ca2cd;
+    --body-bg-gradient2: #67B26F;
+    --container-bg: #f0f0f0;
+    --btn-bg: #04AA6D;
+    --btn-bg-hover: #005e3b;
+
+    --dark-border: #333;
+}
