@@ -108,3 +108,23 @@ body {
   #output-container button:hover{
     color: #b0b0b0;
   }
+
+  .footer {
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    background: rgb(212, 218, 214);
+    text-align: center;
+    color: white;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer a:hover{
+        color: #5ca7f8df;
+        text-decoration: underline;
+    }
