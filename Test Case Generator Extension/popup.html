@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Case Generator</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <h1>Test Case Generator</h1>
+  <form id="testCaseForm">
+    <div class="form-group">
+        <label>Select Data Type:</label>
+        <div class="horizontal-group">
+            <input type="radio" name="datatype" value="int" id="int"><label for="int">Integer</label>
+            <input type="radio" name="datatype" value="float" id="float"> <label for="float">Float</label>
+            <input type="radio" name="datatype" value="char" id="char"><label for="char">Char</label>
+            <input type="radio" name="datatype" value="string" id="string"><label for="string">String</label>
+            <input type="radio" name="datatype" value="long" id="long"><label for="long">Long</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Select Test Case Type:</label>
+        <div class="horizontal-group">
+            <input type="radio" name="testtype" value="simple" id="simple" disabled> <label for="simlpe"> Single Test Case</label>
+            <input type="radio" name="testtype" value="array" id="array" disabled><label for="array"> Array of Data Type</label>
+            <input type="radio" name="testtype" value="sentence" id="sentence" disabled><label for="sentence"> String Sentence</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="length">Test Case Length:</label>
+        <input type="number" id="length" name="length" value="1" min="1">
+    </div>
+
+    <div id="arraySizeContainer" class="form-group hidden">
+        <label for="arraySize">Array Size:</label>
+        <input type="number" id="arraySize" name="arraySize" min="2" value="10">
+    </div>
+
+    <div id="floatDecimalContainer" class="form-group hidden">
+        <label for="floatDecimalSize">Decimal points:</label>
+        <input type="number" id="floatDecimalSize" name="floatDecimalSize" min="2">
+    </div>
+
+    <button type="button" id="generateButton">Generate Test Cases</button>
+    <button type="button" id="clearButton">Clear</button>
+  </form>
+
+  <div id="output-container">
+      <b>Output:</b> 
+      <div id="output"></div>
+    <button type="button" id="copyButton" style="display: none;"><i class="fas fa-copy"></i></button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  form {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+    margin-left: -12px;
+    margin-top: 3px;
+    padding: 2px;
+}
+
+.horizontal-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  #output {
+    position: relative;
+    min-height: 30px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 8px;
+    white-space: wrap;
+    margin: 5px 30px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  #output-container {
+    position: relative;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px 30px 10px 30px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  #copyButton {
+    position: absolute;
+    top: 4px;
+    left: 60px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #007bff;
+  }
+
+  #copyButton:hover {
+    color: #0056b3;
+  }
+
+  
+  input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #output-container button{
+    color: #ccc;
+  }
+
+  #output-container button:hover{
+    color: #b0b0b0;
+  }
