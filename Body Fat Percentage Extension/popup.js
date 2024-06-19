@@ -12,8 +12,13 @@ function calculateBodyFat() {
         const hips = parseFloat(document.getElementById('hips').value);
         bodyFatPercentage = 163.205 * Math.log10(waist + hips - neck) - 97.684 * Math.log10(height) - 78.387;
     }
-
-    document.getElementById('result').innerText = `Body Fat Percentage: ${bodyFatPercentage.toFixed(2)}%`;
+    
+    if(isNaN(bodyFatPercentage)){
+        document.getElementById('result').innerText = 'Please enter valid input values';
+    }
+    else{   
+        document.getElementById('result').innerText = `Body Fat Percentage: ${bodyFatPercentage.toFixed(2)}%`;
+    }
 }
 
 // Show or hide the hips input based on gender

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Next Period Calculator",
+    "version": "1.0",
+    "description": "A simple extension to calculate the next period date.",
+    "action": {
+      "default_popup": "popup.html"
+      
+    },
+    "permissions": ["storage"]
+  }
+  

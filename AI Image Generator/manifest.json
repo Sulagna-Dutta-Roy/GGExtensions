@@ -1,35 +1,10 @@
 {
-    "name": "AI Image Generator",
-    "version": "1.0.0",
-    "description": " generates images using artificial intelligence.",
-    "author": "Your Name",
-    "license": "MIT",
-    "keywords": [
-      "AI",
-      "image",
-      "generator",
-      "artificial intelligence",
-      "machine learning"
-    ],
-    "dependencies": {
-      "express": "^4.17.1",
-      "tensorflow": "^2.8.0",
-      "keras": "^2.8.0",
-      "canvas": "^2.8.0",
-      "multer": "^1.4.2"
-    },
-    "scripts": {
-      "start": "node server.js"
-    },
-    "main": "server.js",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/aasthakourav20/ai-image-generator"
-    },
-    "engines": {
-      "node": ">=12.0.0"
-    },
-    "devDependencies": {}
-    
+  "manifest_version": 3,
+  "name": "AI Image Generator",
+  "version": "1.0.0",
+  "description": " generates images using artificial intelligence.",
+  "author": "Your Name",
+  "action": {
+    "default_popup": "index.html"
   }
-  
+}

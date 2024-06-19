@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Lorem ipsum generator",
+    "version": "1.0",
+    "description": "A Lorem ipsum generator as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

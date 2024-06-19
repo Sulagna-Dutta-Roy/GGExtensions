@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Watchlist</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="scripts/jquery.js"></script>
+<body>
+
+    <div id="header-wrapper">
+        <div id="header">
+            <div class="header-left">
+                <div id="new"><i class="fa-solid fa-plus"></i></div>
+                <div id="checkbox-dropdown">
+                    <span>All</span>
+                    <ul class="checkbox-dropdown-list">
+                        <li>
+                            <label data-list="All">All <i class="fa-solid fa-check"></i></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-right">
+                <div id="file-btn"><i class="fa-solid fa-file"></i></div>
+                <div id="file-options">
+                    <div id="drive-menu">
+                        <div id="drive-upload"><span>Upload </span><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div id="drive-download"><span>Download </span><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                        <div id="drive-last-backup"><span style="font-size: 10px; margin-bottom: 4px;"></span></div>
+                    </div>
+                    <div id="file-upload"><span>Load </span><i class="fa-solid fa-upload"></i></div>
+                    <div id="file-download"><span>Save As </span><i class="fa-solid fa-download"></i></div>
+                    <div id="drive-login" style="display: none; margin-top: 3px;"><span>Sign In </span><img src="img/google-drive.png" width="16px" height="16px"></img></div>
+                    <div id="drive-account"><span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="wrapper">
+        </div>
+    </div>
+
+    <script src="scripts/DataManager.js"></script>
+    <script src="scripts/UI.js"></script>
+    <script src="scripts/movies.js"></script>
+</body>
+</html>

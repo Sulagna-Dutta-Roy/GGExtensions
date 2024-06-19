@@ -13,11 +13,15 @@
         background: linear-gradient(135deg, #667eea, #764ba2);
       }
       .shadow-md {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 9px 20px rgb(0 0 0 / 10%);
+
       }
       .button-hover:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      #share-btn{
+        color:#764ba2;
       }
     </style>
   </head>
@@ -33,7 +37,8 @@
       <button
         id="shorten-btn"
         class="w-full bg-blue-500 text-white py-2 rounded mb-4 button-hover"
-      >
+      > 
+      
         Shorten URL
       </button>
       <div id="result" class="hidden">

@@ -4,24 +4,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>ASCII Value Calculator</title>
 </head>
 
-<body>
-    <header>
-        <h1>ASCII Value Calculator</h1>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 to-purple-500">
+    <header class="fixed top-0 left-0 w-full bg-gray-800 text-white text-center py-4 shadow-lg">
+        <h1 class="text-3xl font-bold">ASCII Value Calculator</h1>
     </header>
-    <main>
-        <div class="container">
-            <form name="myform">
-                <label for="charInput">Enter a Character (Length should be 1):</label>
-                <input type="text" name="charInput" id="charInput" class="js-ascii-input" maxlength="1" />
-                <button type="button" id="getAsciiValueButton">
-                    Get ASCII Value
+    <main class="mt-20 flex flex-col items-center justify-center w-full h-full">
+        <div class="container bg-white p-8 rounded-lg shadow-lg w-96 text-center">
+            <form name="myform" class="flex flex-col space-y-4">
+                <label for="charInput" class="text-lg font-medium">Enter a Word or Sentence:</label>
+                <input type="text" name="charInput" id="charInput" class="border border-gray-300 rounded-md px-4 py-2 focus:border-blue-500 outline-none transition duration-300 ease-in-out" />
+                <button type="button" id="getAsciiValueButton" class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out">
+                    Get ASCII Values
+                </button>
+                <button type="button" id="clearButton" class="bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition duration-300 ease-in-out">
+                    Clear
                 </button>
             </form>
-            <div id="asciiValue"></div>
+            <div id="asciiValue" class="mt-4 text-lg font-semibold opacity-0 transition-opacity duration-500 ease-in-out"></div>
         </div>
     </main>
     <script src="script.js"></script>

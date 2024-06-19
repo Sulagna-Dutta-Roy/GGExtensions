@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Times of sunrise and sunset",
+    "version": "1.0",
+    "description": "A sunrise and sunset time generator as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

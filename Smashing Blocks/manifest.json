@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Smashing Blocks",
+    "version": "1.0",
+    "description": "A smashing blocks game as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
