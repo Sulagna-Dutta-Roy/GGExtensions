@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Alphabet and Vowel ",
+    "version": "1.0",
+    "description": "An Alphabet and Vowel game a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions":[]
+}
