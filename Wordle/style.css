@@ -47,13 +47,7 @@ p {
     color: white;
     font-size: 1.8rem;
 }
-#hint{
-    font-size: 4rem;
-    text-align: center;
-    color: white;
-    word-spacing: 1.2rem;
-    font-variant: all-small-caps;
-}
+
 .head {
     display: flex;
     justify-content: space-around;
@@ -121,20 +115,19 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: var(--box-size);
     height: var(--box-size);
+
     box-shadow: 0 0 2px 0px rgb(164, 162, 162);
     color: white;
+
     font-size: 2.5rem;
     border-radius: 5px;
-    -webkit-text-stroke: 1px white;
-    text-stroke: 1px black;
-    -webkit-text-fill-color: black;
-    text-fill-color: black;
 }
 
 .box.selected {
-    box-shadow: 0 0 5px 1px rgb(42 193 15);
+    box-shadow: 0 0 5px 1px rgb(240, 236, 29);
 }
 
 .popup, .setting {
