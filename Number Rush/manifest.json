@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Number Rush",
+  "version": "1.0",
+  "description": "Test your number typing speed!",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}
