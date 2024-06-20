@@ -96,8 +96,8 @@ resetScore.addEventListener('click', (e) => {
 
 let paused = false;
 let settingIsOpen = false;
-let word = randomWord(word_size).toUpperCase();
-console.log(word)
+let hint=document.getElementById('hint')
+let word = randomWord(word_size).toUpperCase(); 
 let guessWord = ''
 let guessCount = 1;
 let score = 12;
@@ -112,12 +112,33 @@ function randomWord(size) {
     } else if(size == 3) {
         word_list = three_letters['words'];
     }
+    let word=word_list[Math.floor(Math.random() * word_list.length)]
+    let hints=[]
+let data=word.length/2
+for(let i=0;i<data;i++){
+    let ran=Math.floor(Math.random()*word.length)
+    let fin=hints.find(item=>item===ran)
+    if(fin){
+        console.log("No change")
+    }
+    else{
+        hints.push(ran)
+    } 
+} 
+let hint_word=""
+for(let k=0;k<word.length;k++){
+    hint_word+=" "
+    if(hints.includes(k)){ 
+        hint_word+=word.split('')[k]
+    }else{hint_word+="_"}
+} 
+  hint.textContent=hint_word
 
-    return word_list[Math.floor(Math.random() * word_list.length)];
+    return word;
 }
 
 keys.forEach((key) => {
-    key.addEventListener('click', (e) => {
+    key.addEventListener('click', (e) => {randomWord
 
         const letter = e.target.innerText;
 
@@ -254,7 +275,8 @@ function checkWin() {
     boxes[currentActiveInd].classList.remove('selected');
 
     const activeInd = guessCount * word_size;
-    boxes[activeInd].classList.add('selected');
+    boxes[activeInd].classList.add('selected');                 
+    boxes[activeInd].style.background="#2b2828c7"
 
     guessWord = '';
     guessCount += 1;
