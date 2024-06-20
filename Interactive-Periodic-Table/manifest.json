@@ -1,0 +1,12 @@
+{
+    "name": "Periodic Table",
+    "short_name": "PeriodicTable",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "A web application displaying periodic table elements",
+    "version": "1.0",
+    "manifest_version": 2
+  }
+  
