@@ -1,0 +1,11 @@
+{
+    "name": "Kanye Quotes",
+    "version": "1.0.0",
+    "description": "Get random Kanye Quotes",
+    "manifest_version": 3,
+    "author": "Sahuf",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Get the quotes"
+    }
+}
