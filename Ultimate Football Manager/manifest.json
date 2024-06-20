@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Ultimate Football Manager",
+    "version": "1.0",
+    "description": "Manage your own football team and lead them to victory!",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "permissions": ["storage"],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
