@@ -3,6 +3,7 @@
   "short_name": "Price Range",
   "description": "A price range slider and input fields for setting minimum and maximum prices.",
   "manifest_version": 3,
+  "author": "ishithaac2312@gmail.com",
   "version": "1.0.0",
   "start_url": "/index.html",
   "display": "standalone",
