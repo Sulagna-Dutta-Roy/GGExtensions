@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Color Memory Game",
+    "description": "A simple color memory game.",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": []
+}
