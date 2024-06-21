@@ -3,6 +3,7 @@
     "name": "Custom Alert Extension",
     "version": "1.0",
     "description": "A custom alert notification extension.",
+    "author": "ishithaac2312@gmail.com",
     "permissions": ["activeTab"],
     "action": {
       "default_popup": "gssoc.html",

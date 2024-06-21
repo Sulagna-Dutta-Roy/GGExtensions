@@ -1,0 +1,35 @@
+{
+    "name": "Image Comparison Slider",
+    "short_name": "Image Slider",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "A simple image comparison slider using HTML, CSS, and JavaScript.",
+    "author": "ishithaac2312@gmail.com",
+    "icons": [
+      {
+        "src": "images/img.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "images/img.jpg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "images/car.jpg",
+        "sizes": "192x192",
+        "type": "image/jpeg"
+      },
+      {
+        "src": "images/car.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#efefef"
+  }
+  
