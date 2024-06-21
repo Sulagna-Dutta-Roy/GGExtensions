@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+#game-container {
+    text-align: center;
+    padding: 20px;
+}
+#team-info {
+    margin: 20px 0;
+}
+#actions button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+}
