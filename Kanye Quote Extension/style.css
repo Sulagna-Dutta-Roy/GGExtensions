@@ -1,0 +1,14 @@
+button{
+    height: 100px;
+    width: 100px;
+}
+#btn-img{
+    height: 100px;
+    width: 100px;
+}
+#quote{
+    background-color: #ffde59;
+    width: fit-content;
+    display: block;
+    color: white;
+}
