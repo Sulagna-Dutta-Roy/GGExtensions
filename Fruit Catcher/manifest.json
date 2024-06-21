@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Fruit Catcher",
+    "version": "1.0",
+    "description": "A fun game to catch falling fruits!",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": []
+  }
+  
