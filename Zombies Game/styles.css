@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+  }
+  
+  .game-container {
+    position: relative;
+    width: 90%;
+    max-width: 760px;
+    height: 60vh;
+    background-color: #ccc;
+    border: 5px solid #333;
+  }
+  
+  .player, .zombie {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    object-fit: contain; 
+  }
+  #control_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+  }
+  .contoller{
+    width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid rgb(34, 31, 31); 
+  }
+  #Left-control{rotate: 28deg;}
+  #right_cotroller{rotate: -28deg;}
+  #bottom_cotroller{rotate: 60deg;position: relative;left: 4px;top: 4px;}
+  #TOP_BOTTOM_controller{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+  }
+  
