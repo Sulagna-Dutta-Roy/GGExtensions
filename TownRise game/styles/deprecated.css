@@ -1,0 +1,23 @@
+/* Unused CSS Rules */
+
+#log {
+    display: block;
+    font-size: 12px;
+    overflow-y: scroll;
+    height: 100px;
+    width: 100%;
+}
+
+.pop {
+    opacity: 0;
+    filter: drop-shadow(2px 2px 2px var(--dark-border));
+    left: 50%;
+    -webkit-transition : opacity 1s ease-out;
+    transition : opacity 1s ease-out;
+}
+.pop-live {
+    opacity: 1;
+}
+.pop-die {
+    opacity: 0;
+}

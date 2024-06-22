@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Tennis Show Down",
+    "version": "1.0",
+    "description": "A Tennis Game as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+}

@@ -1,0 +1,49 @@
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#water-intake {
+  font-size: 2rem;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+  width: 200px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#reset-water {
+  background-color: #e74c3c;
+  width: 150px;
+  margin-top: 20px;
+}
+
+#reset-water:hover {
+  background-color: #c0392b;
+}

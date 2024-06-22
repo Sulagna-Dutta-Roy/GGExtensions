@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const taskInput = document.getElementById('new-task');
-    const prioritySelect = document.getElementById('priority');
     const addTaskButton = document.getElementById('add-task');
     const taskList = document.getElementById('tasks');
 
     const loadTasks = () => {
+        try{ 
         chrome.storage.sync.get(['tasks'], (result) => {
             const tasks = result.tasks || [];
             taskList.innerHTML = '';
@@ -12,9 +11,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 addTaskToDOM(task);
             });
         });
-    };
-
-    const saveTasks = () => {
+    }catch(err){
+        let data=JSON.parse(localStorage.getItem('tasks')) 
+        if(data){
+        data.forEach(task=>{
+            addTaskToDOM(task) 
+        })
+    }
+    }
+    }; 
+    const saveDetails=(taskInput,priority)=>{
+        try{
+            let data=JSON.parse(chrome.storage.sync.get(['tasks'])) || []
+            let details={
+                text:taskInput,
+                completed: false,
+                priority:priority
+            }
+            if(data){ 
+                    data.push(details);  
+            }
+            else{ 
+                    data.push(details);  
+            } 
+            chrome.storage.sync.set({ data });
+        }catch(err){
+        let data=JSON.parse(localStorage.getItem('tasks')) || []
+        let details={
+            text:taskInput,
+            completed: false,
+            priority:priority
+        }
+        if(data){ 
+                data.push(details); 
+                localStorage.setItem('tasks',JSON.stringify(data))
+        }
+        else{ 
+                data.push(details); 
+            localStorage.setItem('tasks',JSON.stringify(data))
+        } 
+        addTaskToDOM(details)
+    }
+    }
+    const saveTasks = () => { 
+        try{ 
         const tasks = [];
         taskList.querySelectorAll('li').forEach((li) => {
             tasks.push({
@@ -24,6 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         chrome.storage.sync.set({ tasks });
+    }
+    catch(err){
+        const tasks = [];
+        taskList.querySelectorAll('li').forEach((li) => {
+            tasks.push({
+                text: li.querySelector('.task-text').textContent,
+                completed: li.classList.contains('completed'),
+                priority: li.dataset.priority
+            });
+        });
+        localStorage.setItem('tasks',JSON.stringify(tasks)) 
+    }
     };
 
     const addTaskToDOM = (task) => {
@@ -47,5 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
             li.classList.toggle('completed');
             saveTasks();
         });
+     
         li.appendChild(taskText);
-        li.appendChild(deleteButton
+        li.appendChild(deleteButton);
+        taskList.appendChild(li)
+    }
+    loadTasks()
+    addTaskButton.addEventListener('click',()=>{
+        const taskInput = document.getElementById('new-task').value;
+       const prioritySelect = document.getElementById('priority').value;
+        saveDetails(taskInput,prioritySelect)
+    })
+}
+)
+ 

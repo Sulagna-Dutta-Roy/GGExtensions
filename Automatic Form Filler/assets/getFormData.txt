@@ -1,0 +1,61 @@
+chrome.runtime.onInstalled.addListener(()=>{
+    chrome.action.setBadgeText({
+        text:"OFF"
+    })
+})
+
+chrome.action.onClicked.addListener(async (tab) => {
+    console.log("hello")
+    const prevState = await chrome.action.getBadgeText({tabId:tab.id})
+    const nextState = prevState==="OFF"?"ON":"OFF";
+    await chrome.action.setBadgeText({
+        tabId:tab.id,
+        text:nextState
+    })
+    if(nextState==="ON"){
+        chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            files: ["getForms.js"]
+        });
+    }
+});
+
+chrome.runtime.onMessage.addListener((message, sender, response)=>{
+    if(message!=="{}"){
+        const parsedMessage = JSON.parse(message)
+        // const inputs = parsedMessage[selected]
+        let checklist = ``
+
+        for(const form in parsedMessage){
+            const checkboxhtml= `
+            <p>
+                <label for=${form}>${form}</label>
+                <input type="checkbox"/>
+            </p>\n
+            `
+            checklist += checkboxhtml
+        }
+        response({success:true})
+    }
+})
+
+const getRandomInputs = (inputs)=>{
+    const data ={}
+    console.log(Object.entries(inputs))
+    for(const [id, type] of Object.entries(inputs)){
+        console.log(id, type)
+        switch(type){
+            case "text":
+                data[id] = "fjdkjf"
+                break
+            case "number":
+                data[id] = 23213
+                break
+            case "email":
+                data[id] = "sdkfj@dfj.com"
+                break;
+            case "password":
+                data[id] = "fjksjdfk4872384374&*%#_*"
+        }
+    }
+}

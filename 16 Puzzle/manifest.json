@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "16 Puzzle",
+  "description": "16 Puzzle Game",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "tabs"
+  ],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "index.html"
+  }
+}

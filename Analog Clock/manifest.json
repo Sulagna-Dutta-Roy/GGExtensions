@@ -1,27 +1,28 @@
 {
-    "manifest_version": 3,
-    "name": "Analog Clock Extension",
-    "version": "1.0",
-    "description": "Displays an Analog clock ",
-    "permissions": ["activeTab"],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icons/images.jpeg"
-       
-      }
-    },
-    "icons": {
+  "manifest_version": 3,
+  "name": "Analog Clock Extension",
+  "version": "1.0",
+  "description": "Displays an Analog clock ",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
       "16": "icons/images.jpeg"
-     
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["script.js"]
-      }
-    ],
-    "web_accessible_resources": ["style20.css"]
-  }
-  
+    }
+  },
+  "icons": {
+    "16": "icons/images.jpeg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["style20.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

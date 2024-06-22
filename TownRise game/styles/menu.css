@@ -1,0 +1,70 @@
+.menu{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    width: 50%;
+    border: 3px solid green;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 5px 1px black;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.menu img{
+    width: 100px;
+    margin-bottom: 5px;
+}
+.menu p{
+    font-size: 18px;
+    margin: 5px;
+    line-height: 2;
+}
+.menu input{
+    font-size: 16px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+}
+.menu div{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#village-to-load{
+    width: 200px;
+}
+
+#delete-village{
+    width: 100px;
+    padding: 10px;
+    background-color: brown;
+    color: white;
+    border: 1px solid #333;
+}
+
+#buildings-menu p{
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.building-menu{
+    font-size: 12px;
+}
+.building-menu-tooltip{
+    text-align: center;
+}
+.building-menu-tooltip button{
+    padding: 15px 10px;
+}
+
+@media only screen and (max-width: 960px) {
+    .menu {
+        width: 75%;
+    }
+}

@@ -101,7 +101,7 @@ body{
   font-size: 22px;
   font-weight: 500;
 }
-.note span{
+.note small{
   display: block;
   color: #575757;
   font-size: 16px;
@@ -246,6 +246,32 @@ form button{
   font-size: 17px;
   border-radius: 4px;
   background: #808fb7;
+}
+.search {
+    width: 100%;
+    text-align: center;
+}
+#search-input {
+    margin: 15px auto ;
+    padding: 7px 15px;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    border: 2px solid #88ABFF;
+}
+#search-input:focus {
+    border: 2px solid #575757;
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 0;
+}
+.highlight {
+    background-color: #121111;
+    color: whitesmoke;
+    display: inline;
 }
 @media (max-width: 660px){
   .wrapper{

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Fill</title>
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        *, :root, :root::after, :root::before{
+            box-sizing: inherit;
+        }
+        body{
+            width: 350px;
+            background-color: rgb(249, 252, 255);
+            text-align: center;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            padding: 0.4em .8em;
+            margin: 0;
+            font-size: 0.875rem;
+            border-radius: 5px;
+            border: 0;
+            color: white;
+
+        }
+        .invalid-data{
+            transition: all .3s linear;
+            background-color: rgb(194, 35, 35);
+        }
+        .invalid-data:hover{
+            background-color: rgb(123, 39, 39);
+        }
+        .valid-data{
+            transition: all .3s linear;
+            background-color: rgb(61, 191, 18);
+        }
+
+        .valid-data:hover{
+            background-color: rgb(32, 136, 23);
+        }
+        .save-data{
+            background-color:steelblue;
+            transition: all .3s linear;
+        }
+        .save-data:hover{
+            background-color:rgb(59, 100, 134);
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        footer{
+            padding-block: .5em;
+            text-align: center;
+            margin-top: 2em;
+        }
+        .forms-list{
+            padding-bottom: 1em;
+            text-align: left;
+        }
+        .data-list-wrapper{
+            border-top:2px solid black;
+            display: none;
+            border-bottom: 2px solid black;
+            padding: 0;
+        }
+        .data-list{
+            text-align:left;
+        }
+
+        .buttons-container{
+            padding-top: 1em;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .main_wrapper{
+            width: 80%;
+            margin-inline:auto;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: rgb(161, 161, 161);
+        }
+
+        .delete-saved-form{
+            background-color: transparent;
+            color: black;
+        }
+
+        .stored-form-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="main_wrapper">
+            <h1>Select Form to fill</h1>
+            <div class="forms-list"></div>
+            <div class="data-list-wrapper">
+                <h2>Saved Data</h2>
+                <div class="data-list"></div>
+            </div>
+            <div class="buttons-container">
+                <button class="invalid-data">Invalid Data</button>
+                <button class="save-data">Save Data</button>
+                <button class="valid-data">Valid Data</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/register" title="register icons">Register icons created by GOWI - Flaticon</a>
+    </footer>
+</body>
+</html>

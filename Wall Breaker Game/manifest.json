@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Wall breaker game ",
+    "version": "1.0",
+    "description": "A Wall breaker game asva Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions":[]
+}

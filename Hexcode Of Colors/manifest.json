@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Color Code Calculator",
+    "version": "1.0",
+    "description": "A tool to convert and calculate color codes between different formats.",
+    "icons": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icons/icon48.png"
+      }
+    },
+    "permissions": [
+      "storage"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["bg.jpg", "assets/converter.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  

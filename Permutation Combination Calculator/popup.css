@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  margin: 0;
+  background: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: inline-block;
+  width: 40px;
+  font-weight: bold;
+}
+
+input {
+  width: calc(100% - 50px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer {
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background: #007bff;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #d4daea;
+  text-decoration: underline;
+}

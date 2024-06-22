@@ -4,6 +4,8 @@ body{
     background-color: #a19d9d;
     font-family: 'Courier New', Courier, monospace;
     height: 100vh;
+    min-height: 400px;
+    min-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;

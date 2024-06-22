@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Emoji Movie Quiz",
+    "version": "1.0",
+    "description": "An emoji movie Quiz as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

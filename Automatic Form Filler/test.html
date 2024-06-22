@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100lvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        form{
+            font-family: sans-serif;
+            width: fit-content;
+            padding: 1em;
+        }
+        label{
+            display: block;
+        }
+        input + label{
+            display:inline;
+        }
+    </style>
+</head>
+<body>
+   <form action="" id="registration_form">
+    <p>
+        <label for="name">name</label>
+        <input type="text" required autofocus id="name" name="name">
+    </p>
+    <p>
+        <label for="age">age</label>
+        <input type="number" required autofocus id="age" max="80" min="18" name="age">
+    </p>
+    <p>
+        <label for="email">email</label>
+        <input type="email" required autofocus id="email" name="email">
+    </p>
+    <p>
+        <input type="radio" name="gender" id="gender_male" value="Male">
+        <label for="gender_male">Male</label>
+        <input type="radio" name="gender" id="gender_female" value="Female">
+        <label for="gender_female">Female</label>
+    </p>
+    <p>
+        <input type="checkbox" name="activities" id="gaming">
+        <label for="gaming">Gaming</label>
+    </p>
+    <p>
+        <input type="checkbox" name="activities" id="swimming">
+        <label for="swimming">Swimming</label>
+    </p>
+    <p>
+        <input type="checkbox" name="activities" id="track-field">
+        <label for="track-field">Track Field</label>
+    </p>
+    <p>
+        <label for="password">password</label>
+        <input type="password" required autofocus id="password" name="password">
+    </p>
+    <button type="submit">Submit</button>
+   </form> 
+   <form action="" id="login_form">
+    <p>
+        <label for="email">email</label>
+        <input type="email" required autofocus id="email" name="email">
+    </p>
+    <p>
+        <label for="password">password</label>
+        <input type="password" required autofocus id="password" name="password">
+    </p>
+    <button type="submit">Submit</button>
+   </form> 
+</body>
+</html>

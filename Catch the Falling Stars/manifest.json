@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Catch the Falling Stars",
+  "version": "1.0",
+  "description": "A fun game to catch the falling stars!",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}

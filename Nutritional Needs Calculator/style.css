@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    width: 440px !important;
+    min-height: 480px;
+    padding: 1rem;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #dc8383;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.description {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    text-align: left;
+}
+
+input[type="number"],
+select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    background: #32cd32; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #228b22;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.results h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.results p {
+    margin: 5px 0;
+    font-size: 16px;
+}

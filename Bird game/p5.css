@@ -1,17 +1,30 @@
-body{
-    background: linear-gradient(125deg,red,green,blue);
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+body {
+  background: linear-gradient(125deg, red, green, blue);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
-canvas{
-
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100% ;
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-#collision{
-    opacity: 0;
+#collision {
+  opacity: 0;
+}
+#restart-button{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background: #ffffff00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
 }
