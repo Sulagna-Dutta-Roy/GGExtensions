@@ -35,21 +35,22 @@ const play = () => {
         playButton.innerHTML = 'Pause';
         bg.classList.add("animation-bg");
         min = setInterval(() => {
-            minute.innerHTML = `${++minCounter} : `;
+            minute.innerHTML = `${minCounter<9?'0':''}${++minCounter} : `;
         }, 60 * 1000);
 
         sec = setInterval(() => {
             if (secCounter === 60) {
                 secCounter = 0;
             }
-            second.innerHTML = `&nbsp;${++secCounter} : `;
+             
+            second.innerHTML = `&nbsp;${secCounter<9?'0':''}${++secCounter} : `;
         }, 1000);
 
         centiSec = setInterval(() => {
             if (centiCounter === 100) {
                 centiCounter = 0;
             }
-            centiSecond.innerHTML = `&nbsp;${++centiCounter}`;
+            centiSecond.innerHTML = `&nbsp;${centiCounter<9?'0':''}${++centiCounter}`;
         }, 10);
 
         isPlay = true;
@@ -61,6 +62,9 @@ const play = () => {
         clearInterval(sec);
         clearInterval(centiSec);
         isPlay = false;
+        minCounter=0
+        secCounter=0
+        centiCounter=0
         isReset = false;
         bg.classList.remove("animation-bg");
     }
