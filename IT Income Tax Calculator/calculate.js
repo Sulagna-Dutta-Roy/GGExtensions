@@ -23,7 +23,12 @@ else if(income>=1500000){
 var take_home_salary=+income-tax;
 console.log("Take Home Salary = Rs.")
 console.log(take_home_salary);
-document.getElementById("result").innerHTML = take_home_salary;
+if(isNaN(take_home_salary)){
+    document.getElementById("result").innerHTML = 'Please enter valid inputs';
+}else{
+    document.getElementById("result").innerHTML = take_home_salary;
+}
+
 document.getElementById("tax").innerHTML = tax;
 
 return tax;

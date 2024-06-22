@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+h1#h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+input[type="income"],
+input[type="submit"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="income"] {
+  width: calc(100% - 22px); /* Adjust for padding and border */
+  max-width: 300px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+p#tax {
+  display: inline;
+  font-weight: bold;
+}
+
+div#result {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #d9534f;
+  margin-top: 10px;
+}
