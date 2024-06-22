@@ -3,6 +3,8 @@ const cards =
 let allImages = document.getElementsByClassName('card-image'); 
 let movesDisplay = document.querySelector('.move-counter'); 
 let toggledCardsArray = []; 
+let id =[]
+let src=[]
 let move = 0; 
 let winCount = 0; 
 const restart = document.getElementById('restart'); 
@@ -111,22 +113,33 @@ for (var i = 0; i < cards.length; i++) {
 	cards[i].addEventListener('click', function () { 
 		this.classList.add("toggled"); 
 		toggledCardsArray.push(this); 
-		let thisImgSrc = this.querySelector('.card-image').src; 
-		let previousImgSrc = 
-		toggledCardsArray[toggledCardsArray.length - 2].querySelector('.card-image').src; 
-		if(thisImgSrc !== previousImgSrc) { 
-			toggledCardsArray.forEach(function (el) { 
+		let thisImgSrc = this.querySelector('.card-image').src;  
+		let thisImgId=this.querySelector('.card-image').id; 
+        if(src.length===0){
+			id.push(thisImgId)
+			src.push(thisImgSrc)
+			move++;  
+		}
+		else if(!src.includes(thisImgSrc)) {  
+			if(src.length!==0){ 
+			let element=document.querySelector('.cards-container').children[Number(id[0])-1]
 				setTimeout(() => { 
-					el.classList.remove("toggled"); 
-				}, 500); 
-			}) 
-			toggledCardsArray.length = 0; 
-			move++; 
+					element.classList.remove("toggled"); 
+					this.classList.remove('toggled')
+				}, 500);  
+			}
+			id.pop()
+			src.pop()
+			move++;   
 		} 
 		else{ 
+			if(src.includes(thisImgSrc) ){
+				src=[]
+				id=[]
+			winCount++;   
+			}
 			toggledCardsArray.length = 0; 
 			move++; 
-			winCount++; 
 		} 
 		movesDisplay.innerText = `Moves: ${move}`; 
 		if(winCount===6){ 
