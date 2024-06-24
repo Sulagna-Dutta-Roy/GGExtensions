@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVD Calculator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>SVD Calculator</h1>
+  <label for="matrix-size">Select Matrix Size:</label>
+  <select id="matrix-size">
+    <option value="1">1x1</option>
+    <option value="2">2x2</option>
+    <option value="3">3x3</option>
+    <option value="4">4x4</option>
+    <option value="5">1x2</option>
+    <option value="6">1x3</option>
+    <option value="7">1x4</option>
+    <option value="8">2x1</option>
+    <option value="9">2x3</option>
+    <option value="10">2x4</option>
+    <option value="11">3x1</option>
+    <option value="12">3x2</option>
+    <option value="13">3x4</option>
+    <option value="14">4x1</option>
+    <option value="15">4x2</option>
+    <option value="16">4x3</option>
+  </select>
+  <form id="matrix-form">
+    <div id="matrix-inputs"></div>
+    <button type="submit">Calculate SVD</button>
+  </form>
+  <div id="results">
+    <h2>Results</h2>
+    <pre id="output"></pre>
+  </div>
+  <script src="numeric.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
