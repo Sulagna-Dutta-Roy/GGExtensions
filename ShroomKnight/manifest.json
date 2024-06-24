@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "ShrekVsWild",
+    "name": "ShroomKnight",
     "version": "1.0",
-    "description": "Shreck fights with the Monsters & Zombies",
+    "description": "Tower Vs Spiders",
     "permissions": [
         "storage"
     ],
@@ -19,5 +19,5 @@
                 "<all_urls>"
             ]
         }
-  
+    ]
 }
