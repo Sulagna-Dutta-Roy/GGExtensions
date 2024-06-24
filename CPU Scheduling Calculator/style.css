@@ -7,6 +7,7 @@ body {
     align-items: center;
     background: rgb(47, 117, 178);
     background: linear-gradient(90deg, rgba(47, 117, 178, 1) 21%, rgba(166, 233, 234, 1) 100%);
+    min-width: 500px
 }
 
 #input-section,

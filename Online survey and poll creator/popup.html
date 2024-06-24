@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Survey</h1>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="title">Survey Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div id="questions-container">
+                <div class="form-group">
+                    <label for="question-1">Question 1</label>
+                    <input type="text" id="question-1" name="questions[]" required>
+                </div>
+            </div>
+            <button type="button" id="add-question">Add Question</button>
+            <button type="submit">Create Survey</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
