@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Color Catcher",
+    "version": "1.0",
+    "description": "A fun game to catch falling colors!",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": []
+  }
+  
