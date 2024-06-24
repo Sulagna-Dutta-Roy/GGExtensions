@@ -3,6 +3,7 @@
     "name": "Multi Step Form Extension",
     "version": "1.0",
     "description": "An extension for a multi-step form.",
+    "author": "ishithaac2312@gmail.com",
     "permissions": [
       "activeTab"
     ],

@@ -1,0 +1,13 @@
+#volume {
+    width: fit-content;
+    align-items: center;
+    height: max-content;
+}
+
+#volume input {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* Chromium */
+    width: 8px;
+    height: 100px;
+    padding: 0 5px;
+}

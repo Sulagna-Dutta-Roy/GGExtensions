@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Bird Game",
+  "version": "1.0",
+  "description": "Bird Game",
+  "action": {
+    "default_popup": "p5.html"
+  },
+  "permissions": []
+}

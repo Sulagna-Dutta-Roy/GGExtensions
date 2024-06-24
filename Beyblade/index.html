@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyblade Battle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Beyblade Battle</h1>
+        
+        <div class="players">
+            <div class="player player1">
+                <h2>Player 1</h2>
+                <div class="player-stats">
+                    <label>Stamina: <input type="number" id="player1-stamina" value="100"></label>
+                    <label>Defense: <input type="number" id="player1-defense" value="50"></label>
+                    <label>Attack: <input type="number" id="player1-attack" value="70"></label>
+                </div>
+            </div>
+            
+            <div class="player player2">
+                <h2>Player 2</h2>
+                <div class="player-stats">
+                    <label>Stamina: <input type="number" id="player2-stamina" value="100"></label>
+                    <label>Defense: <input type="number" id="player2-defense" value="50"></label>
+                    <label>Attack: <input type="number" id="player2-attack" value="70"></label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="beyblade-arena">
+            <div id="beyblade1" class="beyblade"><img src="beyblade-1.jpg" alt="Beyblade 1"></div>
+            <div id="beyblade2" class="beyblade"><img src="beyblade-2.jpg" alt="Beyblade 2"></div>
+        </div>
+        
+        <div id="result" class="result"></div>
+        
+        <div class="controls">
+            <button class="launch-btn" onclick="launchBattle()">Launch Battle</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
