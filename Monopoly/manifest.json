@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Monoploy Game",
+    "version": "1.0",
+    "description": "A fun game to buy and visit cities",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  
