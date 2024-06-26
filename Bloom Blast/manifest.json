@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Bloom Blast",
+    "version": "1.0",
+    "description": "A fast-paced, colorful game where players must rotate a grid of flowers to create chain reactions of matching colors.",
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+  }
