@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Random Advice Generator",
+    "version": "1.0",
+    "description": "Displays a random advice and refreshes with a new advice when the button is pressed.",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon":"images/icon-dice.svg"
+    },
+    "icons": {
+        "16": "images/icon-dice.svg",
+        "48": "images/pattern-divider-desktop.svg",
+        "128": "images/pattern-mobile-desktop.svg"
+    },
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "script.js"
+    }
+  }
