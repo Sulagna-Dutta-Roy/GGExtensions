@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube Auto Pause options</title>
+    <style>
+        @charset "UTF-8";
+        @import 'https://fonts.googleapis.com/css?family=Inter:300';
+
+		body {
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+			padding: 0;
+			margin: 0;
+		}
+
+        .container {
+			padding: 10px;
+        }
+
+        label {
+            cursor: pointer;
+            color: #383A3F;
+            display: block;
+            font-size: 1.2em;
+        }
+
+		p, label {
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+		h2 {
+			font-size: 20px;
+			text-align: center;
+		}
+
+		h4, hr, h2 {
+			margin: 0;
+		}
+
+		#logo {
+			margin-right: 6px;
+			margin-left: 3px;
+		}
+
+		#version {
+			float: right;
+		}
+
+		a, a:hover, a:focus, a:active {
+      		text-decoration: underline;
+      		color: inherit;
+ 		}
+
+		.collapsible_button {
+			cursor: pointer;
+			color: #383A3F;
+			background-color: white;
+			padding: 2px 0 2px 0;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 13px;
+		}
+
+		.collapsible_button::after {
+			content: ' \25BC'
+		}
+
+		.collapsible_button.active::after {
+			content: ' \25B2'
+		}
+
+		.collapsible_content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+    </style>
+</head>
+
+<body>
+    <div style="width: 350px">
+		<div class="container">
+			<h2><img src="images/icon_48.png" id="logo"></img>Youtube Auto Pause</h2>
+		</div>
+		<hr>
+		<div class="container">
+			<h4>Settings</h4>
+	        <label><input type="checkbox" id="autopause"><span class="label-text">Enable auto pause on tab unfocus</span></label>
+    	    <label><input type="checkbox" id="autoresume"><span class="label-text">Enable auto resume on tab focus</span></label>
+        	<label><input type="checkbox" id="focuspause"><span class="label-text">Enable auto pause on window unfocus</span></label>
+        	<label><input type="checkbox" id="focusresume"><span class="label-text">Enable auto resume on window focus</span></label>
+        	<label><input type="checkbox" id="lockpause"><span class="label-text">Enable auto pause on computer lock</span></label>
+        	<label><input type="checkbox" id="lockresume"><span class="label-text">Enable auto resume on computer unlock</span></label>
+        	<label><input type="checkbox" id="scrollpause"><span class="label-text">Enable auto pause when out of viewport</span></label>
+        	<label><input type="checkbox" id="disabled"><span class="label-text">Disable auto pause/resume</span></label>	
+			<label><input type="checkbox" id="cursorTracking"><span class="label-text">Enable cursor on window tracking</span></label>
+		</div>
+		<hr>
+		<div class="container">
+			<button class="collapsible_button">Advanced settings</button>
+			<div class="collapsible_content">
+		        <div id="hosts">
+     	     		<h4>Enabled sites</h4>
+	        	</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container">
+			<h4>Hotkeys</h4>
+			<div id="hotkeys">
+			</div>
+			<p>You can configure hotkeys in the Extensions menu</p>
+		</div>
+		<hr>
+		<div class="container" style="padding-top: 0">
+			<p style="float: left;"><a href="https://github.com/drodil/youtube_auto_pause" target="_blank">Source</a></p>
+			<p id="version"></p>
+		</div>
+		<hr style="clear: both">
+	</div>
+    <script src="options.js"></script>
+</body>
+
+</html>
