@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right bottom, #ff7e7e, #ff6060, #ff3b3b, #ff1414, #ff0000);
+    height: 600px;
+    width: 400px;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.card {
+    background: rgba(255, 69, 58, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #ff7e7e 0, #ff0000 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    margin: 5px;
+}
+
+button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a50b0b 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: #ff7e7e 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.result {
+    margin-top: 10px;
+}
+
+.result label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.result input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}

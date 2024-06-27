@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Travel Budget Calculator",
+    "version": "1.0",
+    "description": "Estimate the total cost of your trip, including flights, accommodation, food, and activities.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": []
+  }
+  
