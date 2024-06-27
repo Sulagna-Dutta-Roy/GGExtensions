@@ -1,0 +1,22 @@
+{
+    "name": "Hextris",
+    "short_name": "Hextris",
+    "description": "The goal of Hextris is to stop blocks from leaving the inside of the outer gray hexagon.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#000",
+    "theme_color": "#31506e",
+    "icons": [
+      {
+        "src": "icon-192x192.png",
+        "sizes": "192x192",
+        "type": "images/png"
+      },
+      {
+        "src": "icon-512x512.png",
+        "sizes": "512x512",
+        "type": "images/png"
+      }
+    ]
+  }
+  
