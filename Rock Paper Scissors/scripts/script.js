@@ -4,12 +4,14 @@ const gameContainer = document.querySelector(".container"),
   result = document.querySelector(".result"),
   userScoreDisplay = document.querySelector(".user_score"),
   cpuScoreDisplay = document.querySelector(".cpu_score"),
+  tieScoreDisplay = document.querySelector(".tie_score");
   resetButton = document.querySelector(".reset"),
   winnerModal = document.getElementById("winnerModal"),
   winnerMessage = document.getElementById("winnerMessage"),
   playAgainButton = document.getElementById("playAgainButton");
 
 let userScore = 0,
+  tieScore=0,
   cpuScore = 0;
 
 const optionImages = document.querySelectorAll(".option_image");
@@ -29,8 +31,10 @@ function showWinner(winner) {
 
 function resetGame() {
   userScore = 0;
+  tieScore = 0;
   cpuScore = 0;
   userScoreDisplay.textContent = `User: ${userScore}`;
+  tieScoreDisplay.textContent = `Draw: ${tieScore}`;
   cpuScoreDisplay.textContent = `CPU: ${cpuScore}`;
   result.textContent = "Let's Play!!";
   optionImages.forEach(image => image.classList.remove("active"));
@@ -87,11 +91,13 @@ optionImages.forEach((image, index) => {
         userScore++;
       } else if (outComeValue === "Cpu") {
         cpuScore++;
+      } else{
+        tieScore++;
       }
 
       userScoreDisplay.textContent = `User: ${userScore}`;
       cpuScoreDisplay.textContent = `CPU: ${cpuScore}`;
-
+      tieScoreDisplay.textContent = `Draw: ${tieScore}`;
       checkWinner();
     }, 2500);
   });

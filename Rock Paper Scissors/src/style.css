@@ -68,6 +68,7 @@ body {
 }
 
 .user_score,
+.tie_score,
 .cpu_score {
   font-size: 1.2rem;
   color: #333;
@@ -79,7 +80,9 @@ body {
   left: 50%; /* Position at the center horizontally */
   transform: translateX(-210%); /* Adjust to center the score */
 }
-
+.tie_score {
+  left: 47.4%;
+}
 .cpu_score {
   right: 50%; /* Position at the center horizontally */
   transform: translateX(210%); /* Adjust to center the score */
