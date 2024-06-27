@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound interest calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Compound Interest Calculator</h1>
+      <div class="input-values">
+        <div class="elements">
+          <label>Principal Amount:</label>
+          <input type="number" min="0" class="js-principal"><br>
+        </div>
+        <div class="elements">
+          <label>Annual Interest Rate (%):</label>
+          <input type="number" min="0" class="js-interest-rate"><br>
+        </div>
+        <div class="elements">
+          <label>Number of Years:</label>
+          <input type="number" min="0" class="js-years"><br>
+        </div>
+        <button type="submit" class="js-submit">Calculate</button>
+        <div class="js-result result" style="display: none"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
