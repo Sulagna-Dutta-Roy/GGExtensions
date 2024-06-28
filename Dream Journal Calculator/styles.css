@@ -46,3 +46,38 @@ button:hover {
 #wordCloud {
     margin: 0 auto;
 }
+
+.dream {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.dream h3 {
+    margin: 0;
+}
+
+.dream p {
+    margin: 5px 0;
+}
+
+.sentiment-bar {
+    display: flex;
+    height: 20px;
+    margin-top: 10px;
+    position: relative;
+    background-color: #e0e0e0;
+}
+
+.sentiment-positive {
+    background-color: green;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+.sentiment-negative {
+    background-color: red;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
