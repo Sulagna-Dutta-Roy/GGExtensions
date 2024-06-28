@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Journal Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="container">
@@ -12,22 +13,16 @@
         <form id="dreamForm">
             <label for="dreamTitle">Dream Title:</label>
             <input type="text" id="dreamTitle" name="dreamTitle" required>
-
             <label for="dreamDate">Date:</label>
             <input type="date" id="dreamDate" name="dreamDate" required>
-
             <label for="dreamEntry">Dream Entry:</label>
             <textarea id="dreamEntry" name="dreamEntry" rows="4" required></textarea>
-
             <label for="dreamEmotions">Emotions (comma-separated):</label>
             <input type="text" id="dreamEmotions" name="dreamEmotions" required>
-
             <button type="submit">Analyze Dream</button>
         </form>
-
         <h2>Word Cloud</h2>
         <div id="wordCloud" style="width: 600px; height: 400px;"></div>
-
         <h2>Analysis</h2>
         <div id="analysis"></div>
     </div>
