@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Stick Hero With Canvas Game",
+    "version": "1.0",
+    "description": "A Stick Hero With Canvas Game with Chrome extension.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions":[]
+}
