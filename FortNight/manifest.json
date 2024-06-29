@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Fortnite GG Script",
+  "description": "A script for educational purposes to modify game parameters.",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
