@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="controls">
+        <label for="speed">Orbit Speed:</label>
+        <input type="range" id="speed" name="speed" min="1" max="100" value="20">
+    </div>
+    <div class="solar-system">
+        <div class="sun"></div>
+        <div class="orbit orbit1">
+            <div class="planet planet1" data-name="Mercury" data-info="The smallest and closest planet to the Sun."></div>
+        </div>
+        <div class="orbit orbit2">
+            <div class="planet planet2" data-name="Venus" data-info="The second planet from the Sun, known for its thick, toxic atmosphere."></div>
+        </div>
+        <div class="orbit orbit3">
+            <div class="planet planet3" data-name="Earth" data-info="Our home planet, the third planet from the Sun."></div>
+        </div>
+        <div class="orbit orbit4">
+            <div class="planet planet4" data-name="Mars" data-info="The fourth planet from the Sun, known as the Red Planet."></div>
+        </div>
+        <div class="orbit orbit5">
+            <div class="planet planet5" data-name="Jupiter" data-info="The largest planet in our solar system, the fifth from the Sun."></div>
+        </div>
+        <div class="orbit orbit6">
+            <div class="planet planet6" data-name="Saturn" data-info="The sixth planet from the Sun, known for its ring system."></div>
+        </div>
+        <div class="orbit orbit7">
+            <div class="planet planet7" data-name="Uranus" data-info="The seventh planet from the Sun, known for its unique tilt."></div>
+        </div>
+        <div class="orbit orbit8">
+            <div class="planet planet8" data-name="Neptune" data-info="The eighth and farthest known planet from the Sun."></div>
+        </div>
+    </div>
+    <div class="planet-info" id="planet-info"></div>
+    <script src="script.js"></script>
+</body>
+</html>
