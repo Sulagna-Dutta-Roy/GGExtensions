@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Savings Calculator",
+    "description": "Calculate your savings easily with this extension.",
+    "author": "ishithaac2312@gmail.com",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "browser_action": {
+      "default_popup": "index.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
+  
