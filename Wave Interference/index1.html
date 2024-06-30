@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Interference Simulation</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="resetBtn">Reset</button>
+        <label for="frequencySlider">Frequency:</label>
+        <input type="range" id="frequencySlider" min="0.1" max="3.0" value="1.0" step="0.1">
+        <label for="amplitudeSlider">Amplitude:</label>
+        <input type="range" id="amplitudeSlider" min="10" max="100" value="50">
+    </div>
+    <div class="container">
+        <canvas id="simulationCanvas"></canvas>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
