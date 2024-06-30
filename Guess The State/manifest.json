@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Guess The Country",
+    "name": "Guess The State",
     "version": "1.0",
-    "description": "A fun game to guess the Country by the emoji",
+    "description": "A fun game to guess the State by the Riddle",
     "action": {
       "default_popup": "index.html"
     },
