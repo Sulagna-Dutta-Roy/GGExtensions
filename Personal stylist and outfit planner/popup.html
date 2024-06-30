@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylist & Outfit Planner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Outfit Planner</h1>
+    <div class="form-group">
+      <label for="occasion">Occasion</label>
+      <select id="occasion">
+        <option value="casual">Casual</option>
+        <option value="formal">Formal</option>
+        <option value="party">Party</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="weather">Weather</label>
+      <select id="weather">
+        <option value="sunny">Sunny</option>
+        <option value="rainy">Rainy</option>
+        <option value="cold">Cold</option>
+      </select>
+    </div>
+    <button id="generate-outfit">Generate Outfit</button>
+    <div id="outfit-result"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
