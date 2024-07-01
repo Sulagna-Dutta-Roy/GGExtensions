@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="assets/GameCSS.css">
+<link rel="stylesheet" href="assets/OutroCSS.css">
+<script src="assets/OutroJS.js"></script>
+<script src="assets/GameJS.js"></script>
+
+<div id="main-container">
+
+		<!--backgroundImage: all other gameplay elements are children of this div.-->
+		<div id="game-container" class="container">
+			<div class="gamebg"></div>
+
+			<div class="customer">
+				<div id="board" class="board"></div>
+				<div id="lady" class="lady">
+					<div id="requestcake"></div>
+				</div>
+				<span id="greenbar" class="greenbar"></span>
+				<span id="pinkbar" class="pinkbar"></span>
+				<div class="coins">
+					<span id="coin1"></span>
+					<span id="coin2"></span>
+					<span id="coin3"></span>
+					<span id="coin4"></span>
+					<span id="coin5"></span>
+					<span id="coin6"></span>
+				</div>
+				<div class="hearts">
+					<span id="heart1"></span>
+					<span id="heart2"></span>
+					<span id="heart3"></span>
+					<span id="heart4"></span>
+					<span id="heart5"></span>
+					<span id="heart6"></span>
+				</div>
+				<span id="coinhint" class=""></span>
+			</div>
+
+			<div id="chef" class="stand">
+					<div id="smallboard" class=""></div>
+					<div id="cake" class=""></div>	
+			</div>
+
+			<div class="countertop"></div>
+				
+			<div class="tools">
+				<div id="cakepan" class="cakepan"></div>
+				<div id="cakebatter" class="cakebatter"></div>
+				<div id="checkmark" class=""></div>
+				<div id="cooking" class=""></div>
+				<div id="frame" class="">
+					<div id="proces" class=""></div>
+				</div>
+				
+			</div>
+
+			<div id="tutorial">
+				<div id="target" class="target" onclick="clickcooking();">
+				</div>
+				<span id="tutarrow" class="arrow"></span>
+				<span id="box" class="box">
+					<span id="speechlady" class="speechlady"></span>
+					<h1 id="text" class="text">Grab that round cake pan.</h1>
+				</span>
+			</div>
+			<span id="signalarrow" class=""></span>
+		</div>
+
+		<!-- OUTRO SPECIFIC HTML -->
+		<!--backgroundImage: all other outro elements are children of this div.-->
+		<div id="outro-container" class="container">
+
+			<!--Put all background animation (all animation that exists behind the buttons but in front of the background... ex: snow, rain, or bubbles) inside this empty div-->
+			<div id="animation-container">
+				<!-- uncomment the following code for midcore:
+				<div id="end-scenario"></div> -->
+			</div>
+
+			<!--ThanksForPlaying: we will assign a class and Id to be able to change it between screens-->
+			<div id="bottom-button">
+			</div>
+
+			<!--DLbutton: margin: auto; allows the button to be centered automatically!-->
+			<div id="top-button">
+			</div>
+
+			<!--Logo: this is an empty div. Just add a background-image:url('');-->
+			<div id="logo">
+			</div>
+
+			<!--AppIcon-->
+			<div id="appicon">
+			</div>
+      
+			<!--ClickURL that sends the user to the landing page-->
+			<div id="dl-div" onclick="clickDownload();">
+			</div>
+		</div>
+
+</div>
+
