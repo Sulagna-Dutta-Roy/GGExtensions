@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Media Launcher</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <link href="/styles.css" rel="stylesheet"/>    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top_wrapper">
+            <!-- <img src="images/logo.png" alt="Social Media Launcher" class="logo"> -->
+            <span class="title_wrapper">
+                <span class="title">    
+                    Social Media Quick Access
+                </span>
+                <p class="sub_title">All your profiles are just one click away!</p>
+            </span>
+        </div>
+        <div class="middle_wrapper">
+            <span class="name">
+                Hello! <span id="name"></span>
+            </span>
+            <a class="edit-btn" role="button" href="edit.html" id="edit">
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>
+        <div class="modal-icons">
+            <div class="toggle_container">
+                <div class="toggle_wrapper">
+                    <span class="toggle_btn open_btn" name="website">
+                        <a href="#!" id="website" target="_blank">
+                            <i class="fa fa-globe fa-2x"></i>
+                        </a>
+                    </span>
+                    <br/>
+                    <span class="toggle_btn copy_btn" name="website" type="button">
+                        <i class="fa fa-copy fa-1x"></i>
+                    </span>
+                </div>
+                <div class="toggle_wrapper">
+                    <span class="toggle_btn open_btn" name="github">
+                        <a href="#!" id="github" target="_blank">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                    </span>
+                    <br/>
+                    <span class="toggle_btn copy_btn" name="github" type="button">
+                        <i class="fa fa-copy fa-1x"></i>
+                    </span>
+                </div>
+                <div class="toggle_wrapper">
+                    <span class="toggle_btn open_btn" name="linkedin">
+                        <a href="#!" id="linkedin" target="_blank">
+                            <i class="fa fa-linkedin fa-2x"></i>
+                        </a>
+                    </span>
+                    <br/>
+                    <span class="toggle_btn copy_btn" name="linkedin" type="button">
+                        <i class="fa fa-copy fa-1x"></i>
+                    </span>
+                </div>
+                <div class="toggle_wrapper">
+                    <span class="toggle_btn open_btn" name="twitter">
+                        <a href="#!" id="twitter" target="_blank">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </span>
+                    <br/>
+                    <span class="toggle_btn copy_btn" name="twitter" type="button">
+                        <i class="fa fa-copy fa-1x"></i>
+                    </span>
+                </div>
+                <div class="toggle_wrapper">
+                    <span class="toggle_btn open_btn" name="instagram">
+                        <a href="#!" id="instagram" target="_blank">
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </a>
+                    </span>
+                    <br/>
+                    <span class="toggle_btn copy_btn" name="instagram" type="button">
+                        <i class="fa fa-copy fa-1x"></i>
+                    </span>
+                </div>
+                <div>
+                    <a href="#" id="launch-all" class="toggle_rocket">
+                        <i class="fa fa-rocket fa-3x"></i>
+                    </a>
+                </div>
+            </div>            
+        </div>        
+    </div>
+    <script src="/popup.js"></script>
+</body>
+</html>
