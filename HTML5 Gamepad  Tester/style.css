@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #0d0d0d;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    animation: fadeIn 2s;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ccc;
+    animation: fadeIn 3s;
+}
+
+.time {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #aaa;
+    animation: fadeIn 4s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+#gamepads {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    animation: fadeIn 5s;
+}
+
+.gamepad {
+    background-color: #1a1a1a;
+    padding: 1em;
+    margin: 10px;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.gamepad .head, .gamepad .info, .gamepad .inputs {
+    margin-bottom: 10px;
+}
+
+.gamepad .info, .gamepad .inputs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gamepad .label {
+    width: 100px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button, input[type="range"] {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button {
+    background-color: #ff0000;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+button:hover {
+    background-color: #cc0000;
+    transform: scale(1.1);
+}
+
+input[type="range"] {
+    background-color: #ff0000;
+    width: 200px;
+}
+
+.axis-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.axis {
+    width: 50px;
+    height: 50px;
+    background-color: #444;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.axis .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button.pressed {
+    background-color: #ff0000;
+    transform: scale(1.2);
+}
+
+.button span {
+    color: #fff;
+    font-size: 0.8em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* New styles for buttons */
+.red-button {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.red-button:hover {
+  background-color: #ff3333;
+}
+
