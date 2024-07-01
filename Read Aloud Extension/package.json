@@ -1,0 +1,20 @@
+{
+  "name": "read-aloud",
+  "version": "1.0.1",
+  "description": "A Chrome extension that reads aloud the webpage's content with just one click. Support 40+ languages.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "package": "zip -r build/package.zip _locales css img js sound *.html manifest.json background.js -x \\*.map || true",
+    "sync-page-scripts": "rsync -avz js/messaging.js page-scripts/ && aws s3 sync --delete --metadata-directive REPLACE --cache-control max-age=14400,public page-scripts s3://lsdsoftware-assets/read-aloud/page-scripts"
+  },
+
+  "keywords": [
+    "text-to-speech",
+    "chrome-extension"
+  ],
+  "author": "Nishant Kaushal"
+ 
+
+}
