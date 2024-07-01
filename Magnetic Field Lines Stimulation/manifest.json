@@ -1,0 +1,35 @@
+{
+  "name": "Magnetic Field Lines Simulation",
+  "version": "1.0.0",
+  "description": "A simulation to visualize magnetic field lines around a magnet or a set of magnets.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/magnetic-field-lines-simulation.git"
+  },
+  "keywords": [
+    "magnetism",
+    "magnetic field",
+    "simulation",
+    "physics",
+    "visualization"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.130.0",
+    "dat.gui": "^0.7.6"
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "live-server": "^1.2.1"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
