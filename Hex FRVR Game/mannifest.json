@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Hex FRVR Game",
+  "version": "1.0",
+  "description": "A simple Hex FRVR-like game made with HTML, CSS, and JavaScript.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
