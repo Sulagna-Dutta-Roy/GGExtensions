@@ -1,0 +1,161 @@
+{
+  "extension_name": {
+    "message": "Read Aloud: テキスト読み上げ音声リーダー"
+  },
+  "extension_short_name": {
+    "message": "読み上げる"
+  },
+  "extension_description": {
+    "message": "ワンクリックで現在のウェブページの記事を読み上げます。 40以上の言語をサポートします。"
+  },
+  "options_heading": {
+    "message": "オプション"
+  },
+  "options_voice_label": {
+    "message": "音声"
+  },
+  "options_voicegroup_offline": {
+    "message": "オフラインの声"
+  },
+  "options_voicegroup_standard": {
+    "message": "標準音声"
+  },
+  "options_voicegroup_premium": {
+    "message": "プレミアム音声"
+  },
+  "options_voicegroup_additional": {
+    "message": "追加の音声"
+  },
+  "options_enable_custom_voices": {
+    "message": "カスタム音声を有効にする"
+  },
+  "options_rate_label": {
+    "message": "スピード"
+  },
+  "options_rate_warning": {
+    "message": "注：一部の音声は高速では動作しない場合があります。"
+  },
+  "options_pitch_label": {
+    "message": "ピッチ"
+  },
+  "options_volume_label": {
+    "message": "ボリューム"
+  },
+  "options_show_highlighting": {
+    "message": "テキストの強調表示"
+  },
+  "options_highlighting_off": {
+    "message": "消す"
+  },
+  "options_highlighting_popup": {
+    "message": "ポップアップで表示"
+  },
+  "options_highlighting_window": {
+    "message": "別ウィンドウで表示"
+  },
+  "options_audio_playback": {
+    "message": "オーディオ再生"
+  },
+  "options_audio_playback_standalone": {
+    "message": "別のタブを使用する"
+  },
+  "options_audio_playback_embedded": {
+    "message": "ページ内"
+  },
+  "options_hotkeys_link": {
+    "message": "ショートカットキーを編集する"
+  },
+  "options_test_button": {
+    "message": "テスト"
+  },
+  "options_reset_button": {
+    "message": "リセット"
+  },
+  "options_logged_in_as": {
+    "message": "次のユーザーとしてログイン"
+  },
+  "options_account_button": {
+    "message": "アカウント"
+  },
+  "options_logout_button": {
+    "message": "ログアウト"
+  },
+  "player_tab_explanation": {
+    "message": "読み上げでは、このタブを使用して音声を再生します。このタブは、5 分間操作がないと自動的に閉じます。"
+  },
+  "player_hidethistab_link": {
+    "message": "このタブを非表示"
+  },
+  "player_hidethistab_dialog_title": {
+    "message": "このタブを非表示にしますか?"
+  },
+  "player_hidethistab_dialog_body": {
+    "message": "このタブを非表示にすると、読み上げは現在の Web ページ内で音声を再生します。これは、ページから離れると音声が停止することを意味します。 (この設定は、拡張機能の [オプション] ページから元に戻すことができます)"
+  },
+  "player_hidethistab_dialog_ok_button": {
+    "message": "隠れる"
+  },
+  "player_hidethistab_dialog_cancel_button": {
+    "message": "キャンセル"
+  },
+  "player_permission_dialog_title": {
+    "message": "許可が必要です"
+  },
+  "player_permission_dialog_body": {
+    "message": "音声の再生を読み上げに許可しますか?"
+  },
+  "player_permission_dialog_ok_button": {
+    "message": "許可する"
+  },
+  "context_read_selection": {
+    "message": "選択したテキストを読み上げる"
+  },
+  "error_no_text": {
+    "message": "読み上げる文章が見つかりませんでした"
+  },
+  "error_no_voice": {
+    "message": "言語はサポートされていません '{lang}'"
+  },
+  "error_upload_pdf": {
+    "message": "読み上げるにはフォームを使用してPDFファイルをアップロードしてください"
+  },
+  "error_ajax_pdf": {
+    "message": "この PDF ファイルをコンピュータに保存し、この [PDF ビューアー](open-pdf-viewer) で開いて読み上げてください。"
+  },
+  "error_page_unreadable": {
+    "message": "このウェブサイトを読み上げることはできません"
+  },
+  "error_file_access": {
+    "message": "拡張子[設定](open-extension-settings)のファイルURLへの読み上げアクセスを許可する必要があります "
+  },
+  "error_add_permissions": {
+    "message": "このウェブサイトにReadAloudの追加の[権限](request-permissions)を付与する必要があります"
+  },
+  "error_login_required": {
+    "message": "プレミアムボイスを使用するには、[サインイン](sign-in)してください"
+  },
+  "error_voice_unavailable": {
+    "message": "音声が利用できません。別のものを選択してください。"
+  },
+  "error_payment_required": {
+    "message": "クレジットがありません"
+  },
+  "error_wavenet_auth_required": {
+    "message": "Google Wavenetの音声を有効にするには、追加の[権限](auth-wavenet)を付与する必要があります"
+  },
+  "languages_heading": {
+    "message": "言語オプション"
+  },
+  "languages_back_button": {
+    "message": "オプションに戻る"
+  },
+  "google_translate_request_permission": {
+    "message": "Read Aloudは、テキスト読み上げにGoogle翻訳を使用しようとしています。"
+  },
+  "google_translate_allow_button": {
+    "message": "許可する"
+  },
+  "google_translate_keep_page_open": {
+    "message": "Read Aloudは、テキスト読み上げにGoogle翻訳を使用しています。このタブは開いたままにしてください。"
+  }
+}

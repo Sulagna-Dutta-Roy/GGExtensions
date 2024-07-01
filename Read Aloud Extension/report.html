@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Report Issues</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <style>
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  .container {
+    min-width: 400px;
+  }
+  .status {
+    display: none;
+  }
+  button.close {
+    float: right;
+    display: none;
+  }
+  .dark-mode .close {
+    color: white;
+  }
+  </style>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/defaults.js"></script>
+  <script src="js/report.js"></script>
+</head>
+<body>
+  <div class="container">
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h2>Report Issue</h2>
+    <form>
+      <div class="form-group">
+        <label for="txt-url">I was reading this URL</label>
+        <input id="txt-url" type="text" class="form-control" maxlength="500" />
+      </div>
+      <div class="form-group">
+        <label for="txt-comment">This issue occurs</label>
+        <textarea id="txt-comment" class="form-control" rows="3" maxlength="1000"></textarea>
+        <small class="form-text text-muted">
+          Please include your email if you wish to follow up.
+        </small>
+      </div>
+      <div class="form-group">
+        <button id="btn-submit" type="button" class="btn btn-primary">Submit</button>
+        <img id="img-spinner" class="status" src="img/loading.gif" />
+      </div>
+      <div class="form-group">
+        <div id="lbl-status" class="status alert alert-success"></div>
+        <div id="lbl-error" class="status alert alert-danger"></div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
