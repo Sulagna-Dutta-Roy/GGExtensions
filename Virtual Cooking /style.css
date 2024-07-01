@@ -1,669 +1,121 @@
-
-.gamebg{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864822/gamebg_iPadLand_zyqmih.jpg");
-	position:absolute;
-	width:1024px;
-	height:768px;
-	left:0px;
-	top:0px;
-}
-
-.cakepan{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864820/cakepan_iPad_kqhq6j.png");
-	position:absolute;
-	width:52px;
-	height:45px;
-    left:10px;
-    top:166px;
-}
-
-.cakebatter{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864820/cakebatter_iPad_uzobky.png");
-    position:absolute;
-    width:56px;
-    height:46px;
-    left:8px;
-    top:261px;
-}
-
-.bounce{
-     -webkit-animation:bounce .1s alternate;
-}
-
-.check{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864820/checkmark_iPad_kdlveu.png");
-	position:absolute;
-	width:29px;
-	height:29px;
-    left:23px;
-    top:173px;
-     -webkit-animation:bounce .1s alternate;
-}
-
-.check2{
-    left:90px; 
-    top:401px;
-}
-
-.check3{
-    left:300px;
-    top:603px;
-}
-
-.check4{
-    left:590px;
-    top:213px;
-}
-
-.greenbar{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864822/greenbar_iPad_kq5dfe.png");
-    position:absolute;
-    width:0px;
-    height:28px;
-    left:372px;
-    top:9px;
-}
-
-.green{
-    -webkit-animation:green 1s linear forwards;
-}
-
-.green2{
-    -webkit-animation:green2 1s linear forwards;
-}
-
-.pinkbar{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864823/pinkbar_iPad_mvrg8r.png");
-    position:absolute;
-    width:0px;
-    height:27px;
-    left:664px;
-    top:9px;
-}
-
-.pink{
-    -webkit-animation:pink 1s linear forwards;
-}
-
-.pink2{
-    -webkit-animation:pink2 1s linear forwards;
-}
-
-.coinhint{
-    position:absolute;
-    border:5px solid #FFEB3B;
-    -webkit-filter:blur(2px);
-    border-radius:25px;
-    width:38px;
-    height:38px;
-    left:287px;
-    top:-5px;
-    -webkit-animation:bounce .08s linear alternate 8;
-}
-
-.coin{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864820/coin_iPad_rftfgi.png");
-    position:absolute;
-    width:34px;
-    height:30px;
-    left:581px;
-    top:225px;
-    -webkit-animation:flycoin .5s linear forwards;
-}
-
-.heart{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864821/CScake_iPad_l6bds3.png");
-    position:absolute;
-    background-position-y:113px;
-    width:39px;
-    height:26px;
-    left:581px;
-    top:225px;
-    -webkit-animation:flyheart .5s linear forwards;
-}
-
-.lady{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864822/ladysprite_iPad_mgnv24.png");
-	position:absolute;
-	width:90px;
-	height:94px;
-	left:479px;
-    top:252px;
-    -webkit-animation:lady 5s steps(28) infinite;
-}
-
-.happylady{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864822/happylady_iPad_y0a3ni.png");
-    position:absolute;
-    width:98px;
-    height:94px;
-    left:475px;
-    top:252px;
-}
-
-.board{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864822/largeboard_iPad_a6bbki.png");
-    position:absolute;
-    width:180px;
-    height:205px;
-    left:503px;
-    top:146px;
-}
-
-#requestcake{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864821/CScake_iPad_l6bds3.png");
-	position:absolute;
-	width:102px;
-	height:111px;
-    left:74px;
-    top:-102px;
-}
-
-.stand{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864823/standing_iPad_uguatz.png");
-    position:absolute;
-    width:90px;
-    height:246px;
-    left:748px;
-    top:338px;
-} 
-
-.stand2{
-    left:148px;
-} 
-
-.stand3{
-    left:352px;
-    top:403px;
-} 
-
-.stand4{
-    left:470px;
-}
-
-.walk{
-	background- image:url("https://res.cloudinary.com/yamogo/image/upload/v1475869878/bakingyamo/walksprite_iPad.png");
-	position:absolute;
-	width:90px;
-	height:249px;
-    left:748px;
-    top:338px;
-    -webkit-animation:left 1s linear forwards, walk .5s steps(8) infinite forwards;
-}
-
-.walk2{
-    left:469px;
-    -webkit-animation:left2 1s linear forwards, walk2 .5s steps(8) infinite forwards;
-}
-
-.panhand{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864823/panhand_iPad_w4xpb9.png");
-	position:absolute;
-	width:139px;
-	height:244px;
-    left:142px;
-    top:338px;
-}
-
-.panhand2{
-    left:345px;
-    top:404px;
-}
-
-.batterhand{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864820/batterhand_iPad_xt4xwr.png");
-	position:absolute;
-	width:191px;
-	height:244px;
-    left:90px;
-    top:338px;
-}
-
-.walkright{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864824/walkrightsprite_iPad_g6xear.png");
-    position:absolute;
-    width:126px;
-    height:247px;
-    left:142px;
-    top:338px;
-    -webkit-animation:right .8s linear forwards, walkright .4s steps(8) infinite forwards;
-}
-
-.walkup{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864824/walkupsprite_iPad_wqtvhs.png");
-    position:absolute;
-    width:119px;
-    height:247px;
-    left:322px;
-    top:405px;
-    -webkit-animation:up 1.2s linear forwards, walkup .4s steps(8) infinite forwards;
-}
-
-.baking{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864823/ovensprite_iPad_sxtax8.png");
-	position:absolute;
-	width:152px;
-	height:106px;
-	left:22px;
-    top:374px;
-    -webkit-animation:baking 5s steps(31);
-}
-
-.frosting{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864821/frostsprite_iPad_velg2m.png");
-	position:absolute;
-	width:154px;
-	height:108px;
-	left:315px;
-    top:503px;
-    -webkit-animation:frosting 5s steps(31);
-}
-
-.frame{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864823/processframe_iPad_tbfyih.png");
-    position:absolute;
-    width:116px;
-    height:36px;
-    left:44px;
-    top:463px;
-}
-
-.frame2{
-    left:340px;
-    top:593px;
-}
-
-.process{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864822/processbar_iPad_ba9wat.png");
-    position:absolute;
-    width:0px;
-    height:22px;
-    left:9px;
-    top:6px;
-    -webkit-animation:process 5s linear forwards;
-}
-
-.smallboard{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864823/smallboard_iPad_bck0fx.png");
-    position:absolute;
-    width:84px;
-    height:97px;
-    left:-88px;
-    top:72px;
-}
-
-.smallboard2{
-    left:353px;
-    top:519px;
-}
-
-.berrycake{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864823/strawcake_iPad_re5kgl.png");
-	position:absolute;
-	width:102px;
-	height:74px;
-    left:-97px;
-    top:80px;
-}
-
-.small{
-    -webkit-transform:scale(.6);
-}
-
-.berrycake2{
-    left:78px;
-    top:27px;
-}
-
-.chococake{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864821/CScake_iPad_l6bds3.png");
-    position:absolute;
-    background-position-y:77px;
-    width:102px;
-    height:77px;
-    left:343px;
-    top:528px;
-}
-
-.chococake2{
-    left:79px;
-    top:23px;
-}
-
-.chococake3{
-    z-index:-1;
-    left:-74px;
-    top:24px;
-}
-
-.target{
-	position:absolute;
-    width:71px;
-    height:71px;
-    border-radius:15px;
-    border:8px solid white;
-    left:1px;
-    top:152px;
-    box-shadow: 0 0 0 1200px rgba(0, 0, 0, 0.58);
-}
-
-.target2{
-    top:245px;
-}
-
-.target3{
-    width:200px;
-    height:197px;
-    left:2px;
-    top:318px;
-}
-
-.target4{
-    width:99px;
-    height:110px;
-    left:51px;
-    top:401px;
-}
-
-.target5{
-    width:100px;
-    height:98px;
-    left:262px;
-    top:569px;
-}
-
-.target6{
-    width:256px;
-    height:146px;
-    left:262px;
-    top:516px;
-}
-
-.target7{
-    width:103px;
-    height:111px;
-    left:343px;
-    top:509px;
-}
-
-.target8{
-    width:219px;
-    height:217px;
-    left:470px;
-    top:136px;
-}
-
-.target9{
-    width:0px;
-    height:0px;
-    border:0px solid white;
-}
-
-.box{
-    position:absolute;
-    background-color: #b3e7fe;
-    border:6px solid white;
-    border-radius:20px;
-    width:438px;
-    height:66px;
-    left:277px;
-    top:84px;
-}
-
-.box2{
-    top:188px;
-}
-
-.box3{
-    left:344px;
-    top:308px;
-}
-
-.box4{
-    left:81px;
-    top:353px;
-}
-
-.box5{
-    height:86px;
-    left:77px;
-    top:339px;
-}
-
-.speechlady{
-    background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864824/speechlady_iPad_e1vx7e.png");
-    position:absolute;
-    width:146px;
-    height:155px;
-    left:-82px;
-    top:-33px;
-}
-
-.speechlady2{
-    left:399px;
-    -webkit-transform:scaleX(-1);
-}
-
-.text{
-    position:absolute;
-    width:320px;
-    height:30px;
-    left:60px;
-    top:0px;
-    font-family: sans-serif;
-    font-size:15px;
-    text-align:center;
-    line-height:55px;
-}
-
-.text2{
-    left:94px;
-    top:14px;
-    font-size:15px;
-    text-align:left;
-    line-height:25px;
-}
-
-.arrow{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864824/tutarrow_iPad_itozg9.png");
-	position:absolute;
-    width:94px;
-    height:68px;
-    left:120px;
-    top:154px;
-    -webkit-animation:point .4s alternate infinite;
-}
-
-.arrow2{
-	left:120px;
-    top:244px;
-}
-
-.arrow3{
-    left:230px;
-    top:414px;
-}
-
-.arrow5{
-    left:170px;
-    top:584px;
-    -webkit-transform: scaleX(-1);
-    -webkit-animation:point2 .4s alternate infinite;
-}
-
-.arrow7{
-	left:236px;
-    top:529px;
-    -webkit-transform: scaleX(-1);
-    -webkit-animation:point2 .4s alternate infinite;
-}
-
-.arrow8{
-    left:721px;
-    top:209px;
-}
-
-.countertop{
-	background-image:url("https://res.cloudinary.com/yamogo/image/upload/v1475864821/countertop_iPad_fzuiv6.png");
-	position:absolute;
-	width:1024px;
-	height:261px;
-    left:0px;
-    top:507px;
-}
-
-@-webkit-keyframes bounce{
-	100% {-webkit-transform: scale(1.2);}
-}
-
-@-webkit-keyframes point{
-	100% {-webkit-transform:translateX(-49px);}
-}
-
-@-webkit-keyframes point2{
-	100% {-webkit-transform:translateX(-49px) scaleX(-1);}
-}
-
-@-webkit-keyframes walk{
-	100% {background-position:-723px;}
-}
-
-@-webkit-keyframes left{
-    100% {-webkit-transform:translateX(-600px);}
-}
-
-@-webkit-keyframes walk2{
-    100% {background-position:-723px;}
-}
-
-@-webkit-keyframes left2{
-    100% {-webkit-transform:translateX(-322px);}
-}
-
-@-webkit-keyframes lady{
-	100% {background-position:-2521px;}
-}
-
-@-webkit-keyframes baking{
-	100% {background-position:-4714px;}
-}
-
-@-webkit-keyframes frosting{
-	100% {background-position:-4774px;}
-}
-
-@-webkit-keyframes walkright{
-	100% {background-position:-1014px;}
-}
-
-@-webkit-keyframes right{
-    100% {-webkit-transform: translate(190px,65px);}
-}
-
-@-webkit-keyframes walkup{
-    100% {background-position:-952px;}
-}
-
-@-webkit-keyframes up{
-    100% {-webkit-transform: translate(120px,-67px);}
-}
-
-@-webkit-keyframes flycoin{
-    100% {-webkit-transform: translate(-288px, -218px);}
-}
-
-@-webkit-keyframes flyheart{
-    100% {-webkit-transform: translate(162px, -218px);}
-}
-
-@-webkit-keyframes green{
-    100% {width:92px;}
-}
-
-@-webkit-keyframes green2{
-    0% {width:92px;}
-    100% {width:131px;}
-}
-
-@-webkit-keyframes pink{
-    100% {width:34px;}
-}
-
-@-webkit-keyframes pink2{
-    0% {width:34px;}
-    100% {width:65px;}
-}
-
-@-webkit-keyframes process{
-    100% {width:100px;}
-}
-
-/********** OUTRO SPECIFIC CSS **********/
-#main-container {
-	width: 1024px;
-	height: 768px;
-	position: absolute;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #f4c531;
 }
 .container {
-	width: 1024px;
-	height: 768px;
-	left: 0px;
-	top: 0px;
-	position: absolute;
+  background-color: #ffffff;
+  font-size: 16px;
+  padding: 3em 2.8em;
+  width: 90vw;
+  max-width: 32em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 0.6em;
 }
-#outro-container {
-	background-image: url('https://res.cloudinary.com/yamogo/image/upload/v1475864821/BG_iPadLand_fffmhd.jpg');
-	background-size: 1024px 768px;
-	display: none;
+.search-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.2em;
 }
-#animation-container{
-	width: 100%;
-	height: 100%;
-	position: absolute;
+.search-container input {
+  font-size: 1em;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #202030;
 }
-
-/*function that defines the animation to be called later. It also defines the parameters and animation deforms. 
-https://www.w3schools.com/css/css3_animations.asp*/
-@-webkit-keyframes pulse {
-	from {-webkit-transform: scale(1);}
-	to {-webkit-transform: scale(.8);}
+.search-container button {
+  font-size: 1em;
+  background-color: #f4c531;
+  border: none;
+  font-weight: 600;
+  border-radius: 0.3em;
 }
-#bottom-button {
-	position: absolute;
+img {
+  display: block;
+  width: 50%;
+  margin: 1.8em auto 0 auto;
 }
-#top-button {
-	width: 441px;
-	height: 175px;
-	position: absolute;
-	left: 289px;
-	/*animation is called. This is in a very specific order. 1. animation name 2. duration 3. animation easing 4. delay 5. pattern*/
-	animation: pulse 1.5s ease-in-out 1s infinite alternate;
+.details {
+  background-color: #f4c531;
+  position: relative;
+  margin: -4.3em 0 0 0;
+  text-align: center;
+  padding: 0.6em 0;
 }
-.mng-install-click-url {
-	position: absolute;
-	width: 1004px;
-	height: 658px;
-	top: 100px;
-	left: 10px;
+.details h2 {
+  font-size: 1.2em;
+  font-weight: 600;
 }
-
-.mng-install-dl {
-	background-image: url('https://res.cloudinary.com/yamogo/image/upload/v1475864821/CTA_iPadLand_zp4smf.png');
-	top: 307px;
+.details h4 {
+  font-size: 1em;
+  font-weight: 400;
 }
-/*The thanks will be removed for a midcore game:*/
-.mng-install-thanks {
-	width: 452px;
-	height: 54px;
-	background-image: url('https://res.cloudinary.com/yamogo/image/upload/v1475864823/Thanks_iPadLand_gndmiq.png');
-	left: 295px;
-	top: 235px;
+#show-recipe {
+  font-size: 1em;
+  position: relative;
+  left: 75%;
+  padding: 0.9em 0.6em;
+  background-color: #f4c531;
+  border: none;
+  top: 1.5em;
+  border-radius: 0.3em;
+  font-weight: 600;
 }
-
-.mng-install-thanks {
-	width: 452px;
-	height: 54px;
-	background-image: url('Thanks_iPadLand.png');
-	left: 295px;
-	top: 235px;
+#recipe {
+  position: absolute;
+  background-color: #ffffff;
+  min-height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 0.6em;
+  display: none;
+}
+#recipe pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 2.5em 1.2em 1.2em 1.2em;
+  font-size: 0.92em;
+  color: #303040;
+}
+#hide-recipe {
+  font-size: 1em;
+  position: relative;
+  width: 1.8em;
+  height: 1.8em;
+  background-color: #f4c531;
+  border: none;
+  top: 1.2em;
+  left: 90%;
+  border-radius: 0.3em;
+}
+ul {
+  font-size: 1em;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.8em 1.1em;
+  padding: 1.2em 0 0 1.2em;
+  color: #303040;
+  text-transform: capitalize;
+}
+h3 {
+  text-align: center;
+  margin-top: 1.8em;
+  color: #202030;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    font-size: 14px;
+  }
 }
