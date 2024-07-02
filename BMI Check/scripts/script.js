@@ -21,5 +21,5 @@ function calculateBMI() {
         category = 'Obesity';
     }
 
-    resultDiv.innerHTML = `Your BMI is ${bmi.toFixed(2)}. Category: ${category}`;
+    resultDiv.innerHTML = `Your BMI is ${bmi}. Category: ${category}`;
 }

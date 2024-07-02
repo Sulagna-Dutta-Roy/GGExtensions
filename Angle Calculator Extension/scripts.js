@@ -18,3 +18,4 @@ function convertAngle() {
         resultElement.innerHTML = `<p>${angle} radians is equal to ${degrees.toFixed(4)} degrees.</p>`;
     }
 }
+
