@@ -1,6 +1,20 @@
+body{
+    min-width: 522px;
+    min-height: 522px;
+}
+.container{
+    position: absolute;
+     top: 40px;
+      left: 410px;
+       width: 522px;
+       height: 522px;
+      border: 1px solid black;
+}
+
 .ui-draggable-dragging {
     z-index: 10000; !important
 }
+
 
 .ui-draggable {
     z-index: 10;
@@ -48,10 +62,12 @@ span[id*=p-]{
 
 #message-div{
     position: absolute;
-    top: 200px;
-    left: 477px;
+    z-index: 1000;
+    color: black;
+    top: 5px;
+    left: 5px;
     width: 390px;
-    height: 200px;
+    height: 20px;
 }
 
 .opposite-side-msg{
@@ -61,4 +77,10 @@ span[id*=p-]{
 
 .color-body-white{
     background-color: white !important;
+}
+
+@media (width<=600px) {
+    .container{
+        position: static;
+    }
 }
