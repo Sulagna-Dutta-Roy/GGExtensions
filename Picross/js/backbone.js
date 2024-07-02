@@ -69,15 +69,7 @@
   // Regular expression used to split event strings
   var eventSplitter = /\s+/;
 
-  // A module that can be mixed in to *any object* in order to provide it with
-  // custom events. You may bind with `on` or remove with `off` callback functions
-  // to an event; trigger`-ing an event fires all callbacks in succession.
-  //
-  //     var object = {};
-  //     _.extend(object, Backbone.Events);
-  //     object.on('expand', function(){ alert('expanded'); });
-  //     object.trigger('expand');
-  //
+
   var Events = Backbone.Events = {
 
     // Bind one or more space separated events, `events`, to a `callback`
@@ -138,10 +130,6 @@
       return this;
     },
 
-    // Trigger one or many events, firing all bound callbacks. Callbacks are
-    // passed the same arguments as `trigger` is, apart from the event name
-    // (unless you're listening on `"all"`, which will cause your callback to
-    // receive the true name of the event as the first argument).
     trigger: function(events) {
       var event, node, calls, tail, args, all, rest;
       if (!(calls = this._callbacks)) return this;
@@ -492,12 +480,7 @@
       return _.has(this.changed, attr);
     },
 
-    // Return an object containing all the attributes that have changed, or
-    // false if there are no changed attributes. Useful for determining what
-    // parts of a view need to be updated and/or what attributes need to be
-    // persisted to the server. Unset attributes will be set to undefined.
-    // You can also pass an attributes object to diff against the model,
-    // determining if there *would be* a change.
+    
     changedAttributes: function(diff) {
       if (!diff) return this.hasChanged() ? _.clone(this.changed) : false;
       var val, changed = false, old = this._previousAttributes;

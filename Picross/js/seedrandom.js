@@ -181,19 +181,13 @@ startdenom = math.pow(width, chunks);
 significance = math.pow(2, significance);
 overflow = significance * 2;
 
-//
-// When seedrandom.js is loaded, we immediately mix a few bits
-// from the built-in RNG into the entropy pool.  Because we do
-// not want to intefere with determinstic PRNG state later,
-// seedrandom will not call math.random on its own again after
-// initialization.
-//
+
 mixkey(math.random(), pool);
 
 // End anonymous scope, and pass initial values.
 })(
-  [],   // pool: entropy pool starts empty
-  Math, // math: package containing random, pow, and seedrandom
+  [],   
+  Math, 
   256,  // width: each RC4 output is 0 <= x < 256
   6,    // chunks: at least six RC4 outputs for each double
   52    // significance: there are 52 significant digits in a double

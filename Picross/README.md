@@ -3,7 +3,6 @@ Picross
 
 This is a playable [picross puzzle](http://en.wikipedia.org/wiki/Nonogram) generator written in JavaScript
 
-You can access [an online version here](http://liouh.com/picross/)
 
 ### Instructions
 
