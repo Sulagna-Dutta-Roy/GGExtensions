@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Debt Payment Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Credit Card Debt Payment Calculator</h1>
+        <form id="debtForm">
+            <h2>Credit Card Details</h2>
+            <div class="form-group">
+                <label for="cardName">Credit Card Name</label>
+                <input type="text" id="cardName" name="cardName" required>
+                
+                <label for="totalDebt">Balance</label>
+                <input type="number" id="totalDebt" name="totalDebt" required>
+                
+                <label for="interestRate">Interest Rate (%)</label>
+                <input type="number" id="interestRate" name="interestRate" step="0.01" required>
+                
+                <label for="minPayment">Minimum Payment</label>
+                <input type="number" id="minPayment" name="minPayment" required>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="addCard">Add Another Card</button>
+            </div>
+
+            <h2>Payment Details</h2>
+            <div class="form-group">
+                <label for="additionalPayment">Additional Monthly Payment</label>
+                <input type="number" id="additionalPayment" name="additionalPayment" required>
+                
+                <label for="paymentStrategy">Payment Method</label>
+                <select id="paymentStrategy" name="paymentStrategy" required>
+                    <option value="avalanche">Avalanche (Highest Interest First)</option>
+                    <option value="snowball">Snowball (Lowest Balance First)</option>
+                </select>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="calculate">Calculate</button>
+            </div>
+        </form>
+
+        <div id="result" class="result">
+            <!-- Results will be displayed here -->
+        </div>
+
+        <div id="cardList" class="card-list">
+            <!-- List of added cards will be displayed here -->
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
