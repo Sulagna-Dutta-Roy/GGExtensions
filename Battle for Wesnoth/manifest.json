@@ -1,0 +1,27 @@
+{
+  "name": "Battle for Wesnoth",
+  "short_name": "Wesnoth",
+  "description": "A simple web-based strategy game inspired by Battle for Wesnoth.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#ffffff",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
