@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
     typeWriter();
   
-    startFigmaExtensionButton.addEventListener('click', function() {
-      chrome.action.setPopup({ popup: 'popup.html' });
+    startFigmaExtensionButton.addEventListener('click', ()=> {
+      browser.browserAction.setPopup({ popup: 'popup.html' });
       window.location.href = 'popup.html';
     });
   });
