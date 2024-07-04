@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "CSS Wizards",
+    "description": " Fun game where we make our CSS concepts stronger in a gamified way.",
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+    }
