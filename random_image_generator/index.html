@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Image Feed</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      img {
+        margin: 10px;
+        border-radius: 5px;
+        width: 200px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Image Feed</h1>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      const unsplashURL = "https://api.unsplash.com/photos/random";
+      const rows = 5;
+      const accessKey = 'H4_7hYT7rFC3qAotphrayv5QpJbJHPMIIjVWugvT3DM'; 
+
+      const fetchRandomImage = async () => {
+        try {
+          const response = await fetch(`${unsplashURL}?client_id=${accessKey}`);
+          const data = await response.json();
+          return data.urls.small;
+        } catch (error) {
+          console.error('Error fetching image:', error);
+        }
+      };
+
+      const loadImages = async () => {
+        for (let i = 0; i < rows * 3; i++) {
+          const imageSrc = await fetchRandomImage();
+          if (imageSrc) {
+            const image = document.createElement("img");
+            image.src = imageSrc;
+            container.appendChild(image);
+          }
+        }
+      };
+
+      loadImages();
+    </script>
+  </body>
+</html>
