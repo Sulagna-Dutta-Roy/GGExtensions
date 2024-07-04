@@ -37,49 +37,6 @@ header {
   text-align: left;
 }
 
-.share-menu {
-  float: right;
-  padding-right: 8px;
-}
-
-.share-menu a {
-  text-decoration: none;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 12px;
-  display: block;
-  float: right;
-  margin-left: 5px;
-  position: relative;
-  opacity: .5;
-  top: -2px;
-  transition: opacity .1s ease-out;
-}
-
-.share-menu a:last-child {
-  margin-left: 8px;
-}
-
-.share-menu a:hover {
-  opacity: .75;
-}
-
-.share-menu .share-twitter {
-  background-image: url(../images/icon-twitter.svg);
-}
-
-.share-menu .share-facebook {
-  background-image: url(../images/icon-facebook.svg);
-}
-
-.share-menu .share-email {
-  background-image: url(../images/icon-email.svg);
-}
-
-.share-menu a:hover {
-  color: rgba(255, 255, 255, .5);
-}
 
 .logo {
   cursor: default;
@@ -366,6 +323,7 @@ bento:before {
 
 .editor input.input-strobe {
   background: rgba(62, 203, 255, .3);
+  animation: none;
   -webkit-animation: input .5s infinite;
   -moz-animation: input .5s infinite;
 
@@ -920,6 +878,7 @@ plate orange:nth-last-child(4) {
   height: 4px;
   width: 4px;
   border: solid 2px #2a231d;
+  border-radius: 0%;
   background: rgba(255, 255, 255, .5);
   -webkit-border-radius: 5px;
 }
@@ -1244,7 +1203,6 @@ plate orange:nth-last-child(4) {
   width: 30px;
   display: inline-block;
   opacity: .25;
-  transition: opacity .2s .ease-out;
 }
 
 .level-nav a:hover {
