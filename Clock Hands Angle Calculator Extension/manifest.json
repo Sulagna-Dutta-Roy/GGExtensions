@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "LCM and HCF Calculator",
+    "name": "Clock Hands Angle Calculator",
     "version": "1.0",
-    "description": "LCM and HCF Calculator.",
+    "description": "Clock Hands Angle Calculator.",
     "permissions": [],
     "action": {
         "default_popup": "popup.html"
