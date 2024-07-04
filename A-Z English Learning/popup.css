@@ -1,5 +1,6 @@
 body{
     background-color: #0C0B0C;
+    min-width: 560px;
   }
   
   /* #0C0B0C */
@@ -135,3 +136,29 @@ body{
     background-image: url("images/zebra.png");
   }
   
+  @media (width<=600px) {
+      .btn {
+    width: 99px;
+    height: 99px;
+    margin: 5px;
+    border-width: 3px;
+    font-size: 3rem;
+  }
+  }  
+
+  /* .btn {
+    outline: none;
+    border: 10px solid #FEE6ED;
+    font-size: 5rem;
+    font-family: Serif;
+    line-height: 2;
+    font-weight: 900;
+    color: #FEE6ED;
+    border-radius: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: #0C0B0C;
+  } */
