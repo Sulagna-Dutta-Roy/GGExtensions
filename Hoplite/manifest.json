@@ -1,0 +1,27 @@
+{
+  "name": "Hoplite Game",
+  "short_name": "Hoplite",
+  "description": "A simple web-based strategy game inspired by Hoplite.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
