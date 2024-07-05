@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Crack Code",
+    "description": "Crack the code with the hints given to you and according to the rules and enjoy the game",
+    "browser_action":{
+        "default_popup":"index.html"
+    },
+    "background": {
+      "service_worker": "script.js",
+      "styles" : "style.css"
+    },
+    "permissions":["activeTab"]
+
+}
+  
