@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Slot Machine Game",
+    "name": "Fruit Matcher",
     "version": "1.0",
     "description": "A fun fruit slot machine game extension",
     "browser_action": {
