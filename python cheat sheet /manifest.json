@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "python cheat sheet",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "tabs"
+  ],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "python.md"
+  }
+}
