@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Square Root",
+    "version": "1.0",
+    "description": "Simply square root of a number",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
