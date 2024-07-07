@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Midpoint Calculator",
+    "version": "1.0",
+    "description": "Midpoint Calculator.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
