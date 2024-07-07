@@ -1,9 +1,9 @@
 {
-    "name": "Zurbo Game",
-    "short_name": "Zurbo",
-    "description": "A fun game to play",
+    "name": "Space Gun",
+    "short_name": "Space_Gun",
+    "description": "A fun game to play.",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#f9f9f9",
     "theme_color": "#006400"
-}
+  }
