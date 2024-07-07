@@ -1,0 +1,245 @@
+/*
+  * Parking Master v3 styles for upcoming.
+  * MIT http://github.com/Parking-Master
+*/
+/* This is commented out
+@font-face {
+font-family: "Digital";
+src: url("digital-font.ttf");
+}
+div#drive_pedal {
+    width: 4.510416666666667vw;
+    height: 4.510416666666667vw;
+    background-image: url('drive-pedal.png');
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: absolute;
+    left: 46.526041666666664vw;
+    top: 38vw;
+}
+div#shift_box {
+    position: absolute;
+    left: 51.338541666666664vw;
+    top: 36vw;
+    background-color: rgb(200, 200, 200);
+    width: 3.2552083333333335vw;
+    height: 4.8828125vw;
+    outline: 0.06510416666666667vw solid black;
+    border-radius: 0.13020833333333334vw;
+    box-shadow: 0.3255208333333333vw 0.3255208333333333vw 0px rgb(200, 200, 200);
+}
+#parking_symbols_shifter {
+  font-size: 1vw;
+}
+div#knob {
+    background-color: rgb(215, 215, 215);
+    border: 0.06510416666666667vw solid #111;
+    width: 1.3020833333333333vw;
+    height: 1.3020833333333333vw;
+    border-radius: 9999px;
+    box-shadow: 0.1953125vw 0.13020833333333334vw #111;
+    position: relative;
+    left: 15%;
+}
+div#knob:hover {
+    cursor: grab;
+}
+div#knob:active {
+    cursor: grabbing;
+}
+@keyframes buttonslidereverse {
+  from {top: 0.06510416666666667vw;}
+}
+@keyframes buttonslidedrive {
+  from {top: 1.3671875vw;}
+}
+@keyframes buttonslidepark {
+  from {top: 2.6041666666666665vw;}
+}
+#steering {
+    background-color: transparent;
+    position: absolute;
+    top: 36vw;
+    margin-left: 42.317708333333336vw;
+    border-radius: 9999px;
+    background-image: url('steering-wheel.jpg');
+    background-size: 100%;
+    width: 5.208333333333333vw;
+    height: 5.208333333333333vw;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 15;
+}
+#steering:hover {
+    cursor: grab;
+}
+#steering:active {
+    cursor: grabbing;
+}
+@font-face {
+font-family: "Sansation";
+src: url("https://db.onlinewebfonts.com/t/00370d92f1b404768d34ac7dc664289e.eot");
+src: url("https://db.onlinewebfonts.com/t/00370d92f1b404768d34ac7dc664289e.eot?#iefix") format("embedded-opentype"),
+url("https://db.onlinewebfonts.com/t/00370d92f1b404768d34ac7dc664289e.woff2") format("woff2"),
+url("httpss://db.onlinewebfonts.com/t/00370d92f1b404768d34ac7dc664289e.woff") format("woff"),
+url("httpss://db.onlinewebfonts.com/t/00370d92f1b404768d34ac7dc664289e.ttf") format("truetype"),
+url("https://db.onlinewebfonts.com/t/00370d92f1b404768d34ac7dc664289e.svg#Sansation") format("svg");
+}
+* {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+body {
+  font-family: 'Sansation', arial;
+  cursor: url("default-cursor.ico") 1 1, default;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+button {
+cursor: grab;
+}
+button:active {
+cursor: grabbing;
+}
+#status-button-bar { 
+left: 58.59375vw;
+}
+.buttonReverse {
+height: 30px;
+color: black;
+background-color: white;
+outline: 4px black;
+width: 80px;
+border: 2px solid black;
+-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+.buttonReverse:active {
+background-color: #D3D3D3;
+-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   transform: scale(1.1, 1.1);
+}
+#arrowright {
+cursor: grab;
+background-color: white;
+background-size: cover;
+width:50px;
+height: 50px;
+outline: none;
+border: 2px solid black;
+position: absolute;
+left: 910px;
+top: 550px;
+}
+#arrowright:active {
+cursor: grabbing;
+box-shadow: -2px -1px gray;
+}
+#arrowleft {
+cursor: grab;
+background-color: white;
+background-size: cover;
+width: 50px;
+height: 50px;
+outline: none;
+border: 2px solid black;
+position: absolute;
+left: 850px;
+top: 550px;
+}
+#arrowleft:active {
+transform: scale(1.1, 1.1);
+cursor: grabbing;
+}
+.paraGraph1 {
+font-family: sans-serif, Arial;
+text-align: center;
+}
+ol {
+font-size: 0.8em;
+text-align: center;
+font-family: sans-serif;
+}
+#header-style {
+font-size: 3vw;
+font-family: 'Sansation', Arial;
+text-align: center;
+}
+#canvas {
+position: relative;
+left: 50vw;
+margin-left: -19.53125vw;
+top: 6.25vw;
+background-color: #FFF;
+}
+.buttonDrive {
+height: 30px;
+color: black;
+background-color: white;
+width: 80px;
+border: 2px solid black;
+-webkit-touch-callout: none;
+-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+.buttonDrive:active {
+background-color: #D3D3D3;
+-moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   transform: scale(1.1, 1.1);
+}
+.buttonPark {
+position: relative;
+border-radius: 50vw;
+height: 0.6510416666666666vw;
+width: 0.6510416666666666vw;
+border: 1px solid #111;
+background-color: #111;
+left: 50%;
+margin-left: -5px;
+top: -50%;
+margin-top: 5px;
+}
+.buttonPark:hover {
+    cursor: pointer;
+}
+#speedstatus {
+font-family: 'Digital';
+position: absolute;
+left: 32vw;
+top: 36vw;
+font-size:1.8vw;
+background-color: #f9f9f9;
+border-radius: 645vw;
+border: 0.195vw solid #222;
+padding: 0.80vw;
+padding-top: -0.7vw;
+padding-bottom: -0.7vw;
+display: inline-block;
+width: 6.510416666666667vw;
+height: 3.2552083333333335vw;
+z-index: 15;
+}
+html {
+    background-image: url(background.png);
+    background-color: #f9f9f9;
+    background-size:  70%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.close-menu {
+color: red;
+font-weight: bold;
+text-decoration: none;
+border: 2px solid #fafafa;
+background-color: white;
+width: 100px;
+}*/

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+#steering {
+    background-color: transparent;
+    position: absolute;
+    left: 200px;
+    border-radius: 9999px;
+    background-image: url('steering1.png');
+    background-size: 100%;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+#steering:hover {
+    cursor: grab;
+}
+#steering:active {
+    cursor: grabbing;
+}
+</style>
+</head>
+<body>
+<div id="steering"></div>
+<button id="auto_click_donot" hidden>Click</button>
+<input type="text" id="transform_rotation_over100" value="" style="display: none;" />
+<input type="number" id="steer-coors__" value="0" style="display: none;" />
+<script>
+document.addEventListener('keydown', function(e){
+  if (e.key === 'ArrowLeft') {
+    var autoSteer = setInterval(function(){
+      document.addEventListener('keyup', function(){
+        clearInterval(autoSteer);
+        document.getElementById('steer-coors__').value = '0';
+        document.getElementById('steering').style.transform = 'rotate(0deg)';
+        return;
+      });
+      document.getElementById('steer-coors__').stepUp(1);
+      var i = document.getElementById('steer-coors__').value;
+      $('#steering').css({
+        transform: 'rotate(-' + i + 'deg)'
+      });
+      if (!autoSteer) {
+        clearInterval(autoSteer);
+      } else {
+
+      }
+    }, 1);
+  } else if (e.key === 'ArrowRight') {
+      var autoSteer = setInterval(function(){
+      document.addEventListener('keyup', function(){
+        clearInterval(autoSteer);
+        document.getElementById('steer-coors__').value = '0';
+        document.getElementById('steering').style.transform = 'rotate(0deg)';
+        return;
+      });
+      document.getElementById('steer-coors__').stepUp(1);
+      var i = document.getElementById('steer-coors__').value;
+      $('#steering').css({
+        transform: 'rotate(' + i + 'deg)'
+      });
+      if (!autoSteer) {
+        clearInterval(autoSteer);
+      } else {
+
+      }
+    }, 1);
+  }
+});
+window.onload = function() {
+  steerpress();
+  document.getElementById('transform_rotation_over100').value = "";
+  document.getElementById('steer-coors__').value = "0";
+}
+function steerpress() {
+  document.getElementById('auto_click_donot').click();
+}
+$('#auto_click_donot').click(function() {
+$('#steering').mousedown(function() {
+$('#steering').mousemove(function(e) {
+  var pagecoors_before = e.pageX - e.pageY;
+  var pageCoors = pagecoors_before -200;
+  document.getElementById('transform_rotation_over100').value = pageCoors;
+  $("#steering").css({
+    transform: "rotate(" + pageCoors + "deg)"
+  });
+  var steer_coors = document.getElementById('transform_rotation_over100').value;
+  $('#transform_rotation_over100').val(steer_coors);
+   if ($('#transform_rotation_over100').val() > 35){
+    window.parent.postMessage('mouseRightDown()', '*');
+  } else if ($('#transform_rotation_over100').val() < -50){
+    window.parent.postMessage('mouseLeftDown()', '*');
+  }
+});
+});
+  $("#steering").mouseup(function(){
+    $('#steering').unbind();
+    if ($('#transform_rotation_over100').val() > 40){
+    window.parent.postMessage('mouseRightUp()', '*');
+  } else if ($('#transform_rotation_over100').val() < -50){
+    window.parent.postMessage('mouseLeftUp()', '*');
+  }
+    steerpress();
+  });
+});
+</script>
+</body>
+</html>
