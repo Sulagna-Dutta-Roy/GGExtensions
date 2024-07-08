@@ -1,0 +1,50 @@
+.game-container {
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .grid-cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-cell.flower {
+    background-color: #fcc;
+  }
+  
+  .grid-cell.flower.bloom {
+    animation: bloom 0.5s ease-in-out;
+  }
+  
+  @keyframes bloom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .score-container {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }

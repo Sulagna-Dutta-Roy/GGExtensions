@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Isogram Checker",
+    "version": "1.0",
+    "description": "A fun game to decrypt and encrypt text",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  

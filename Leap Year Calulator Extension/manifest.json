@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Leap Year Calculator",
+    "version": "1.0",
+    "description": "Leap Year Calculator.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

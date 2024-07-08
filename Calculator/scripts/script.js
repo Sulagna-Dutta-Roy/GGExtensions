@@ -104,9 +104,10 @@ function handleClick(event) {
 
 // Function to display numbers and operators
 function display(num) {
-    output.value += num;
+    if(num!=='Basic Mode' && num!=='Scientific Mode'){
+        output.value += num;
+    }
 }
-
 // Function to calculate the expression
 function calculate() {
     const expression = output.value.trim();

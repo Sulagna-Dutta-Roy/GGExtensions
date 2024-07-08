@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Ceaser-Cipher",
+    "version": "1.0",
+    "description": "A fun game to decrypt and encrypt text",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  

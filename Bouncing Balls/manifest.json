@@ -1,0 +1,15 @@
+
+{
+  "manifest_version": 2,
+  "name": "Bouncig Ball Game",
+  "version": "1.0",
+  "description": "Bouncing balls game typically involves simulating multiple balls moving within a confined space, such as a canvas, with physics-based interactions.",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": ""
+  },
+  "icons": {
+    "128": ""
+  },
+  "permissions": []
+}

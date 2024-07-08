@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Media Launcher</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/edit.css"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top_wrapper">
+            <!-- <img src="images/logo.png" alt="Social Media Launcher" class="logo"> -->
+            <span class="title_wrapper">
+                <span class="title">    
+                    Social Media Quick Access
+                </span>
+                <p class="sub_title">All your profiles are just one click away!</p>
+            </span>
+        </div>
+        <div class="middle_wrapper">
+            <span class="name">
+                Hello! <span id="name"></span>
+            </span>
+            <a class="edit-btn" role="button" href="edit.html" id="edit">
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>
+        <div class="modal-icons">
+            <div class="edit_field_wrapper">
+                <i class="fa fa-child fa-2x"></i>
+                <div class="ball">
+                    <input class="edit_field" id="name_field" type="text" placeholder="Name">
+                </div>
+            </div>
+            <div class="edit_field_wrapper">
+                <i class="fa fa-globe fa-2x"></i>
+                <div class="ball">
+                    <input class="edit_field" id="website" type="text" placeholder="url">
+                </div>
+            </div>
+            <div class="edit_field_wrapper">
+                <i class="fa fa-github fa-2x"></i>
+                <div class="ball">
+                    <input class="edit_field" id="github" type="text" placeholder="url">
+                </div>
+            </div>
+            <div class="edit_field_wrapper">
+                <i class="fa fa-linkedin fa-2x"></i>
+                <div class="ball">
+                    <input class="edit_field" id="linkedin" type="text" placeholder="url">
+                </div>
+            </div>
+            <div class="edit_field_wrapper">
+                <i class="fa fa-twitter fa-2x"></i>
+                <div class="ball">
+                    <input class="edit_field" id="twitter" type="text" placeholder="url">
+                </div>
+            </div>
+            <div class="edit_field_wrapper">
+                <i class="fa fa-instagram fa-2x"></i>
+                <div class="ball">
+                    <input class="edit_field" id="instagram" type="text" placeholder="url">
+                </div>
+            </div>
+        </div>
+        <div class="footer_wrapper">
+            <div class="">
+                <a class="footer_btn" role="button" id="save">Save</a>
+            </div>
+            <div class="">
+                <a class="footer_btn" role="button" href="popup.html">Back</a>
+            </div>
+        </div>
+    </div>
+    <script src="/edit.js"></script>
+</body>
+</html>

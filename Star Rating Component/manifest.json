@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Star Rating Component",
+    "version": "1.0",
+    "description": "Displays a random advice and refreshes with a new advice when the button is pressed.",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon":"images/icon-star.svg"
+    },
+    "icons": {
+        "16": "images/icon-dice.svg",
+        "48": "images/illustration-thank-you.svg"
+    },
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "script.js"
+    }
+  }

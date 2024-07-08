@@ -1,0 +1,18 @@
+﻿{
+    "name": "Frogger Game",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Frogger Game",
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "permissions": [
+        "cookies"
+    ],
+    "action": {
+        "default_title": "Frogger Game",
+        "default_popup": "popup.html",
+        
+    }
+}

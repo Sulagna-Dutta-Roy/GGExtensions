@@ -1,0 +1,98 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.controls {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.controls label {
+  margin-right: 10px;
+}
+
+.solar-system {
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+}
+
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 50px yellow;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: rotate linear infinite;
+}
+
+.orbit1 { width: 150px; height: 150px; animation-duration: 5s; }
+.orbit2 { width: 250px; height: 250px; animation-duration: 7s; }
+.orbit3 { width: 350px; height: 350px; animation-duration: 10s; }
+.orbit4 { width: 450px; height: 450px; animation-duration: 15s; }
+.orbit5 { width: 550px; height: 550px; animation-duration: 20s; }
+.orbit6 { width: 650px; height: 650px; animation-duration: 25s; }
+.orbit7 { width: 750px; height: 750px; animation-duration: 30s; }
+.orbit8 { width: 850px; height: 850px; animation-duration: 35s; }
+
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.planet1 { width: 20px; height: 20px; background: gray; }
+.planet2 { width: 30px; height: 30px; background: orange; }
+.planet3 { width: 35px; height: 35px; background: blue; }
+.planet4 { width: 25px; height: 25px; background: red; }
+.planet5 { width: 50px; height: 50px; background: brown; }
+.planet6 { width: 45px; height: 45px; background: gold; }
+.planet7 { width: 40px; height: 40px; background: cyan; }
+.planet8 { width: 38px; height: 38px; background: blue; }
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.planet-info {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  max-width: 300px;
+  text-align: center;
+}

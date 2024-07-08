@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Illusion Game",
+    "version":"1.0",
+    "description":"You allow the user to input their guess for the rotation direction with the arrow Keys C-'clockwise', A-'anticlockwise'",
+    "action":{
+        "default_popup" : "Illusion.py"
+    },
+    "permissions": []
+}
