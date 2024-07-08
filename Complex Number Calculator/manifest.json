@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Complex Number Calculator",
+    "version": "1.0",
+    "description": "Calculate the complex numbers",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
