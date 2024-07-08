@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Cosine Formula",
+    "version": "1.0",
+    "description": "Calculate the cosine for triangle",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
