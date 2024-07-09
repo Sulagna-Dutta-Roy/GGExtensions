@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Cube Root Calculator",
+    "version": "1.0",
+    "description": "Calculate the cube root of a number",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

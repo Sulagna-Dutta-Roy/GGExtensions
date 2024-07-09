@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Personal Stylist and Outfit Planner",
+    "description": "A personal stylist and outfit planner for your daily needs.",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+      }
+    },
+    "permissions": ["storage"],
+    "icons": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  }
+  
