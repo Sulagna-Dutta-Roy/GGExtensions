@@ -8,12 +8,14 @@ let blockInterval = null;
 let gameOver = false;
 
 function startGame() {
-    gameArea.innerHTML = '';
-    score = 0;
-    scoreDisplay.textContent = 'Score: ' + score;
-    gameOver = false;
-    addBlock();
-    blockInterval = setInterval(moveBlock, 10);
+  gameArea.innerHTML = "";
+  score = 0;
+  scoreDisplay.textContent = "Score: " + score;
+  gameOver = false;
+  addBlock();
+  clearInterval(blockInterval);
+  blockInterval = null; // Reset the interval variable
+  blockInterval = setInterval(moveBlock, 10);
 }
 
 function addBlock() {
@@ -62,3 +64,4 @@ function dropBlock() {
 
 gameArea.addEventListener('click', dropBlock);
 window.onload = startGame;
+document.querySelector(".restart-btn").addEventListener("click", startGame);

@@ -6,7 +6,6 @@
 "permissions": [
     "storage"
 ],
-"optional-permissions" : ["tabs"],
 "action": {
     "default_popup": "index.html"
 },
