@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Memory Flip",
+    "version": "1.0",
+    "description": "A memory matching game!",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": []
+  }
+  
