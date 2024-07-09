@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Fibonacci Number",
+    "version": "1.0",
+    "description": "Calculate the fibonacci number of nth term",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
