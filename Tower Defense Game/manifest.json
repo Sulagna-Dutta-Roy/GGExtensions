@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Tower Defense Game",
+    "description": "A strategy game where players place defensive towers to stop waves of enemies from reaching a goal.",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+      }
+    },
+    "permissions": []
+  }
+  
