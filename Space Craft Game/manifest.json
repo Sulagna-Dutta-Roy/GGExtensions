@@ -1,0 +1,34 @@
+{
+    "manifest_version": 1,
+    "name": "SpaceCraft Game",
+    "description": "Manifest file for SpaceCraft Game engine.",
+    "version": "1.0",
+  
+    "permissions": [
+      "storage",
+      "network"
+    ],
+  
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+  
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+  
+    "web_accessible_resources": [
+      "images/*.png"
+    ]
+  }
+  

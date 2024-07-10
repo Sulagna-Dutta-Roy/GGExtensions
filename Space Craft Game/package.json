@@ -1,0 +1,14 @@
+{
+  "name": "spacecraft",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">   <img src=\"./doc/img1.png\">     <img alt=\"GitHub release (latest SemVer)\" src=\"https://img.shields.io/github/v/release/0xMartin/SpaceCraft\">     <img alt=\"GitHub all releases\" src=\"https://img.shields.io/github/downloads/0xMartin/SpaceCraft/total\">     <img alt=\"GitHub repo size\" src=\"https://img.shields.io/github/repo-size/0xMartin/SpaceCraft\"> </div>",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
