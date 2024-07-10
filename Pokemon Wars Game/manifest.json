@@ -1,0 +1,30 @@
+{
+    "name": "Pokemon Wars",
+    "short_name": "PokeWars",
+    "description": "A space shooter game featuring Pokémon.",
+    "version": "1.0.0",
+    "icons": [
+      {
+        "src": "img/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "img/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "permissions": [
+      "audio"
+    ],
+    "dependencies": {
+      "jquery": "^3.5.1",
+      "bootstrap": "^4.5.2"
+    }
+  }
+  

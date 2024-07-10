@@ -382,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
  
     return {
      x:e.clientX || e.targetTouches[0].clientX,
-     y:e.clientY || e.targetTouches[0].clientY
+     y:e.clientY || e.targetTouches[0].clientY,
     };
  
    };
