@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+   <title>Pokemon Wars</title>
+   <script src="animacao.js"></script>
+   <script src="teclado.js"></script>
+   <script src="colisor.js"></script>
+   <script src="fundo.js"></script>
+   <script src="nave.js"></script>
+   <script src="ovni.js"></script>
+   <script src="deoxys.js"></script>
+   <script src="tiro.js"></script>
+   <script src="spritesheet.js"></script>
+   <script src="explosao.js"></script>
+   <script src="painel.js"></script>
+   <style>
+   *{
+      padding: 0px;
+      margin: 0px;
+   }
+   #link_jogar {
+      /* Inicia oculto */
+      display: none;
+   
+      /* Cores e fundo */
+      color: yellow;
+      background: url(img/botao-jogar.png);
+         
+      /* Fonte */
+      font-size: 20px;
+      font-family: sans-serif;
+      
+      /* Sem sublinhado e com sombra */
+      text-decoration: none;
+      text-shadow: 2px 2px 5px black;
+         
+      /* Posicionamento */
+      position: absolute;
+      left: 220px;
+      top: 330px;
+
+      /* A imagem do botão é 72x72, descontamos os paddings */
+      width: 52px;
+      height: 26px;
+      padding: 23px 10px;
+   }
+   </style>
+</head>
+
+<body>
+   <canvas id="canvas_animacao" width="500" height="500"></canvas>
+   
+   <a id="link_jogar" href="javascript: iniciarJogo()"></a>
+   
+   <script>
+      // Canvas e Context
+      var canvas = document.getElementById('canvas_animacao');
+      var context = canvas.getContext('2d');
+
+      // Variáveis principais
+      var imagens, animacao, teclado, colisor, nave, criadorLatios, criadorDeoxys;
+      var totalImagens = 0, carregadas = 0;
+      var musicaAcao;
+      
+      // Começa carregando as imagens e músicas
+      carregarImagens();
+      carregarMusicas();
+      
+      function carregarImagens() {
+         // Objeto contendo os nomes das imagens
+         imagens = {
+            fundo_iniciar: 'fundo.png',
+            gameover: 'gameover.png',
+            espaco:   'fundo-espaco.png', 
+            estrelas: 'fundo-estrelas.png', 
+            nuvens:   'fundo-nuvens.png', 
+            nave:     'nave-spritesheet.png', 
+            latios:   'latios_spritesheet.png',
+            deoxys:   'deoxys_spritesheet.png',
+            deoxys2:   'deoxys_spritesheet2.png',  
+            explosao: 'explosao.png',
+            tiro: 'tiro.png'
+         };
+         
+         // Carregar todas
+         for (var i in imagens) {
+            var img = new Image();
+            img.src = 'img/' + imagens[i];
+            img.onload = carregando;
+            totalImagens++;
+            
+            // Substituir o nome pela imagem
+            imagens[i] = img;
+         }
+      }
+      
+      function carregando() {
+         context.save();
+         
+         // Fundo 
+         context.drawImage(imagens.fundo_iniciar, 0, 0, canvas.width, canvas.height);
+         
+         // Barra de loading
+         carregadas++;
+         var tamanhoTotal = 300;
+         var tamanho = carregadas / totalImagens * tamanhoTotal;
+         context.fillStyle = 'green';
+         context.fillRect(100, 250, tamanho, 25);
+         
+         context.restore();
+         
+         if (carregadas == totalImagens) {
+            iniciarObjetos();
+            mostrarLinkJogar();
+         }
+      }
+      
+      function iniciarObjetos() {
+         // Objetos principais
+         animacao = new Animacao(context);
+         teclado = new Teclado(document);
+         colisor = new Colisor();
+         espaco = new Fundo(context, imagens.espaco);
+         estrelas = new Fundo(context, imagens.estrelas);
+         nuvens = new Fundo(context, imagens.nuvens);
+         nave = new Nave(context, teclado, imagens.nave, 
+                         imagens.explosao, imagens.tiro); 
+         painel = new Painel(context, nave);
+         
+         // Ligações entre objetos
+         animacao.novoSprite(espaco);
+         animacao.novoSprite(nuvens);
+         animacao.novoSprite(estrelas);
+         animacao.novoSprite(painel);
+         animacao.novoSprite(nave);
+         
+         colisor.novoSprite(nave);
+         animacao.novoProcessamento(colisor);
+         
+         configuracoesIniciais();
+      }
+      
+      function configuracoesIniciais() {
+         // Fundos
+         espaco.velocidade = 60;
+         estrelas.velocidade = 150;
+         nuvens.velocidade = 500;
+         
+         // Nave
+         nave.posicionar();
+         nave.velocidade = 200;
+         
+         // Inimigos
+         criacaoInimigos();
+         
+         // Game Over
+         nave.acabaramVidas = function() {
+            animacao.desligar();
+            gameOver();
+         }
+         
+         // Pontuação
+         colisor.aoColidir = function(o1, o2, o3) {
+            // Tiro com Ovni
+            if ( (o1 instanceof Tiro && o2 instanceof Ovni) ||
+                 (o1 instanceof Ovni && o2 instanceof Tiro) )
+               painel.pontuacao += 10;
+
+            if ( (o1 instanceof Tiro && o3 instanceof Deoxys) ||
+                  (o1 instanceof Deoxys && o3 instanceof Tiro) )
+               painel.pontuacao += 50;
+         }
+      }
+      
+      function criacaoInimigos() {
+         criadorLatios = {
+            ultimoOvni: new Date().getTime(),
+            
+            processar: function() {
+               var agora = new Date().getTime();
+               var ovni_decorrido = agora - this.ultimoOvni;
+               
+               if (decorrido > 1000) {
+                  novoOvni();
+                  this.ultimoOvni = agora;
+               }
+            }
+         };
+
+         criadorDeoxys = {
+            ultimoDeoxys: new Date().getTime(),
+            
+            processar: function() {
+               var agora = new Date().getTime();
+               var deoxys_decorrido = agora - this.ultimoDeoxys;
+
+               if (deoxys_decorrido > 5000) {
+                  novoDeoxys();
+                  this.ultimoDeoxys = agora;
+               }
+            }
+         };
+
+         criadorLatios = {
+            ultimoOvni: new Date().getTime(),
+            
+            processar: function() {
+               var agora = new Date().getTime();
+               var ovni_decorrido = agora - this.ultimoOvni;
+               
+               if (ovni_decorrido > 1000) {
+                  novoOvni();
+                  this.ultimoOvni = agora;
+               }
+            },
+         };
+
+         criadorDeoxys = {
+            ultimoDeoxys: new Date().getTime(),
+
+            processar: function() {
+               var agora = new Date().getTime();
+               var deoxys_decorrido = agora - this.ultimoDeoxys;
+
+               if (deoxys_decorrido > 5000) {
+                  novoDeoxys();
+                  this.ultimoDeoxys = agora;
+               }
+            }
+            
+         };
+         
+         animacao.novoProcessamento(criadorLatios);
+         animacao.novoProcessamento(criadorDeoxys);
+      }
+      
+      function novoOvni() {
+         var ovni = new Ovni(context, imagens.latios, imagens.explosao);
+
+         // Mínimo: 500; máximo: 1000
+         ovni.velocidade = 
+            Math.floor( 500 + Math.random() * (500 - 250 + 1) );
+         
+         // Mínimo: 0; máximo: largura do canvas - largura do ovni   
+         ovni.x = 
+            Math.floor(Math.random() * 
+                       (canvas.width - imagens.latios.width + 1) );
+                  
+         // Descontar a altura
+         ovni.y = -imagens.latios.height;
+         
+         animacao.novoSprite(ovni);
+         colisor.novoSprite(ovni);
+      }
+
+      function novoDeoxys() {
+         var deoxys = new Deoxys(context, imagens.deoxys, imagens.deoxys2, imagens.explosao);
+
+
+         // Mínimo: 500; máximo: 1000
+         deoxys.velocidade = 
+            Math.floor( deoxys.velocidade + 50 + Math.random() * (500 - 250 + 1) );
+         
+         // Mínimo: 0; máximo: largura do canvas - largura do ovni   
+         deoxys.x = 
+            Math.floor(Math.random() * 
+                       (canvas.width - imagens.deoxys.width + 1) );
+                  
+         // Descontar a altura
+         deoxys.y = -imagens.deoxys.height;
+         
+         animacao.novoSprite(deoxys);
+         colisor.novoSprite(deoxys);
+      }
+      
+      function pausarJogo() {
+         if (animacao.ligado) {
+            animacao.desligar();
+            ativarTiro(false);
+            context.save();
+            context.fillStyle = 'white';
+            context.strokeStyle = 'black';
+            context.font = '50px sans-serif';
+            context.fillText("Pausado", 160, 200);
+            context.strokeText("Pausado", 160, 200);
+            context.restore();
+         }
+         else {
+            criadorLatios.ultimoOvni = new Date().getTime();
+            criadorDeoxys.ultimoDeoxys = new Date().getTime();
+            animacao.ligar();
+            ativarTiro(true);
+         }
+      }
+      
+      function ativarTiro(ativar) {
+         if (ativar) {
+            teclado.disparou(ESPACO, function() {
+               nave.atirar();
+            });
+         }
+         else
+            teclado.disparou(ESPACO, null);
+      }
+      
+      function carregarMusicas() {
+         musicaAcao = new Audio();
+         musicaAcao.src = 'snd/musica-acao.mp3';
+         musicaAcao.volume = 0.8;
+         musicaAcao.loop = true;
+         musicaAcao.load();
+      }
+      
+      function mostrarLinkJogar() {
+         document.getElementById('link_jogar').style.display =
+            'block';
+      }
+      
+      function iniciarJogo() {
+         criadorLatios.ultimoOvni = new Date().getTime();
+         criadorDeoxys.ultimoDeoxys = new Date().getTime();
+      
+         // Tiro
+         ativarTiro(true);
+         
+         // Pausa
+         teclado.disparou(ENTER, pausarJogo);
+         
+         document.getElementById('link_jogar').style.display =
+            'none';
+         musicaAcao.play();
+         animacao.ligar();
+      }
+      
+      function gameOver() {
+         // Tiro
+         ativarTiro(false);
+         
+         // Pausa
+         teclado.disparou(ENTER, null);
+         
+         // Parar a música e rebobinar
+         musicaAcao.pause();
+         musicaAcao.currentTime = 0.0;
+         
+         // Fundo
+         context.drawImage(imagens.gameover, 0, 0, canvas.width, canvas.height);
+         
+         // Texto "Game Over"
+         context.save();
+         context.fillStyle = 'white';
+         context.strokeStyle = 'black';
+         context.font = '70px sans-serif';
+         context.fillText("", 40, 200);
+         context.strokeText("", 40, 200);
+         context.restore();
+         
+         // Volta o link "Jogar"
+         mostrarLinkJogar();
+         
+         // Restaurar as condições da nave
+         nave.vidasExtras = 5;
+         nave.posicionar();
+         animacao.novoSprite(nave);
+         colisor.novoSprite(nave);
+         
+         // Tirar todos os inimigos da tela
+         removerInimigos();
+      }
+      
+      function removerInimigos() {
+         for (var i in animacao.sprites) {
+            if (animacao.sprites[i] instanceof Ovni)
+               animacao.excluirSprite(animacao.sprites[i]);
+
+            if (animacao.sprites[i] instanceof Deoxys)
+               animacao.excluirSprite(animacao.sprites[i]);
+         }
+      }
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Scraper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Scraper</h1>
+    <form id="scrapeForm">
+        <label for="urlInput">Enter URL: </label>
+        <input type="text" id="urlInput" placeholder="https://example.com">
+        <button type="submit">Scrape</button>
+    </form>
+    <button id="downloadButton" style="display: none;">Download Data</button>
+    <pre id="output"></pre>
+    <div id="downloadButtons" style="display:none;">
+        <button id="downloadTxtButton">Download as TXT</button>
+        <button id="downloadCsvButton">Download as CSV</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
