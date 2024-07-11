@@ -1,0 +1,29 @@
+
+{
+    "manifest_version": 3,
+    "name": "Virtual Study Group",
+    "version": "1.0",
+    "description": "Join and manage virtual study groups directly from your browser.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "identity"
+    ],
+    "oauth2": {
+      "client_id": "YOUR_GOOGLE_CLIENT_ID",
+      "scopes": [
+        "profile",
+        "email"
+      ]
+    }
+  }
+  
