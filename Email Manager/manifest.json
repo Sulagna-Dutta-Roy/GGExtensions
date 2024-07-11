@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Email Manager",
+  "version": "1.0",
+  "description": "Store and manage important emails",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
