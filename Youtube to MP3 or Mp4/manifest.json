@@ -1,5 +1,5 @@
 {
-    "name":"Youtube to mp3",
+    "name":"Youtube to mp3/mp4",
     "version":"0.1",
     "manifest_version":2,
     "browser_action":{
