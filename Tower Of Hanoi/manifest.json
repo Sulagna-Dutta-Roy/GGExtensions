@@ -1,6 +1,6 @@
 {
-    "name": "Falling Words",
-    "short_name": "FallingWords",
+    "name": "Tower Of Hanoi",
+    "short_name": "TowerOfHanoi",
     "description": "A fun game to play",
     "start_url": "index.html",
     "display": "standalone",
