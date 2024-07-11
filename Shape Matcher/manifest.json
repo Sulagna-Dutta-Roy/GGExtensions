@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Shape Matcher",
+    "version": "1.0",
+    "description": "Match the falling shapes to the target shape!",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": []
+  }
+  

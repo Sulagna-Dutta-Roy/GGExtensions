@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Calculator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="volumecalculator">
+    <label for="dropdown">Choose an option:</label>
+    <select id="dropdown" name="options">
+        <option id="cubeoption" value="Cube">Cube</option>
+        <option id="cuboiodoption" value="Cuboid">Cuboid</option>
+        <option id="cylinderoption" value="Cylinder">Cylinder</option>
+        <option id="coneoption" value="Cone">Cone</option>
+        <option id="freustumoption" value="Frustum">Frustum</option>
+        <option id="hemisphereoption" value="Hemisphere">Hemisphere</option>
+        <option id="sphereoption" value="Sphere">Sphere</option>
+    </select>
+    <input type="number" min="0" id="radius" placeholder="Radius" style="display:none;">
+    <input type="number" min="0" id="frustum1" placeholder="Top Radius" style="display:none;">
+    <input type="number" min="0" id="frustum2" placeholder="Bottom Radius" style="display:none;">
+    <input type="number" min="0" id="height" placeholder="Height" style="display:none;">
+    <input type="number" min="0" id="cube" placeholder="Side Length" style="display:none;">
+    <input type="number" min="0" id="cuboid1" placeholder="Length" style="display:none;">
+    <input type="number" min="0" id="cuboid2" placeholder="Width" style="display:none;">
+    <button id="calculate">Calculate</button>
+    <input type="text" id="Calculatebox" readonly>
+</div>
+    <script src="popup.js"></script>
+
+</body>
+</html>

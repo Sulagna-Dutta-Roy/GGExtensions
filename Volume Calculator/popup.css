@@ -1,0 +1,79 @@
+body, html {
+    background-color: #F1E5D1;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.volumecalculator {
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label, select, input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    body, html {
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #volumecalculator {
+        padding: 15px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input[type="number"], select, input[type="text"] {
+        font-size: 14px;
+    }
+}
