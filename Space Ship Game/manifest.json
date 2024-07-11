@@ -1,0 +1,22 @@
+{
+    "name": "Spaceship Game",
+    "short_name": "Spaceship",
+    "description": "An experimental spaceship game by Choyu",
+    "start_url": "experimental.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

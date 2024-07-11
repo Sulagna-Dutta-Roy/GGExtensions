@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spaceship Game (experiemntal)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property='og:title' content='Spaceship Game experiemental'/>
+    <meta property="og:image" content="https://i.imgur.com/DLE3UEd.png">
+    <meta property='og:description' content='CRINGE'/>
+    <meta property='twitter:card' content='summary_large_image'/>
+    <meta property='og:url' content='https://grimreaper2654.github.io/Spaceship-Game/game/experimental.html'/>
+    <meta property='og:image:width' content='752' />
+    <meta property='og:image:height' content='730' />
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game" class="main">
+        <div id="big">
+            <button onclick="load()"><h3>Initialise</h3></button>
+            <p>
+                W to accelerate <br>
+                S to decelerate <br>
+                A and D to rotate <br>
+                Q to switch aiming mode <br>
+                turrets follow mouse pointer <br>
+                Left click to shoot turrets <br>
+                E to shoot main cannon <br>
+                F to fire railgun <br>
+                hold down R to boost <br>
+                X to repair (regenerate hp) <br>
+                R to boost <br>
+                U to open/close upgrades menu (and pause) <br>
+                Save by clicking the save button in the upgrades menu <br>
+                Zoom out to see more of the map at once <br>
+            </p>
+        </div>
+    </div>
+    <div id="upgrades">
+        <div id="overlay">
+        </div>
+        <div id="buttonGrid">
+        </div>
+    </div>
+    <div id="controlPannel">
+        <button onclick="game();"><h3>Start Game</h3></button>
+    </div>
+    <div id="data">
+        <img id="Battleship" src="Battleship.png">
+        <img id="BattleshipRed" src="BattleshipRed.png">
+        <img id="Cruiser" src="Cruiser.png">
+        <img id="CruiserRed" src="CruiserRed.png">
+        <img id="Destroyer" src="Destroyer.png">
+        <img id="DestroyerRed" src="DestroyerRed.png">
+        <img id="Frigate" src="Frigate.png">
+        <img id="FrigateRed" src="FrigateRed.png">
+        <img id="Bomber" src="Bomber.png">
+        <img id="BomberRed" src="BomberRed.png">
+        <img id="Interceptor" src="Interceptor.png">
+        <img id="InterceptorRed" src="RedInterceptor.png">
+        <img id="MainCannonRed" src="MainBattleshipTurretRed.png">
+        <img id="SmallCannonRed" src="SmallBattleshipTurretRed.png">
+        <img id="TinyCannonRed" src="TinyTurretRed.png">
+        <img id="BattleshipGreen" src="BattleshipGreen.png">
+        <img id="CruiserGreen" src="CruiserGreen.png">
+        <img id="DestroyerGreen" src="DestroyerGreen.png">
+        <img id="FrigateGreen" src="FrigateGreen.png">
+        <img id="BomberGreen" src="BomberGreen.png">
+        <img id="InterceptorGreen" src="GreenInterceptor.png">
+        <img id="MainCannonGreen" src="MainBattleshipTurretGreen.png">
+        <img id="SmallCannonGreen" src="SmallBattleshipTurretGreen.png">
+        <img id="TinyCannonGreen" src="TinyTurretGreen.png">
+        <img id="PDCannon" src="PDturret.png">
+        <img id="BulletBomb" src="empty.png">
+        <img id="BulletRail" src="RailgunRound.png">
+        <img id="BulletHuge" src="Huge BulletV2.png">
+        <img id="BulletLarge" src="Large Bullet.png">
+        <img id="BulletSmall" src="Small Bullet.png">
+        <img id="BulletTiny" src="Tiny Bullet.png">
+        <img id="BulletPD" src="empty.png">
+        <img id="greyCircle" src="greyCircle.png">
+        <img id="blueCircle" src="blueCircle.png">
+        <img id="silverCircle" src="silverCircle.png">
+        <img id="BattleshipPlume" src="Engine Plume1-1.png">
+        <img id="BattleshipPlumeOverlay" src="Engine Plume1-2.png">
+        <img id="CruiserPlume" src="Engine Plume2-1.png">
+        <img id="CruiserPlumeOverlay" src="Engine Plume2-2.png">
+        <img id="DestroyerPlume" src="Engine Plume3-1.png">
+        <img id="DestroyerPlumeOverlay" src="empty.png">
+        <img id="BomberPlume" src="empty.png">
+        <img id="BomberPlumeOverlay" src="empty.png">
+        <img id="FrigatePlume" src="empty.png">
+        <img id="FrigatePlumeOverlay" src="empty.png">
+        <img id="InterceptorPlume" src="empty.png">
+        <img id="InterceptorPlumeOverlay" src="empty.png">
+        <img id="particle" src="Particle.png">
+        <img id="s0" src="s0.png">
+        <img id="s1" src="s1.png">
+        <img id="s2" src="s2.png">
+        <img id="s3" src="s3.png">
+        <img id="s4" src="s4.png">
+        <img id="s5" src="s5.png">
+        <img id="None" src="empty.png">
+        <img id="Metal" src="Metal.png">
+        <img id="Circuits" src="Circuit.png">
+        <img id="FuelCell" src="FuelCell.png">
+        <img id="China" src="madeinchina.png">
+    </div>
+</body>
+<script src="experimental.js"></script>
+
+
