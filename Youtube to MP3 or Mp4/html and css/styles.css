@@ -1,0 +1,23 @@
+body{
+   
+    width:140px;
+    height:120px;
+    background-color:rgb(29, 235, 14);
+}
+h3{
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+.input-check{
+    width: 20px;
+    height: 20px;
+}
+label{
+    font-weight: 600;
+   
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}

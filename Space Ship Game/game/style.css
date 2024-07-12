@@ -1,0 +1,118 @@
+#main {
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 1;
+}
+
+#explosion {
+    z-index: 2;
+}
+
+#bombers {
+    z-index: 3;
+}
+
+#canvasOverlay {
+    z-index: 4;
+}
+
+canvas {
+    pointer-events: none;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    zoom: 100%
+}
+
+html {
+    margin:0;
+    padding:0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin:0;
+    padding:0;
+}
+
+#data {
+    display: none;
+}
+
+#upgrades {
+    z-index: 1;
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    width: 50%;
+    height: 75%;
+    text-align: left;
+    zoom: 200%;
+}
+
+#buttonGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+    padding: 15px;
+    zoom: 100%;
+    height: 85%;
+    overflow-y: auto;
+}
+
+#overlay {
+    font-size: 40px; 
+    display: flex;
+    justify-content: space-between;
+    zoom: 100%;
+}
+
+#overlay img {
+    height: 25px;
+}
+
+#overlay #leftText {
+    text-align: left;
+}
+
+#overlay #rightText {
+    text-align: right;
+}
+
+.button {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    color: white;
+    text-align: top;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    white-space: pre-line;
+}
+
+.button img {
+    max-width: 15px;
+    max-height: 15px;
+}
+
+#big {
+    zoom: 300%;
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Space Station Defense Game",
+    "version": "1.0.0",
+    "description": "A space station defense game created by Mahesh Sawant using Python and Turtle graphics.",
+    "main": "main.py",
+    "scripts": {
+      "start": "python main.py"
+    },
+    "author": "Mahesh Sawant",
+    "license": "MIT",
+    "dependencies": {
+      "turtle": "0.0.1"
+    }
+  }
+  
+  

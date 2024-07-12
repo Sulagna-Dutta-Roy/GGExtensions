@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Bookmark Quest",
+  "version": "1.0",
+  "description": "Turn your bookmarks into an adventure!",
+  "permissions": [
+    "bookmarks",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
