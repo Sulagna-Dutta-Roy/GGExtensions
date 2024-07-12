@@ -29,9 +29,6 @@
 
 <br>
 
-## **Working video 📹**
-<!-- add your working video over here -->
 
-https://github.com/aditya-agr/GameZone/assets/101137544/d4d93ee1-3160-499d-b279-65b3de933b68
 
 
