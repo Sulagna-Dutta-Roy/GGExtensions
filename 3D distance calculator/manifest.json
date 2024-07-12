@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Distance Calculator",
+    "version": "1.0",
+    "description": "Distance Calculator.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

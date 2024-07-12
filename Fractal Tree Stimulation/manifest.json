@@ -1,0 +1,30 @@
+{
+  "name": "Fractal Tree Simulation",
+  "version": "1.0.0",
+  "description": "A simulation that generates fractal trees using recursive algorithms.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/fractal-tree-simulation.git"
+  },
+  "keywords": [
+    "fractal",
+    "tree",
+    "simulation",
+    "recursion",
+    "algorithm"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "canvas": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

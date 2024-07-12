@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "PenPointerFight",
+    "description": "It is a basic version of the most iconic pen fight game. Here are supposed to collide you pen pointer to the opponents pen pointer to win the game.",
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

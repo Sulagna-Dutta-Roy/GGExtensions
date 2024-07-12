@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Guess the Correct Logo",
+    "description": "Guess the Correct Logo",
+    "version": "1.0",
+    "permissions": [
+        "storage",
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess",
+        "tabs"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Block by Block",
+    "version": "1.0",
+    "description": "Block by Block",
+    "icons": {
+        "48": "icon.png",
+        "64": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
