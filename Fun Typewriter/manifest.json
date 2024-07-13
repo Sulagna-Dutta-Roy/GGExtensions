@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Fun Typewriter",
+  "description": "Fun Typewriter",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "tabs"
+  ],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
