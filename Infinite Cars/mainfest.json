@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Infinite Cars",
+    "version": "1.0",
+    "description": "car racing game",
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+      {
+        "js": ["./scripts/libs/phaser.min.js"],
+        "module":["./scripts/infinite-cars.processed.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
+  
