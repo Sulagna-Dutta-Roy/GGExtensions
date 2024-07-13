@@ -1,0 +1,15 @@
+{
+    "name": "Hungry Shark",
+    "short_name": "Hungry Shark",
+    "icons": [
+      {
+        "src": "/android-chrome-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#87cefa",
+    "background_color": "#87cefa",
+    "display": "standalone"
+  }
+  

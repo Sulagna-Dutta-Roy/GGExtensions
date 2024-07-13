@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Ninja Hattori Game",
+    "version": "1.0",
+    "description": "Your favourite cartoon is all here! Use your ninja techniques and dont let kiyo hurt Hattori",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "hattory.png"
+    },
+    "icons": {
+        "16": "hattory.png",
+        "48": "hattory.png",
+        "128": "hattory.png"
+    },
+    "permissions": []
+}
