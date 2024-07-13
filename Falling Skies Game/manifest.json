@@ -1,0 +1,23 @@
+{
+    "name": "Falling Skies",
+    "version": "1.0.0",
+    "description": "A fun game where the player controls a deer to collect nuts and avoid hunters.",
+    "author": "Mahesh Sawant",
+    "main": "falling_skies.py",
+    "dependencies": {
+      "turtle": "included"
+    },
+    "scripts": {
+      "start": "python falling_skies.py"
+    },
+    "assets": {
+      "images": [
+        "background.gif",
+        "deer_left.gif",
+        "deer_right.gif",
+        "hunter.gif",
+        "nut.gif"
+      ]
+    }
+  }
+  
