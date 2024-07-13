@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Color Memory Challenge",
+    "version": "1.0",
+    "description": "Test your memory with colors!",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": []
+}
