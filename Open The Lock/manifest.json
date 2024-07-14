@@ -1,0 +1,22 @@
+{
+    "name": "Unlock The Lock",
+    "short_name": "UnlockLock",
+    "description": "Can you unlock the lock by doing the task? Game points will be awarded on the basis of levels cleared.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#ff0",
+    "icons": [
+      {
+        "src": "icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
