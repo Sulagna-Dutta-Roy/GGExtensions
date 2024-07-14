@@ -1,0 +1,14 @@
+{
+  "name": "Baseball Game",
+  "short_name": "Baseball",
+  "icons": [
+    {
+      "src": "/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ff5733",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
