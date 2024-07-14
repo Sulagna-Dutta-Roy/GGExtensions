@@ -1,0 +1,13 @@
+{
+    "manifest_version": 1,
+    "name": "Image Converter",
+    "version": "1.0",
+    "description": "A Chrome extension to convert the image's extension.",
+    "permissions": [
+      "downloads",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
