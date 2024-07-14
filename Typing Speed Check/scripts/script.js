@@ -12,10 +12,17 @@ timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
 function loadParagraph() {
-    const ranIndex = Math.floor(Math.random() * paragraphs.length);
+    const randomWords = [];
+    for (let i = 0; i < 430; i = randomWords.length) {
+        const randomIndex = Math.floor(Math.random() * words.length);
+        words[randomIndex].split("").forEach(char => {
+            randomWords.push(char);
+        });
+        randomWords.push(" ");
+    }
     typingText.innerHTML = "";
-    paragraphs[ranIndex].split("").forEach(char => {
-        let span = `<span>${char}</span>`
+    randomWords.forEach(char => {
+        let span = `<span>${char}</span>`;
         typingText.innerHTML += span;
     });
     typingText.querySelectorAll("span")[0].classList.add("active");
