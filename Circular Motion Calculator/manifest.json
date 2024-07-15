@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Circular Motion Calculator",
+    "version": "1.0",
+    "description": "Circular Motion Calculator which helps us to calculate the centripetal acceleration, angular frequency, period and frequency",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "image.png"
+    },
+    "icons": {
+        "16": "image.png",
+        "48": "image.png",
+        "128": "image.png"
+    },
+    "permissions":[]
+}
