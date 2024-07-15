@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Critical Point Calculator",
+    "version": "1.0",
+    "description": "Just give the value of van der wall constants and get critical point of ideal gases",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "cp.png"
+    },
+    "icons": {
+        "16": "cp.png",
+        "48": "cp.png",
+        "128": "cp.png"
+    },
+    "permissions": []
+}
