@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Rabbit Chase Game",
+    "name": "Pet Care Calculator",
     "version": "1.0",
-    "description": "A simple game , your aim is to protect rabbit from wolf",
+    "description": "Calculates the lifetime cost of owning different types of pets, including food, healthcare, and other expenses, based on current market prices.",
     "action": {
         "default_popup": "index.html",
         "default_icon": "calc.png"
