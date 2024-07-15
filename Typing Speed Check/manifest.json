@@ -1,8 +1,8 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 4,
     "name": "Typing Speed Check",
     "version": "1.0",
-    "description": "This extension will help you to improve your typing speed.",
+    "description": "This extension will help you to improve your typing speed. This extension helps you by giving you a random 430character paragraph to check your speed.",
     "permissions": [
       "storage"
     ],
@@ -21,4 +21,3 @@
       }
     ]
   }
-  
