@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #7F00FF, #E100FF); /* Replace with your preferred gradient colors */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #FF355E; /* Neon red color */
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+
+input[type="number"], button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #FF355E; /* Neon red color */
+    color: white;
+    transition: background-color 0.3s ease;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #FF355E;
+}
+
+button:hover {
+    background-color: #FF1493; /* Lighter shade of red */
+    border-color: #FF1493;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #00FFEE; /* Neon color */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 30%; /* Adjust top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 999;
+    text-align: center;
+}
+
+.popup-content {
+    font-size: 1.2rem;
+}
+
+.popup.active {
+    display: block;
+    animation: popupAppear 0.5s ease forwards;
+}
+
+@keyframes popupAppear {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -30%);
+    }
+}
