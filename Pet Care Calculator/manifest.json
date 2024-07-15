@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Rabbit Chase Game",
+    "version": "1.0",
+    "description": "A simple game , your aim is to protect rabbit from wolf",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "calc.png"
+    },
+    "icons": {
+        "16": "calc.png",
+        "48": "calc.png",
+        "128": "calc.png"
+    },
+    "permissions":[]
+}
