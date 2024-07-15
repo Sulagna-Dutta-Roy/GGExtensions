@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMuzie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 350px;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1db954;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        #currentTrack {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        span {
+            font-weight: bold;
+            color: #1db954;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #1db954;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #1ed760;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        #visualizer {
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .bar {
+            width: 5px;
+            height: 100%;
+            background-color: #1db954;
+            display: inline-block;
+            margin-right: 2px;
+        }
+
+        #lyrics {
+            margin-top: 20px;
+            max-height: 150px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        #lyrics::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        #lyrics::-webkit-scrollbar-thumb {
+            background-color: #1db954;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MyMuzie</h1>
+    <div id="currentTrack">
+        <p>Current track: <span id="trackTitle">Loading...</span></p>
+        <p>Artist: <span id="trackArtist">Loading...</span></p>
+        <p>Album: <span id="trackAlbum">Loading...</span></p>
+    </div>
+    <div id="controls">
+        <button id="prevButton">Prev</button>
+        <button id="playPauseButton">Play/Pause</button>
+        <button id="nextButton">Next</button>
+    </div>
+    <div id="visualizer">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div id="lyrics">
+        Lyrics will appear here when a song is playing...
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
