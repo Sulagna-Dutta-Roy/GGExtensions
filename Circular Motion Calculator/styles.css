@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('image.png');
+    background-image: url('background.webp');
     background-size: cover;
     background-position: center;
 }
