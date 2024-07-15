@@ -23,7 +23,6 @@ If a player successfully made a goal, they earn a point.
 The game continues for a predetermined duration or until a specific number of goals is reached.
 Players can restart the game by refreshing the page.
 - 
-- 
 
 <br>
 
