@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Emirp Number Calculator",
+    "version": "1.0",
+    "description": "A web application to check Emirp numbers and calculate Emirp numbers within a range.",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+    }}
+}
