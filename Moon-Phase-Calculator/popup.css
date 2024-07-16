@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: rgb(13, 12, 12);
+  height: 550px;
+  width: 500px;
+  transition: all 0.25s ease-in-out;
+}
+
+h1#heading {
+  font-size: 1.5em;
+  color: #fff;
+  margin-left: 20px;
+  text-align: center;
+}
+
+#color-theme #theme{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  background-color: inherit;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Moon Phase container */
+#moon-phase{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 400px;
+  width: 450px;
+  line-height: 1.7rem;
+  font-size: 1.3rem;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  padding: 30px;
+  background-color: rgb(13, 12, 12);
+}
+
+#moon-phase #moon-phase-icon{
+  padding: 10px;
+  height: 250px;
+  width: 250px;
+}
+
+#moon-phase #moon-phase-img{
+  padding: 0px 10px 10px 10px;
+  margin-top: -20px;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+}
+
+#moon-phase .moon-phase-note{
+  position: absolute;
+  font-size: 0.8rem;
+  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 0.8rem);
+  bottom: 0;
+  right: 10px;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background: rgb(13, 12, 12);
+  text-align: center;
+  color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #0e77e7df;
+    text-decoration: underline;
+}
+
+/* Social link */
+#right-socials {
+  position: absolute;
+  right: 1em;
+  height: 150px;
+  width: 70px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#right-socials a i {
+  transition: scale .3s ease-in-out;
+}
+
+#right-socials a i#github-link:hover,
+i#linkedin-link:hover {
+  scale: 1.1;
+}
