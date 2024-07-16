@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "2D Shapes Calculator",
+    "version": "1.0",
+    "description": "Calculate the perimeter and area of various 2D shapes.",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+    }
+}

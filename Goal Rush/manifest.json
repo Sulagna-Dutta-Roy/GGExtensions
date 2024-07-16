@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Goal Rush Game",
+    "version": "1.0",
+    "description": "An interactive game where you can play Goal Rush.",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+    }
+}

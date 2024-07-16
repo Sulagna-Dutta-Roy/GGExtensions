@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "MyMuzie",
+  "version": "1.0",
+  "description": "Enhance your music listening experience on YouTube",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

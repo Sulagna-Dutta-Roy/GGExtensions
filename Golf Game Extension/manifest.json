@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Golf Game Extension",
+    "version": "1.0",
+    "description": "Golf is a sport enjoyed by people of all ages and abilities and the aim of the game is to hit a ball from a tee-off point into a hole in as few shots as possible.",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "golf.jpeg"
+    },
+    "icons": {
+        "16": "golf.jpeg",
+        "48": "golf.jpeg",
+        "128": "golf.jpeg"
+    },
+    "permissions":[]
+}

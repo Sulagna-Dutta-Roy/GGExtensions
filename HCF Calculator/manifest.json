@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "HCF CALCULATOR",
+    "version": "1.0",
+    "description": "A simple game , your aim is to protect rabbit from wolf",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "image.png"
+    },
+    "icons": {
+        "16": "image.png",
+        "48": "image.png",
+        "128": "image.png"
+    },
+    "permissions":[]
+}
