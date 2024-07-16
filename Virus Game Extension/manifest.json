@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "VIRUS GAME EXTENSION",
+    "version": "1.0",
+    "description": "You are a virus and must eliminate all blood cells present.",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "game.png"
+    },
+    "icons": {
+        "16": "game.png",
+        "48": "game.png",
+        "128": "game.png"
+    },
+    "permissions":[]
+}
