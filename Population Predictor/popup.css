@@ -1,0 +1,147 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  width: 500px;
+  background-image: linear-gradient(to right, #443e4b, #616264);
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+main {
+  max-width: 600px;
+  width: 70%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+input[type="text"] {
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #e6e4e4;
+  font-size: 16px;
+  margin-bottom: 6px;
+  transition: all 0.3s;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+  align-self: center;
+
+}
+
+button:hover {
+  background-color: #666;
+  transform: translateY(-2px);
+}
+
+#result {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 550px;
+  overflow: auto;
+  text-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background: rgb(13, 12, 12);
+  text-align: center;
+  color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: #0e77e7df;
+    text-decoration: underline;
+}
+
+/* Social link */
+#right-socials {
+  position: absolute;
+  right: 1em;
+  height: 150px;
+  width: 70px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#right-socials a i {
+  transition: scale .3s ease-in-out;
+}
+
+#right-socials a i#github-link:hover,
+i#linkedin-link:hover {
+  scale: 1.1;
+}
