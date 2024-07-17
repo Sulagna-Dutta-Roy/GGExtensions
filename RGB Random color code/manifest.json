@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Random RGB Color Generator",
+    "version": "1.0",
+    "description": "Generates random RGB color codes",
+    "permissions": [],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
