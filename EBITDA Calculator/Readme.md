@@ -17,3 +17,4 @@ This calculator helps businesses and financial analysts quickly compute the EBIT
 
 ## Screenshots :-
 
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/18fdcbed-6523-4f10-b8de-a3f9f7ed146a">
