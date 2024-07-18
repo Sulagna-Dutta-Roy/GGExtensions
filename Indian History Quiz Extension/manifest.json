@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Aptitute Test",
+    "version": "1.0",
+    "description": "A simple aptitute test extension",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": []
+}
