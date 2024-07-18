@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Aero Acrobat Game",
+    "version": "1.0",
+    "description": "With the help of the spacebar and four arrow keys, players must guide the boy upwards, maneuvering through a maze of obstacles",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "body-bg.jpg"
+    },
+    "icons": {
+        "16": "body-bg.jpg",
+        "48": "body-bg.jpg",
+        "128": "body-bg.jpg"
+    },
+    "permissions": []
+}
