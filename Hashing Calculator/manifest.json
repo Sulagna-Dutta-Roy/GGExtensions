@@ -1,0 +1,9 @@
+{
+  "name": "Hashing Message Calculator",
+  "short_name": "HashCalc",
+  "description": "A web application to hash messages using various algorithms.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+}
