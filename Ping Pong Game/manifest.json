@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Ping Pong game",
+  "version": "1.0",
+  "description": "2 player game extension",
+  "permissions": [
+      "storage"
+  ],
+  "optional-permissions" : ["tabs"],
+  "action": {
+      "default_popup": "index.html"
+  },
+  "web_accessible_resources": [
+      {
+          "resources": [
+              "index.html"
+          ],
+          "matches": [
+              "<all_urls>"
+          ]
+      }
+  ]
+  }
