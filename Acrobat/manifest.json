@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Acrobat",
+    "description": "Acrobat game",
+    "version": "1.0",
+    "permissions": [
+      "tabs"
+    ],
+    "host_permissions": ["*://*/*"],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
