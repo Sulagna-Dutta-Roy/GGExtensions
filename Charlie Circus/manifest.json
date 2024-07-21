@@ -1,0 +1,67 @@
+{
+    "name": "Charlie Circus",
+    "short_name": "Circus",
+    "description": "An HTML5 game for Charlie Circus",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "assets/icons/app_icon_57x57.png",
+        "sizes": "57x57",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_60x60.png",
+        "sizes": "60x60",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_76x76.png",
+        "sizes": "76x76",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_114x114.png",
+        "sizes": "114x114",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_120x120.png",
+        "sizes": "120x120",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_152x152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/app_icon_1024x1024.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      }
+    ]
+  }
+  
