@@ -1,0 +1,87 @@
+#_nextButton_,
+#_prevButton_ {
+	height: 100%;
+	padding: 0;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-size: medium;
+	cursor: pointer;
+	font-family: consolas;
+	flex-grow: 1;
+	font-weight: bold;
+	background-color: #f0f0f0;
+	color: black;
+}
+#_nextButton_:hover,
+#_prevButton_:hover {
+	background-color: rgb(250, 250, 250);
+}
+#_nextButton_:active,
+#_prevButton_:active {
+	background-color: rgb(246, 163, 163);
+	box-shadow: 0 1px #b1b1b1;
+	transform: translateY(1px);
+}
+#_matchesText_ {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	color: maroon;
+	font-size: medium;
+	font-weight: bold;
+	height: 100%;
+	padding: 0 2rem;
+	font-family: consolas;
+}
+#_optionsDiv_ {
+	display: flex;
+	width: 100%;
+	height: 30px;
+	gap: 10px;
+}
+#_innerDiv_ {
+	padding: 0.25rem;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	width: 98%;
+	height: 100%;
+	overflow-y: auto;
+	margin-top: 8px;
+}
+#_selectedTextExact_ {
+	background-color: orange;
+	color: black;
+}
+#_selectedTextNeighbors_ {
+	background-color: yellow;
+	color: black;
+}
+#_outerDiv_ {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	justify-content: center;
+	align-items: center;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px;
+	z-index: 10000;
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	max-width: 95%;
+	max-height: 95%;
+	border-radius: 5px;
+	min-width: 300px;
+	min-height: 150px;
+}
+#_resizeHandle_ {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(5%, -22%);
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: nwse-resize;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Physics Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="resetBtn">Reset</button>
+        <select id="simulationType">
+            <option value="gravity">Gravity</option>
+            <option value="frictionless">Frictionless</option>
+        </select>
+        <button id="addBallBtn">Add Ball</button>
+        <button id="removeBallBtn">Remove Ball</button>
+    </div>
+    <div class="container">
+        <canvas id="simulationCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

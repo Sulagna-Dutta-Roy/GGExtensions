@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Email Generator</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Professional Email Generator</h1>
+        <div class="form-group">
+            <label for="scenario">Select Scenario:</label>
+            <select id="scenario">
+                <option value="internship">Applying for Internship</option>
+                <option value="job">Applying for Job</option>
+                <option value="networking">Networking</option>
+                <option value="followUp">Follow-up</option>
+                <option value="thankYou">Thank You</option>
+                <option value="resignation">Resignation</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="recipient">Recipient's Name:</label>
+            <input type="text" id="recipient" placeholder="Enter recipient's name">
+        </div>
+        <div class="form-group">
+            <label for="details">Details:</label>
+            <textarea id="details" placeholder="Provide additional details here..."></textarea>
+        </div>
+        <button onclick="generateEmail()">Generate Email</button>
+        <button onclick="saveEmail()">Save Email</button>
+        <div class="output">
+            <h2>Generated Email:</h2>
+            <textarea id="emailOutput" readonly></textarea>
+        </div>
+        <div class="error" id="error"></div>
+        <h2>Saved Emails:</h2>
+        <div id="savedEmails"></div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

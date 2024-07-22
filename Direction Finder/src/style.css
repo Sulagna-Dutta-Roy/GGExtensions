@@ -1,0 +1,18 @@
+#map {
+    height: 100vh;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.control-item {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "My Custom Extension",
+  "description": "This is a custom Chrome extension.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+  }
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

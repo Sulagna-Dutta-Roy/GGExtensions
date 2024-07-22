@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Population Growth Analysis</title>
+        <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Population Growth Analysis</h1>
+            </header>
+            <p>Enter the following information:</p>
+            <form>
+                <label for="starting-population">Starting Population:</label
+                ><br />
+                <input type="text" id="starting-population" /><br />
+
+                <label for="births-per-year">Births per Year:</label><br />
+                <input type="text" id="births-per-year" /><br />
+
+                <label for="deaths-per-year">Deaths per Year:</label><br />
+                <input type="text" id="deaths-per-year" /><br />
+
+                <label for="years">Years:</label><br />
+                <input type="text" id="years" /><br />
+
+                <button type="button" id="btnClick">
+                    Calculate
+                </button>
+            </form>
+
+            <p id="result"></p>
+        </main>
+
+        <!-- -------------- RIGHT SOCIAL LINKS -------------- -->
+
+        <div id="right-socials">
+          <a href="https://github.com/vansh-codes/Sudoku-Visualizer" style="color: #1b1a1a" target="_blank">
+            <i class="fa-brands fa-github fa-3x" id="github-link"></i>
+          </a>
+          <a href="https://linkedin.com/in/vanshchaurasiya24/" style="color: #0557a8" target="_blank">
+            <i class="fa-brands fa-linkedin fa-3x" id="linkedin-link" ></i>
+          </a>
+        </div>
+
+
+        <!-- --------------------- FOOTER ------------------- -->
+        <div class="footer">
+          Made by &copy; <a href="https://github.com/vansh-codes/" target="_blank">vansh-codes</a> 2024
+        </div>
+
+        <script src="popup.min.js"></script>
+    </body>
+</html>

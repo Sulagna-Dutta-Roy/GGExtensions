@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Audio Player",
+    "version": "1.0",
+    "description": "A simple music player for playing uploaded audio files.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "icons": {
+        "48": "images.jpg",
+        "128": "images.jpg"
+    },
+    "permissions": [
+      "storage"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Brick Breaker",
+    "version": "1.0",
+    "description": "A Brick Breaker as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  

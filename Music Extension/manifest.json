@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Meditation Music Player",
+    "version": "1.0",
+    "description": "Play meditation music in your browser.",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "permissions": ["activeTab"]
+}

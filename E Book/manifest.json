@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"E-Boo Website",
+    "version":"1.0",
+    "description":"An Attractive Website to manage Books",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

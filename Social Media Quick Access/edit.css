@@ -1,0 +1,75 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    width: 400px; 
+}
+.wrapper {
+    padding: 15px 15px;
+    background-color: rgb(83, 59, 59);
+}
+.top_wrapper {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ab6262;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+}
+.title_wrapper {
+    text-align: center;
+}
+.title {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+.sub_title {
+    color: #bfbfbf;
+}
+.middle_wrapper {
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.edit_field_wrapper {
+    display: flex;
+    justify-content: space-around;
+    color: red;
+    padding-bottom: 10px;
+}
+.edit_field {
+    width: 300px;
+    background-color: #e6e6e6;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.footer_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+i{
+    color:rgb(226, 186, 186);
+}
+.footer_btn {
+    color: white;
+    background-color: rgb(51, 32, 28);
+    padding: 5px 10px;
+    border-radius:3px ;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer_btn:hover{
+    background-color: brown;
+}

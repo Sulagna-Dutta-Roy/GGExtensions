@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Logarithm Calculator",
+    "version": "1.0",
+    "description": "Logarithm Calculator.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

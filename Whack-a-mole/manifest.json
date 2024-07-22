@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Whack-a-mole Game Extension JS",
+    "version": "1.0",
+    "description": "Whack-a-mole game extension built in pure HTML CSS JS...",
+    "author" : "sambitmondal2005@gmail.com",
+    "icons": {
+        "48": "game-39-48.png",
+        "128": "game-39-128.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

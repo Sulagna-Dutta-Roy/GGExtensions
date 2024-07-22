@@ -1,0 +1,6 @@
+{
+  "name": "Heat Index Calculator",
+  "short_name": "Heat Index",
+  "start_url": "/index.html",
+  "display": "standalone"
+}

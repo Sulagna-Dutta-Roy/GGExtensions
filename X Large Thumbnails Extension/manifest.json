@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "X Large Thumbnails Extension",
+  "version": "1.0",
+  "description": "Enlarges thumbnails on platform X (Twitter) for a better viewing experience.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://twitter.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

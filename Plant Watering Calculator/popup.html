@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Watering Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Plant Watering Calculator</h1>
+    <form id="plant-form">
+        <label for="plant-type">Plant Type:</label>
+        <select id="plant-type">
+            <option value="succulents">Succulents</option>
+            <option value="ferns">Ferns</option>
+            <option value="flowering">Flowering Plants</option>
+            <option value="vegetables">Vegetables</option>
+        </select>
+        <label for="plant-size">Plant Size (cm):</label>
+        <input type="number" id="plant-size" min="1">
+        <label for="soil-type">Soil Type:</label>
+        <select id="soil-type">
+            <option value="sandy">Sandy</option>
+            <option value="loamy">Loamy</option>
+            <option value="clay">Clay</option>
+        </select>
+        <label for="sunlight">Sunlight Exposure (hours):</label>
+        <input type="number" id="sunlight" min="1" max="24">
+        <button type="submit">Calculate</button>
+    </form>
+    <p id="result"></p>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Flappy Bird Game JS Extension",
+    "version": "1.0",
+    "description": "Flappy Bird is a fun game to play when get bored...",
+    "author" : "ishadutta.193@gmail.com",
+    "icons":{
+        "16": "./images/Bird-16.png",
+        "32": "./images/Bird-32.png",
+        "48": "./images/Bird-48.png",
+        "128": "./images/Bird-128.png"
+
+    },
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html", "style.css", "script.js", "images/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+}

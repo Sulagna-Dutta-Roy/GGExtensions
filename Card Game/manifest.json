@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Card Game",
+  "version": "1.0",
+  "description": "A Card game as a Chrome extension.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}
+

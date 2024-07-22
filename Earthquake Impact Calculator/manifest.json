@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Earthquake Impact Calculator",
+    "description": "This extension calculates the earthquake impact",
+    "version": "1.0",
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+  }

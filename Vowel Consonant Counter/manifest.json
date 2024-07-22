@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Vowel Consonant Counter",
+    "version": "1.0",
+    "description": "Calculate the number of vowels and consonants",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

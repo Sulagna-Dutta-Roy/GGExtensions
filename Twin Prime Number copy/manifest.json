@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Twin Prime Number",
+    "version": "1.0",
+    "description": "Calculates pairs of prime numbers that differ by exactly two.",
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
+     

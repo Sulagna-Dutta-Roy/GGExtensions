@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body,html {
+    background-color: #F1E5D1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdowntimer {
+    background-color: #C39898;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 5px solid #987070;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #C39898;
+}
+
+label, input {
+    text-align: center;
+    font-size: larger;
+}
+
+input {
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: large;
+    background-color: #987070;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+@media (max-width: 500px) {
+    .countdowntimer {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    input {
+        width: 80px;
+        height: 35px;
+        font-size: medium;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: medium;
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "automated-testing-monitoring-extension",
+    "version": "1.0.0",
+    "description": "A browser extension for automated testing and monitoring CI pipelines, code quality, and dependencies.",
+    "main": "background/background.js",
+    "scripts": {
+      "test": "jest",
+      "lint": "eslint .",
+      "audit": "npm audit"
+    },
+    "dependencies": {
+      "jest": "^26.6.3",
+      "eslint": "^7.14.0"
+    },
+    "devDependencies": {}
+  }
+  

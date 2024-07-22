@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Area Calculator",
+    "version": "1.0",
+    "description": "Calculates Area of given shape.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

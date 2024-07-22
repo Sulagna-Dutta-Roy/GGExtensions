@@ -1,0 +1,45 @@
+{
+  "simulation_name": "Wave Interference Simulation",
+  "version": "1.0.0",
+  "description": "A simulation demonstrating the interference of waves from multiple sources.",
+  "date_created": "2024-06-30",
+  "license": "MIT",
+  "dependencies": {
+    "numpy": ">=1.21.0",
+    "matplotlib": ">=3.4.0",
+    "scipy": ">=1.7.0"
+  },
+  "settings": {
+    "grid_size": [200, 200],
+    "time_step": 0.01,
+    "total_time": 10,
+    "wave_sources": [
+      {
+        "position": [50, 50],
+        "frequency": 1,
+        "amplitude": 1,
+        "phase": 0
+      },
+      {
+        "position": [150, 150],
+        "frequency": 1,
+        "amplitude": 1,
+        "phase": 0
+      }
+    ]
+  },
+  "output": {
+    "directory": "./output",
+    "file_format": "png",
+    "frame_rate": 24
+  },
+  "visualization": {
+    "colormap": "viridis",
+    "colorbar": true,
+    "title": "Wave Interference"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "simulation.log"
+  }
+}

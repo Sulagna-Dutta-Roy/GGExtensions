@@ -1,0 +1,153 @@
+<body>
+    <div class="container">
+        
+        <h2>
+            HOW TO PLAY ?
+            <h3>
+            Press left key to move left </h3>
+            <h3>Right key to move right </h3>
+            <h3>Space key to fire
+            </h3>
+        </h2>
+        <button id="reset-button" ><img class="reset" src="reset.png"></button>
+        <canvas class="canvas" id="canvas" width="500" height="600" ></canvas>
+        </div>
+        
+    </div>
+    
+</body>
+
+
+
+<img id="invader" src="invader.png" style="display:none;">
+<img id="cannon" src="cannon.png"  style="display:none;">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+let score = 0;
+let HighScore = 0;  
+var setInterval;
+var ctx = document.getElementById("canvas").getContext("2d")
+function GameObject(x,y,img){
+    this.x = x;
+    this.y = y;
+    this.img = img;
+    this.active = true;
+}
+GameObject.prototype.draw = function(ctx){
+    this.active && ctx.drawImage(this.img,this.x,this.y,40,40)
+}
+
+GameObject.prototype.move = function(dx,dy){
+    this.x+=dx ; this.y+=dy;
+}
+
+GameObject.prototype.fire = function(dy){
+    return new shot(this.x+20 , this.y+20,dy)
+}
+GameObject.prototype.isHitBy = function(shot){
+    function between(x,a,b){
+        return a<x && x<b
+    }
+    return this.active && between(shot.x,this.x,this.x+40)&& between(shot.y+10,this.y,this.y+20)
+}
+function shot(x,y,dy){
+    this.x=x;
+    this.y=y;
+    this.dy=dy;
+}
+
+shot.prototype.move = function(){
+    this.y+=this.dy
+    return this.y > 0 &&this.y<600
+}
+
+shot.prototype.draw = function(ctx){
+    ctx.fillStyle="#000"
+    ctx.fillRect(this.x-1 , this.y , 3, 20)
+}
+var invaderDx = -5
+var invaders =[]
+var cannons=new GameObject(230,550,document.getElementById("cannon"))
+var invaderShot,cannonShot
+
+function init(){
+    var img = document.getElementById("invader")
+    for (var y=0 ; y<3; y++){
+        for (var x = 0; x<8 ; x++){
+            invaders.push(new GameObject( 50+x*50 , 20+y*50, img))
+        }
+    }
+}
+
+
+function draw(){
+    ctx.fillStyle = "#ddd"
+    ctx.fillRect(0,0,500,600)
+    invaders.forEach(inv => inv.draw(ctx))
+    cannons.draw(ctx)
+    invaderShot && invaderShot.draw(ctx)
+    cannonShot && cannonShot.draw(ctx)
+    ctx.fillStyle = "#000";
+    ctx.font = "20px Arial";
+    ctx.fillText("Score: " + score, 10, 20);
+
+}
+
+
+function move(){
+    var leftX = invaders[0].x, rightX = invaders[invaders.length-1].x
+    if (leftX <= 20 || rightX >= 440) invaderDx = -invaderDx
+    invaders.forEach(inv=>inv.move(invaderDx,0.5))
+    if (invaderShot && !invaderShot.move()){
+        invaderShot =null
+    }
+    if (!invaderShot){
+        var active= invaders.filter(i=>i.active)
+        var r = active[Math.floor(Math.random()*active.length)]
+        invaderShot = r.fire(20)
+    }
+    if(cannonShot){
+        var hit = invaders.find(inv=>inv.isHitBy(cannonShot))
+        if (hit){
+            hit.active = false
+            cannonShot = null
+            score += 10; // Increment the score by 10 when an invader is hit
+            
+        }
+        else{
+            if (!cannonShot.move()) cannonShot =null 
+        }
+    }
+}
+function isGameOver(){
+    return cannons.isHitBy(invaderShot) || invaders.find(inv=>inv.active && inv.y > 530)
+}
+function game(){
+    move()
+    draw()
+    if (isGameOver()){
+        alert("Game Over Your Score is : "+score)
+        clearInterval(interval)
+    }
+}
+
+
+function start(){
+    init()
+    document.addEventListener("keydown",function(e)
+    {
+     if (e.keyCode == 37 && cannons.x > 40 )  cannons.move(-20,0)  
+     if (e.keyCode == 39 && cannons.x < 420 ) cannons.move(20,0)
+     if(e.keyCode== 32 && !cannonShot) cannonShot = cannons.fire(-30)
+    })
+    
+    interval = setInterval(game,50)
+}
+
+document.getElementById("reset-button").addEventListener("click", function() {
+    location.reload();
+});
+window.onload = start
+</script>

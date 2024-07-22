@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Ideal Gas Calculator",
+    "version": "1.0",
+    "description": "An ideal gas calculator computes properties such as pressure, volume, temperature, and moles using the ideal gas law equation (PV = nRT).",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "calc.png"
+    },
+    "icons": {
+        "16": "calc.png",
+        "48": "calc.png",
+        "128": "calc.png"
+    },
+    "permissions":[]
+}

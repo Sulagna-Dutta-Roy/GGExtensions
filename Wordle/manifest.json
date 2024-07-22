@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Wordle game",
+    "version": "1.0",
+    "description": "A W as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

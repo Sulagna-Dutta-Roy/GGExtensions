@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hit The Numbers</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body style="background-image: url('Bubbles.jpg'); background-size: cover;">
+  <div class="game-container">
+    <h1>Hit the Numbers!</h1>
+    <p id="instructions">Hit the target number for bonus points!</p>
+    <div class="scoreboard">
+      <span class="box">Score:</span>
+      <span class="value-box" id="score-value">0</span>
+      <span class ="box">Time:</span>
+      <span class="value-box" id ="timer">0</span>
+    </div>
+    <div class="target-container">
+      <span class="box">Hit:</span>
+      <span class="value-box" id="hit">0</span>
+    </div>
+    <div id="bubble-container"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

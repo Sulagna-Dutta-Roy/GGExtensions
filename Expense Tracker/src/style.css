@@ -21,6 +21,7 @@
 
 body {
     background-color: #c7d1e4;
+    width: 400px;
 }
 
 .wrapper {
@@ -74,11 +75,12 @@ body {
     border-color: #587ef4;
 }
 
-.total-amount-container,
-.user-amount-container {
+
+.total-amount-container, .user-amount-container {
     background-color: #ffffff;
     padding: 1.25em 0.9em;
     border-radius: 0.3em;
+    width: 350px;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
 }
 
@@ -89,6 +91,8 @@ body {
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
     margin: 2em 0;
     padding: 1.2em;
+    margin-left: 200px;
+    width: 400px;
 }
 
 .output-container p {
@@ -120,6 +124,9 @@ body {
     padding: 1.8em 1.2em;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
     border-radius: 0.6em;
+    
+    margin-left:200px;
+    width:400px;
 }
 
 .sublist-content {
@@ -172,6 +179,12 @@ body {
     color: #587ef4;
 }
 
+.exp{
+    color:red;
+}
+.bal{
+    color:green;
+}
 @media screen and (max-width: 600px) {
     .wrapper {
         font-size: 14px;

@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Python Code Editor Extension",
+    "version": "1.0",
+    "description": "Navigate to the Python code editor quickly and easily.",
+    "action": {
+      "default_popup": "welcome.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }

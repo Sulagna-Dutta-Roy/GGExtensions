@@ -1,0 +1,10 @@
+{
+    "manifest_version":3,
+    "name":"Photography Portfolio Extension",
+    "version":"1.0",
+    "description":"It will help to create a portfolio in the field of photography",
+    "action":{
+        "default_popup" : "index.html"
+    },
+    "permissions": []
+}

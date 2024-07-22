@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Guess The Pokemon Game",
+    "version": "1.0",
+    "description": "Trust your knowledge of Pokemon and enter the name of the Pokemon through the text input",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": []
+}

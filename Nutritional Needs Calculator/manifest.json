@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Nutritional Needs Calculator",
+    "description": "This extension calculates the nutritional needs required",
+    "version": "1.0",
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+  }

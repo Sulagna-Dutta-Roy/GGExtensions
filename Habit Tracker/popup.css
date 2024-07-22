@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.habit-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#habit-input {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-habit-button {
+    padding: 6px 12px;
+    margin-left: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-habit-button:hover {
+    background-color: #0056b3;
+}
+
+#habit-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.habit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.habit-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.habit-item span {
+    flex-grow: 1;
+}
+
+.habit-item button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.habit-item button:hover {
+    background-color: #c82333;
+}

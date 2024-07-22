@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Pixel Smash",
+    "version": "1.0",
+    "description": "A dynamic and addictive arcade game with a neon theme.",
+    "icons": {
+        "128": "icon.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": []
+}

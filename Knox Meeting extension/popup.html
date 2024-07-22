@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Knox Meeting attendees</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app">
+      <div class="field">
+        <div class="label">Exclude attendee if name matches</div>
+        <div class="control">
+          <input class="input" id="name-to-exclude" />
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">Hide business unit if matches (Korean only)</div>
+        <input class="input" id="business-unit-to-hide" />
+      </div>
+      <!-- <div class="field">
+        <div class="checkbox">
+          <input type="checkbox" id="group-by-division" />Group by division
+        </div>
+      </div> -->
+      <div class="field">
+        <div class="checkbox">
+          <input type="checkbox" id="hide-nickname" />
+          Hide nickname (experimental)
+        </div>
+      </div>
+      <div class="field">
+        <div class="checkbox">
+          <input type="checkbox" id="add-korean-honorific-suffix" />
+          Add Korean honorific suffix (님, nim)
+        </div>
+      </div>
+      <div class="field">
+        <button class="button is-success" id="get-attendees">
+          Get attendees
+        </button>
+      </div>
+      <div class="field">
+        <div class="label">Attendees</div>
+        <textarea class="textarea" readonly id="attendees"></textarea>
+      </div>
+      <div style="display: flex; justify-content: space-between">
+        <button class="button is-success" id="copy-to-clipboard">
+          Copy to clipboard
+        </button>
+        <div>
+          <button class="button is-danger" id="report-bug">Report bug</button>
+          <button class="button is-info" id="support">Support</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+
+    <!--
+      This HTML file opens when you click on icon from the toolbar.
+
+      To begin the development, run `npm run watch`.
+      To create a production bundle, use `npm run build`.
+    -->
+  </body>
+</html>

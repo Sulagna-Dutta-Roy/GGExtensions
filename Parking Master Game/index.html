@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <title>Parking Master - A simple web game</title>
+    <link rel="icon" href="https://parkingmaster.w3spaces.com/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Parking-Master/Parking-Master@latest/libs/swifty.js"></script>
+    <style>p{transition:cubic-bezier(1, 0, 0, 1);}code[name="auto"]{background-color: #ccc; padding: 4px; position: absolute; width: 70%; left: 50%; margin-left: -35%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; cursor: default; font-weight: 500; border-radius: 3px;}code[name="auto"]:hover{background-color: #bbb;}code[name="auto"]:active{background-color: #aaa;}footer>p>a{border-bottom:1px solid #f1f1f1 !important}footer{position: absolute; top: 150%; height: 10%; background-color: #333; width: 100%; margin: 0; left: 0; bottom: 0; right: 0;}p{padding-top:1px}vws{position:relative;margin-top:0.3vw;margin-bottom:0.2vw}nav{padding-left:1em;display:inline;padding:6px;letter-spacing:.5pt;box-sizing:border-box;position:fixed;margin:0!important;margin-left:0!important;left:0;top:0;right:0;width:100%;height:2em;background-color:#333;z-index:10}.nav.nav-item{color:#f5f5f5;text-decoration:none;margin-right:1em;cursor:pointer;user-select:none;-webkit-user-drag:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;border-bottom:none!important}.nav.nav-item:hover{border-bottom:1px solid #f5f5f5!important}.nav.nav-icon{position:fixed;width:30px;height:30px;left:98%;margin-top:-0.2%;background-image:url(https://parkingmaster.w3spaces.com/favicon.ico);background-size:cover;background-color:transparent;border:none;outline:0!important;cursor:pointer;z-index:1}.nav.nav-icon:active{cursor:wait}body,html{font-family:Verdana,Arial,helvetica,"Open sans",sans-serif;font-size:1.1em;font-style:normal;font-weight:lighter}body{overflow-y:scroll;overflow-x:hidden;background-color:#f9f9f9}h1.heading1{font-family:Arial,Helvetica,sans-serif,Verdana,"Open sans"!important;font-style:normal!important;width:300;display:inline;margin-left:-150px;position:absolute;left:50%;top:8%;overflow-x:visible;color:#232323;font-weight:100;font-size:2.2em}p{color:#333;font-style:normal}hr{border:none;outline:0;position:relative;width:95%;left:50%;height:2px;line-height:2px;margin-left:-47.5%;background:#ccc}hr#hr1{width:60%!important;margin-left:-30%!important}::selection{background-color:#e2e2e2;opacity:0}.box{display:grid;background-color:#f1f1f1;border-radius:4px;width:165px;padding:6px;box-shadow:1.5px 1.5px .5px rgba(0,0,0,.25);font-size:1rem}.box.box-left{position:relative;left:20%;margin-top:145px}.box.box-left::before{width:4px;height:5px;background-color:#f1f1f1}.box.box-right{position:relative;left:66%;margin-top:5%}a{color:#444;text-decoration:none;overflow:visible;border-bottom:1px solid #444;width:auto;height:auto;padding:0;margin:0}.using-mouse:focus{outline:0}.using-keyboard:focus{outline:1px solid #f5f5f5}</style>
+</head>
+<body>
+  <base href="https://parkingmaster.w3spaces.com/">
+  <style>.menu{font-family: Arial, Helvetica, sans-serif;width:120px;z-index:100000;box-shadow:0 4px 5px 3px rgba(0,0,0,.2);position:fixed;display:none;transition:.2s display ease-in;background-color:#fefefe}.menu-options{list-style:none;padding:10px 0;z-index:1}.menu-option{font-weight:500;z-index:1;font-size:14px;padding:10px 40px 10px 20px;cursor:pointer}.menu-option:hover{background:rgba(0,0,0,.2)}input[type=button]{font-size:.9vw;text-align:center}</style>
+  <div class="menu"><ul class="menu-options"><li onclick="history.go(1);" class="menu-option">Forward</li><li onclick="history.go(-1);" class="menu-option">Back</li><li onclick="loc.reload();" class="menu-option">Refresh</li><li onclick="loc.reload(true);" class="menu-option">Reload</li><li onclick="downloadPage('custom');" class="menu-option">Save As</li><li onclick="setTimeout($wind.print,100);" class="menu-option">Print</li></ul></div>
+  <script>function downloadPage(t){if(t==='prenamed'){var a=document.createElement('a');a.href='data:text/html,'+document.documentElement.outerHTML; a.setAttribute('download', 'index.html'); a.setAttribute('hidden', ''); document.body.appendChild(a);a.click()}else if(t==='custom'){var _e=prompt('Enter file name:', 'index.html'); var _v = _e; var a=document.createElement('a'); a.href='data:text/html,' + document.documentElement.outerHTML; a.setAttribute('download', _v); a.setAttribute('hidden', ''); document.body.appendChild(a);a.click()}} const menu=document.querySelector(".menu"),menuOption=document.querySelector(".menu-option");let menuVisible=!1;const toggleMenu=e=>{menu.style.display="show"===e?"block":"none",menuVisible=!menuVisible},setPosition=({top:e,left:t})=>{menu.style.left=`${t}px`,menu.style.top=`${e}px`,toggleMenu("show")};window.addEventListener("click",e=>{menuVisible&&toggleMenu("hide")}),menuOption.addEventListener("click",e=>{console.log("mouse-option",e.target.innerHTML),toggleMenu("hide")}),window.addEventListener("contextmenu",e=>{e.preventDefault();const t={left:e.pageX,top:e.pageY};return setPosition(t),!1});</script>
+  <nav style="user-select: none;" draggable="false">
+    <a class="nav nav-item" href="https://parkingmaster.w3spaces.com/" tabindex="1">Home</a>
+    <a class="nav nav-item" href="/help.html" tabindex="2">Help</a>
+    <a class="nav nav-item" href="/docs.html" tabindex="3">Documentation</a>
+    <a class="nav nav-item" href="https://parkingmaster.w3spaces.com/?void#start" tabindex="4">Play</a>
+    <button class="nav nav-icon" onclick="location.href='/'" tabindex="5"></button>
+  </nav>
+  <h1 class="heading1">Parking Master Game</h1>
+  <div class="main-wrapper content">
+      <p style="text-align: center; position: relative; margin-top: 150px; left: 50%; width: 100%; margin-left: -50%;">A simple / fun web-game and desktop application.</p>
+      <hr id="hr1">
+      <div class="text text-content1">
+        <!-- <p style="text-align: center;"><a href="https://parkingmaster.w3spaces.com">https://parkingmaster.w3spaces.com</a></p><br> -->
+        <p style="text-align: center">
+          Just being simple, this game is very fun. Parking Master is also available for mobile.
+          <br>
+          Parking Master has constant fixes and updates. <a href="mailto:parkingmaster@email.com">Saw a bug we didn't notice?</a>
+          <br>
+          <vsw></vsw>
+        </p>
+      </div>
+      <br>
+        <p style="text-align:center">A short preview of the game:</p>
+        <iframe id="frame" src="https://parkingmaster.w3spaces.com/lvl1_src.html" style="position: relative; width: 70%; height: 33.5vw; left: 50%; margin-left: -35%; border: 5px solid #ccc; border-radius: 4px;"></iframe>
+      <br>
+      <code name="auto" style="position:absolute;" onclick="location.href='https://parkingmaster.w3spaces.com/?void#start'">Play more</code>
+      <br>
+      <br>
+      <p style="text-align: center; color: #555;">Copyright (c) 2021 Parking Master | <a href="https://github.com/Parking-Master/Parking-Master/blob/main/LICENSE.md">License</a></p>
+      <div style="position:relative;width:100%;height:50%;"></div>
+      <footer>
+      <p style="margin-left:40%"><span style="color:#fff">Sources:</span> <a href="https://github.com/Thenikhilraj" style="color:#f1f1f1">GitHub</a> &bullet; <a href="/" style="color:#f1f1f1">Website</a> &bullet; <a href="/help.html" style="color:#f1f1f1">Help</a></p>
+      </footer>
+  </div>
+<script>
+function $$(i) {
+  return document.querySelectorAll(i);
+}
+function id(i) {
+  return document.getElementById(i);
+}
+function cs(i, t) {
+  return document.getElementsByClassName(`${i}`)[t];
+}
+document.addEventListener("mousedown", () => {
+  for (var i = 0; i < $$('.nav-item').length; i++) {
+    $$('.nav-item')[i].classList.add("using-mouse");
+    $$('.nav-item')[i].classList.remove("using-keyboard");
+  }
+});
+document.addEventListener("keydown", () => {
+  for (var i = 0; i < $$('.nav-item').length; i++) {
+    $$('.nav-item')[i].classList.add("using-keyboard");
+    $$('.nav-item')[i].classList.remove("using-mouse");
+  }
+});
+</script>
+</body>
+</html>

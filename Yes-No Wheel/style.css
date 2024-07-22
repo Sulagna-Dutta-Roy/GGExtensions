@@ -1,0 +1,51 @@
+html, body {
+    display: block;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+}
+
+.wheel-container {
+    display: flex;
+    background-color: #011d38;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+    margin: 20px;
+}
+
+#wheel {
+    border: 8px solid #011d38;
+    border-radius: 100%;
+    margin: 20px;
+    background-color: #011d38;
+}
+
+#spin {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #011d38;
+    color: #fff;
+    border: 2px solid #FCAE03;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#spin:hover {
+    background-color: #052f56;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}

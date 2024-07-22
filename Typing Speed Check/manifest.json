@@ -1,0 +1,23 @@
+{
+    "manifest_version": 4,
+    "name": "Typing Speed Check",
+    "version": "1.0",
+    "description": "This extension will help you to improve your typing speed. This extension helps you by giving you a random 430character paragraph to check your speed.",
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_icon": {
+        "16": "./icons/icon16.png",
+        "48": "./icons/icon48.png",
+        "128": "./icons/icon128.png"
+      },
+      "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["index.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }

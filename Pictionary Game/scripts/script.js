@@ -35,11 +35,12 @@ canvas.width = 800;
 canvas.height = 600;
 let drawing = false;
 
+
 function updateScores() {
   scoresElement.textContent = players
     .map((player, index) => `${player}: ${scoreBoard[index]}`)
     .join(", ");
-}
+    }
 
 function displayWord() {
   wordElement.textContent = words[currentWordIndex];
@@ -47,20 +48,29 @@ function displayWord() {
 
 function displayCurrentPlayer() {
   currentPlayerElement.textContent = players[currentPlayerIndex];
-}
+  }
 
 function startTimer() {
   clearInterval(timer);
   timeLeft = 60;
   timerElement.textContent = timeLeft;
+  const alertElement = document.getElementById("alert");
+  alertElement.style.display = "none"; // Hide the alert initially
+
   timer = setInterval(() => {
     timeLeft--;
     timerElement.textContent = timeLeft;
+
+    if (timeLeft <= 10) {
+      alertElement.style.display = "block"; // Show the alert
+      alertElement.textContent = `${timeLeft} seconds left`;
+    }
+
     if (timeLeft <= 0) {
       clearInterval(timer);
       alert(`${players[currentPlayerIndex]} ran out of time!`);
       switchTurn();
-    }
+      }
   }, 1000);
 }
 
@@ -110,33 +120,51 @@ clearButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", switchTurn);
-
 startButton.addEventListener("click", () => {
-  if (players.length < 2) {
-    alert("Please add at least two players.");
-    return;
-  }
-  resetGame();
+ if (players.length < 2) {
+   alert("Please add at least two players.");
+     return;
+}
+   resetGame();
   startTimer();
-});
+  });
+  
+ addPlayerButton.addEventListener("click", () => {
+    const playerName = playerNameInput.value.trim();
+    if (playerName && !players.includes(playerName)) {
+      players.push(playerName);
+      scoreBoard.push(0);
+      const li = document.createElement("li");
+      li.textContent = playerName;
 
-addPlayerButton.addEventListener("click", () => {
-  const playerName = playerNameInput.value.trim();
-  if (playerName && !players.includes(playerName)) {
-    players.push(playerName);
-    scoreBoard.push(0);
-    const li = document.createElement("li");
-    li.textContent = playerName;
-    playerListElement.appendChild(li);
-    playerNameInput.value = "";
-    updateScores();
-  } else {
-    alert("Invalid or duplicate player name.");
-  }
-});
-
-// New: Event listener for the guess button
-guessButton.addEventListener("click", () => {
+      const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+deleteButton.style.border = "none";
+deleteButton.style.padding = "5px 10px";
+deleteButton.style.cursor = "pointer";
+    deleteButton.addEventListener("click", () => {
+      const index = players.indexOf(playerName);
+      if (index !== -1) {
+        players.splice(index, 1);
+        scoreBoard.splice(index, 1);
+        playerListElement.removeChild(li);
+        updateScores();
+        if (currentPlayerIndex >= players.length) {
+          currentPlayerIndex = 0;
+        }
+        displayCurrentPlayer();
+      }
+    });
+    li.appendChild(deleteButton);
+      playerListElement.appendChild(li);
+      playerNameInput.value = "";
+      updateScores();
+      } else {
+        alert("Invalid or duplicate player name.");
+        }
+        });
+        // New: Event listener for the guess button
+        guessButton.addEventListener("click", () => {
   const guessedWord = prompt("Enter your guess:");
   if (
     guessedWord &&

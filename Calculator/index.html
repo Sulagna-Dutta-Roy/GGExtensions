@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="src/calci.css">
 </head>
-
 <body>
     <div class="container">
-        <div class="calculator">
-            <input type="text" id="inputBox" placeholder="0" />
-            <div>
-                <button class="button operator">AC</button>
-                <button class="button operator">DEL</button>
-                <button class="button operator">%</button>
-                <button class="button operator">/</button>
+        <div class="calci">
+            <input type="text" placeholder="0" id="output" readonly>
+            <div class="buttons basic-buttons">
+                <button id="clear" class="function">C</button>
+                <button id="delete" class="function">DEL</button>
+                <button id="percentage" class="function">%</button>
+                <button id="divide" class="operator">/</button>
+                <button id="seven" class="number">7</button>
+                <button id="eight" class="number">8</button>
+                <button id="nine" class="number">9</button>
+                <button id="add" class="operator">+</button>
+                <button id="four" class="number">4</button>
+                <button id="five" class="number">5</button>
+                <button id="six" class="number">6</button>
+                <button id="subtract" class="operator">-</button>
+                <button id="one" class="number">1</button>
+                <button id="two" class="number">2</button>
+                <button id="three" class="number">3</button>
+                <button id="multiply" class="operator">*</button>
+                <button id="zero" class="number">0</button>
+                <button id="double-zero" class="number">00</button>
+                <button id="sqrt" class="function">√</button>
+                <button id="exponent" class="function">^</button>
+                <button id="left-paren" class="function">(</button>
+                <button id="right-paren" class="function">)</button>
+                <button id="equals" class="equal operator">=</button>
             </div>
-            <div>
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button operator">*</button>
+            <div class="buttons scientific-buttons" style="display: none;">
+                <button id="sin" class="function">sin</button>
+                <button id="cos" class="function">cos</button>
+                <button id="tan" class="function">tan</button>
+                <button id="log" class="function">log</button>
+                <button id="ln" class="function">ln</button>
+                <button id="pi" class="number">π</button>
+                <button id="e" class="number">e</button>
+                <button id="exp" class="function">exp</button>
+                <button id="factorial" class="function">x!</button>
             </div>
-            <div>
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button operator">-</button>
-            </div>
-            <div>
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button operator">+</button>
-            </div>
-
-            <div>
-                <button class="button">00</button>
-                <button class="button">0</button>
-                <button class="button">.</button>
-                <button class="button equalBtn">=</button>
-            </div>
+            <button id="toggle-mode" class="function">Scientific Mode</button>
         </div>
     </div>
-
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" type="module"></script>
 </body>
-
 </html>

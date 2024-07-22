@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #a19d9d;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    min-height: 400px;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 60px;
+    z-index: 2;
+}
+
+.clock{
+    position: relative;
+    background-color: #5c5b5b;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid darkgray;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.7);
+}
+
+.numbers div{
+    position: absolute;
+    font-size: 27px;
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.7);
+}
+.twelve{
+    
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three{
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.six{
+
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nine{
+    color : black ;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrows{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: rgb(156, 107, 107);
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.7);
+    z-index: 4;
+}
+
+.arrows div{
+    background-color: white;
+    width: 7px;
+    position: absolute;
+    height: 120px;
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 3;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+}
+
+.arrows .hour{
+    height: 80px;
+    transform: rotate(0deg);
+    background-color: rgb(127, 30, 69);
+}
+
+.arrows .minute{
+    transform: rotate(180deg);
+    background-color: rgb(127 , 30, 69);
+}
+
+.arrows .second{
+    transform: rotate(270deg);
+    background-color: rgb(127, 30 , 69);
+}

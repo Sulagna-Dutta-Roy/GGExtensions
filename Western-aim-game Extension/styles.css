@@ -1,0 +1,156 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.giris {
+    background-image: url(img/giris.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.oyun-kolay {
+    .game-container {
+        position: relative;
+        width: 500px; 
+        height: 500px; 
+        border: 5px solid #000;
+        overflow: hidden;
+        margin: 0 auto; /* Yatayda merkezlemek için */
+    }
+      
+    .target {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+      
+    .score {
+        color: white;
+        background-color: black;
+        width: 40%;
+        margin-left: 30%;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    
+    .media-player {
+        position:absolute;
+        text-align: center;
+        margin-bottom: 800px;
+    }
+    
+}
+
+.oyun-orta {
+    .game-container {
+        position: relative;
+        width: 900px; 
+        height: 700px; 
+        border: 5px solid #000;
+        overflow: hidden;
+        margin: 0 auto; /* Yatayda merkezlemek için */
+    }
+      
+    .target {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+      
+    .score {
+        color: white;
+        background-color: black;
+        width: 40%;
+        margin-left: 30%;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    
+    .media-player {
+        position:absolute;
+        text-align: center;
+        margin-bottom: 800px;
+    }
+    
+}
+
+.oyun-zor {
+    .game-container {
+        position: relative;
+        width: 1280px; 
+        height: 720px; 
+        border: 5px solid #000;
+        overflow: hidden;
+        margin: 0 auto; /* Yatayda merkezlemek için */
+    }
+      
+    .target {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+      
+    .score {
+        color: white;
+        background-color: black;
+        width: 40%;
+        margin-left: 30%;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    
+    .media-player {
+        position:absolute;
+        text-align: center;
+        margin-bottom: 800px;
+    }
+    
+}
+
+.git-hub {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+}
+
+.ana-sayfa-buton {
+    position: absolute;
+    right: 44%;
+    top: 90%;
+}
+
+@media screen and (max-width: 768px){
+    .giris {
+        background-image: url(/img/giris-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .oyun-kolay-buton{
+        display: none;
+    }
+    .oyun-zor-buton {
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Candy Crush Game",
+    "version": "1.0",
+    "description": "A Candy Crush game as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  
+  

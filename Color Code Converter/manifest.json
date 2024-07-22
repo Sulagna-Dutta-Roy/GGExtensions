@@ -1,0 +1,40 @@
+{
+    "name": "Color Code Converter",
+    "short_name": "ColorConverter",
+    "version": "1.0.0",
+    "description": "A simple tool to convert color codes between HEX, RGB, RGBA, HSL, HSV, and CMYK formats.",
+    "manifest_version": 2,
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "permissions": [],
+    "browser_action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "js": ["converter.js", "script.js"],
+        "css": ["style.css"]
+      }
+    ],
+    "web_accessible_resources": [
+      "icons/icon16.png",
+      "icons/icon48.png",
+      "icons/icon128.png",
+      "style.css",
+      "assets/converter.js",
+      "script.js"
+    ]
+}
+  

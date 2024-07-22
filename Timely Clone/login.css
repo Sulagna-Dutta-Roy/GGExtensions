@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#head {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+#head>div {
+    width: 45%;
+}
+
+#head>div:first-child {
+    padding-left: 40px;
+}
+
+#head>div:nth-child(2) img {
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+#login-div {
+    width: 100%;
+}
+
+#child-div {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#child-div>div {
+    width: 48%;
+}
+
+#child-div > div:first-child {
+    width: 40%;
+    padding-top: 170px;
+}
+
+#child-div>div>h3 {
+    color:rgb(97, 97, 120);
+    word-spacing: 3px;
+    line-height: 27px;
+}
+
+#child-div>div>h3:first-child {
+    color:rgb(97, 97, 120);
+    font-size: 23px;
+}
+
+#badges {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+}
+
+#badges img {
+    height: 150px;
+}
+
+#child-div>div>p {
+    font-family: sans-serif;
+    font-weight: lighter;
+    word-spacing: 6px;
+    line-height: 27px;
+    margin-bottom: 22px;
+}
+
+#color-to-grey {
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: grey;
+    word-spacing: 3px;
+}
+
+#login {
+    margin-top: 100px;
+}
+
+#login h2 {
+    font-family: sans-serif;
+    font-size: 40px;
+    color: rgb(97, 97, 120);
+    word-spacing: 5px;
+}
+
+#login input {
+    width: 92%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 1.5px solid rgb(216, 210, 210);
+    font-size: 16px;
+    color: rgb(173, 168, 168);
+}
+
+#login button {
+    width: 92%;
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 20px 0; 
+    border: 1.5px solid rgb(224, 224, 224);
+    background-color: white;
+    color:grey;
+    font-size: 15px;
+    position: relative;
+}
+
+#login button img {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+}
+
+#login button:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+

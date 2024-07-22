@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #fact-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  #fact {
+    font-size: 16px;
+  }
+  
+  .generate-fact {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  

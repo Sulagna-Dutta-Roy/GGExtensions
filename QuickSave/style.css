@@ -1,0 +1,32 @@
+
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 95%);
+}
+h1{
+    color: rgba(32, 24, 24, 0.822)
+}
+textarea{
+    font-family:  'Poppins','Helvetica Neue', sans-serif;
+    font-size: medium;
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    border-radius: 4px;
+    border:none
+}
+button{
+    border-radius: 3px;
+    border: none;
+    background: linear-gradient(to right,#196BCA ,#6433E0);
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    transform: rotate(0deg);
+}
+
+button:hover{
+    background: linear-gradient(to right,#5482d0 ,#7d5ee3);
+    background-color: #5482d0;
+   }
+button:active{
+    transform: scale(0.95);
+   }

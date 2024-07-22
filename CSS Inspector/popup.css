@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.container {
+  padding: 10px;
+}
+
+button {
+  width: 100%;
+}

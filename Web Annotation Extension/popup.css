@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 200px;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#penWidth, #colorPicker, #undoButton {
+  margin: 5px 0;
+}
+
+#undoButton:hover, #clearButton:hover {
+  background-color: #c82333;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}

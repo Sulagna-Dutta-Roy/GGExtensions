@@ -1,0 +1,21 @@
+{
+  "name": "Price Range Slider",
+  "short_name": "Price Range",
+  "description": "A price range slider and input fields for setting minimum and maximum prices.",
+  "manifest_version": 3,
+  "author": "ishithaac2312@gmail.com",
+  "version": "1.0.0",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#17A2B8",
+  "background_color": "#ffffff",
+  "icons": {
+    "192": "icon.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "script.js"
+  }
+}

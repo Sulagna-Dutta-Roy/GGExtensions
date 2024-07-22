@@ -1,0 +1,14 @@
+span[style="background-color: yellow;"] {
+    cursor: pointer;
+  }
+  
+  span[style="background-color: yellow;"]:hover::after {
+    content: attr(title);
+    background: #000;
+    color: #fff;
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  

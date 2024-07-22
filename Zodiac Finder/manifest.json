@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Zodiac Finder",
+    "version": "1.0",
+    "description": "A tool that finds us our Zodiac Sign and other traits related to it.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "storage"
+    ]
+  }
+  

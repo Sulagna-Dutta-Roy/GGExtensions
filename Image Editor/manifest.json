@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Image editor Extension JS",
+    "version": "1.0",
+    "description": "Image editor extension built in pure HTML CSS JS...",
+    "author": "sambitmondal2005@gmail.com",
+    "icons": {
+        "48": "images-20-48.png",
+        "128": "images-20-128.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions": [
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Erosion Rate Calculator",
+    "version": "1.0",
+    "description": "Calculate soil erosion rates based on rainfall, soil type, and land slope.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": []
+  }
+  

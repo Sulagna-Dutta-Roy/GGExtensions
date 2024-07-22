@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Projectile Motion Game",
+    "version": "1.0",
+    "description": "Send a projectile with the space key! Get 750 points to win in less than 45 seconds!",
+    "permissions": [
+        "storage"
+    ],
+    "optional_permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html",
+                "celebrate.html",
+                "fail.html",
+                "play.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

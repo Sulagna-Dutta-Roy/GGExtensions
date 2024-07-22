@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Parking Master Game",
+    "description": "A simple web game.",
+    "version": "1.0",
+    "icons": {
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/icon48.png"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://parkingmaster.w3spaces.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [{
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }]
+  }
+  

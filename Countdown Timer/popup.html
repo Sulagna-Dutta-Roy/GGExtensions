@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <form id="countdownForm">
+
+
+    <div class="countdowntimer">
+
+
+        <div class="item" id="hour">
+            <label for="hours">Hours</label>
+            <input type="number" min="0" id="hours">
+        </div>
+
+
+        <div class="item" id="minute">
+            <label for="minutes">Minutes</label>
+            <input type="number" min="0" max="60" id="minutes">
+        </div>
+
+
+        <div class="item" id="second">
+            <label for="seconds">Seconds</label>
+            <input type="number" min="0" max="60" id="seconds">
+        </div>
+
+
+        <button type="button" onclick="startCountdown()">Start Countdown</button>
+        <button id="stopButton" type="button" onclick="stopCountdown()" disabled>Stop Countdown</button>
+    
+    
+    </form>
+    
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>

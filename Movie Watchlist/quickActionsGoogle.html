@@ -1,0 +1,291 @@
+<!-- injected html -->
+<style>
+    #MovieBookmark-Extension.dark{
+        --button-border-color: #5f6368;
+        --button-hover-color: #2c2d31;
+        --button-active-bg-color: rgba(138,180,248,0.24);
+        --div-border-color: #3c4043;
+
+        --button-a-color: #dadce0;
+        --button-a-active: #d2e3fc;
+    }
+
+    #MovieBookmark-Extension.light{
+        --button-border-color: #dadce0;
+        --button-hover-color: #f0f0f0;
+        --button-active-bg-color: #e8f0fe;
+        --div-border-color: #dadce0;
+
+        --button-a-color: #4d5156;
+        --button-a-active: #1967d2;
+    }
+
+    #MovieBookmark-quickactions{
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--div-border-color);
+    }
+
+    .mb-button{
+        position: relative;
+        width: 40px;
+        height: 40px;
+
+        border: 1px solid var(--button-border-color);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .mb-button svg{
+        width: 100%;
+        height: 100%;
+        display: block;
+        fill: var(--button-a-color);
+    }
+
+    .mb-button-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .mb-button-container:hover .mb-button{
+        background-color: var(--button-hover-color);
+    }
+
+    .mb-button-container:hover a{
+        opacity: 0.85;
+    }
+
+    .mb-button-container a{
+        color: var(--button-a-color);
+        text-decoration: none;
+        margin-top: 5px;
+        font-family: Google Sans;
+        font-weight: 500;
+    }
+
+    svg.stroke{
+        display: block;
+    }
+
+    svg.fill{
+        display: none;
+    }
+
+    .mb-button-container.active svg{
+        fill: var(--button-a-active);
+    }
+
+    .mb-button-container.active svg.stroke{
+        display: none;
+    }
+    
+    .mb-button-container.active svg.fill{
+        display: block;
+    }
+
+    .mb-button-container.active .mb-button{
+        background-color: var(--button-active-bg-color);
+        border: 1px solid var(--button-active-bg-color);
+    }
+
+    .mb-button-container.active:hover .mb-button{
+        background-color: var(--button-active-bg-color);
+    }
+
+    .mb-button-container.active a{
+        color: var(--button-a-active);
+    }
+
+    .mb-button-container.active:hover a{
+        opacity: unset;
+    }
+
+    .mb-switch{
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 12px;
+        margin: 0 5px;
+    }
+
+    .mb-switch input{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .mb-slider{
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(154, 160, 166);
+        transition: 0.4s;
+        border-radius: 17px;
+    }
+
+    .mb-slider:before{
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        top: -3px;
+        background-color: rgb(218, 220, 224);
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .mb-slider{
+        background-color: rgba(138, 180, 248, 0.5);
+    }
+
+    input:focus + .mb-slider{
+        box-shadow: 0 0 1px rgba(138, 180, 248, 0.5);
+    }
+
+    input:checked + .mb-slider:before{
+        transform: translateX(13px);
+        background-color: rgb(138, 180, 248);
+    }
+
+    #MovieBookmark-selector{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #3c4043;
+    }
+
+    #add-list{
+        display: none;
+        position: absolute;
+        left: 55px;
+        top: 0px;
+        width: 130px;
+        border-radius: 5px;
+        border: 1px solid #3c4043;
+        background-color: rgb(32, 33, 36);
+        z-index: 100;
+    }
+
+    #add-list:before{
+        content: '';
+        width: 55px;
+        left: -55px;
+        position: absolute;
+        top: 0;
+        height: 100%;
+    }
+
+    #movie-lists{
+        position: relative;
+        list-style: none;
+        padding: 5px;
+        overflow-y: scroll;
+        max-height: 160px;
+    }
+
+    #movie-lists li{
+        height: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    #movie-lists li:hover, #list-new:hover{
+        background-color: var(--button-hover-color);
+        border-radius: 3px;
+    }
+
+    #movie-lists li.active{
+        color: rgb(138, 180, 248);
+    }
+
+    #movie-lists::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    #movie-lists::-webkit-scrollbar-thumb {
+        background: rgb(138, 180, 248);
+        border-radius: 20px;
+    }
+
+    #list-new{
+        padding: 5px;
+        border-bottom: 1px solid #3c4043;
+    }
+
+    #add-btn:hover #add-list{
+        display: block;
+    }
+
+</style>
+
+<div id="MovieBookmark-selector">
+    <div>
+        <svg viewBox="0 0 24 24" width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+            <g transform="matrix(1, 0, 0, 1, 27.009001, -39.238998)">
+                <path fill="#4285F4" d="M -3.264 51.509 C -3.264 50.719 -3.334 49.969 -3.454 49.239 L -14.754 49.239 L -14.754 53.749 L -8.284 53.749 C -8.574 55.229 -9.424 56.479 -10.684 57.329 L -10.684 60.329 L -6.824 60.329 C -4.564 58.239 -3.264 55.159 -3.264 51.509 Z"/>
+                <path fill="#34A853" d="M -14.754 63.239 C -11.514 63.239 -8.804 62.159 -6.824 60.329 L -10.684 57.329 C -11.764 58.049 -13.134 58.489 -14.754 58.489 C -17.884 58.489 -20.534 56.379 -21.484 53.529 L -25.464 53.529 L -25.464 56.619 C -23.494 60.539 -19.444 63.239 -14.754 63.239 Z"/>
+                <path fill="#FBBC05" d="M -21.484 53.529 C -21.734 52.809 -21.864 52.039 -21.864 51.239 C -21.864 50.439 -21.724 49.669 -21.484 48.949 L -21.484 45.859 L -25.464 45.859 C -26.284 47.479 -26.754 49.299 -26.754 51.239 C -26.754 53.179 -26.284 54.999 -25.464 56.619 L -21.484 53.529 Z"/>
+                <path fill="#EA4335" d="M -14.754 43.989 C -12.984 43.989 -11.404 44.599 -10.154 45.789 L -6.734 42.369 C -8.804 40.429 -11.514 39.239 -14.754 39.239 C -19.444 39.239 -23.494 41.939 -25.464 45.859 L -21.484 48.949 C -20.534 46.099 -17.884 43.989 -14.754 43.989 Z"/>
+            </g>
+        </svg>
+    </div>
+    
+    <label class="mb-switch">
+        <input id="mb-checkbox" type="checkbox" checked>
+        <span class="mb-slider"></span>
+    </label>
+
+    <div>
+        <img width="15px" height="15px">
+    </div>
+</div>
+
+<div id="MovieBookmark-Extension">
+    <div id="MovieBookmark-quickactions">
+        <div id="add-btn" class="mb-button-container">
+            <div class="mb-button">
+                <span style="width: 16px; height: 16px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                    </svg>
+                </span>
+            </div>
+            <a>Add</a>
+            <div id="add-list">
+                <div id="list-new">Add new</div>
+                <ul id="movie-lists">
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div id="bookmark-btn" class="mb-button-container">
+            <div class="mb-button">
+                <span style="width: 20px; height: 20px;">
+                    <svg class="stroke" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"></path>
+                    </svg>
+                    <svg class="fill" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"></path>
+                    </svg>
+                </span>
+            </div>
+            <a>Bookmark</a>
+        </div>
+    </div>
+</div>

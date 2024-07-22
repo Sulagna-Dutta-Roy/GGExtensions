@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Contest Finder",
+    "version": "1.0",
+    "description": "Get links to future online programming contests.",
+    "permissions": [
+        "storage",
+        "notifications",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://codeforces.com/*",
+        "https://leetcode.com/*",
+        "https://www.hackerrank.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

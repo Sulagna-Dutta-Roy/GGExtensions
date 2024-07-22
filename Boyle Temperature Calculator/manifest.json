@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Boyle Temperature Calculator",
+    "version": "1.0",
+    "description": "Calculate the Boyle Temperature",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

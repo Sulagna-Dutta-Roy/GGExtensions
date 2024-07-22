@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Length converter</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Length Converter</h1>
+            <div class="container-field">
+                <div class="input-group">
+                    <div class="input-label">
+                        <label for="fromUnit">From:</label>
+                    </div>
+                    <select class="select-group" id="fromUnit">
+                        <option selected value="Millimeter">Millimeter</option>
+                        <option value="Centimeter">Centimeter</option>
+                        <option value="Decimeter">Decimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Inch">Inch</option>
+                        <option value="Mile">Mile</option>
+                        <option value="Yard">Yard</option>
+                    </select>
+                    <input placeholder="Input Length" id="fromLength" type="number" name="from-length" min="0" class="input-field">
+                </div>
+
+                <div class="input-group">
+                    <div class="input-label">
+                        <label for="toUnit">To:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    </div>
+                    <select class="select-group" id="toUnit">
+                        <option value="Millimeter">Millimeter</option>
+                        <option selected value="Centimeter">Centimeter</option>
+                        <option value="Decimeter">Decimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Inch">Inch</option>
+                        <option value="Mile">Mile</option>
+                        <option value="Yard">Yard</option>
+                    </select>
+                    <input readonly placeholder="Output" id="outputLength" type="number" name="to-temperature" min="0" class="input-field readonly-background">
+                </div>
+
+                <div class="input-group">
+                    <button id="btnReset" class="btn btn-reset">Reset</button>
+                    <button id="btnCalculate" class="btn btn-calculate">Calculate</button>
+                    
+                </div>
+            </div>
+    </div>
+
+    <script src="./scripts/project-common.js"></script>
+    <script src="./scripts/length-converter.js"></script>
+    
+</body>
+</html>

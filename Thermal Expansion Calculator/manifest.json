@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Thermal-Expansion-calculator",
+    "version": "1.0",
+    "description": "Thermal-Expansion-Calculator",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+}
+}

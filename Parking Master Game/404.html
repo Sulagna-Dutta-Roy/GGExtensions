@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+        <style>
+          body {
+              font-family: Arial, Helvetica, sans-serif;
+          }
+          .not-found--header.header {
+            color: #333;
+            font-size: 6vw;
+            font-family: Arial !important;
+            text-align: center;
+          }
+          .content-menu {
+            font-size: 1em;
+            position: absolute;
+            left: 50%;
+            margin-left: -110px;
+            padding: 1px;
+          }
+          img {
+            pointer-events: none;
+            transform: rotate(1deg);
+          }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Parking-Master/Parking-Master/game/customjs/custom-tags.css">
+    </head>
+    <body>
+      <vr></vr>
+      <img style="width: 10vw; position: absolute; left: 5vw;" src="https://www.clker.com/cliparts/7/A/o/G/U/p/cloud-md.png" />
+      <img style="width: 9vw; position: absolute; left: 10vw; top: 4vw;" src="https://www.clker.com/cliparts/7/A/o/G/U/p/cloud-md.png" />
+      <div class="not-found--header header"><span style="font-weight:600;">404</span><br><small style="font-size: 3vw;">Page not found<hr></small></div>
+      <div class="content-menu content"><a style="color: #444;" href="/Parking-Master/index.html" text="Home">Home</a>&nbsp;&nbsp;&bullet;&nbsp;&nbsp;<a style="color: #444;" href="/help.html" text="Help">Help</a>&nbsp;&nbsp;&bullet;&nbsp;&nbsp;<a style="color: #444;" href="/documentation.html" text="Help">Documentation</a></div>
+      <script>
+          var filesDirectory = '/Parking-Master/';
+$.ajax({url: filesDirectory}).then(function(html) {
+    // create temporary DOM element
+    var document = $(html);
+    document.find('a[href$=.' + location.pathname.split('.').pop() + ']').each(function() {
+        var pdfName = $(this).text();
+        var pdfUrl = $(this).attr('href');
+
+        alert(pdfName);
+    })
+});</script>
+    </body>
+</html>

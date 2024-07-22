@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Concentration Game",
+    "version": "1.2",
+    "description": "An interactive Chrome extension to Find and match pairs of cards from memory..",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+   
+  }

@@ -8,9 +8,7 @@ const cityHide = document.querySelector('.city-hide');
 
 // Click functionality
 
-
-search.addEventListener('click', () => {
-
+function weatherReport() {
     const APIKey = '3588f91865bb345e0de3691b0a69e2e4';
     const city = document.querySelector('.search-box input').value;
 
@@ -152,4 +150,15 @@ search.addEventListener('click', () => {
             }
         }
     });
+}
+
+search.addEventListener('click', () => {
+    weatherReport();
 });
+
+document.querySelector('.js-location')
+    .addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            weatherReport();
+        }
+    })

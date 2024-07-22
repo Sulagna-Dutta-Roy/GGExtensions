@@ -1,0 +1,126 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: #ffffff;
+    width: 600px;
+    height: 600px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+}
+
+textarea, .preview {
+    width: 50%;
+    padding: 20px;
+    border: none;
+    font-size: 16px;
+    overflow-y: auto;
+}
+
+textarea {
+    resize: none;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #666666;
+}
+
+.preview {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-left: 1px solid #444444;
+}
+
+#export-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#export-button:hover {
+    background-color: #45a049;
+}
+
+/* Markdown styles */
+.preview h1, .preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.preview p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.preview blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #333333;
+    border-left: 5px solid #4CAF50;
+}
+
+.preview pre {
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.preview code {
+    background-color: #444444;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.preview a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.preview a:hover {
+    text-decoration: underline;
+}
+
+/* Scrollbar styling */
+textarea::-webkit-scrollbar, .preview::-webkit-scrollbar {
+    width: 12px;
+}
+
+textarea::-webkit-scrollbar-thumb, .preview::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover, .preview::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}

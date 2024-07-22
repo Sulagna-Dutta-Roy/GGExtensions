@@ -6,6 +6,8 @@
 }
 body {
   background-color: #f4c531;
+  width: 600px;
+  height: 600px;
 }
 
 ::-webkit-scrollbar {

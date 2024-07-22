@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    background: #000;
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+h1{
+    color: #fa8072;
+    font-size: 2rem;
+}
+/* .corner{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+} */
+.enter{
+    width: 98px;
+    border: none;
+    /* position: relative;
+    top: 60px; */
+    margin-right: 270px;
+    margin-top: 50px;
+}
+font{
+    position: relative;
+    top: 47px;
+    font-size: 1.25rem;
+    margin-right: 267px;
+}
+.line{
+    top: -12px;
+}
+.but{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: black;
+    color: #fa8072;
+    position: absolute;
+    border: 1px solid white;
+    cursor: pointer;
+    left: 782px;
+    top: 130px;
+}
+.but:hover{
+    background-color: #fa8072;
+    color: black;
+}

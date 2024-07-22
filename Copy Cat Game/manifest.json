@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Copy Cat Game Extension",
+    "version": "1.0",
+    "description": "A Copy Cat Game with Chrome extension",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "storage"
+    ]
+  }

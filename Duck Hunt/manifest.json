@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Duck Hunt",
+    "version": "1.0",
+    "description": "A Duck Hunt as a Chrome extension.",
+    "action": {
+      "default_popup": "start.html"
+    },
+    "permissions": []
+  }

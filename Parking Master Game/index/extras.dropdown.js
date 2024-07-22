@@ -1,0 +1,1 @@
+setInterval(function(){document.querySelector("details").hasAttribute("open")?document.querySelector("details").querySelector("summary").style.borderRight="none":document.querySelector("details").querySelector("summary").style.borderRight="0.1vw solid #222"},100);

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "LeetCode Problem of the Day",
+    "version": "1.0",
+    "description": "Generates a random LeetCode problem once every 24 hours.",
+    "permissions": [],
+    "action": {
+      "default_popup": "popup.html"
+     
+    }
+  }
+  

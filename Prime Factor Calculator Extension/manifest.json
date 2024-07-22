@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Prime Factors Calculator",
+    "version": "1.0",
+    "description": "Prime Factors Calculator.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

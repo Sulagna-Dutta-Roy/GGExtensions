@@ -1,0 +1,15 @@
+{
+  "name": "CSS injector",
+  "description": "CSS injector extension.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}

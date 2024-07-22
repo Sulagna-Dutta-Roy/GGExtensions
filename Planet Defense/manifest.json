@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Planet Defence",
+    "version": "1.0",
+    "description": "A simple game , your aim is to protect planet",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "space.jpg"
+    },
+    "icons": {
+        "16": "space.jpg",
+        "48": "space.jpg",
+        "128": "space.jpg"
+    },
+    "permissions":[]
+}

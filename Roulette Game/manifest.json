@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Roulette game",
+    "version": "1.0",
+    "description": "Roulette as a Chrome extension.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }

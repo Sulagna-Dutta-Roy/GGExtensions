@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Screen Time Tracker",
+    "version": "1.0",
+    "description": "Tracks the amount of time you spend on websites.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}

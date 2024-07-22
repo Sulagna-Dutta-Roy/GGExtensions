@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "FormFill",
+  "version": "1.0.0",
+  "description": "Frustrated by having to entered form data again and again for testing? This extension will automatically fillup dummy data invalid or valid as per your choice into any selected form.",
+  "icons": {
+    "65": "/assets/form-64.png",
+    "512": "/assets/form.png"
+  },
+  "action": {
+    "default_icon": {
+      "64": "/assets/form-64.png",
+      "512": "/assets/form.png"
+    },
+    "default_popup": "index.html",
+    "default_title": "FormFill"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "clipboardRead",
+    "clipboardWrite",
+    "idle",
+    "management",
+    "topSites",
+    "storage",
+    "webNavigation",
+    "webRequest",
+    "scripting"
+  ],
+  "background":{
+    "service_worker":"serviceWorker.js"
+  },
+  "content_scripts":[
+    {
+    "matches":["https://*/*", "http://*/*"],
+    "js":["content.js"]
+    }
+  ],
+  "host_permissions": ["https://*/*", "http://*/*"]
+}

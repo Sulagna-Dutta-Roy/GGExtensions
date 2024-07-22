@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to CodeChef</title>
+  <link rel="stylesheet" href="typewriter.css">
+  <style>
+    body {
+      background: linear-gradient(45deg, yellow, orange);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange }
+    }
+  </style>
+</head>
+<body>
+  <div class="typewriter">
+    <h1>Welcome to CodeChef Coding Problems</h1>
+  </div>
+  <p>Enhance your coding skills with CodeChef's challenging problems!</p>
+  <button onclick="navigateToCodeChef()">Start Coding</button>
+  <script>
+    function navigateToCodeChef() {
+      window.location.href = "https://www.codechef.com/";
+    }
+  </script>
+</body>
+</html>

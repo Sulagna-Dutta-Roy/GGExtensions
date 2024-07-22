@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Color Chase",
+    "version": "1.0",
+    "description": "A fun game where you chase and click on moving colors!",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": []
+  }
+  

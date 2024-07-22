@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Catch the Ball Game",
+  "version": "1.0",
+  "description": "A simple catch the ball game.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}

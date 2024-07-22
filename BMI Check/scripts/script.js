@@ -1,4 +1,6 @@
 function calculateBMI() {
+    document.querySelector('.result')
+        .classList.add('result-value');
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value);
     const resultDiv = document.getElementById('result');

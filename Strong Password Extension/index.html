@@ -5,14 +5,19 @@
   <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
 <body>
+
   <div id="container">
-    <h1>Password Generator</h1>
-    <label for="length">Length: </label>
+    <h1 id="heading">Password Generator</h1>
+    <label for="length"><span id="lengthlabel">Enter length: </span></label>
     <input type="number" id="length" value="16" min="8" max="64">
-    <button id="generate">Generate</button>
+    
     <div id="password"></div>
-    <button id="copy" disabled>Copy</button>
+
+    <button id="copy">Copy</button>
+    <button id="generate">Generate</button>
+
   </div>
+
   <script src="scripts/script.js"></script>
 </body>
 </html>

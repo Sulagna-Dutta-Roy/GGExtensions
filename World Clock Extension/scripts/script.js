@@ -342,41 +342,106 @@ async function fetchTime(city) {
     try {
         const response = await fetch(`https://worldtimeapi.org/api/timezone/${city}`);
         const data = await response.json();
-        return data.utc_datetime;
+        return data;
     } catch (error) {
         console.error('Error fetching time:', error);
         return null;
     }
 }
 
+// Function to create an analog clock hand
+function createHand(className) {
+    const hand = document.createElement('div');
+    hand.classList.add(className);
+    return hand;
+}
+
+// Function to update the analog clock
+function updateAnalogClock(clock, currentTime) {
+    const secondHand = clock.querySelector('.second');
+    const minuteHand = clock.querySelector('.minute');
+    const hourHand = clock.querySelector('.hour');
+
+    const seconds = currentTime.getSeconds();
+    const minutes = currentTime.getMinutes();
+    const hours = currentTime.getHours();
+
+    const secondsDegrees = ((seconds / 60) * 360) + 90;
+    const minutesDegrees = ((minutes / 60) * 360) + ((seconds / 60) * 6) + 90;
+    const hoursDegrees = ((hours / 12) * 360) + ((minutes / 60) * 30) + 90;
+
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+    hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+}
+
 // Function to add a clock for a city
 async function addClock(city) {
     const clockContainer = document.getElementById('clockContainer');
-    // Remove existing clock elements
-    clockContainer.innerHTML = '';
     const clock = document.createElement('div');
     clock.classList.add('clock');
+
     const cityName = document.createElement('span');
     cityName.textContent = city.split('/').pop().replace(/_/g, ' ');
-    cityName.classList.add('city'); // Add city class
+    cityName.classList.add('city');
+
     const clockTime = document.createElement('span');
-    clock.appendChild(cityName);
+    clockTime.classList.add('time');
+
+    const timeZone = document.createElement('span');
+    timeZone.classList.add('timezone');
+
+    // Create the analog clock container
+    const analogClock = document.createElement('div');
+    analogClock.classList.add('analog-clock');
+    analogClock.appendChild(createHand('hour'));
+    analogClock.appendChild(createHand('minute'));
+    analogClock.appendChild(createHand('second'));
+
+    // Add a click event listener to remove the clock
+    clock.addEventListener('click', () => {
+        clock.remove();
+    });
+
+    clock.appendChild(analogClock);
     clock.appendChild(clockTime);
+    clock.appendChild(timeZone);
+    clock.appendChild(cityName);
     clockContainer.appendChild(clock);
-    // Update time every second
-    setInterval(async () => {
-        const time = await fetchTime(city);
-        if (time) {
-            const currentTime = new Date(time);
-            clockTime.textContent = currentTime.toLocaleTimeString();
-            clockTime.classList.add('time'); // Add time class
+
+    const updateTime = async () => {
+        const timeData = await fetchTime(city);
+        if (timeData) {
+            const currentTime = new Date(timeData.datetime);
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZone: city,
+                timeZoneName: 'short'
+            });
+            const formattedTime = formatter.formatToParts(currentTime);
+            const timeString = formattedTime
+                .filter(part => part.type === 'hour' || part.type === 'minute' || part.type === 'second')
+                .map(part => part.value)
+                .join(':');
+            const timeZoneAbbr = formattedTime.find(part => part.type === 'timeZoneName').value;
+            clockTime.textContent = timeString;
+            timeZone.textContent = timeZoneAbbr;
+
+            // Update analog clock
+            updateAnalogClock(analogClock, currentTime);
         } else {
             clockTime.textContent = 'Error fetching time';
+            timeZone.textContent = '';
         }
-    }, 1000);
+    };
+
+    updateTime();
+    setInterval(updateTime, 1000);
 }
 
-// Event listener for form submission
+// Event listener for form submit
 document.getElementById('cityForm').addEventListener('submit', async (event) => {
     event.preventDefault();
     const selectedCity = citySelect.value;

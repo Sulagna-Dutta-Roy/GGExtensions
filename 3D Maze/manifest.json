@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "3D Maze Game",
+    "version": "1.0",
+    "description": "A simple 3D maze game.",
+    "permissions": [],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    }
+  }
+  

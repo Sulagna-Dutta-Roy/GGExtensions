@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Eco Warrior",
+    "version": "1.0",
+    "description": "An educational game to raise awareness about environmental conservation.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+  }
+  

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Lighthouse Team">
+  <meta name="viewport" content="width=device-width">
+  <title>Lighthouse</title>
+  <link rel="stylesheet" href="styles/lighthouse.css">
+</head>
+<body>
+  <main class="main" role="main">
+    <div class="section section--run">
+      <img class="header__icon" src="images/lh_logo.svg" width="75" height="75"></svg>
+      <!-- <object data="images/lh_logo.svg" type="image/svg+xml"></object> -->
+      <button class="button button--generate">Generate report</button>
+      <span class="psi-disclaimer"><a href="https://developers.google.com/speed/docs/insights/v5/get-started?utm_source=lh-chrome-ext" title="https://developers.google.com/speed/docs/insights/v5/get-started" target="_blank" rel="noopener nofollow">Uses the PSI API</a></span>
+      <div class="errormsg"></div>
+    </div>
+    <div class="section section--options">
+      <form class="options__form">
+        <div class="options__group">
+          <h3 class="options__title">Show results in:</h3>
+          <ul class="options__list options__backend">
+            <!-- filled dynamically -->
+          </ul>

@@ -1,0 +1,107 @@
+body {
+    background: #ffffff; 
+    text-align: center;
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+	height: 400px;
+	width: 400px;
+}
+
+button {
+    background: #dcdcdc; 
+    border: 0;
+    color: #211678; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background: #7935f9; 
+}
+
+button:active {
+    background: #bfbfbf; 
+}
+
+
+button:active {
+    background: #bfbfbf; 
+}
+
+h1 {
+    font-size: 28px; /* Slightly smaller heading */
+    margin: 20px 0 10px 0; /* Adjusted margins */
+}
+
+input {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.calc {
+    background: #211678; /* Light gray calculation area */
+    color: #ffffff; /* Dark gray text */
+    padding: 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#results {
+    color: #ffffff; /* Medium gray text */
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5; /* Normal line height */
+}
+
+.vect {
+    display: inline-block;
+    font-size: 16px;
+    color: #211678; /* Dark gray text */
+    margin: 10px;
+    text-align: left;
+}
+
+.vect > p {
+    font-weight: bold;
+}
+
+.operation {
+    margin: 15px 0;
+}
+
+.operation label {
+    color: #211678; /* Dark gray text */
+    font-size: 16px;
+}
+
+.operation select {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px;
+    margin: 5px;
+    background: #f5f5f5; /* Very light gray background */
+    color: #211678; /* Dark gray text */
+}
+#results {
+    color: #211678; /* Dark gray text */
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px; /* Added padding for better separation */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Very light gray background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+    line-height: 1.5; /* Normal line height */
+	display: block;
+}

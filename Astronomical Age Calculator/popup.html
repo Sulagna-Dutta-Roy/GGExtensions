@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Astronomical Age Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Astronomical Age Calculator</h1>
+            <label for="age">Enter your age (in Earth years):</label>
+            <input type="number" min="0" id="age" placeholder="e.g., 30">
+            <label for="planet">Select a planet:</label>
+            <select id="planet">
+                <option value="Mercury">Mercury</option>
+                <option value="Venus">Venus</option>
+                <option value="Earth">Earth</option>
+                <option value="Mars">Mars</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Saturn">Saturn</option>
+                <option value="Uranus">Uranus</option>
+                <option value="Neptune">Neptune</option>
+            </select>
+            <button id="calculateButton">Calculate</button>
+            <div id="result"></div>
+            <button onclick="location.href='about.html'" id="aboutButton">About</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

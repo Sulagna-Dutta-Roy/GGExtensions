@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wheel of Fortune</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      text-align: center;
+    }
+    #wheel {
+      margin: 20px auto;
+      width: 200px;
+      height: 200px;
+      border: 10px solid #ccc;
+      border-radius: 50%;
+      position: relative;
+    }
+    #wheel:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid red;
+      transform: translate(-50%, -100%);
+    }
+    #wheel div {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-color: lightblue;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      transform-origin: 100% 100%;
+    }
+    #spin {
+      margin: 20px;
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #result {
+      margin: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wheel of Fortune</h1>
+  <div id="wheel">
+    <!-- Wheel segments will be generated dynamically -->
+  </div>
+  <button id="spin">Spin</button>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

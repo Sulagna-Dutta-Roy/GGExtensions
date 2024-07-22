@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#pdfViewer {
+    height: 80vh;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 500px;
+}
+
+#pdfFrame {
+    width: 500px;
+    height: 100%;
+    border: none;
+}
