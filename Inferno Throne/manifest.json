@@ -1,0 +1,11 @@
+{
+    "name": "Infernal Throne",
+    "short_name": "InfernalThrone",
+    "description": "A thrilling game experience in the Infernal Throne.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "landscape",
+    "icons": []
+  }
