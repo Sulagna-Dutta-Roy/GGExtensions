@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Touch No Fire Game",
+    "version": "1.0",
+    "description": "Eat Burger instead of fire to increase the score.",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
