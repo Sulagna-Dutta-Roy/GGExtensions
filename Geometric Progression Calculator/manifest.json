@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Geometric Progression Calculator",
+    "version": "1.0",
+    "description": "A tool that finds us the nth term and sum of n terms of the given Geometric Progression",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "storage"
+    ]
+  }
