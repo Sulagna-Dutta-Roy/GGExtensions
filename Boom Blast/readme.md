@@ -23,7 +23,7 @@ BOOM BLAST is a fun and colorful browser-based game where players click on ballo
 
 1. Clone this repository .
 ```bash
-  clone https://github.com/Shantnu-singh/GGExtensions/tree/master/Boom Blast Game
+  clone https://github.com/Sulagna-Dutta-Roy/GGExtensions/tree/master/Boom Blast 
 ```
 2. Open the `index.html` file in a web browser to start the game.
 
