@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Antilog Calculator",
+    "version": "1.0",
+    "description": "A calculator that calculates us the antilog of the value with respect to it's base.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "storage"
+    ]
+}
