@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wigglenog-button {
+    margin: 10px;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wigglenog-button.active {
+    background-color: #00ff00;
+}
+
+#result-container {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#start-game {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

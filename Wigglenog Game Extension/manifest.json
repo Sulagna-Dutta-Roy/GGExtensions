@@ -1,0 +1,10 @@
+{
+    "highScores": [
+        {"player": "Vivek", "score": 10},
+        {"player": "Ranga", "score": 8}
+    ],
+    "gameConfig": {
+        "sequenceLength": 4,
+        "buttonCount": 4
+    }
+}
