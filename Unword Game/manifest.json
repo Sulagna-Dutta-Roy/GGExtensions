@@ -1,0 +1,12 @@
+{
+    "name": "unwordIT - Jumbled Word Charades",
+    "short_name": "unwordIT",
+    "description": "A modern twist on charades with jumbled words",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#1a1a2e",
+    "theme_color": "#4ecca3",
+    "orientation": "portrait-primary",
+    "related_applications": [],
+    "prefer_related_applications": false
+  }

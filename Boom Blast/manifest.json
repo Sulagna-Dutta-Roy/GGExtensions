@@ -1,0 +1,10 @@
+{
+    "name": "BOOM BLAST",
+    "short_name": "BOOM BLAST",
+    "description": "A colorful balloon-popping game",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ee7752",
+    "theme_color": "#23a6d5",
+    "orientation": "portrait-primary"
+  }
