@@ -19,9 +19,9 @@ Preprocess the lyrics by removing stop words and punctuation.
 Apply the K-Means algorithm to group songs based on lyric similarities.
 
 ## Images
-![image](https://github.com/Diksha566/codex-project-song-clustering/assets/121545576/e0dfb962-77c4-4aa6-9afb-2a7441a2cf6e)
+![image](https://drive.google.com/file/d/1fzVwcXG0PrSTo0iqfA4BU-dEw3UwCXBY/view?usp=sharing)
 
-![image](https://github.com/Diksha566/codex-project-song-clustering/assets/121545576/6ef1bd19-28aa-4ff7-88df-e304365e8973)
+![image](https://drive.google.com/file/d/17zAPc1llos2r8U6___RTJpW4fUKCFyc6/view?usp=sharing)
 
 
 
