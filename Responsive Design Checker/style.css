@@ -8,8 +8,8 @@ body {
     width: 100%;
     box-sizing: border-box;
     overflow: auto;
-    min-width: 900px;
-    min-height: 900px;
+    min-width: 1100px;
+    min-height: 1100px;
 }
 
 h1 {
