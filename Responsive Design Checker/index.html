@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Responsive Design Checker</h1>
+    <div class="controls">
+        <label for="url">URL: </label>
+        <input type="text" id="url" placeholder="Enter website URL">
+        <button id="loadButton">Load URL</button>
+    </div>
+    <div class="iframe-container">
+        <div class="iframe-wrapper">
+            <label for="desktop">Desktop (1024x768)</label>
+            <iframe id="desktop" width="1024" height="768"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+            <label for="tablet">Tablet (768x1024)</label>
+            <iframe id="tablet" width="768" height="1024"></iframe>
+        </div>
+        <div class="iframe-wrapper">
+            <label for="mobile">Mobile (375x667)</label>
+            <iframe id="mobile" width="375" height="667"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
