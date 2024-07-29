@@ -3,9 +3,10 @@
 An interactive 8-puzzle game built with HTML, CSS, and JavaScript. The objective of the game is to arrange the tiles in numerical order by sliding them into the empty space. 
 
 ## Features
-- Shuffle the puzzle tiles.
-- Reset the puzzle to the solved state.
-- Timer to track the time taken to solve the puzzle.
+- Puzzle Grid: A 3x3 grid with tiles that can be moved to solve the puzzle.
+- Shuffle Button: Randomly shuffles the tiles to create a new puzzle.
+- Reset Button: Resets the puzzle to its initial solved state.
+- Timer: Displays the elapsed time since the puzzle was started.
 
 ## How to Play
 
@@ -36,6 +37,14 @@ An interactive 8-puzzle game built with HTML, CSS, and JavaScript. The objective
 5. Click the **Reset** button to reset the puzzle to the solved state and reset the timer.
 
 ## Code Structure
+
+```bash
+8-puzzle-game/
+├── style.css
+├── script.js
+├── index.html
+└── README.md
+```
 
 ### HTML
 
