@@ -86,6 +86,26 @@
         .blur {
             filter: blur(5px);
         }
+        #footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            animation: bounce 0.5s infinite alternate;
+        }
+        @keyframes bounce {
+            from {
+                transform: translateX(-50%) translateY(0px);
+            }
+            to {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -101,6 +121,7 @@
             <p>Your score: <span id="final-score"></span></p>
             <button id="restart-button">Restart</button>
         </div>
+        <div id="footer">Made with ❤️ by <a href="https://github.com/Anjaliavv51"> Anjali</a></div>
     </div>
 
     <!--script>
@@ -400,6 +421,7 @@ function startGame() {
     isGameStarted = true;
     document.getElementById('start-screen').style.display = 'none';
     document.getElementById('game-grid').classList.remove('blur');
+    document.getElementById('footer').style.display = 'block';
     initGame();
 }
 
@@ -493,6 +515,7 @@ function endGame() {
     document.getElementById('game-over').style.display = 'block';
     document.getElementById('final-score').textContent = score;
     document.getElementById('game-grid').classList.add('blur');
+    document.getElementById('footer').style.display = 'block';
 }
 
 function updateScore() {
@@ -537,6 +560,7 @@ function initGame() {
     initializeBoxes();
     renderGame();
     updateScore();
+    document.getElementById('footer').style.display = 'block';
     window.addEventListener('keydown', handleKeyPress);
     document.getElementById('game-grid').addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', () => {
