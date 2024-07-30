@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Dashboard</h1>
+        <div class="dashboard">
+            <div class="card">
+                <h2>Income</h2>
+                <p id="income">$0.00</p>
+                <input type="number" id="incomeInput" placeholder="Add Income">
+                <button onclick="addIncome()">Add</button>
+            </div>
+            <div class="card">
+                <h2>Expenses</h2>
+                <p id="expenses">$0.00</p>
+                <input type="number" id="expensesInput" placeholder="Add Expense">
+                <button onclick="addExpense()">Add</button>
+            </div>
+            <div class="card">
+                <h2>Savings</h2>
+                <p id="savings">$0.00</p>
+                <input type="number" id="savingsInput" placeholder="Add Savings">
+                <button onclick="addSavings()">Add</button>
+            </div>
+            <div class="card">
+                <h2>Investments</h2>
+                <p id="investments">$0.00</p>
+                <input type="number" id="investmentsInput" placeholder="Add Investment">
+                <button onclick="addInvestment()">Add</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

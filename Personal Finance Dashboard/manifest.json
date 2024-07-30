@@ -1,0 +1,19 @@
+
+### manifest.json
+
+```json
+{
+  "manifest_version": 2,
+  "name": "Personal Finance Dashboard",
+  "version": "1.0",
+  "description": "A simple personal finance dashboard to track income, expenses, savings, and investments.",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "icons/icon128.png"
+  },
+  "permissions": []
+}
