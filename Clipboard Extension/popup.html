@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clipboard Extension</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background-color: #f4f4f9;
+      width: 400px;
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+      resize: none;
+    }
+    button {
+      padding: 10px 20px;
+      margin-right: 5px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 5px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    li span {
+      flex-grow: 1;
+      word-break: break-all;
+    }
+    li button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    li button.copy {
+      background-color: #28a745;
+      margin-right: 5px;
+    }
+    li button:hover {
+      background-color: #c82333;
+    }
+    li button.copy:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clipboard</h1>
+  <textarea id="clipboardContent" placeholder="Enter text to copy..."></textarea><br>
+  <button id="copyButton">Copy</button>
+  <button id="pasteButton">Paste</button>
+  <ul id="clipboardHistory"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>
