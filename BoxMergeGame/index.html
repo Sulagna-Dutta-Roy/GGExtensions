@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmerge</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #game-grid {
+            display: inline-block;
+        }
+        .row {
+            display: flex;
+            height: 30px;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+            border: 1px solid white;
+        }
+        #game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        #restart-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #score-display {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        #start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1000;
+}
+#start-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+        .blur {
+            filter: blur(5px);
+        }
+        #footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            animation: bounce 0.5s infinite alternate;
+        }
+        @keyframes bounce {
+            from {
+                transform: translateX(-50%) translateY(0px);
+            }
+            to {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="start-screen">
+        <h2>Welcome to the Game!</h2>
+        <button id="start-button">Start Game</button>
+    </div>
+    <div id="game-container">
+        <div id="score-display">Score: 0</div>
+        <div id="game-grid"></div>
+        <div id="game-over">
+            <h2>Game Over!</h2>
+            <p>Your score: <span id="final-score"></span></p>
+            <button id="restart-button">Restart</button>
+        </div>
+        <div id="footer">Made with ❤️ by <a href="https://github.com/Anjaliavv51"> Anjali</a></div>
+    </div>
+
+    <!--script>
+        const COLORS = ['red', 'blue', 'green', 'purple'];
+        let playerPosition = { x: 0, y: 0 };
+        let boxes = [];
+        let playerSize = 1;
+        let gridSize = { width: 0, height: 0 };
+        let score = 0;
+        let isGameOver = false;
+
+        function updateGridSize() {
+            const cellSize = 30;
+            gridSize = {
+                width: Math.floor(window.innerWidth / cellSize),
+                height: Math.floor(window.innerHeight / cellSize)
+            };
+        }
+
+        function initializeBoxes() {
+            boxes = [];
+            for (let i = 0; i < 20; i++) {
+                boxes.push({
+                    x: Math.floor(Math.random() * gridSize.width),
+                    y: Math.floor(Math.random() * gridSize.height),
+                    color: COLORS[Math.floor(Math.random() * COLORS.length)]
+                });
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (isGameOver) return;
+            
+            const key = e.key.toLowerCase();
+            switch (key) {
+                case 'arrowup':
+                case 'w':
+                    playerPosition.y = Math.max(0, playerPosition.y - 1);
+                    break;
+                case 'arrowdown':
+                case 's':
+                    playerPosition.y = Math.min(gridSize.height - 1, playerPosition.y + 1);
+                    break;
+                case 'arrowleft':
+                case 'a':
+                    playerPosition.x = Math.max(0, playerPosition.x - 1);
+                    break;
+                case 'arrowright':
+                case 'd':
+                    playerPosition.x = Math.min(gridSize.width - 1, playerPosition.x + 1);
+                    break;
+            }
+            checkCollisions();
+            renderGame();
+        }
+
+        function checkCollisions() {
+            boxes = boxes.filter(box => {
+                if (box.x === playerPosition.x && box.y === playerPosition.y) {
+                    if (box.color === 'red') {
+                        playerSize++;
+                        score += 10;
+                    } else if (box.color === 'purple') {
+                        playerSize++;
+                        score += 20;
+                    } else {
+                        endGame();
+                    }
+                    return false;
+                }
+                return true;
+            });
+            updateScore();
+        }
+
+        function endGame() {
+            isGameOver = true;
+            document.getElementById('game-over').style.display = 'block';
+            document.getElementById('final-score').textContent = score;
+            document.getElementById('game-grid').classList.add('blur');
+        }
+
+        function updateScore() {
+            document.getElementById('score-display').textContent = `Score: ${score}`;
+        }
+
+        function renderGame() {
+            const gameGrid = document.getElementById('game-grid');
+            gameGrid.innerHTML = '';
+            for (let y = 0; y < gridSize.height; y++) {
+                const row = document.createElement('div');
+                row.className = 'row';
+                for (let x = 0; x < gridSize.width; x++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    const isPlayer = x === playerPosition.x && y === playerPosition.y;
+                    const box = boxes.find(box => box.x === x && box.y === y);
+                    cell.style.backgroundColor = isPlayer ? 'purple' : (box ? box.color : 'white');
+                    if (isPlayer) {
+                        cell.textContent = playerSize;
+                    }
+                    row.appendChild(cell);
+                }
+                gameGrid.appendChild(row);
+            }
+        }
+
+        function restartGame() {
+            playerPosition = { x: 0, y: 0 };
+            playerSize = 1;
+            score = 0;
+            isGameOver = false;
+            document.getElementById('game-over').style.display = 'none';
+            document.getElementById('game-grid').classList.remove('blur');
+            initializeBoxes();
+            renderGame();
+            updateScore();
+        }
+
+        function initGame() {
+            updateGridSize();
+            initializeBoxes();
+            renderGame();
+            updateScore();
+            window.addEventListener('keydown', handleKeyPress);
+            window.addEventListener('resize', () => {
+                updateGridSize();
+                initializeBoxes();
+                renderGame();
+            });
+            document.getElementById('restart-button').addEventListener('click', restartGame);
+        }
+
+        initGame();
+    </script-->
+    <!--script>
+        const COLORS = ['red', 'blue', 'green', 'purple'];
+let playerPosition = { x: 0, y: 0 };
+let boxes = [];
+let playerSize = 1;
+let gridSize = { width: 0, height: 0 };
+let score = 0;
+let isGameOver = false;
+let cellSize = 30;
+
+function updateGridSize() {
+    gridSize = {
+        width: Math.floor(window.innerWidth / cellSize),
+        height: Math.floor(window.innerHeight / cellSize)
+    };
+}
+
+function initializeBoxes() {
+    boxes = [];
+    for (let i = 0; i < 20; i++) {
+        boxes.push({
+            x: Math.floor(Math.random() * gridSize.width),
+            y: Math.floor(Math.random() * gridSize.height),
+            color: COLORS[Math.floor(Math.random() * COLORS.length)]
+        });
+    }
+}
+
+function handleKeyPress(e) {
+            if (isGameOver) return;
+            
+            const key = e.key.toLowerCase();
+            switch (key) {
+                case 'arrowup':
+                case 'w':
+                    playerPosition.y = Math.max(0, playerPosition.y - 1);
+                    break;
+                case 'arrowdown':
+                case 's':
+                    playerPosition.y = Math.min(gridSize.height - 1, playerPosition.y + 1);
+                    break;
+                case 'arrowleft':
+                case 'a':
+                    playerPosition.x = Math.max(0, playerPosition.x - 1);
+                    break;
+                case 'arrowright':
+                case 'd':
+                    playerPosition.x = Math.min(gridSize.width - 1, playerPosition.x + 1);
+                    break;
+            }
+            checkCollisions();
+            renderGame();
+        }
+
+function handleMouseMove(e) {
+    if (isGameOver) return;
+    
+    const rect = document.getElementById('game-grid').getBoundingClientRect();
+    const x = Math.floor((e.clientX - rect.left) / cellSize);
+    const y = Math.floor((e.clientY - rect.top) / cellSize);
+    
+    if (x !== playerPosition.x || y !== playerPosition.y) {
+        playerPosition = {
+            x: Math.max(0, Math.min(gridSize.width - 1, x)),
+            y: Math.max(0, Math.min(gridSize.height - 1, y))
+        };
+        checkCollisions();
+        renderGame();
+    }
+}
+
+function checkCollisions() {
+    boxes = boxes.filter(box => {
+        if (box.x === playerPosition.x && box.y === playerPosition.y) {
+            if (box.color === 'red') {
+                playerSize++;
+                score += 10;
+            } else if (box.color === 'purple') {
+                playerSize++;
+                score += 20;
+            } else {
+                endGame();
+            }
+            return false;
+        }
+        return true;
+    });
+    updateScore();
+}
+
+function endGame() {
+    isGameOver = true;
+    document.getElementById('game-over').style.display = 'block';
+    document.getElementById('final-score').textContent = score;
+    document.getElementById('game-grid').classList.add('blur');
+}
+
+function updateScore() {
+    document.getElementById('score-display').textContent = `Score: ${score}`;
+}
+
+function renderGame() {
+    const gameGrid = document.getElementById('game-grid');
+    gameGrid.innerHTML = '';
+    for (let y = 0; y < gridSize.height; y++) {
+        const row = document.createElement('div');
+        row.className = 'row';
+        for (let x = 0; x < gridSize.width; x++) {
+            const cell = document.createElement('div');
+            cell.className = 'cell';
+            const isPlayer = x === playerPosition.x && y === playerPosition.y;
+            const box = boxes.find(box => box.x === x && box.y === y);
+            cell.style.backgroundColor = isPlayer ? 'purple' : (box ? box.color : 'white');
+            if (isPlayer) {
+                cell.textContent = playerSize;
+            }
+            row.appendChild(cell);
+        }
+        gameGrid.appendChild(row);
+    }
+}
+
+function restartGame() {
+    playerPosition = { x: 0, y: 0 };
+    playerSize = 1;
+    score = 0;
+    isGameOver = false;
+    document.getElementById('game-over').style.display = 'none';
+    document.getElementById('game-grid').classList.remove('blur');
+    initializeBoxes();
+    renderGame();
+    updateScore();
+}
+
+function initGame() {
+    updateGridSize();
+    initializeBoxes();
+    renderGame();
+    updateScore();
+    document.getElementById('game-grid').addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', () => {
+        updateGridSize();
+        initializeBoxes();
+        renderGame();
+    });
+    document.getElementById('restart-button').addEventListener('click', restartGame);
+}
+
+initGame();
+    </script-->
+    <script>
+        const COLORS = ['red', 'blue', 'green', 'purple'];
+let playerPosition = { x: 0, y: 0 };
+let boxes = [];
+let playerSize = 1;
+let gridSize = { width: 0, height: 0 };
+let score = 0;
+let isGameOver = false;
+let cellSize = 30;
+
+function startGame() {
+    isGameStarted = true;
+    document.getElementById('start-screen').style.display = 'none';
+    document.getElementById('game-grid').classList.remove('blur');
+    document.getElementById('footer').style.display = 'block';
+    initGame();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('game-grid').classList.add('blur');
+    document.getElementById('start-button').addEventListener('click', startGame);
+});
+
+function updateGridSize() {
+    gridSize = {
+        width: Math.floor(window.innerWidth / cellSize),
+        height: Math.floor(window.innerHeight / cellSize)
+    };
+}
+
+function initializeBoxes() {
+    boxes = [];
+    for (let i = 0; i < 20; i++) {
+        boxes.push({
+            x: Math.floor(Math.random() * gridSize.width),
+            y: Math.floor(Math.random() * gridSize.height),
+            color: COLORS[Math.floor(Math.random() * COLORS.length)]
+        });
+    }
+}
+
+function handleKeyPress(e) {
+    if (isGameOver) return;
+    
+    const key = e.key.toLowerCase();
+    switch (key) {
+        case 'arrowup':
+        case 'w':
+            movePlayer(0, -1);
+            break;
+        case 'arrowdown':
+        case 's':
+            movePlayer(0, 1);
+            break;
+        case 'arrowleft':
+        case 'a':
+            movePlayer(-1, 0);
+            break;
+        case 'arrowright':
+        case 'd':
+            movePlayer(1, 0);
+            break;
+    }
+}
+
+function handleMouseMove(e) {
+    if (isGameOver) return;
+
+    const rect = document.getElementById('game-grid').getBoundingClientRect();
+    const x = Math.floor((e.clientX - rect.left) / cellSize);
+    const y = Math.floor((e.clientY - rect.top) / cellSize);
+
+    if (x !== playerPosition.x || y !== playerPosition.y) {
+        playerPosition.x = Math.max(0, Math.min(gridSize.width - 1, x));
+        playerPosition.y = Math.max(0, Math.min(gridSize.height - 1, y));
+        checkCollisions();
+        renderGame();
+    }
+}
+
+function movePlayer(dx, dy) {
+    playerPosition.x = Math.max(0, Math.min(gridSize.width - 1, playerPosition.x + dx));
+    playerPosition.y = Math.max(0, Math.min(gridSize.height - 1, playerPosition.y + dy));
+    checkCollisions();
+    renderGame();
+}
+
+function checkCollisions() {
+    boxes = boxes.filter(box => {
+        if (box.x === playerPosition.x && box.y === playerPosition.y) {
+            if (box.color === 'purple') {
+                playerSize++;
+                score += 20;
+            } else {
+                endGame();
+            }
+            return false;
+        }
+        return true;
+    });
+    updateScore();
+}
+
+function endGame() {
+    isGameOver = true;
+    document.getElementById('game-over').style.display = 'block';
+    document.getElementById('final-score').textContent = score;
+    document.getElementById('game-grid').classList.add('blur');
+    document.getElementById('footer').style.display = 'block';
+}
+
+function updateScore() {
+    document.getElementById('score-display').textContent = `Score: ${score}`;
+}
+
+function renderGame() {
+    const gameGrid = document.getElementById('game-grid');
+    gameGrid.innerHTML = '';
+    for (let y = 0; y < gridSize.height; y++) {
+        const row = document.createElement('div');
+        row.className = 'row';
+        for (let x = 0; x < gridSize.width; x++) {
+            const cell = document.createElement('div');
+            cell.className = 'cell';
+            const isPlayer = x === playerPosition.x && y === playerPosition.y;
+            const box = boxes.find(box => box.x === x && box.y === y);
+            cell.style.backgroundColor = isPlayer ? 'purple' : (box ? box.color : 'white');
+            if (isPlayer) {
+                cell.textContent = playerSize;
+            }
+            row.appendChild(cell);
+        }
+        gameGrid.appendChild(row);
+    }
+}
+
+function restartGame() {
+    playerPosition = { x: 0, y: 0 };
+    playerSize = 1;
+    score = 0;
+    isGameOver = false;
+    document.getElementById('game-over').style.display = 'none';
+    document.getElementById('game-grid').classList.remove('blur');
+    initializeBoxes();
+    renderGame();
+    updateScore();
+}
+
+function initGame() {
+    updateGridSize();
+    initializeBoxes();
+    renderGame();
+    updateScore();
+    document.getElementById('footer').style.display = 'block';
+    window.addEventListener('keydown', handleKeyPress);
+    document.getElementById('game-grid').addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', () => {
+        updateGridSize();
+        initializeBoxes();
+        renderGame();
+    });
+    document.getElementById('restart-button').addEventListener('click', restartGame);
+}
+
+initGame();
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "BoxMerge",
+    "version": "1.0",
+    "description": "Box Merge is a grid-based puzzle game where players control a colored box using arrow keys. The goal is to grow your box by merging with similar colors while avoiding different colors.",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.js"
+    }
+}
