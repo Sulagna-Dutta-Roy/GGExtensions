@@ -1,0 +1,410 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: burlywood;
+}
+.mu{
+    font-family: Arial, sans-serif;
+  padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    background: rgb(12, 44, 89);
+
+}
+.my{
+    display: flex;
+    justify-content:space-around;
+
+
+}
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background: rgb(23, 53, 3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+h1, h2 {
+    text-align: center;
+   
+}
+
+.single-color, .gradient-maker {
+    margin-bottom: 20px;
+    
+}
+
+.color-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-inputs > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+    margin: 10px;
+}
+
+.color-display {
+    width: 100px; 
+    color: black;
+    height: 100px; 
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.gradient-display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gradient-box {
+    width: 100px;
+    color: black;
+    height: 100px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+        body {
+            margin: 0;
+            padding: 0;
+            background: burlywood;
+        }
+        .mu {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            background: rgb(12, 44, 89);
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            background: rgb(23, 53, 3);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .single-color, .gradient-maker {
+            margin-bottom: 20px;
+        }
+        .color-inputs {
+            display: flex;
+            justify-content: space-between;
+        }
+        .color-inputs > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin: 10px;
+        }
+        .color-display {
+            width: 100px; 
+            height: 100px; 
+            margin-top: 10px;
+            border: 1px solid #ccc;
+        }
+        .gradient-display {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gradient-box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .css-code {
+            margin-top: 20px;
+            font-family: monospace;
+            color: black;
+            background: #ccc;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        #singleColorValues p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        .gradient-box {
+            padding: 20px;
+            color: black;
+        }
+        @media (max-width: 1024px) {
+            .gradient-display {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                font-size: 10px;
+            }
+            .color-inputs {
+                flex-direction: column;
+            }
+            .color-inputs > div {
+                width: 100%;
+            }
+            h1, h2 {
+                text-align: center;
+                font-size: 10px;
+            }
+            .gradient-display {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                font-size: 10px;
+            }
+            h1, h2 {
+                text-align: center;
+                font-size: 10px;
+            }
+            .gradient-box {
+                width: 80px;
+                height: 80px;
+            }
+            .gradient-display {
+                grid-template-columns: 1fr;
+            }
+            .color-display {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        @media (max-width: 380px) {
+            .container {
+                font-size: 10px;
+            }
+            h1, h2 {
+                text-align: center;
+                font-size: 16px;
+            }
+            .gradient-box {
+                width: 80px;
+                height: 80px;
+            }
+            .gradient-display {
+                grid-template-columns: 1fr;
+            }
+            .color-display {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .single-color {
+            display: flex;
+            justify-content: center;
+        }
+        #singleColor {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        #singleColorValues {
+            margin-left: 20px;
+        }
+        #gradientColor1 {
+            width: 110px;
+            height: 90px;
+        }
+        #gradientColor2 {
+            width: 110px;
+            height: 90px;
+        }
+        .color-picker-container {
+            position: relative;
+            display: inline-block;
+        }
+        .color-picker {
+            position: relative;
+        }
+        .color-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #612828;
+            font-size: 14px;
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+.css-code {
+    margin-top: 20px;
+    font-family: monospace;
+    color: black;
+    background: #ccc;
+    padding: 10px;
+    border-radius: 8px;
+}
+.css-code {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#copyButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #007bff;
+}
+
+#copyButton i {
+    vertical-align: middle;
+}
+
+#singleColorValues p {
+    margin: 0;
+    line-height: 1.5;
+}
+.gradient-box{
+    padding:20px;
+    color: black;
+}
+@media (max-width: 1024px) {
+    .gradient-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        font-size: 10px;
+    }
+
+    .color-inputs {
+        flex-direction: column;
+    }
+
+    .color-inputs > div {
+        width: 100%;
+    }
+    h1, h2 {
+        text-align: center;
+        font-size: 10px;
+       
+    }
+    .gradient-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        font-size: 10px;
+    }
+    h1, h2 {
+        text-align: center;
+        font-size: 10px;
+       
+    }
+    .gradient-box {
+        width: 80px;
+        height: 80px;
+    }
+
+    .gradient-display {
+        grid-template-columns: 1fr;
+    }
+
+    .color-display {
+        width: 80px; 
+        height: 80px; 
+    }
+}
+@media (max-width: 380px) {
+    .container {
+        font-size: 10px;
+    }
+    h1, h2 {
+        text-align: center;
+        font-size: 16px;
+       
+    }
+    .gradient-box {
+        width: 80px;
+        height: 80px;
+    }
+
+    .gradient-display {
+        grid-template-columns: 1fr;
+    }
+
+    .color-display {
+        width: 80px;  
+        height: 80px;
+    }
+}
+.single-color{
+    display: flex;
+    justify-content: center;
+}
+#singleColor{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+
+}
+#singleColorValues{
+
+     margin-left: 20px;
+}
+#gradientColor1{
+    width: 110px;
+    height: 90px;
+}
+#gradientColor2{
+    width: 110px;
+    height: 90px;
+}
+
+.color-picker-container {
+    position: relative;
+    display: inline-block;
+}
+
+.color-picker {
+    position: relative;
+}
+
+.color-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #612828;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+}
