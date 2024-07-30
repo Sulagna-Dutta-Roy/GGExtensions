@@ -1,0 +1,10 @@
+{
+    "name": "Water Drop Catcher",
+    "short_name": "Drop Catcher",
+    "description": "An interactive game to catch water drops and raise awareness about water conservation.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#4682B4",
+    "theme_color": "#87CEEB",
+    "orientation": "portrait"
+  }
