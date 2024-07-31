@@ -1,0 +1,10 @@
+{
+    "name": "Plank Game",
+    "short_name": "PlankGame",
+    "description": "A simple game where you move using the arrow keys.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+  }
+  
