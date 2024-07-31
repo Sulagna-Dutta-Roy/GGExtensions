@@ -1,0 +1,10 @@
+{
+    "name": "Elemental Flux game",
+    "short_name": "Elemental Flux",
+    "description": "An interactive game to drag and drops renweable source of energy and raise awareness about energy conservation.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#4682B4",
+    "theme_color": "#87CEEB",
+    "orientation": "portrait"
+  }
