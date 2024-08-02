@@ -86,6 +86,27 @@ function displayMovieDetails(details){
     `;
 }
 
+const themeToggle = document.getElementById('theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+    if (document.body.classList.contains('light-mode')) {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+    }
+});
+
+// You might want to initialize the theme based on user preference or default to dark mode
+document.addEventListener('DOMContentLoaded', () => {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (prefersDarkScheme) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.add('light-mode');
+    }
+});
 
 window.addEventListener('click', (event) => {
     if(event.target.className != "form-control"){

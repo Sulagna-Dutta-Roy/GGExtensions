@@ -3,10 +3,9 @@
   "name": "ToDo Extension JS",
   "version": "1.0",
   "description": "Simple ToDo Extension is JS for managing day to day tasks...",
-  "permissions": ["storage", "notifications", "alarms"],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "permissions": [
+    "storage"
+  ],
   "action": {
     "default_popup": "index.html"
   },

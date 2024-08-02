@@ -1,188 +1,124 @@
-const inputBox = document.querySelector(".inputField input[type='text']");
-const timeInput = document.querySelector(".inputField input[type='number']");
-const addBtn = document.querySelector(".inputField button");
-const todoList = document.querySelector(".todoList");
-const deleteAllBtn = document.querySelector(".footer button"),
-      todos=localStorage.getItem('stored'),
-      add_todo=document.getElementById('add_todo');
-let editIndex = null;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
-function handleRemove(index){
-const todoList_con = document.querySelector(".todoList"),
-       todos=JSON.parse(localStorage.getItem('stored'));
-let childer=todoList_con.children[index]
-todoList_con.removeChild(childer)
-let finder_val=todos[index]
-let todo=todos.filter(item =>item!==finder_val)
-localStorage.setItem('stored',JSON.stringify(todo))
-}
-function handle_todoList(datas){
-const todoList_con = document.querySelector(".todoList");
-  datas.map((item,index) =>{
-   let div=document.createElement('div')
-   let p=document.createElement('p')
-   let p2=document.createElement('p')
-   let img=document.createElement('img')
-   img.setAttribute('src','https://cdn-icons-png.flaticon.com/128/2732/2732657.png')
-   img.setAttribute('alt','close')
-   img.style.height="15px"
-   img.style.width="15px"
-   img.setAttribute('onClick', `handleRemove(${index})`);
-   p.textContent=`${item.todo}`
-   p.style.width="75%"
-   p2.textContent=`${item.time} M`
-   div.appendChild(p)
-   div.appendChild(p2)
-   div.appendChild(img)
-   div.style.display="flex"
-   div.style.width="100%"
-   div.style.justifyContent="space-between"
-   div.style.alignItems="center"
-   todoList_con.appendChild(div)
-  })
-}
-if(todos){
-  let datas=JSON.parse(todos)
-  handle_todoList(datas)
-}
-add_todo.addEventListener('click',()=>{
-  const inputBox = document.querySelector(".inputField input[type='text']").value,
-        timeInput = document.querySelector(".inputField input[type='number']").value;
-  let data=localStorage.getItem('stored')
-  if(data){
-  let datas=JSON.parse(data)
-  let userInputs={todo:inputBox,time:timeInput,Time:new Date().toISOString()}
-  datas.push(userInputs)
-  handle_todoList([{todo:inputBox,time:timeInput}])
-  localStorage.setItem('stored',JSON.stringify(datas))
-  }
-  else{
-    let datas=[{todo:inputBox,time:timeInput,Time:new Date().toISOString()}]
-    localStorage.setItem('stored',JSON.stringify(datas))
-  }
-})
-inputBox.onkeyup = () => {
-  let userEnteredValue = inputBox.value; //getting user entered value
-  if (userEnteredValue.trim() != 0) { 
-    addBtn.classList.add("active"); //active the add button
-  } else {
-    addBtn.classList.remove("active"); //unactive the add button
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-showTasks();
-
-addBtn.onclick = () => { //when user click on plus icon button
-  let userEnteredValue = inputBox.value; //getting input field value
-  let timeAllocated = parseInt(timeInput.value) || 0; //getting time allocated value
-  chrome.storage.local.get("tasks", (result) => {
-    let tasks = result.tasks || [];
-    const task = { text: userEnteredValue, completed: false, timeAllocated: timeAllocated, startTime: Date.now() };
-    if (editIndex !== null) {
-      tasks[editIndex] = task;
-      editIndex = null;
-    } else {
-      tasks.push(task);
-    }
-    chrome.storage.local.set({ tasks: tasks }, () => {
-      setTaskAlarms(tasks);
-      showTasks();
-    });
-  });
-  addBtn.classList.remove("active"); //unactive the add button once the task added
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(bg.jpg);
 }
 
-function setTaskAlarms(tasks) {
-  chrome.alarms.clearAll();
-  tasks.forEach((task, index) => {
-    if (task.timeAllocated > 0 && !task.completed) {
-      let alarmTime = (task.startTime + task.timeAllocated * 60000) - Date.now();
-      if (alarmTime > 0) {
-        chrome.alarms.create(`alarm_${index}`, { delayInMinutes: alarmTime / 60000 });
-      }
-    }
-  });
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 30px 30px; /* Increased padding */
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-function showTasks() {
-  chrome.storage.local.get("tasks", (result) => {
-    let tasks = result.tasks || [];
-    const pendingTasksNumb = document.querySelector(".pendingTasks");
-    pendingTasksNumb.textContent = tasks.filter(task => !task.completed).length; //passing the array length in pendingtask
-    if (tasks.length > 0) { //if array length is greater than 0
-      deleteAllBtn.classList.add("active"); //active the delete button
-    } else {
-      deleteAllBtn.classList.remove("active"); //unactive the delete button
-    }
-    let newLiTag = "";
-    tasks.forEach((element, index) => {
-      newLiTag += `<li data-index="${index}" class="${element.completed ? 'completed' : ''}">
-        ${element.text} (${element.timeAllocated} min)
-        <span class="icon delete-btn"><i class="fas fa-trash"></i></span>
-        <span class="icon edit-btn"><i class="fas fa-edit"></i></span>
-        <span class="icon check-btn"><i class="fas fa-check"></i></span>
-      </li>`;
-    });
-    todoList.innerHTML = newLiTag; 
-    inputBox.value = ""; 
-    timeInput.value = ""; 
-  });
+header {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
 }
 
-todoList.addEventListener("click", function (event) {
-  const target = event.target;
-  if (target.classList.contains("fa-trash") || target.classList.contains("delete-btn")) {
-    const index = target.closest("li").dataset.index;
-    deleteTask(index);
-  } else if (target.classList.contains("fa-edit") || target.classList.contains("edit-btn")) {
-    const index = target.closest("li").dataset.index;
-    editTask(index);
-  } else if (target.classList.contains("fa-check") || target.classList.contains("check-btn")) {
-    const index = target.closest("li").dataset.index;
-    toggleCompleteTask(index);
-  }
-});
-
-function deleteTask(index) {
-  chrome.storage.local.get("tasks", (result) => {
-    let tasks = result.tasks || [];
-    tasks.splice(index, 1); 
-    chrome.storage.local.set({ tasks: tasks }, () => {
-      setTaskAlarms(tasks);
-      showTasks();
-    });
-  });
+.input_field {
+  position: relative;
+  height: 50px; /* Increased height */
+  margin-top: 20px; /* Increased top margin */
+  width: 100%;
 }
 
-function editTask(index) {
-  chrome.storage.local.get("tasks", (result) => {
-    let tasks = result.tasks || [];
-    inputBox.value = tasks[index].text; // populate input field with the todo text
-    timeInput.value = tasks[index].timeAllocated; // populate input field with the time allocated
-    editIndex = index; 
-    addBtn.classList.add("active"); // activate the add button
-  });
+.refresh_button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #1940a5;
+  height: 40px; /* Increased height */
+  width: 40px; /* Increased width */
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
 }
 
-function toggleCompleteTask(index) {
-  chrome.storage.local.get("tasks", (result) => {
-    let tasks = result.tasks || [];
-    tasks[index].completed = !tasks[index].completed; // toggle the completed status
-    chrome.storage.local.set({ tasks: tasks }, () => {
-      setTaskAlarms(tasks);
-      showTasks();
-    });
-  });
+.refresh_button:active {
+  transform: translateY(-50%) scale(0.98);
 }
 
-deleteAllBtn.onclick = () => {
-  chrome.storage.local.set({ tasks: [] }, () => {
-    setTaskAlarms([]);
-    showTasks();
-  });
+.input_field input,
+.button button {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px; /* Increased font size */
 }
 
-const closeIcon = document.getElementById("closeIcon");
-closeIcon.addEventListener("click", () => {
-  window.close(); // Close the popup
-});
+.input_field input {
+  padding: 0 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.captch_box input {
+  color: #6b6b6b;
+  font-size: 28px; /* Increased font size for captcha display */
+  pointer-events: none;
+}
+
+.captch_input input:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.message {
+  font-size: 16px; /* Increased font size */
+  margin: 20px 0; /* Increased margin */
+  color: #1940a5;
+  display: none;
+}
+
+.message.active {
+  display: block;
+}
+
+.button button {
+  background: #1940a5;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button button:active {
+  transform: scale(0.99);
+}
+
+.button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.difficulty select {
+  height: 50px; /* Increased height */
+  font-size: 18px; /* Increased font size */
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.error_message {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+}

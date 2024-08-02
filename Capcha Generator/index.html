@@ -1,91 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Captcha Generator</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
     <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
-<body>
-<div class="container">
-    <header style="color: #333;  font-size:22px;">Captcha Generator</header>
-    <div class="input_field captch_box">
-        <input id="captchaOutput" style="border: 1px solid #1e1b18" type="text" value="" />
-        <button class="refresh_button" id="refbut" onclick="generateCaptcha()">
-            <i class="fa-solid fa-rotate-left"></i>
+  </head>
+  <body>
+    <div class="container">
+      <header>Captcha Generator</header>
+      <div class="input_field captch_box">
+        <input type="text" id="captcha" value="" disabled />
+        <button class="refresh_button" aria-label="Refresh Captcha">
+          <i class="fa-solid fa-rotate-right"></i>
         </button>
+      </div>
+      <div class="input_field captch_input">
+        <label for="captcha_input">Enter captcha</label>
+        <input type="text" id="captcha_input" placeholder="Enter captcha" />
+      </div>
+      <div class="message" id="message">Entered captcha is correct</div>
+      <div class="input_field button disabled">
+        <button id="submit_button">Submit Captcha</button>
+      </div>
+      <div class="difficulty">
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="error_message" id="error_message"></div>
     </div>
-    <div class="input_field captch_input">
-        <input id="captchaInput" type="text" placeholder="Enter captcha" />
-    </div>
-    <div id="message" class="message">Entered captcha is correct</div>
-    <div  class="input_field button ">
-        <button onclick="checkCaptcha()" id="inputfield">Submit Captcha</button>
-    </div>
-    <div class="captcha-history">
-        <h4>Captcha History</h4>
-        <ul id="captchaHistoryList"></ul>
-    </div>
-    <div class="audio-captcha">
-        <button onclick="playAudioCaptcha()" id="audcaptch" >Audio Captcha</button>
-        <audio id="audioCaptcha" controls style="display: none;">
-            <source src="audio/captcha.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-</div>
 
-<script src="scripts/script.js"></script>
-<script>
-    var captchaHistory = [];
-
-    function generateCaptcha() {
-        // Generate a random captcha
-        var captcha = Math.random().toString(36).slice(2, 8).toUpperCase();
-        document.getElementById("captchaOutput").value = captcha;
-        captchaHistory.unshift(captcha); // Add to history
-    }
-
-    function checkCaptcha() {
-        var inputCaptcha = document.getElementById("captchaInput").value.toUpperCase();
-        var generatedCaptcha = captchaHistory[0];
-        if (inputCaptcha === generatedCaptcha) {
-            // Correct captcha
-            document.getElementById("message").textContent = "Entered captcha is correct";
-            // Remove from history
-            captchaHistory.shift();
-            // Clear input field
-            document.getElementById("captchaInput").value = "";
-            // Regenerate captcha
-            generateCaptcha();
-        } else {
-            // Incorrect captcha
-            document.getElementById("message").textContent = "Entered captcha is incorrect";
-        }
-        updateCaptchaHistory();
-    }
-
-    function updateCaptchaHistory() {
-        var list = document.getElementById("captchaHistoryList");
-        list.innerHTML = "";
-        for (var i = 0; i < captchaHistory.length; i++) {
-            var listItem = document.createElement("li");
-            listItem.textContent = captchaHistory[i];
-            list.appendChild(listItem);
-        }
-    }
-
-    function playAudioCaptcha() {
-        var audio = document.getElementById("audioCaptcha");
-        audio.play();
-    }
-
-    // Generate initial captcha on page load
-    generateCaptcha();
-</script>
-</body>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
