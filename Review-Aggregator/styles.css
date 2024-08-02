@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 400px; /* Max width for larger screens */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 1.5em; /* Responsive font size */
+    margin-bottom: 10px;
+  }
+  
+  input, button {
+    width: 100%; /* Full width elements */
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  input {
+    font-size: 1em;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #reviewsContainer {
+    margin-top: 10px;
+  }
+  
+  .review {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review h3 {
+    margin: 0;
+    font-size: 1.2em; /* Responsive font size */
+  }
+  
+  .review p {
+    margin: 5px 0;
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.2em; /* Slightly smaller font size on small screens */
+    }
+  
+    input, button {
+      padding: 10px;
+    }
+  
+    .review {
+      padding: 10px;
+    }
+  
+    .review h3 {
+      font-size: 1em; /* Adjust font size on small screens */
+    }
+  }
+  
