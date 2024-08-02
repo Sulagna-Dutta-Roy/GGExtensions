@@ -1,4 +1,3 @@
-<!-- captcha generator in js  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,18 +14,28 @@
     <div class="container">
       <header>Captcha Generator</header>
       <div class="input_field captch_box">
-        <input type="text" value="" disabled />
-        <button class="refresh_button">
+        <input type="text" id="captcha" value="" disabled />
+        <button class="refresh_button" aria-label="Refresh Captcha">
           <i class="fa-solid fa-rotate-right"></i>
         </button>
       </div>
       <div class="input_field captch_input">
-        <input type="text" placeholder="Enter captcha" />
+        <label for="captcha_input">Enter captcha</label>
+        <input type="text" id="captcha_input" placeholder="Enter captcha" />
       </div>
-      <div class="message">Entered captcha is correct</div>
+      <div class="message" id="message">Entered captcha is correct</div>
       <div class="input_field button disabled">
-        <button>Submit Captcha</button>
+        <button id="submit_button">Submit Captcha</button>
       </div>
+      <div class="difficulty">
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="error_message" id="error_message"></div>
     </div>
 
     <script src="scripts/script.js"></script>
