@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Length Converter JS Extension",
+    "version": "1.0",
+    "description": "Length Converter Extension offers a seamless experience for converting lengths, allowing users to effortlessly switch between various units of measurement...",
+    "author" : "ishadutta.193@gmail.com",
+    
+    "icons":{
+        "16": "./src/icon-16.png",
+        "32": "./src/icon-32.png",
+        "48": "./src/icon-48.png",
+        "128": "./src/icon-128.png"
+
+    },
+    "permissions": [
+      "storage"
+    ],
+    "action": {
+      "default_popup": "main.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["main.html"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+}

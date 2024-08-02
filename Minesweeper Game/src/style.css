@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.minesweeper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgba(52, 38, 8, 0.895);
+    padding: 30px 30px;
+    background-color: rgba(52, 38, 8, 0.539);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px rgba(52, 38, 8, 0.539);
+}
+
+#points {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 600;
+}
+
+#board {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(10, 40px);
+    border: 1px solid #ccc;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    user-select: none;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+.mine {
+    background-color: #f00;
+    color: #fff;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff;
+}

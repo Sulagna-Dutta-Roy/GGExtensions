@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "SVD Matrix Calculator",
+  "version": "1.0",
+  "description": "Calculate SVD of a matrix.",
+  "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+  },
+  "permissions": [],
+  "web_accessible_resources": [
+      {
+          "resources": ["math.min.js"],
+          "matches": ["<all_urls>"]
+      }
+  ]
+}

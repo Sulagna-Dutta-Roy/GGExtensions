@@ -1,0 +1,25 @@
+{
+    "name": "Fruit Cutting Web Game",
+    "short_name": "FruitCutting",
+    "description": "A fun web game where users can cut different varieties of fruit images using a knife.",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+      {
+        "src": "images/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "images/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "scope": "/"
+  }
+  

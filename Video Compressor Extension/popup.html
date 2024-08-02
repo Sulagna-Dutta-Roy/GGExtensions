@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Compressor</title>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Video Compressor</h1>
+        <input type="file" id="fileInput" accept="video/*">
+        <br>
+        <br>
+        <label for="outputFormat">Output Format:</label>
+        <select id="outputFormat">
+            <option value="mp4">MP4</option>
+            <option value="mov">MOV</option>
+            <!-- Add more output formats if needed -->
+        </select>
+        <br>
+        <button id="convertBtn">Convert</button>
+        <p id="statusText"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="popup.css">
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="stick">
+        <textarea rows="1" cols="5" id="textArea"></textarea>
+    </div>
+    <div id="all">
+        <h3 id="head"><button id="settings"">⚙️</button></h3>
+        <div id="settingspage" style="text-align:center; display:none">
+            <h4>Skin tone</h4>
+            <button class="tone" id="0">🏻</button>
+            <button class="tone" id="1">🏼</button>
+            <button class="tone" id="2">🏽</button>
+            <button class="tone" id="3">🏾</button>
+            <button class="tone" id="4">🏿</button>
+            <button class="tone" id="5">All</button>
+            <hr>
+        </div>
+        <div id="smileys-div" class="grid-container"></div>
+        <div id="nature-div" class="grid-container"></div>
+        <div id="food-div" class="grid-container"></div>
+        <div id="places-div" class="grid-container"></div>
+        <div id="activities-div" class="grid-container"></div>
+        <div id="objects-div" class="grid-container"></div>
+        <div id="symbols-div" class="grid-container"></div>
+        <div id="flags-div" class="grid-container"></div>
+    </div>
+    <div class="footer">
+        <button class="select" id="smileys">😀</button>
+        <button class="select" id="nature">🐶</button>
+        <button class="select" id="food">🍔</button>
+        <button class="select" id="activities">🏀</button>
+        <button class="select" id="places">🌍</button>
+        <button class="select" id="objects">⚙️</button>
+        <button class="select" id="symbols">🔤</button>
+        <button class="select" id="flags">🏁</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

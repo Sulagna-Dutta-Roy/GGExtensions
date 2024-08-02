@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Trigonometric Calculator</h1>
+        <input type="number" id="angle" placeholder="Enter angle or value">
+        <select id="unit">
+            <option value="degrees">Degrees</option>
+            <option value="radians">Radians</option>
+        </select>
+        <div class="btn-wrapper">
+            <button class="type1" id="sin">Sin</button>
+            <button class="type1" id="cos">Cos</button>
+            <button class="type1" id="tan">Tan</button>
+            <button class="type2" id="asin">Asin</button>
+            <button class="type2" id="acos">Acos</button>
+            <button class="type2" id="atan">Atan</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+#map-section {
+    width: 57%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#map {
+    --marginWidth: 0px;
+    --marginHeight: 0px;
+    --sm_img_size: 48px;
+    --md_img_size: 64px;
+    --lg_img_size: 72px;
+
+    border: 0;
+    height: 100%;
+    min-height: 650px;
+    justify-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    background-image: url("../img/background.webp");
+    background-repeat: space;
+    background-size: cover;
+    background-position-x: center;
+    -webkit-transition: 2s -webkit-filter linear;
+    -moz-transition: 2s -moz-filter linear;
+    -moz-transition: 2s filter linear;
+    -ms-transition: 2s -ms-filter linear;
+    -o-transition: 2s -o-filter linear;
+    transition: 2s filter linear, 2s -webkit-filter linear;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.map-winter {
+    filter: grayscale(0.8);
+}
+
+.map-autumn {
+    filter: saturate(150%) hue-rotate(320deg);
+}
+
+.map-summer {
+    filter: saturate(150%) contrast(120%);
+}
+
+.map-div {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+.map-div:first-child {
+    margin-top: 45px;
+}
+
+#map-city {
+    top: 42%;
+}
+#map-farms {
+    top: 33%;
+}
+#map-manufactories {
+    top: -6%;
+}
+
+
+.map-item {
+    filter: drop-shadow(2px 2px 2px #333);
+    margin: var(--marginHeight) var(--marginWidth);
+    line-height: 0;
+}
+
+.map-item-sm img {
+    height: var(--sm_img_size);
+    width: var(--sm_img_size);
+}
+
+.map-item-md img {
+    height: var(--md_img_size);
+    width: var(--md_img_size);
+}
+
+.map-item-lg img {
+    height: var(--lg_img_size);
+    width: var(--lg_img_size);
+}
+
+@media only screen and (max-width: 960px) {
+    #map {
+        min-height: 300px;
+    }
+}

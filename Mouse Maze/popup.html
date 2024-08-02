@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse_Maze</title>
+    <style>
+        body {
+            width: 400px;
+            height: 500px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #game-container {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            border: 2px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+        #mouse {
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+            border-radius: 50%;
+            position: absolute;
+            transition: all 0.1s;
+        }
+        .wall {
+            background-color: #333;
+            position: absolute;
+        }
+        #exit {
+            width: 30px;
+            height: 30px;
+            background-color: #4CAF50;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        #start-btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #start-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse_Maze</h1>
+    <div id="game-container">
+        <div id="mouse"></div>
+        <div id="exit"></div>
+    </div>
+    <div id="timer">Time: 30s</div>
+    <button id="start-btn">Start Game</button>
+    <script src="popup.js"></script>
+</body>
+</html>

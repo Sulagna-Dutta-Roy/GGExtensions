@@ -1,0 +1,11 @@
+/* Apply a color filter to reduce blue light */
+.blue-light-filter {
+    filter: brightness(100%) saturate(100%) grayscale(0) 
+            contrast(100%) sepia(0%) hue-rotate(0deg);
+}
+
+/* Increase the hue-rotate to shift towards red/orange colors */
+.blue-light-filter-intense {
+    filter: brightness(100%) saturate(100%) grayscale(0) 
+            contrast(100%) sepia(0%) hue-rotate(20deg);
+}

@@ -1,0 +1,127 @@
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.calci {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input#output {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 10px 3px;
+    font-size: 2rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #e9eef2;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #e9eef2;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: buttonFadeIn 0.5s ease;
+}
+
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+button:active::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.function {
+    background-color: #ffcc00;
+}
+
+button.operator {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+button.equal {
+    grid-column: span 2;
+    background-color: #f44336;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.9;
+}

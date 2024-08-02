@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Interactive Periodic Table</h1>
+        <div id="search-container">
+            <input type="text" id="element-name" placeholder="Search By Name">
+            <button id="search-button-for-name">Search</button>
+            <br>
+            <input type="text" id="input-symbol" placeholder="Search By Symbol">
+            <button id="search-button-for-symbol">Search</button>
+        </div>
+        <div id="periodic-table"></div>
+        <div id="element-details" class="hidden">
+            <h2 id="element-name-display"></h2>
+            <p><strong>Symbol:</strong> <span id="element-symbol"></span></p>
+            <p><strong>Atomic Number:</strong> <span id="element-atomic-number"></span></p>
+            <p><strong>Category:</strong> <span id="element-category"></span></p>
+            <p><strong>Uses:</strong> <span id="element-uses"></span></p>
+            <p><strong>History:</strong> <span id="element-history"></span></p>
+            <button id="close-details">Close</button>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

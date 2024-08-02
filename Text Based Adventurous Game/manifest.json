@@ -1,0 +1,9 @@
+{
+  "name": "Text-Based Adventure Game",
+  "short_name": "Adventure",
+  "description": "An engaging and immersive text-based adventure game.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Thala For A Reason MAGIC",
+    "short_name": "Thala Calculator",
+    "description": "A magical calculator inspired by MS Dhoni, where any 6-digit number results in the number 7.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#3498db",
+    "theme_color": "#2980b9",
+    "icons": [
+      {
+        "src": "assets/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

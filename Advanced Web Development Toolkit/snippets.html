@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Snippets</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Code Snippets</h1>
+        <input type="text" id="snippetTitle" placeholder="Title">
+        <input type="text" id="snippetTags" placeholder="Tags (comma separated)">
+        <textarea id="snippetContent" rows="10" cols="50" placeholder="Your code..."></textarea>
+        <br>
+        <button id="saveSnippet">Save Snippet</button>
+        <button id="importSnippets">Import Snippets</button>
+        <input type="file" id="fileInput" style="display:none;">
+        <div id="snippetsList"></div>
+    </div>
+    <script src="scripts/snippets.js"></script>
+</body>
+
+</html>

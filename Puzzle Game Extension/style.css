@@ -1,0 +1,14 @@
+body{
+    background-color: #678c8a;
+}
+center{
+    position: relative;
+    top: 20vh;
+}
+#id_restart{
+    position: relative;
+    top:23vh;
+    left: 47vw;
+    background-color: #5c8079;
+    border-radius: 13px;
+}

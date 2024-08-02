@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Daily Delight",
+    "version": "1.0",
+    "description": "Enhance your browsing experience with a new delightful element each day!",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "activeTab"
+    ]
+}

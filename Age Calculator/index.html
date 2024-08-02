@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Date and Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgb(188, 149, 224);">
+    <div class="container" style="width: 500px; padding: 25px; background-color:rgb(229, 177, 229); border: rgb(3, 3, 3); border-radius: 23px; position: relative; top: 120px;">
+       
+        
+        <!-- Date Difference Calculator -->
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h2 class="text-center" style="font-style: italic; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Date Difference Calculator</h2>
+                <form id="dateForm">
+                    <div class="form-group">
+                        <label for="startDate">Enter the start date:</label>
+                        <input type="date" class="form-control" id="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">Enter the end date:</label>
+                        <input type="date" class="form-control" id="endDate" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Calculate Difference</button>
+                </form>
+                <div class="mt-4" id="dateResult" style="display: none;">
+                    <h3 class="text-center">Difference: <span id="years"></span> years, <span id="months"></span> months, and <span id="days"></span> days.</h3>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Age Calculator -->
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h2 class="text-center" style="font-style: italic; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Age Calculator</h2>
+                <form id="ageForm">
+                    <div class="form-group">
+                        <label for="birthdate">Enter your birthdate:</label>
+                        <input type="date" class="form-control" id="birthdate" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Calculate Age</button>
+                </form>
+                <div class="mt-4" id="ageResult" style="display: none;">
+                    <h3 class="text-center">You are <span id="ageYears"></span> years, <span id="ageMonths"></span> months, and <span id="ageDays"></span> days old.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

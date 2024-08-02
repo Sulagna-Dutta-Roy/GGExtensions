@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "PageTextFinder",
+	"description": "Find text on the page, based on your input.",
+	"version": "1.2.1",
+	"permissions": ["storage", "unlimitedStorage", "activeTab"],
+	"icons": {
+		"128": "icon.png"
+	},
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"],
+			"css": ["content.css"]
+		}
+	]
+}

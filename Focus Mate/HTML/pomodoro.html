@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusMate</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/pomodoro.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="nav-container">
+        <input type="checkbox" id="click">
+        <label for="click">
+            <i class="menu-btn bx bx-menu"></i>
+            <i class="close-btn bx bx-x-circle"></i>
+        </label>
+
+        <div class="sidenav">
+            <div class="logo">
+                🎯Focus <span> Mate </span>
+            </div>
+            <div class="icon_items">
+                <ul>
+                    <li>
+                        <i class="bx bxs-home" id="home"></i>
+                        <a href="popup.html">Home</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-laptop" id="laptop"></i>
+                        <a href="working_session.html">Working Session</a>
+                    </li>
+                    <li class>
+                        <i class="bx bx-block"></i>
+                        <a href="website_blocking.html">Website Blocking</a>
+                    </li>
+                    <li class="active">
+                        <i class="bx bx-time-five"></i>
+                        <a href="pomodoro.html">Pomodoro</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-edit"></i>
+                        <a href="todo_list.html">To-Do List</a>
+                    </li>
+                    <li>
+                        <i class="bx bx-signal-5"></i>
+                        <a href="performance.html">Progress Tracking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Pomodoro Timer</h1>
+                <div class="card-header-buttons">
+                    <button id="buttonTypePomodoro" class="active" >
+                        Pomodoro
+                    </button>
+                    <button id="buttonTypeShortBreak" >Short Break</button>
+                </div>
+                <div class="card-body">
+                    <div id="circularProgressBar" class="progress-bar">
+                        <div class="progress-bar-inner">
+                            <h2 class="progress-value">
+                                25:00
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn-success" id="start-btn">Start</button>
+                    <button class="btn-danger" id="stop-btn">Stop</button>
+                    <button id="reset-btn">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JS/popup.js"></script>
+    <script src="../JS/pomodoro.js"></script>
+    <script src="../JS/background.js"></script>
+</body>
+</html>

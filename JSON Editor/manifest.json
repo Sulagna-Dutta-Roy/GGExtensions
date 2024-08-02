@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "JSON Formatter",
+    "version": "1.0",
+    "description": "A Chrome extension to format and validate JSON data.",
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  

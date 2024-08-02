@@ -1,0 +1,199 @@
+body {
+   --background: #1F204C;
+   --number-background: #5F61BB;
+   --number-shadow: #434596;
+   --symbol-background: #424392;
+   --symbol-shadow: #313378;
+   --text: #F6F6F6;
+   --text-fade: #CCCCCC;
+   --text-green: #2ECC71;
+   --text-red: #D8334A;
+   --selected-background: #DDDDDD;
+   --selected-shadow: #C8C8C8;
+   
+   background-color:var(--background);
+   color:var(--text);
+   margin:0;
+   font-family: 'Baloo', cursive;
+   overflow-x:hidden;
+   #hidden {
+      display:none;
+   }
+   #game { //Adding cursors to body seems a bit tempremental and so #game takes up the whole window and cursors work fine
+      width:100vw;
+      min-height:100vh;
+      cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_default.png), auto;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-between; //with the minimum height being the full screen height the keyboard will be at the bottom of the screen and game at the top - for mobile mainly
+      &[cursor] { //This is just so I can collapse all of these together. Also feel free to use these
+         &[cursor="default"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_default.png), auto;
+         }
+         &[cursor="1"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_1.png), auto;
+         }
+         &[cursor="2"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_2.png), auto;
+         }
+         &[cursor="3"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_3.png), auto;
+         }
+         &[cursor="4"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_4.png), auto;
+         }
+         &[cursor="5"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_5.png), auto;
+         }
+         &[cursor="6"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_6.png), auto;
+         }
+         &[cursor="7"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_7.png), auto;
+         }
+         &[cursor="8"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_8.png), auto;
+         }
+         &[cursor="9"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_9.png), auto;
+         }
+         &[cursor="0"] {
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/cursor_clear.png), auto;
+         }
+      }
+      #board {
+         display:flex;
+         flex-direction:column;
+         transform:translateX(50px);
+         min-width:600px; //I kinda
+         min-height:600px;//Really want
+         max-width:600px; //It to be
+         max-height:600px;//600×600
+         margin-top:10px;
+         .row {
+            display:flex;
+            flex-direction:row;
+            >div {
+               width:80px;
+               height:80px;
+               margin:10px;
+               &.number, &.symbol, &.result {
+                  user-select: none;
+                  line-height:80px;
+                  text-align:center;
+                  font-size:60px;
+               }
+               &.number, &.symbol {
+                  border-radius:8px;
+               }
+               &.number {
+                  background-color:var(--number-background);
+                  box-shadow:0 8px 0 0 var(--number-shadow);
+                  transition:all .25s -.1s; //Negative delay makes a pop, I added a longer comment on line 142
+                  &:active {
+                        transform:translateY(8px);
+                        box-shadow:0 0px 0 0 #434596;
+                  }
+               }
+               &.symbol {
+                  background-color:var(--symbol-background);
+                  box-shadow:0 8px 0 0 var(--symbol-shadow);
+               }
+               &.result {
+                  position: relative;
+                  font-size:40px;
+                  &.correct {
+                     color:var(--text-green);
+                  }
+                  &.wrong {
+                     color:var(--text-red);
+                  }
+               }
+            }
+         }
+      }
+      #keyboard {
+         width:500px;
+         display:flex;
+         flex-direction:row;
+         justify-content:center;
+         flex-wrap:wrap;
+         margin-bottom:20px;
+         .key {
+            width:80px;
+            height:80px;
+            line-height:80px;
+            margin:10px;
+            font-size:52px;
+            border-radius:8px;
+            text-align:center;
+            user-select: none;
+            background-color:var(--number-background);
+            box-shadow:0 8px 0 0 var(--number-shadow);
+            transition:all .25s -.1s; //This is the secret to the energy, negative delay skips the beginning of the transition making it pop as soon as there is an action; it will pop in when you click, pop out when you release
+            &.used {
+               background-color:var(--symbol-background);
+               box-shadow:0 8px 0 0 var(--symbol-shadow);
+               &:active {
+                  transform:translateY(8px);
+                  box-shadow:0 0px 0 0 var(--symbol-shadow);
+               }
+               &.selected {
+                  color:var(--symbol-background);
+                  background-color:var(--selected-background);
+                  box-shadow:0 16px 0 0 var(--selected-shadow);
+                  transform:translateY(-8px);
+                  &:active {
+                     transform:translateY(8px);
+                     box-shadow:0 0px 0 0 var(--selected-shadow);
+                  }
+               }
+            }
+            &:not(.used) {
+               &:active {
+                  transform:translateY(8px);
+                  box-shadow:0 0px 0 0 var(--number-shadow);
+               }
+               &.selected {
+                  color:var(--number-background);
+                  background-color:var(--text);
+                  box-shadow:0 16px 0 0 var(--text-fade);
+                  transform:translateY(-8px);
+                  &:active {
+                     transform:translateY(8px);
+                     box-shadow:0 0px 0 0 var(--text-fade);
+                  }
+               }
+            }
+         }
+      }
+   }
+   #winner {
+      position: fixed;
+      top:50%;
+      left:0px;
+      right:0px;
+      transform:translateY(-50%);
+      background-color:#2ABA66;
+      text-align:center;
+      .header {
+         margin:40px 0;
+         font-size:60px;
+         margin-bottom:-20px;
+      }
+      #new {
+         margin-bottom:30px;
+      }
+      #close {
+         position: absolute;
+         top:0px;
+         right:0px;
+         padding:0 14px;
+         font-size:32px;
+      }
+      &:not(.show) {
+         display:none;
+      }
+   }
+}

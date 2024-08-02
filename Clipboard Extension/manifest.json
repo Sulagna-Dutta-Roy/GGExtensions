@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Clipboard Extension",
+  "version": "1.0",
+  "description": "A simple clipboard extension to manage clipboard history.",
+  "permissions": [
+    "storage",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/1.png"
+      
+    }
+  }
+}

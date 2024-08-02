@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #282c34;
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+.time {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.weather {
+  font-size: 24px;
+}

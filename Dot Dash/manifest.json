@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Dot Dash Mania",
+    "description": "A fast-paced clicking game to test your reflexes.",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": [
+      "activeTab"
+    ],
+    "icons": {
+      "128": "icon.png"
+    }
+  }
+  

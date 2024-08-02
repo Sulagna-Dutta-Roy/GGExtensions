@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Hashing Message Calculator",
+    "version": "1.0",
+    "description": "A web application to hash messages using various algorithms.",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
+

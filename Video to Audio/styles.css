@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1A2B34;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: #1E3643;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color:#A9BEC8;
+}
+
+input {
+    outline: dashed;
+    outline-color:cyan ;
+    padding: 12rem;
+    margin-bottom: 2rem;
+    background-color: #1A2B35;
+}
+
+button {
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #F2B137;
+    border: none;
+    font-weight: 700;
+    box-shadow: inset 0 -3px 2px rgba(0, 0, 0, .3);
+    border-radius: 12px;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+#downloadLink{
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #14c358f0;
+    border: none;
+    font-weight: 700;
+    box-shadow: inset 0 -3px 2px rgba(0, 0, 0, .3);
+    border-radius: 12px;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+input[type="file"] {
+    color: white;
+    font-weight: 700;
+  }
+@media (max-width:700px) {
+    .container{
+        width: 80%;
+    }
+    input{
+        padding: 12rem 0;
+    }
+}

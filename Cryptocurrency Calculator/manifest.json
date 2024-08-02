@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Cryptocurrency Calculator",
+    "version": "1.0",
+    "description": "A simple web application to calculate cryptocurrency conversions based on user input.",
+    "permissions": [],
+    "action": {
+        "default_popup": "index.html"
+    }
+}

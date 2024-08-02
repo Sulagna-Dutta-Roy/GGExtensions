@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Full Page Screenshot",
+  "version": "1.0",
+  "description": "A Chrome extension to capture full-page screenshots.",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "src/icon.jpg",
+    "48": "src/icon.jpg",
+    "128": "src/icon.jpg"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

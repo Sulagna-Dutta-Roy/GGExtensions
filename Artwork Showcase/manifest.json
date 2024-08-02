@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Artwork of the Day",
+    "version": "1.0",
+    "description": "Showcases a new piece of artwork or photography each day along with information about the artist and their inspiration.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage",
+        "https://api.artic.edu/"
+    ]
+}

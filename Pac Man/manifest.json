@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Pac-Man Game",
+  "version": "1.0",
+  "description": "A classic Pac-Man game built with HTML, CSS, and JavaScript.",
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

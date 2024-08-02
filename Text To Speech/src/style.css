@@ -48,6 +48,13 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+.pauseresume{
+  display: flex;
+  column-gap: 2%;
+  margin-top: 2%;
+}
+
 button:hover {
   background: #4070f4;
 }

@@ -11,6 +11,8 @@
 body {
     font-family: 'Inter', sans-serif;
     transition: background-color 0.3s, color 0.3s;
+    width: 100vh;
+    height: 100vh;
 }
 
 body.light-mode {

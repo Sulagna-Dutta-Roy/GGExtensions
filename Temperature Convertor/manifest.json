@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name":"Temperature Convertor",
+    "version":"1.1",
+    "description":"A chrome extension for converting temperature between different units(Celsius,Farenhiet,Kelvin)",
+    "permissions":["storage","activeTab"],
+    "action":
+    {
+        "default_popup":"popup.html",
+        "default_icon":
+        {
+            "16":"16.png",
+            "32":"32.png",
+            "128":"128.png"
+        },
+        "default_size":[400,400]
+
+    },
+    "icons":{
+        "16":"16.png",
+        "32":"32.png",
+        "128":"128.png"
+    }
+}

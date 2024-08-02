@@ -1,0 +1,69 @@
+{
+    "name": "Youtube Auto Pause",
+    "version": "1.6.2",
+    "description": "Stops Youtube (+ other video services) on tab unfocus and continues on focus",
+    "permissions": ["tabs", "storage", "activeTab", "scripting", "idle"],
+    "host_permissions": [
+      "https://*.youtube.com/*",
+      "https://*.vimeo.com/*",
+      "https://*.netflix.com/watch/*",
+      "https://*.youtubekids.com/*",
+      "https://*.primevideo.com/*",
+      "https://*.hbomax.com/*",
+      "https://*.disneyplus.com/*",
+      "https://*.twitch.tv/*"
+    ],
+    "options_ui": {
+      "page": "index.html",
+      "open_in_tab": false
+    },
+    "icons": {
+      "16": "icon48.png"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "48": "icon48.png"
+    },
+    "background": {
+      "service_worker": "yt.js"
+    },
+    "externally_connectable": {
+      "ids": ["*"],
+      "matches": [
+        "https://*.youtube.com/*",
+        "https://*.youtubekids.com/*",
+        "https://*.vimeo.com/*",
+        "https://*.netflix.com/watch/*",
+        "https://*.primevideo.com/*",
+        "https://*.hbomax.com/*",
+        "https://*.disneyplus.com/*",
+        "https://*.twitch.tv/*"
+      ]
+    },
+    "commands": {
+      "toggle-extension": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+K",
+          "mac": "Command+Shift+K"
+        },
+        "description": "Toggle auto pause/resume"
+      },
+      "toggle-play": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+Space",
+          "mac": "Command+Shift+Space"
+        },
+        "description": "Toggle play/pause"
+      },
+      "toggle_mute": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+O",
+          "mac": "Command+Shift+O"
+        },
+        "description": "Toggle mute"
+      }
+    },
+    "manifest_version": 3
+  }
+}

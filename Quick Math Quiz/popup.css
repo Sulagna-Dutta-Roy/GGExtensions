@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #quiz {
+    margin: 20px auto;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  input, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+  }
+  
+  #feedback {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #score {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  

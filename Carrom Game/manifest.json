@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Carrom",
+    "version": "1.0",
+    "description": "A Carrom Board Game, built on web using Javascript and Html Canvas.",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "carrom.html",
+      "default_icon": {
+        "16": "carrom.jpg"
+      }
+    }
+  }
+  

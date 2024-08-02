@@ -36,7 +36,6 @@ body {
     transform: rotate(10deg);
   }
 }
-
 .container.start .cpu_result {
   transform-origin: right;
   animation: cpuShake 0.7s ease infinite;
@@ -60,6 +59,33 @@ body {
   font-size: 2rem;
   color: #7d2ae8;
   margin-top: 1.5rem;
+}
+.scores {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  top: 10px;
+}
+
+.user_score,
+.tie_score,
+.cpu_score {
+  font-size: 1.2rem;
+  color: #333;
+  position: absolute;
+  top: 20px; 
+}
+
+.user_score {
+  left: 50%; /* Position at the center horizontally */
+  transform: translateX(-210%); /* Adjust to center the score */
+}
+.tie_score {
+  left: 47.4%;
+}
+.cpu_score {
+  right: 50%; /* Position at the center horizontally */
+  transform: translateX(210%); /* Adjust to center the score */
 }
 
 .option_image img {
@@ -95,5 +121,68 @@ body {
   color: #7d2ae8;
   font-size: 1.235rem;
   margin-top: 1rem;
-  pointer-events: none;
+}
+
+/* Button Styles */
+.reset {
+  background-color: #7d2ae8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+  display: block;
+}
+
+.reset:hover {
+  background-color: #6c1ccf;
+}
+
+/* Existing styles... */
+
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-content p {
+  font-size: 1.5rem;
+  color: #7d2ae8;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #7d2ae8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.modal-content button:hover {
+  background-color: #5c1bb1;
 }

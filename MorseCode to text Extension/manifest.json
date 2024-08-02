@@ -1,0 +1,20 @@
+{ 
+    "manifest_version": 3,
+    "name": "Morse Code Translator",
+    "version": "1.0",
+    "description": "Translate text to Morse code and vice versa.",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "128": "icon128.png"
+      }
+    },
+    "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "128": "icon128.png"
+    }
+  }

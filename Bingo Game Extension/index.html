@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Game</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div id="home-page" class="page">
+        <h1>Bingo game</h1>
+        <p class="tagline">Welcome to the Bingo Adventure!</p>
+        <button id="start-button">Start Game</button>
+        <button id="about-button">About Us</button>
+    </div>
+    <div id="game-page" class="page hidden">
+        <div class="container">
+            <div id="turn-indicator">User's Turn</div>
+            <div class="board-container">
+                <div id="user-board" class="board"></div>
+                <div id="computer-board" class="board"></div>
+            </div>
+        </div>
+        <button id="home-button">Home</button>
+    </div>
+    <div id="congrats-page" class="page hidden">
+        <h1 id="congrats-message"></h1>
+        <button id="restart-button">Restart Game</button>
+    </div>
+    <script src="scripts/script.js"></script>
+    
+</body>
+</html>

@@ -20,7 +20,7 @@ body {
   max-width: 300px;
   width: 100%;
   border-radius: 12px;
-  padding: 15px 25px 25px;
+  padding: 20px 30px 30px; /* Increased padding */
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -35,8 +35,8 @@ header {
 
 .input_field {
   position: relative;
-  height: 45px;
-  margin-top: 15px;
+  height: 50px; /* Increased height */
+  margin-top: 20px; /* Increased top margin */
   width: 100%;
 }
 
@@ -46,8 +46,8 @@ header {
   right: 10px;
   transform: translateY(-50%);
   background: #1940a5;
-  height: 30px;
-  width: 30px;
+  height: 40px; /* Increased height */
+  width: 40px; /* Increased width */
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -65,6 +65,7 @@ header {
   outline: none;
   border: none;
   border-radius: 8px;
+  font-size: 18px; /* Increased font size */
 }
 
 .input_field input {
@@ -74,7 +75,7 @@ header {
 
 .captch_box input {
   color: #6b6b6b;
-  font-size: 22px;
+  font-size: 28px; /* Increased font size for captcha display */
   pointer-events: none;
 }
 
@@ -83,8 +84,8 @@ header {
 }
 
 .message {
-  font-size: 14px;
-  margin: 14px 0;
+  font-size: 16px; /* Increased font size */
+  margin: 20px 0; /* Increased margin */
   color: #1940a5;
   display: none;
 }
@@ -107,4 +108,17 @@ header {
 .button.disabled {
   opacity: 0.6;
   pointer-events: none;
+}
+
+.difficulty select {
+  height: 50px; /* Increased height */
+  font-size: 18px; /* Increased font size */
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.error_message {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
 }

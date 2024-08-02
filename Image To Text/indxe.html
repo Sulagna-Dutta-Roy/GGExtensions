@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Image To Text Using JS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.min.js" defer></script> -->
+    <script src="Tesseract.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <h1>Convert image to Editable Text</h1>
+        </header>
+        <main>
+            <section class="upload-file flex-between">
+                <p class="tooltip" title="Enter URL of image.">
+                    <img src="images/search.png" alt="">
+                </p>
+                <input type="text" placeholder="Enter URL of image" id="img-url">
+                <label>
+                    <p class="tooltip" title="Select any file.">
+                        <img src="images/upload.png" alt="">
+                    </p>
+                    <input type="file" hidden id="upload-file-btn">
+                </label>
+            </section>
+            <section class="result flex-between">
+                <img src="images/upload.png" alt="" id="img-result">
+                <img src="images/arrow-right.png" alt="" class="arrow">
+                <div>
+                    <p class="tooltip" title="Copy text." id="copy-text">
+                        <img src="images/copy.png" alt="">
+                    </p>
+                    <textarea id="converted-text" placeholder="Converted text of image"></textarea>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Screenshot and Text Extractor",
+    "version": "1.0",
+    "description": "Take screenshots and extract text from webpages",
+    "permissions": [
+      "activeTab",
+      "downloads",
+      "<all_urls>"
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  }

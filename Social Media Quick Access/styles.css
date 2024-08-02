@@ -1,0 +1,81 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 20px;
+    width: 400px; 
+}
+.wrapper {
+
+    padding: 10px 15px;
+    background:linear-gradient(rgb(95, 0, 16), rgb(54, 25, 25));
+}
+.top_wrapper {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ab6262;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+}
+.title_wrapper {
+    text-align: center;
+}
+.title {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+.edit-btn{
+    color: #ba7474
+}
+.sub_title {
+    color: #bfbfbf;
+    padding-bottom: 10px;;
+}
+.middle_wrapper {
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.toggle_container {
+    margin:10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.toggle_wrapper {
+    text-align: center;
+}
+.toggle_btn {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    color: #ba7474;
+    cursor: pointer;
+}
+.toggle_btn:hover {
+    opacity: 0.4;
+}
+.toggle_rocket {
+    color: #cdaeae;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+.toggle_rocket:hover {
+    color: #ffaeae;
+    opacity: 0.4;
+}
+
+.open_btn i{
+    color:#f1c7c7;
+}

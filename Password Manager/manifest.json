@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Password Manager",
+    "version": "1.0",
+    "description": "A simple password manager to store and autofill passwords.",
+    "permissions": ["storage"],
+    "browser_action": {
+        "default_popup": "index.html"
+    }
+}

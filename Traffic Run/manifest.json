@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Traffic Run",
+    "version": "1.0",
+    "description": "Traffic Run is an game that tests your reflexes and strategic thinking as you navigate through bustling city streets filled with traffic.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ]
+  }

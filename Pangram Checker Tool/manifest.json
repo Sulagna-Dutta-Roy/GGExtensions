@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Pangram Checker Tool",
+    "version": "1.0",
+    "description": "A game to check the string is Pangram or not.",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
+  

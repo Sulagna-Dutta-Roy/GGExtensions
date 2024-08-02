@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "A-Z Learning",
+  "version": "1.0",
+  "description": "An interactive tool to learn the alphabet from A to Z.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}

@@ -1,0 +1,85 @@
+/* Overall styling */
+body {
+    font-family: sans-serif;
+    margin: 0; /* Remove default browser margins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Set minimum height for the popup */
+    background-color: #eee; /* Light background */
+  }
+  
+  #popup {
+    background-color: #fff; /* White popup window */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    max-width: 350px; /* Limit popup width for better responsiveness */
+    text-align: center;
+  }
+  
+  h1#title {
+    margin-bottom: 15px;
+    color: #333; /* Darker heading text */
+  }
+  
+  /* Color display area */
+  #color-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  #color-box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    cursor: pointer; /* Add a cursor hover effect */
+  }
+  
+  #color-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em; /* Slightly smaller font for color info */
+  }
+  
+  #color-code {
+    margin-right: 5px;
+  }
+  
+  /* Buttons */
+  #generate-button,
+  #back-button,
+  #copy-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  #generate-button,
+  #back-button {
+    background-color: #4CAF50; /* Green button for generating */
+    color: #fff; /* White button text */
+  }
+  
+  #back-button {
+    margin-left: 10px; /* Add spacing between buttons */
+  }
+  
+  #generate-button:hover,
+  #back-button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+  
+  #copy-button {
+    background-color: #ddd; /* Light gray for copy button */
+    color: #333; /* Darker text for copy button */
+  }
+  
+  #copy-button:hover {
+    background-color: #ccc; /* Slightly darker gray on hover */
+  }
+  

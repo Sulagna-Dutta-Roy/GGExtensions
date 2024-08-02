@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="slot-machine">
+      <div class="slot">
+        <div class="reel" id="reel1"></div>
+        <div class="reel" id="reel2"></div>
+        <div class="reel" id="reel3"></div>
+      </div>
+      <div class="slot">
+        <div class="reel" id="reel4"></div>
+        <div class="reel" id="reel5"></div>
+        <div class="reel" id="reel6"></div>
+      </div>
+      <div class="slot">
+        <div class="reel" id="reel7"></div>
+        <div class="reel" id="reel8"></div>
+        <div class="reel" id="reel9"></div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button id="spin-button">Spin</button>
+      <button id="reset-button">Reset</button>
+      <button id="rules-button">Rules</button>
+    </div>
+    <div class="info">
+      <div id="result"></div>
+      <div id="balance">Balance: $100</div>
+    </div>
+    <div id="rules-card" class="hidden">
+      <h2>Slot Machine Rules</h2>
+      <p>1. Each spin costs $10.</p>
+      <p>2. Match 3 symbols in any row to win $50.</p>
+      <p>3. If you win, $50 is added to your balance.</p>
+      <p>4. If you lose, $10 is deducted from your balance.</p>
+      <p>5. Click the reset button to restart the game with a $100 balance.</p>
+    </div>
+  </div>
+
+  <audio id="spin-sound" src="spin.mp3"></audio>
+  <audio id="win-sound" src="win.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+
+</html>

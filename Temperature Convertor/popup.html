@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Convertor</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h4>Temperature Convertor</h4>
+      <form id="ConversionForm">
+        <p>Enter Temperature</p>
+        <input
+          class="input"
+          id="inputTemp"
+          name="inputTemp"
+          value=""
+          type="text"
+        />
+        <div class="dropdown">
+          <div class="from">
+            <p>From</p>
+            <div class="select-container">
+              <select id="from" name="from">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+              </select>
+            </div>
+          </div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-container">
+              <select id="to" name="to">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="convert_btn">Convert</button>
+      </form>
+      <div class="result"></div>
+    </div>
+    <script src="background.js"></script>
+  </body>
+</html>

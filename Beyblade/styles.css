@@ -1,0 +1,101 @@
+/* Reset and general styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("HD-wallpaper-beyblade-2-let-it-rip-rip-power-blade-top.jpg");
+    background-size: cover;
+    background-position: center bottom 700px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.player {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.player h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.player-stats {
+    margin-bottom: 10px;
+}
+
+.player-stats label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.player-stats input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.beyblade-arena {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.beyblade {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.beyblade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.launch-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.launch-btn:hover {
+    background-color: #0b7dda;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}

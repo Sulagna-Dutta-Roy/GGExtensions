@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Trio Match",
+    "version": "1.0",
+    "description": "A simple game , your aim is to match 3 colours in lowest chance ",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "Trio_Match.png"
+    },
+    "icons": {
+        "16": "Trio_Match.png",
+        "48": "Trio_Match.png",
+        "128": "Trio_Match.png"
+    },
+    "permissions":[]
+}

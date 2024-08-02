@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Time Zone Calculator",
+    "version": "1.0",
+    "description": "A simple time zone calculator.",
+    "permissions": [],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon/icon.png",
+        "48": "icon/icon.png",
+        "128": "icon/icon.png"
+      }
+    },
+    "icons": {
+      "16": "icon/icon.png",
+      "48": "icon/icon.png",
+      "128": "icon/icon.png"
+    }
+  }
+  

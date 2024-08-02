@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Geometric Progression</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #FFF2D7;">
+    <div class="container" style="width: 500px; padding: 25px; background-color:#F98866; border: rgb(3, 3, 3); border-radius: 23px; position: relative; top: 80px;">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <header style="font-size:20px; border-radius:20px; margin-bottom:20px">
+                    Geometric Progression Calculator
+                </header>
+                <label for="firstTerm">First Term (a₁):</label>
+                <input type="number" id="firstTerm" required> 
+
+                <label for="commonRatio">Common Ratio (r):</label>
+                <input type="number" id="commonRatio" required>
+
+                <label for="termNumber">Term Number (n):</label>
+                <input type="number" id="termNumber" required>
+
+                <label for="calculationType">Choose Calculation:</label>
+                <select id="calculationType">
+                    <option value="nthTerm">Nth Term</option>
+                    <option value="sumOfTerms">Sum of First N Terms</option>
+                </select>
+
+                <button onclick="calculate()">Calculate</button>
+
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

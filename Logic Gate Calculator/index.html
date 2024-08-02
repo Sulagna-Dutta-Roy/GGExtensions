@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gate Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Logic Gate Calculator</h1>
+        <div class="calculator">
+            <div class="inputs">
+                <label for="input1">Input 1:</label>
+                <input type="number" id="input1">
+                <label for="input2" id="labelInput2">Input 2:</label>
+                <input type="number" id="input2">
+            </div>
+            <div class="gates">
+                <label for="gate">Select Gate:</label>
+                <select id="gate" onchange="handleGateChange()">
+                    <option value="AND">AND</option>
+                    <option value="OR">OR</option>
+                    <option value="NOT">NOT</option>
+                    <option value="NAND">NAND</option>
+                    <option value="NOR">NOR</option>
+                    <option value="XOR">XOR</option>
+                    <option value="XNOR">XNOR</option>
+                </select>
+            </div>
+            <button onclick="calculate()">Calculate</button>
+            <div class="result">
+                <h2>Result: <span id="result">0</span></h2>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

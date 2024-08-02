@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Resume builder Extension JS",
+    "version": "1.0",
+    "description": "Resume builder extension built in pure HTML CSS JS...",
+    "author" : "sambitmondal2005@gmail.com",
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

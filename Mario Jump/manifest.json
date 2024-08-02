@@ -1,0 +1,22 @@
+{
+    "name": "MarioJump",
+    "short_name": "MarioJump",
+    "description": "A fun and interactive Mario Jump game.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "yellow",
+    "theme_color": "yellow",
+    "icons": [
+      {
+        "src": "/path/to/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/path/to/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

@@ -1,0 +1,28 @@
+body {
+    background: #000;
+    color: #fff;
+    min-width: 560px;
+    padding-bottom: 20px;
+}
+
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+table {
+    margin-top: 30px
+}
+
+.display-none {
+    display: none;
+}
+
+tbody td {
+    text-transform: uppercase;
+}

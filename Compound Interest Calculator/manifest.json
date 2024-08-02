@@ -1,0 +1,9 @@
+{
+  "name": "Compound Interest Calculator",
+  "short_name": "InterestCalc",
+  "description": "A simple compound interest calculator.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50"
+}

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Stock Price Tracker",
+  "version": "1.0",
+  "description": "Track real-time stock prices easily.",
+  "permissions": [],
+  "action": {
+      "default_popup": "index.html"
+  }
+}

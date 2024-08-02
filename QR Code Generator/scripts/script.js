@@ -70,6 +70,16 @@ window.onload = () => {
   userInput.value = "";
   BGColor.vavlue = BGColorChoice = "#ffffff";
   FGColor.value = FGColorChoice = "#377dff";
-  downloadBtn.classList.add("hide");
+  downloadBtn.classList.add(" ");
   submitBtn.disabled = true;
 };
+downloadBtn.addEventListener("click", () => {
+  const src = container.querySelector("img").src;
+  const link = document.createElement("a");
+  link.href = src;
+  link.download = "QR_Code.png";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+

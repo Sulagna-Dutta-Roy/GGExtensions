@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Downloader",
+  "version": "1.0",
+  "description": "Download images and videos from Instagram.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://localhost:3000/*"
+  ],
+  "action": {
+    "default_popup": "public/index.html"
+  }
+ 
+
+}

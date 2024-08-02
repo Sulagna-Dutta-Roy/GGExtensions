@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Equation Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Quadratic Equation Solver <code>(ax<sup>2</sup> + bx + c = 0)</code></h2>
+        <div class="controls">
+            <input type="number" id="a" name="a" placeholder="Enter a" step="0.1">
+            <input type="number" id="b" name="b" placeholder="Enter b" step="0.1">
+            <input type="number" id="c" name="c" placeholder="Enter c" step="0.1">
+        </div>
+        <div class="controls">
+            <button id="clear">Clear</button>
+            <button id="solve" onclick="solveQuadratic()">Solve</button>
+        </div>
+        <p>Roots: <span id="roots"></span></p>
+        <p>Turning point: <span id="turning-point"></span></p>
+        <p>Axis of Symmetry: <span id="symmetry"></span></p>
+        <canvas id="graphCanvas" width="460" height="300"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

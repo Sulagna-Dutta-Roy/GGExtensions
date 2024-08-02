@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Infinite Cars",
+  "version": "1.0",
+  "description": "A car racing game",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/libs/phaser.min.js", "scripts/infinite-cars.processed.js"]
+    }
+  ],
+  "icons": {
+    "36": "assets/icons/infinite-cars-icon-android-36x36.png",
+    "48": "assets/icons/infinite-cars-icon-android-48x48.png",
+    "72": "assets/icons/infinite-cars-icon-android-72x72.png",
+    "96": "assets/icons/infinite-cars-icon-android-96x96.png",
+    "144": "assets/icons/infinite-cars-icon-android-144x144.png",
+    "192": "assets/icons/infinite-cars-icon-android-192x192.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "36": "assets/icons/infinite-cars-icon-android-36x36.png",
+      "48": "assets/icons/infinite-cars-icon-android-48x48.png",
+      "72": "assets/icons/infinite-cars-icon-android-72x72.png",
+      "96": "assets/icons/infinite-cars-icon-android-96x96.png",
+      "144": "assets/icons/infinite-cars-icon-android-144x144.png",
+      "192": "assets/icons/infinite-cars-icon-android-192x192.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/audios/*",
+        "assets/fonts/*",
+        "assets/icons/*",
+        "assets/images/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

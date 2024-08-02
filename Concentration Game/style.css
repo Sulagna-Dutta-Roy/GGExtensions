@@ -1,0 +1,74 @@
+body {
+    background-color: #8b5a2b;
+    margin: 0;
+  }
+  
+  /* Horizontal lines for wood grain effect */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 5px, #d2b48c 5px, #d2b48c 10px);
+  }
+  
+  /* Vertical lines for wood grain effect */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 5px, #d2b48c 5px, #d2b48c 10px);
+  }
+
+  section {
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+  }
+
+  .scoreboard {
+    display: flex;
+    flex-flow: column;
+    border: 5px #ff2e2e solid;
+    background-color: white;
+    padding: 10px;
+    margin-block: auto;
+    margin-right: 200px;
+  }
+  
+  .cards {
+    margin: 48px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    gap: 16px;
+  }
+  
+  .card {
+    height: 100px;
+    width: 100%;
+    background: white;
+    border: 5px solid #ff2e2e;
+    cursor: pointer;
+    justify-items: center;
+    /* transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out; */
+  }
+
+  /* .card:hover {
+    transform: rotateY(180deg);
+  } */
+  
+  img {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 3%;
+  }

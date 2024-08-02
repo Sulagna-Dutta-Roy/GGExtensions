@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+    color: #fff;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .typewriter {
+    font-size: 24px;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  #start-hackerrank-python {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #36d1dc;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #hackerrank-python-link {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #36d1dc;
+    text-decoration: none;
+  }

@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Invoice Generator",
+    "version": "1.0",
+    "description": "Generate and manage invoices directly from your browser.",
+    "permissions": ["storage", "activeTab", "scripting", "notifications"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  

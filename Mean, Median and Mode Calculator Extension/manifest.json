@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Mean,Median and Mode Calculator",
+    "version": "1.0",
+    "description": "Mean,Median and Mode Calculator.",
+    "permissions": [],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

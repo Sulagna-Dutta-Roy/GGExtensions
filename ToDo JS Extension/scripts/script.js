@@ -1,97 +1,124 @@
-const inputBox = document.querySelector(".inputField input[type='text']");
-const dateInput = document.querySelector(".inputField input[type='date']");
-const timeInput = document.querySelector(".inputField input[type='time']");
-const addBtn = document.querySelector(".inputField button");
-const todoList = document.querySelector(".todoList");
-const deleteAllBtn = document.querySelector(".footer button");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
-// Function to validate inputs and update button state
-const validateInputs = () => {
-  let userEnteredValue = inputBox.value.trim();
-  
-  if (userEnteredValue) {
-    addBtn.classList.add("active");
-    addBtn.disabled = false;
-  } else {
-    addBtn.classList.remove("active");
-    addBtn.disabled = true;
-  }
-};
-
-// Event listeners for input changes
-[inputBox, dateInput, timeInput].forEach(input => {
-  input.addEventListener("input", validateInputs);
-});
-
-showTasks(); // Call showTasks on page load
-
-addBtn.onclick = () => { // When user clicks on the plus icon button
-  let userEnteredValue = inputBox.value.trim();
-  let dateEnteredValue = dateInput.value;
-  let timeEnteredValue = timeInput.value;
-
-  let getLocalStorageData = localStorage.getItem("New Todo");
-  let listArray = getLocalStorageData ? JSON.parse(getLocalStorageData) : [];
-
-  let taskObj = {
-    task: userEnteredValue,
-    date: dateEnteredValue || "No Date", // Default to "No Date" if not provided
-    time: timeEnteredValue || "No Time"  // Default to "No Time" if not provided
-  };
-  
-  listArray.push(taskObj);
-  localStorage.setItem("New Todo", JSON.stringify(listArray));
-  showTasks();
-  addBtn.classList.remove("active");
-  addBtn.disabled = true;
-  inputBox.value = "";
-  dateInput.value = "";
-  timeInput.value = "";
-};
-
-function showTasks() {
-  let getLocalStorageData = localStorage.getItem("New Todo");
-  let listArray = getLocalStorageData ? JSON.parse(getLocalStorageData) : [];
-  
-  const pendingTasksNumb = document.querySelector(".pendingTasks");
-  pendingTasksNumb.textContent = listArray.length;
-
-  if (listArray.length > 0) {
-    deleteAllBtn.classList.add("active");
-    deleteAllBtn.disabled = false;
-  } else {
-    deleteAllBtn.classList.remove("active");
-    deleteAllBtn.disabled = true;
-  }
-  
-  let newLiTag = "";
-  listArray.forEach((element, index) => {
-    newLiTag += `<li>${element.task} <span class="time">${element.date} ${element.time}</span><span class="icon delete-btn" data-index="${index}"><i class="fas fa-trash"></i></span></li>`;
-  });
-  todoList.innerHTML = newLiTag;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-todoList.addEventListener("click", function(event) {
-  if (event.target.classList.contains("delete-btn")) {
-    let index = event.target.dataset.index;
-    deleteTask(index);
-  }
-});
-
-function deleteTask(index) {
-  let getLocalStorageData = localStorage.getItem("New Todo");
-  let listArray = JSON.parse(getLocalStorageData);
-  listArray.splice(index, 1);
-  localStorage.setItem("New Todo", JSON.stringify(listArray));
-  showTasks();
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(bg.jpg);
 }
 
-deleteAllBtn.onclick = () => {
-  localStorage.removeItem("New Todo");
-  showTasks();
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 30px 30px; /* Increased padding */
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-const closeIcon = document.getElementById("closeIcon");
-closeIcon.addEventListener("click", () => {
-  window.close();
-});
+header {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.input_field {
+  position: relative;
+  height: 50px; /* Increased height */
+  margin-top: 20px; /* Increased top margin */
+  width: 100%;
+}
+
+.refresh_button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #1940a5;
+  height: 40px; /* Increased height */
+  width: 40px; /* Increased width */
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.refresh_button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.input_field input,
+.button button {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px; /* Increased font size */
+}
+
+.input_field input {
+  padding: 0 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.captch_box input {
+  color: #6b6b6b;
+  font-size: 28px; /* Increased font size for captcha display */
+  pointer-events: none;
+}
+
+.captch_input input:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.message {
+  font-size: 16px; /* Increased font size */
+  margin: 20px 0; /* Increased margin */
+  color: #1940a5;
+  display: none;
+}
+
+.message.active {
+  display: block;
+}
+
+.button button {
+  background: #1940a5;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button button:active {
+  transform: scale(0.99);
+}
+
+.button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.difficulty select {
+  height: 50px; /* Increased height */
+  font-size: 18px; /* Increased font size */
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.error_message {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+}

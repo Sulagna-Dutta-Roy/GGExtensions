@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Russian Roulette Game",
+    "description": "A high-stakes, tension-filled game with a neon theme.",
+    "version": "1.0",
+    "icons": {
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": []
+  }  

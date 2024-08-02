@@ -38,28 +38,85 @@ Contributors can enhance the project by implementing new features or improvement
 git clone https://github.com/Your-Username/GGExtensions.git
 ```
 
-**3.** Create a Branch: Create a new branch for your changes:
+**3.** Add a reference(remote) to the original repository.
+
+```bash
+git remote add upstream https://github.com/Sulagna-Dutta-Roy/GGExtensions
+```
+
+**4.** Check the remotes for this repository.
+
+```bash
+git remote -v
+```
+
+**5.** Always take a pull from the upstream repository to your master branch to keep it at par with the main project (updated repository).
+
+```bash
+git pull upstream main
+```
+
+**6.** Create a Branch: Create a new branch for your changes:
 
 ```bash
 git checkout -b my-feature
 ```
 
-**4.** Make Changes: Make your desired changes to the codebase.
+**7.** Make Changes: Make your desired changes to the codebase.
 
-**5.** Commit Changes: Commit your changes with a descriptive commit message:
+```bash
+git add .
+git add <filename>
+```
+
+**8.** Commit Changes: Commit your changes with a descriptive commit message:
 
 ```bash
 git commit -m "Add new feature"
 ```
 
-**6.** Push Changes: Push your changes to your forked repository:
+**9.** Push Changes: Push your changes to your forked repository:
 
 ```bash
 git push origin my-feature
 ```
 
-**7.** Submit a Pull Request: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.
+**10.** Submit a Pull Request: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.
 
-**8.** Congratulations! You've made your first contribution! 🙌🏼
+**11.** Congratulations! You've made your first contribution! 🙌🏼
+
+### Alternatively contribute using GitHub Desktop
+
+1. **Open GitHub Desktop:**
+   Launch GitHub Desktop and log in to your GitHub account if you haven't already.
+
+2. **Clone the Repository:**
+   - If you haven't cloned the repository yet, you can do so by clicking on the "File" menu and selecting "Clone Repository."
+   - Choose the repository from the list of repositories on GitHub and clone it to your local machine.
+
+3. **Switch to the Correct Branch:**
+   - Ensure you are on the branch that you want to submit a pull request for.
+   - If you need to switch branches, you can do so by clicking on the "Current Branch" dropdown menu and selecting the desired branch.
+
+4. **Make Changes:**
+   Make your changes to the code or files in the repository using your preferred code editor.
+
+5. **Commit Changes:**
+   - In GitHub Desktop, you'll see a list of the files you've changed. Check the box next to each file you want to include in the commit.
+   - Enter a summary and description for your changes in the "Summary" and "Description" fields, respectively. Click the "Commit to <branch-name>" button to commit your changes to the local branch.
+
+6. **Push Changes to GitHub:**
+   After committing your changes, click the "Push origin" button in the top right corner of GitHub Desktop to push your changes to your forked repository on GitHub.
+
+7. **Create a Pull Request:**
+  - Go to the GitHub website and navigate to your fork of the repository.
+  - You should see a button to "Compare & pull request" between your fork and the original repository. Click on it.
+
+8. **Review and Submit:**
+   - On the pull request page, review your changes and add any additional information, such as a title and description, that you want to include with your pull request.
+   - Once you're satisfied, click the "Create pull request" button to submit your pull request.
+
+9. **Wait for Review:**
+    Your pull request will now be available for review by the project maintainers. They may provide feedback or ask for changes before merging your pull request into the main branch of the repository.
 
 Thank you for contributing💗

@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "manifest_version": 3,
     "action":{
-        "default_icon": "bat.png", 
+        "default_icon": "src/bat.png", 
         "default_popup": "index.html" 
     }
 }

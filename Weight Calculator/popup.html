@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weight Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Weight Converter</h2>
+    <input type="number" id="inputValue1" placeholder="Enter value">
+    <select id="unitSelector1">
+      <option value="kg">Kilograms (kg)</option>
+      <option value="g">Grams (g)</option>
+      <option value="mg">Milligrams (mg)</option>
+      <option value="ug">Micrograms (µg)</option>
+      <option value="t">Tonnes (t)</option>
+      <option value="it">Imperial Tons (it)</option>
+      <option value="ust">US Tons (ust)</option>
+      <option value="st">Stones (st)</option>
+      <option value="oz">Ounces (oz)</option>
+    </select>
+    <input type="number" id="inputValue2" placeholder="Converted value" readonly>
+    <select id="unitSelector2">
+      <option value="kg">Kilograms (kg)</option>
+      <option value="g">Grams (g)</option>
+      <option value="mg">Milligrams (mg)</option>
+      <option value="ug">Micrograms (µg)</option>
+      <option value="t">Tonnes (t)</option>
+      <option value="it">Imperial Tons (it)</option>
+      <option value="ust">US Tons (ust)</option>
+      <option value="st">Stones (st)</option>
+      <option value="oz">Ounces (oz)</option>
+    </select>
+    <button onclick="convert()">Convert</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Polynomial Roots Calculator Extension",
+    "version": "1.0",
+    "description": "A Polynomial roots calculator with Chrome extension",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "storage"
+    ]
+  }

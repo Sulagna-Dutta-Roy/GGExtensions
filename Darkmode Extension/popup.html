@@ -1,106 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Duskify</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e3ba5b;
+            background-color: #e1e1e1;
+            /* Initial background color */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* Align items to the top */
+            height: 100vh;
             margin: 0;
-            padding: 0px;
-             border-radius: 0px 0px 15px 15px !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
-    max-width: 300px;
-    margin: auto;
-    border: 2px solid #e3ba5b;
-    overflow: hidden;
-     padding: 3px;
-        }
-        
-
-        .card {
-              /* border-radius:15px; */
-             background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    max-width: 300px;
-    margin: auto;
-    /* border: 2px solid #e3ba5b; */
+            transition: background-color 0.5s ease;
+            /* Transition for body background color */
         }
 
-        .card h1 {
-            color: #333;
-            font-size: 24px;
-            margin-top: 0;
-            text-align: center;
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
         }
 
-        .switch-container {
+        .dark-mode {
+            background-color: #171614;
+        }
+
+        .toggle-container {
+            position: relative;
+            width: 140px;
+            top: 20px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .sun-icon-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .sun-icon-container i,
+        .moon i {
+            font-size: 50px;
+            color: #000000;
+            transition: color 0.5s ease;
+        }
+
+        .dark-mode .sun-icon-container i,
+        .dark-mode .moon i {
+            color: #fcfcfc;
+        }
+
+        .light-mode-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 75px;
+            height: 75px;
+            background-color: #FFFFFF;
+            z-index: -1;
+            transition: transform 0.5s ease, left 0.5s ease, background-color 0.5s ease, border-radius 0.5s ease;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .dark-mode .light-mode-indicator {
+            left: calc(100% + 65px);
+            background-color: #010101;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .moon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
         }
 
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-
-        .switch input[type="checkbox"] {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            border-radius: 34px;
-            transition: .4s;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            border-radius: 50%;
-            transition: .4s;
-        }
-
-        input[type="checkbox"]:checked+.slider {
-            background-color: #e3ba5b;
-        }
-
-        input[type="checkbox"]:checked+.slider:before {
-            transform: translateX(26px);
+        .moon i {
+            font-size: 50px;
+            color: #000000;
+            /* Black color for the moon icon */
         }
     </style>
-    <script src="popup.js"></script>
 </head>
+
 <body>
-    <div class="card">
-        <h1>Dark</h1>
-        <div class="switch-container">
-            <label class="switch">
-                <input type="checkbox" id="invertCheckbox">
-                <span class="slider"></span>
-            </label>
+    <div class="toggle-container">
+        <div class="sun-icon-container" onclick="activateLightMode()">
+            <div class="sun"><i class="material-symbols-outlined">light_mode</i></div>
+            <div class="light-mode-indicator"></div> <!-- Light mode indicator -->
         </div>
+        <div class="moon" onclick="activateDarkMode()"><i class="material-symbols-outlined">dark_mode</i></div>
+        <!-- Moon icon with onclick event -->
     </div>
+    <script src="popup.js"></script>
 </body>
+
 </html>

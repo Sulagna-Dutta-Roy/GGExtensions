@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Angle Converter",
+  "version": "1.0",
+  "description": "Convert angles between degrees, radians, and gradients.",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": []
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pac-man</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+    }
+    .container {
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(28, 20px);
+      grid-gap: 1px;
+      border: 2px solid #000;
+      background-color: #222;
+    }
+    h3 {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid"></div>
+    <h3>Score: <span id="score">0</span></h3>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2 id="popup-message"></h2>
+      <button id="play-again-btn">Play Again</button>
+    </div>
+  </div>
+  <script type="module" src="scripts/popup.js" defer></script>
+</body>
+</html>

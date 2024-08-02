@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Text to Image Generator Extension JS",
+    "version": "1.0",
+    "description": "Text to Image Generator extension built in pure HTML CSS JS...",
+    "author" : "sambitmondal2005@gmail.com",
+    "icons": {
+        "48": "image-text-2-48.png",
+        "128": "image-text-2-128.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "optional-permissions" : ["tabs"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "index.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

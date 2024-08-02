@@ -1,0 +1,33 @@
+{
+  "name": "instagram-downloader",
+  "version": "1.0.0",
+  "description": "Tools for download media from instagram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0l3r/instagram-downloader.git"
+  },
+  "keywords": [
+    "instagram",
+    "downloader",
+    "scrape",
+    "instagram"
+  ],
+  "author": "Naufal Taufiq Ridwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n0l3r/instagram-downloader/issues"
+  },
+  "homepage": "https://github.com/n0l3r/instagram-downloader#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.10",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "inquirer": "^8.2.4",
+    "node-fetch": "^2.7.0"
+  }
+}

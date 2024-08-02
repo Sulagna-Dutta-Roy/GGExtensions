@@ -1,39 +1,106 @@
+/* Add custom styles here */
 
-
-div#main-outer {
-    width: 575px;
-    height: auto;
-    margin: 4px;
-    border-radius: 5px;
-}
-
-div#main-inner {
-    padding: 8px;
-}
-
-div#main-title {
-    font-size: 16px;
-    text-align: center;
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main container */
+  #main-outer {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search bar */
+  #coinSearch {
+    width: calc(100% - 120px);
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Dropdown */
+  #platform {
+    width: 110px;
     font-weight: bold;
-}
-
-img#main-image {
-    display: block;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div#main-about-text {
-    margin-top: 10px;
-    text-align: center;
-}
-table {
-    border-collapse: collapse;
+    border-radius: 20px;
+    padding: 7px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  /* Table */
+  table {
     width: 100%;
-}
-
-td {
-    padding: 3px;
-    border-top: 1px solid #ddd;
-}
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Favorite icon */
+  #favorite img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* Top 100 icon */
+  #top img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Rank column */
+  #rank {
+    width: 60px;
+  }
+  
+  /* Name column */
+  #name {
+    width: 200px;
+  }
+  
+  /* Page size dropdown */
+  #pageSize {
+    width: 110px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 7px 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  /* Price column */
+  #price img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+  }
+  
+  /* Change column */
+  #change {
+    width: 165px;
+    text-align: center;
+  }
+  
+  /* Hover effect on table row */
+  tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  

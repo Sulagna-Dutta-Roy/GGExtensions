@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 250px;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  #sites {
+    margin-top: 10px;
+  }
+  
+  .site {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

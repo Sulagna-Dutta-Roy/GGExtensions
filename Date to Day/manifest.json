@@ -1,0 +1,15 @@
+{
+    "name": "Date to Day",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action":{
+        "default_popup": "popup.html",
+        "default_icon":{
+            "128" : "logo.png"
+        }
+    },
+    "icons":{
+        "128":"logo.png"
+    },
+    "permissions": ["activeTab"]
+}

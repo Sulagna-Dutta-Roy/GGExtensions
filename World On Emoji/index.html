@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Emoji</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Emoji</h1>
+        <h2 class="score">Score: <span id="score">0</span></h2>
+        <div id="emoji-container">
+            <span id="emoji"></span>
+        </div>
+        <input type="text" id="guess-input" placeholder="Enter your guess">
+        <button id="submit-btn">Submit</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

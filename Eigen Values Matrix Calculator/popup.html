@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Math.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Matrix Calculator</h1>
+        <div class="matrix-size">
+            <label for="matrixSize">Matrix Size:</label>
+            <select id="matrixSize">
+                <option value="2">2x2</option>
+                <option value="3" selected>3x3</option>
+                <option value="4">4x4</option>
+            </select>
+        </div>
+        <div class="matrix-container">
+            <h2>Matrix A</h2>
+            <table id="matrixA"></table>
+        </div>
+        <div class="operations">
+            <button id="eigenvaluesBtn">Calculate Eigenvalues</button>
+        </div>
+        <div class="result">
+            <h2>Eigenvalues</h2>
+            <div id="eigenvaluesResult"></div>
+        </div>
+    </div>
+</body>
+</html>

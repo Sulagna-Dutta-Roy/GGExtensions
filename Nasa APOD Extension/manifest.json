@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "APOD Extension",
+    "description": "Shows the Astronomy Picture of the Day",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "galaxy.png"
+    },
+    "permissions": [
+      "https://api.nasa.gov/"
+    ]
+  }
+  

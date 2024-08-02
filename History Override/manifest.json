@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "History Override",
+    "description": "Overrides the History Page",
+    "version": "1.0",
+    "action": {
+      "default_title": "History"
+    },
+    "permissions": [
+      "history",
+      "favicon"
+    ],
+    "icons": {
+      "16": "history16.png",
+      "32": "history32.png",
+      "48": "history (1).png",
+      "128": "history.png"
+    },
+    "chrome_url_overrides": {
+      "history": "history.html"
+    }
+  }
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Invoice Generator</h1>
+  <form id="invoice-form" style="width: 450px; height: fit-content;">
+    <label for="client-name">Client Name:</label>
+    <input type="text" id="client-name" name="client-name" required><br>
+    
+    <label for="client-email">Client Email:</label>
+    <input type="email" id="client-email" name="client-email" required><br>
+    
+    <label for="service-description">Service Description:</label>
+    <textarea id="service-description" name="service-description" required></textarea><br>
+    
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" required><br>
+    
+    <label for="template">Template:</label>
+    <select id="template" name="template" required>
+      <option value="template1">Template 1</option>
+      <option value="template2">Template 2</option>
+    </select><br>
+    
+    <button type="button" id="generate-invoice">Generate Invoice</button>
+  </form>
+
+  <div id="invoice-preview" style="display:none;">
+    <h2>Invoice Preview</h2>
+    <div id="invoice-content"></div>
+    <button type="button" id="save-pdf">Save as PDF</button>
+
+  </div>
+  
+  <script src="html2canvas.min.js"></script>
+  <script src="jspdf.umd.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

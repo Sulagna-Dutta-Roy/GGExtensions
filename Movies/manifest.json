@@ -1,0 +1,10 @@
+{
+    "name": "Movies Extension",
+    "description": "An Extension for amazin movies ",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action":{
+        "default_icon": "static/lovely-movies-ss.jpg", 
+        "default_popup": "index.html" 
+    }
+}

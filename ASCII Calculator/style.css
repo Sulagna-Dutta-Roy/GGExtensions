@@ -1,0 +1,38 @@
+body {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  min-width: 400px;
+  min-height: 500px;
+}
+
+.container {
+  animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-to-r {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  background-size: 200% 200%;
+  animation: gradient-bg 5s ease infinite;
+}

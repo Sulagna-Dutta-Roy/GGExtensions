@@ -1,0 +1,11 @@
+{
+    "name": "Claw Crane",
+    "short_name": "Claw Crane",
+    "description": "An arcade claw machine game.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": []
+  }
+  

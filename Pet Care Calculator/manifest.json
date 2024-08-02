@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Pet Care Calculator",
+    "version": "1.0",
+    "description": "Calculates the lifetime cost of owning different types of pets, including food, healthcare, and other expenses, based on current market prices.",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "calc.png"
+    },
+    "icons": {
+        "16": "calc.png",
+        "48": "calc.png",
+        "128": "calc.png"
+    },
+    "permissions":[]
+}

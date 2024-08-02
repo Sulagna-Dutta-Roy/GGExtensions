@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "BackToTop",
+  "version": "1.0",
+  "description": "A web application with a 'Back to Top' button example.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": []
+}

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "AI Image Generator",
+  "version": "1.0.0",
+  "description": " generates images using artificial intelligence.",
+  "author": "Your Name",
+  "action": {
+    "default_popup": "index.html"
+  }
+}

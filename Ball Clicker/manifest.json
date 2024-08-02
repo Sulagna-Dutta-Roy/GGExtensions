@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Ball Clicker",
+  "version": "1.0",
+  "description": "A simple ball clicker game.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}
