@@ -1,0 +1,11 @@
+{
+    "name": "Blob Generator",
+    "version": "1.0.0",
+    "description": "An simple extension to generate Blob",
+    "manifest_version": 3,
+    "author": "Sourabh singh rawat",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Blob Generator"
+    }
+}
