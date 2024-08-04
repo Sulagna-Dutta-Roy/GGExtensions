@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "TabTamer",
+    "version": "1.0",
+    "description": "Manage and list browser tabs easily.",
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}
