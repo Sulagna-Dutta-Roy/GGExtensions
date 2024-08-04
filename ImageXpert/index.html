@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageXpert</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://ideogram.ai/assets/progressive-image/balanced/response/Rqc5OHGYRXyUGQtrdCVPRQ" alt="" style="width: 100%;" height="10%">
+        <br>
+        <a href="#" onclick="changeConversion('jpegToPNG')">Universal to PNG Wizard</a>
+        <a href="#" onclick="changeConversion('pngToJPEG')">Universal to JPEG Wizard</a>
+        <a href="#" onclick="changeConversion('pngToAVIF')">Universal to AVIF Wizard</a>
+        <a href="#" onclick="changeConversion('avifToPNG')">AVIF to PNG</a>
+        <a href="#" onclick="changeConversion('pngToWebP')">Universal  to WebP Hub</a>
+        <a href="#" onclick="changeConversion('webpToPNG')">WebP to PNG</a>
+        <a href="#" onclick="changeConversion('jpegToBMP')">Universal to BMP Wizard</a>
+        <a href="#" onclick="changeConversion('bmpToJPEG')">BMP to JPEG</a>
+        <a href="#" onclick="changeConversion('imageToPDF')">Image to PDF</a>
+  
+    </div>
+    <br><br><br>
+    <div class="container">
+        <h1>ImageXpert: Transforming Your Images, One Click at a Time.</h1>
+        <div class="conversion-options">
+            <label for="conversionType">Selected Conversion:</label>
+            <span id="selectedConversion">UNIVERSAL  to PNG Wizard</span>
+        </div>
+
+        <div class="upload-area">
+            <input type="file" id="fileUpload" accept="image/*,.pdf">
+            <button onclick="convertFile()">Convert</button>
+        </div>
+
+        <div class="download-link" id="downloadLink" style="display:none;">
+            <a id="downloadButton" href="#" download>Download Converted File</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ImageXpert. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.18.0/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>

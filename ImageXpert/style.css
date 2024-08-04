@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d8f6f6;
+    margin: 0;
+    padding: 50px;
+}
+.navbar {
+    background-color: #3d3d3d;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.conversion-options {
+    margin: 20px 0;
+}
+.conversion-options select, input[type="file"] {
+    margin: 10px 0;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
