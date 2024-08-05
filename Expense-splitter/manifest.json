@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Expense Splitter",
+  "version": "1.0",
+  "optional_permissions" : ["tabs"],
+  "action": {
+      "default_popup": "index.html"
+  },
+  "web_accessible_resources": [
+      {
+          "resources": [
+              "index.html"
+          ],
+          "matches": [
+              "<all_urls>"
+          ]
+      }
+  ]
+}
