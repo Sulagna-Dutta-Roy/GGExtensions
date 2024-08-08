@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Noisli Clone",
+    "version": "1.0",
+    "description": "A clone of Noisli with gradient backgrounds and sound mixing.",
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": [
+      "storage"
+    ]
+  }
+  
