@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scribble Extension</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #72EDF2 10%, #d38327 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      margin: 0;
+    }
+
+    button {
+      background: #46d1ff;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #4141C5;
+    }
+  </style>
+</head>
+<body>
+  <button id="clear">Clear Canvas</button>
+  <button id="close">Close Extension</button>
+  <script src="popup.js"></script>
+</body>
+</html>
