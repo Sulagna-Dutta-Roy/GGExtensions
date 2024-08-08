@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Tamper Monkey Extension",
+    "version": "1.0",
+    "description": "Apply custom CSS with advanced styling and gradient background to webpages.",
+    "icons": {
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://example.com/*"],
+            "css": ["style.css"],
+            "js": ["script.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ]
+}
