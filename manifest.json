@@ -1,18 +1,16 @@
+
 {
     "manifest_version": 3,
-    "name": "Guess the Correct Logo",
-    "description": "Guess the Correct Logo",
+    "name": "Endless_Runner",
     "version": "1.0",
     "permissions": [
-        "storage",
-        "declarativeNetRequest",
-        "declarativeNetRequestWithHostAccess",
-        "tabs"
+      "storage",
+      "declarativeNetRequest",
+      "declarativeNetRequestWithHostAccess",
+      "tabs"
     ],
-    "host_permissions": [
-        "*://*/*"
-    ],
+    "host_permissions": ["*://*/*"],
     "action": {
-        "default_popup": "index.html"
+      "default_popup": "index.html"
     }
-}
+  }
