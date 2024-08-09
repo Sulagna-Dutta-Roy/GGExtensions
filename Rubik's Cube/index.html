@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Rubik cube</title>
+    <meta name="description" content="rubiks cube" />
+    <meta property="keywords" content="rubiks cube online" />
+    <meta property="og:title" content="RubikCube" />
+    <meta property="og:description" content="html css js" />
+    <meta property="og:keywords" content="rubiks" />
+    <meta property="author" content="Sourabh" />
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 500px;
+        width: 500px;
+      }
+      h1 {
+        position: fixed;
+        right: 5px;
+        bottom: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        writing-mode: vertical-rl;
+      }
+      #container {
+        height: 100%;
+        width: 100%;
+      }
+      #status {
+        font-size: 18px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .status-item {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+      }
+      #order-select {
+        outline: 0;
+        margin-left: 5px;
+      }
+      #disorder {
+        width: 50px;
+        display: none;
+      }
+      #restore {
+        width: 50px;
+      }
+    </style>
+    <link
+      rel="preload"
+      href="./3bfd9608.js"
+      as="script"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="status">
+        <div class="status-item">
+          <label for="finish">State :</label> <span id="finish"></span>
+        </div>
+        <div class="status-item">
+          <label for="order-select">Order :</label>
+          <select id="order-select">
+            <option value="2">2</option>
+            <option value="3" selected="">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="status-item"><button id="restore">Restore</button></div>
+      </div>
+    </div>
+    <script type="module" src="./3bfd9608.js"></script>
+  </body>
+</html>
