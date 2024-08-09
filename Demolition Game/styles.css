@@ -1,0 +1,88 @@
+body {
+    margin: 40;
+    padding: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #dedde4;
+    font-family: Arial, sans-serif;
+    color: #2518e0;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  .game-header {
+    margin-bottom: 0px;
+  }
+  
+  .score-board {
+    font-size: 1.5em;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 5px;
+    margin: 0 auto;
+  }
+  
+  .grid-cell {
+    width: 50px;
+    height: 50px;
+    background: #ece7e7;
+    border: 2px solid #e01212;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .player {
+    width: 80%;
+    height: 80%;
+    background: #4caf50;
+    border-radius: 50%;
+  }
+  
+  .bomb {
+    width: 80%;
+    height: 80%;
+    background: #f44336;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  
+  .explosion {
+    width: 100%;
+    height: 100%;
+    background: orange;
+  }
+  
+  .obstacle {
+    width: 100%;
+    height: 100%;
+    background: #1416a0;
+  }
+  
+  .reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0f12dd;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .reset-button:hover {
+    background: #0d0e0d;
+  }
+  
