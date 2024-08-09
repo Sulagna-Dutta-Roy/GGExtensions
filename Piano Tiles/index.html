@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Games - Piano Tiles</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="canvasContainer">
+        <div class="score" id="score">0</div>
+        <div class="gameEnd none" id="gameEnd">
+            Opps! Wrong Tile
+        <br />
+        <button id="restartBtn">Restart Game</button>
+      </div>
+      <div class="gameStart" id="gameStart">
+          Lets Start Tapping
+        <br />
+        <button id="startBtn">Start Playing</button>
+      </div>
+      <canvas class="game" id="gameCanvas"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

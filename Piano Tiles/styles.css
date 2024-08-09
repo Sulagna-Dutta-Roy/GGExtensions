@@ -1,0 +1,45 @@
+body {
+  margin: 0px;
+  height: 550px;
+  width: 450px;
+}
+.canvasContainer {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  font-size: 0px;
+  height: 100%;
+  width: 100%;
+}
+.canvasContainer canvas {
+  border: 0.5px solid #ddd;
+}
+.canvasContainer .score {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5em;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+.gameEnd,
+.gameStart {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  left: 0px;
+  width: 100%;
+  font-size: 1.5rem;
+  text-shadow: -1px -1px #fff;
+}
+.canvasContainer button {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.none {
+  display: none;
+}

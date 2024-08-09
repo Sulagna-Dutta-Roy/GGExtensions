@@ -1,0 +1,11 @@
+{
+    "name": "Rubiks Cube",
+    "version": "1.0.0",
+    "description": "An simple rubiks cube game",
+    "manifest_version": 3,
+    "author": "Sourabh singh rawat",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Rubiks Cube"
+    }
+}
