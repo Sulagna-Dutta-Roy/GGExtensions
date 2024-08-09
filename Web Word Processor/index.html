@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Word Processor : Write, Edit, Create – All in Your Browser!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://ideogram.ai/assets/progressive-image/balanced/response/EX_ckMruS6aULr-KIK0fNA" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1><img src="https://ideogram.ai/assets/progressive-image/balanced/response/RUcWFKmdSiyYVKIBJOYnGg" alt="" style="width: 100%; height: 20%;"> Write, Edit, Create – All in Your Browser!</h1>
+</nav>
+
+<div id="toolbar">
+    <h3> Font Family :
+        <select id="font-family" class="tool">
+            <option value="Poppins">Poppins</option>
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="cursive">Cursive</option>
+            <option value="monospace">Monospace</option>
+            <option value="serif">Serif</option>
+            <option value="'Courier New', Courier, monospace">'Courier New', Courier, monospace</option>
+            <option value="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif</option>
+            <option value="Georgia, 'Times New Roman', Times, serif">Georgia, 'Times New Roman', Times, serif</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana, Geneva, Tahoma, sans-serif</option>
+            <option value="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">System UI, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif</option>
+        </select>
+    </h3>
+    <h3> Font Size :
+        <select id="font-size" class="tool">
+            <option value="12px">12px</option>
+            <option value="14px">14px</option>
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+            <option value="20px">20px</option>
+            <option value="24px">24px</option>
+            <option value="28px">28px</option>
+            <option value="32px">32px</option>
+            <option value="36px">36px</option>
+            <option value="40px">40px</option>
+            <option value="42px">42px</option>
+            <option value="48px">48px</option>
+        </select>
+    </h3>
+    <h3> Text Align :
+        <select id="text-align" class="tool">
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+        </select>
+    </h3>
+
+    <h3> List Type :
+        <select id="list-type" class="tool">
+            <option value="">None</option>
+            <option value="ul">Bullet Points</option>
+            <option value="ol">Numbered List</option>
+            <option value="star">Star List</option>
+        </select>
+    </h3>
+    <button class="tool" onclick="document.execCommand('bold')">Bold</button>
+    <button class="tool" onclick="document.execCommand('italic')">Italic</button>
+    <button class="tool" onclick="document.execCommand('underline')">Underline</button>
+
+    <h3>Text Color:
+        <input type="color" id="text-color" class="tool" title="Text Color" style="height: 40px;">
+    </h3>
+    <h3>Background Color:
+        <input type="color" id="background-color" class="tool" title="Background Color" style="height: 40px;">
+    </h3>
+
+    <button class="tool" onclick="addImage()">Add Image</button>
+    <button class="tool" onclick="addSheet()">Add Sheet</button>
+    <button class="tool" onclick="exportPDF()">Export as PDF</button>
+    <button class="tool" onclick="exportImage('jpeg')">Export as JPEG</button>
+    <button class="tool" onclick="exportImage('png')">Export as PNG</button>
+</div>
+
+<div id="editor-container">
+    <div id="editor" class="editor" contenteditable="true">
+        Start typing here...
+    </div>
+</div>
+
+<input type="file" id="fileInput" style="display:none" accept="image/*" onchange="handleFileSelect(event)">
+
+<footer>
+    <p>Designed by Ankit</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.6.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</body>
+</html>
