@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "ROI Calculator",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "browser_action": {
+      "default_popup": "index.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
+  
