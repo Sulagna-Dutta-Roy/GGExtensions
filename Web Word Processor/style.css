@@ -1,0 +1,74 @@
+h1{
+    text-align: center; 
+    background-image: url('https://ideogram.ai/assets/progressive-image/balanced/response/QX_ULN1yRi6Y38LgVobpPw'); 
+    background-size: contain; -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+    font-size: 3rem !important;
+} 
+        body {
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #dffefb;
+            color: #333;
+        }
+        nav {
+            background-color: #032541;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        #toolbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #e4f0fb;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .tool {
+            margin-bottom: 30px;
+            margin-right: 20px;
+            padding: 10px;
+        }
+        #editor-container {
+            display: flex;
+            flex-direction: column; /* Stack sheets vertically */
+            align-items: center; /* Center align sheets horizontally */
+            margin: 20px auto;
+        }
+        .editor {
+            width: 800px;
+            height: 1200px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff; /* Default white background for new sheets */
+            color: #000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 0; /* Space between sheets */
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box; /* Ensure padding and border are included in width and height */
+        }
+        footer {
+            background-color: #0a2848;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        h3 {
+            color: #21558d;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-right: 10px;
+        }
+        h1 {
+            padding: 30px;
+        }
