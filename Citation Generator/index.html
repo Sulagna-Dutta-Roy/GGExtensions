@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citation Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="container">
+    <h1>Citation Generator</h1>
+    <form id="citation-form">
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="publisher">Publisher:</label>
+        <input type="text" id="publisher" name="publisher" required>
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" required>
+
+        <button type="submit">Genrate Citation</button>
+    </form>
+
+    <div id="citation-output">
+        <h2>Your Citation:</h2>
+        <p id="citation"></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
